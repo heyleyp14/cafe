@@ -457,3 +457,28 @@ La cámara del emulador muestra una sala virtual (un mueble y un televisor), no 
 - **Paso 3:** latencia en teléfono. El tamaño sí está medido: APK de depuración 45 702 962 bytes; modelo entregado 8 901 272 bytes.
 - El comando `./gradlew connectedDebugAndroidTest` que cita el README no se ejecutó tal cual: las pruebas instrumentadas se lanzaron con `adb shell am instrument`, para poder leer los archivos de resultados antes de desinstalar.
 - Comparación opcional de modelos (EfficientNet-B0, ResNet50).
+
+## Fase 12 — Pasos 1 y 3: teléfono físico (2026-10-10)
+
+**Estado: la fase sigue SIN CERRAR.** Falta el paso 2 (fotos reales del humano).
+
+### Qué se hizo
+
+- Se instaló el APK de depuración en el teléfono del humano por USB y se ejecutaron en él las pruebas instrumentadas.
+- Los archivos de resultados se guardaron en `ml/outputs/android_phone/` y `docs/resultados.md` incluye ahora una sección del teléfono.
+
+### Qué se comprobó
+
+- Dispositivo: **Motorola Edge 30**, Android 14 (API 34), arm64-v8a, SoC SM7325, unos 7.2 GB de RAM.
+- La app se instala, abre en 1668 ms y no registra cierres inesperados.
+- **Pruebas instrumentadas: 9 de 9 en verde en el teléfono.**
+  - Nivel 1: diferencia máxima de probabilidad 0.0000001 (límite 0.01).
+  - Nivel 2: 10 de 10 clases coinciden.
+- **Latencia:** mediana 21.0 ms, p95 22 ms con 4 hilos (5 de calentamiento + 50 medidas).
+- **Hilos:** 2 hilos, mediana 21.0 ms y p95 23 ms; 4 hilos, mediana 21.0 ms y p95 22 ms. No hay diferencia apreciable; se mantiene 4, y las predicciones son idénticas.
+- Tamaño: APK de depuración 45 702 962 bytes; modelo 8 901 272 bytes.
+
+### NO EJECUTADO
+
+- Paso 2: fotos reales tomadas por el humano y exactitud en campo.
+- Recorrido manual de la interfaz en el teléfono por parte del agente (solo se comprobó que abre).

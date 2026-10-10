@@ -34,6 +34,25 @@ def field_section():
             f"**n = {len(rows)} es pequeño**: esta cifra es orientativa y no permite generalizar.")
 
 
+def phone_section():
+    latency, threads = load("android_phone/latency.json"), load("android_phone/latency_threads.json")
+    level1, level2 = load("android_phone/parity_level1.json"), load("android_phone/parity_level2.json")
+    if not latency:
+        return ["## Android (teléfono)", "NO EJECUTADO."]
+    return [
+        "## Android (teléfono)",
+        f"Dispositivo: {latency['device']}, Android {latency['android']}, {latency['abi']}.",
+        f"- Paridad nivel 1 (modelo aislado): diferencia máxima de probabilidad {max(level1.values()):.7f} "
+        "(límite 0.01).",
+        f"- Paridad nivel 2 (flujo completo): {level2['matches']} de {level2['images']} clases coinciden.",
+        f"- Latencia con {latency['threads']} hilos ({latency['measured_runs']} medidas): mediana "
+        f"{latency['median_ms']} ms, p95 {latency['p95_ms']} ms.",
+        "- Comparación de hilos: " + "; ".join(
+            f"{k.split('_')[1]} hilos, mediana {v['median_ms']} ms y p95 {v['p95_ms']} ms"
+            for k, v in threads.items() if k.startswith("threads_")) + ".",
+    ]
+
+
 def main():
     stats, history, metrics = load("dataset_stats.json"), load("history.json"), load("metrics.json")
     parity, model_io = load("parity.json"), load("model_io.json")
@@ -95,6 +114,7 @@ def main():
         "- Comparación de hilos: " + "; ".join(
             f"{k.split('_')[1]} hilos, mediana {v['median_ms']} ms y p95 {v['p95_ms']} ms"
             for k, v in threads.items() if k.startswith("threads_")) + ".",
+        *phone_section(),
         "## Resultados en campo",
         field_section(),
         "## Limitaciones",
@@ -112,7 +132,6 @@ def main():
             "Cambio de dominio: RoCoLe es café Robusta de Ecuador y parte de DECAFIA proviene de Brasil; en "
             "Colombia predomina el arábica.",
             "La clase minador tiene pocas imágenes de test, por lo que sus métricas son poco precisas.",
-            "Las latencias son de un emulador en un PC, no de un teléfono.",
             "Es un prototipo académico de apoyo, no una herramienta de diagnóstico.",
         ]),
     ]

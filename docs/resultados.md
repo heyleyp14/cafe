@@ -88,6 +88,18 @@ Dispositivo: Google sdk_gphone64_x86_64, Android 17, x86_64.
 
 - Comparación de hilos: 2 hilos, mediana 9.0 ms y p95 11 ms; 4 hilos, mediana 12.0 ms y p95 15 ms.
 
+## Android (teléfono)
+
+Dispositivo: motorola motorola edge 30, Android 14, arm64-v8a.
+
+- Paridad nivel 1 (modelo aislado): diferencia máxima de probabilidad 0.0000001 (límite 0.01).
+
+- Paridad nivel 2 (flujo completo): 10 de 10 clases coinciden.
+
+- Latencia con 4 hilos (50 medidas): mediana 21.0 ms, p95 22 ms.
+
+- Comparación de hilos: 2 hilos, mediana 21.0 ms y p95 23 ms; 4 hilos, mediana 21.0 ms y p95 22 ms.
+
 ## Resultados en campo
 
 NO EJECUTADO. Falta instalar el APK en un teléfono y probar con fotos reales tomadas por el humano (fase 12). Registrar los casos en `docs/campo.csv` y volver a ejecutar `make results`.
@@ -101,5 +113,4 @@ NO EJECUTADO. Falta instalar el APK en un teléfono y probar con fotos reales to
 - Con el umbral elegido se aceptan todas las imágenes de validación y de test, así que en la práctica no filtra.
 - Cambio de dominio: RoCoLe es café Robusta de Ecuador y parte de DECAFIA proviene de Brasil; en Colombia predomina el arábica.
 - La clase minador tiene pocas imágenes de test, por lo que sus métricas son poco precisas.
-- Las latencias son de un emulador en un PC, no de un teléfono.
 - Es un prototipo académico de apoyo, no una herramienta de diagnóstico.
