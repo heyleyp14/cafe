@@ -117,7 +117,7 @@ Hecha por el agente mirando miniaturas, **no por una persona experta en café**:
 
 - **Sesgo de fondo en `minador`:** 19 de las 20 imágenes revisadas son hojas sobre fondo blanco o de laboratorio, mientras que casi todas las de `sana` son fotos de campo. El modelo puede aprender "fondo blanco = minador". Hay que comprobarlo en la fase 12 con fotos reales.
 - **`minador` es pequeña** (39 imágenes de test): sus métricas tendrán intervalos amplios.
-- Los pares con distancia perceptual > 52 no se agrupan; en la muestra revisada eran hojas distintas, pero no se puede descartar alguna copia muy transformada.
+- **Fuga residual no eliminada en `sana`:** DECAFIA contiene varias tomas distintas de una misma hoja (otra posición, otro encuadre) y no trae metadatos para agruparlas. El hash no las une porque no son la misma foto. Entre las series `SANAS_NUEVAS_*` y `SANAS_SOCORRO_*` quedan 26 pares en particiones distintas con distancia 53–64; al mirarlos, varios son la misma hoja fotografiada dos veces. Puede inflar un poco las métricas de `sana` en test. En `minador` y `roya` los pares revisados con distancia > 52 eran hojas distintas sobre fondo blanco.
 - Dominio: RoCoLe es Robusta (Ecuador) y las imágenes `MINEIRO_*` son de Brasil.
 
 ### NO EJECUTADO

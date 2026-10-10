@@ -52,6 +52,6 @@ Formato: fecha, decisión, motivo. Las marcadas **DECISIÓN** en el plan usan el
 - **Decisión:** hash perceptual dHash de 256 bits, comparado sobre las 8 orientaciones (rotaciones y espejos) de cada imagen, además de MD5.
   - Distancia ≤ 40: se considera la misma foto y se conserva una sola copia (la de RoCoLe si existe). Si las copias tienen etiquetas distintas, se descartan todas.
   - Distancia 41–52: se conservan, pero se obligan a caer en la misma partición.
-- **Motivo:** los umbrales se eligieron mirando pares de muestra por distancia. Hasta ~45 los pares eran la misma foto (a menudo rotada); a partir de ~53 eran hojas distintas sobre fondo blanco. Un primer intento con dHash de 64 bits daba falsos duplicados y se desechó.
+- **Motivo:** los umbrales se eligieron mirando pares de muestra por distancia. Hasta ~45 los pares eran la misma foto (a menudo rotada); a partir de ~53 eran hojas distintas sobre fondo blanco o tomas distintas de una misma hoja, que el hash no puede unir (limitación anotada en la bitácora). Un primer intento con dHash de 64 bits daba falsos duplicados y se desechó.
 - **Decisión:** las fotos de RoCoLe de la misma planta (`C<cultivo>P<planta>` en el nombre) van juntas a una sola partición.
 - **Decisión:** se ignora la partición original de DECAFIA y se divide de nuevo 70/15/15 con semilla 42, estratificado por clase y respetando los grupos.
