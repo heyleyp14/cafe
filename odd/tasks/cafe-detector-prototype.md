@@ -38,6 +38,7 @@ Strategy `ask-on-risk`. Forecast exceeds 400 authored lines (ML scripts plus And
 ## Evidence
 
 - T0: tool check and license verification recorded in `docs/bitacora.md` and `docs/decisiones.md` (2026-10-10).
+- T0: commit `a514810` on `feat/phase-0-setup`. RDD off (global), so no native review; assessed tier not applicable.
 
 ## Known gaps
 
