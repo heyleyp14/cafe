@@ -60,3 +60,66 @@ Las entradas "NO EJECUTADO" de arriba sobre instalación y conversión quedan re
 - Tras instalar, TensorFlow seguía sin ver la GPU ("Cannot dlopen some GPU libraries"). Causa: no encuentra las librerías CUDA que pip deja dentro del entorno. Solución: añadir las carpetas `site-packages/nvidia/*/lib` a `LD_LIBRARY_PATH`; el `Makefile` lo hace automáticamente.
 - Comprobado: con esa variable, `list_physical_devices("GPU")` devuelve la RTX 4050 y una pasada de MobileNetV2 se ejecuta en `GPU:0`.
 - Queda sin efecto la nota anterior "GPU: NO DISPONIBLE". Ejecutar los scripts con `make` (o exportando la variable) para usar la GPU.
+
+## Fase 1 — Datos (2026-10-10)
+
+**Estado: CERRADA.** Criterios de aceptación cumplidos (detalle abajo). Todas las cifras salen de `ml/outputs/dataset_stats.json`.
+
+### Qué se hizo
+
+- Descarga de RoCoLe (Mendeley, 1560 imágenes) y DECAFIA (Zenodo) a `ml/data/raw/` (fuera de git).
+- `ml/01_preparar_datos.py`: etiquetas a nivel de imagen, exclusiones, deduplicación, división 70/15/15 por grupos y `dataset_stats.json`. Se ejecuta con `make data` (unos 10 s).
+- Hojas de contacto para la revisión manual en `ml/data/review/` (fuera de git).
+
+### Hallazgos sobre los datos
+
+- **DECAFIA trae 2769 imágenes, no las 2786 que anuncia** su descripción (su propia partición suma 1934 + 549 + 286 = 2769).
+- "coco" = defoliación por gorgojos; no se usa.
+- Hay muchas copias: 510 duplicados eliminados (61 de ellos entre los dos datasets) y 11 imágenes descartadas por ser copias con etiquetas contradictorias. `SANAS_NUEVAS_*` contiene copias rotadas de `SANAS_SOCORRO_*`, y RoCoLe repite fotos bajo identificadores de planta distintos.
+- Algunas imágenes `ROYA_*` de DECAFIA son copias de RoCoLe, aunque su documentación dice que solo reutilizó hojas sanas.
+
+### Descartes (por regla)
+
+| Regla | Imágenes |
+|---|---|
+| DECAFIA `SANAS_ROCOLE_*` (derivadas de RoCoLe) | 454 |
+| DECAFIA recortes de lesión | 398 |
+| DECAFIA con clase dominante `coco` | 270 |
+| RoCoLe arañita roja | 167 |
+| Duplicados eliminados | 510 |
+| Copias con etiquetas contradictorias | 11 |
+| Empates de clase dominante | 0 |
+
+### Resultado: 2519 imágenes
+
+| Clase | train | val | test | Total | Origen |
+|---|---|---|---|---|---|
+| minador | 185 | 40 | 39 | 264 | DECAFIA 264 |
+| roya | 559 | 120 | 120 | 799 | RoCoLe 568, DECAFIA 231 |
+| sana | 1019 | 219 | 218 | 1456 | RoCoLe 745, DECAFIA 711 |
+
+### Qué se comprobó (criterios de aceptación)
+
+- **Ninguna imagen en dos particiones:** 0 coincidencias por MD5, 0 pares con distancia perceptual ≤ 52 entre particiones y 0 grupos repartidos. Verificado además con un cálculo independiente sobre los archivos ya copiados: la distancia mínima entre particiones es 53.
+- **≥ 100 imágenes de entrenamiento por clase:** sí; la menor es `minador` con 185.
+- **Desbalance reportado:** razón clase mayor/menor en train = 5.508 (`sana`/`minador`). La fase 2 debe usar `class_weight`.
+- Fracciones reales por clase: entre 0.6996 y 0.7008 en train; entre 0.1477 y 0.1515 en val y test.
+
+### Revisión manual de etiquetas (20 imágenes por clase)
+
+Hecha por el agente mirando miniaturas, **no por una persona experta en café**:
+
+- `minador`: las 20 muestran lesiones coherentes con minador.
+- `sana`: en ninguna de las 20 se aprecian lesiones.
+- `roya`: ninguna etiqueta absurda, pero en varias de RoCoLe (roya nivel 1) las lesiones son tan pequeñas que a tamaño de miniatura no se distinguen de una hoja sana. No se pudo confirmar ni descartar ruido de etiquetas en esos casos.
+
+### Limitaciones que hay que llevar al informe
+
+- **Sesgo de fondo en `minador`:** 19 de las 20 imágenes revisadas son hojas sobre fondo blanco o de laboratorio, mientras que casi todas las de `sana` son fotos de campo. El modelo puede aprender "fondo blanco = minador". Hay que comprobarlo en la fase 12 con fotos reales.
+- **`minador` es pequeña** (39 imágenes de test): sus métricas tendrán intervalos amplios.
+- Los pares con distancia perceptual > 52 no se agrupan; en la muestra revisada eran hojas distintas, pero no se puede descartar alguna copia muy transformada.
+- Dominio: RoCoLe es Robusta (Ecuador) y las imágenes `MINEIRO_*` son de Brasil.
+
+### NO EJECUTADO
+
+- Revisión de etiquetas por una persona experta. Las hojas de contacto están en `ml/data/review/` para quien quiera hacerla.
