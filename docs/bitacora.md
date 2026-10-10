@@ -52,3 +52,11 @@
 - `Makefile` usa ahora `ml/.venv/bin/python` por defecto.
 
 Las entradas "NO EJECUTADO" de arriba sobre instalación y conversión quedan resueltas. Siguen pendientes: Android SDK y `adb` (fase 6) y el informe del proyecto (fase 7).
+
+### Actualización: GPU habilitada (2026-10-10)
+
+- El humano reinició el equipo; el módulo del kernel y `nvidia-utils` coinciden ahora en 615.78.08 y `nvidia-smi` reporta "NVIDIA GeForce RTX 4050 Laptop GPU", 6141 MiB.
+- Se instaló `tensorflow[and-cuda]==2.21.0` en `ml/.venv` (añade los paquetes `nvidia-*-cu12`).
+- Tras instalar, TensorFlow seguía sin ver la GPU ("Cannot dlopen some GPU libraries"). Causa: no encuentra las librerías CUDA que pip deja dentro del entorno. Solución: añadir las carpetas `site-packages/nvidia/*/lib` a `LD_LIBRARY_PATH`; el `Makefile` lo hace automáticamente.
+- Comprobado: con esa variable, `list_physical_devices("GPU")` devuelve la RTX 4050 y una pasada de MobileNetV2 se ejecuta en `GPU:0`.
+- Queda sin efecto la nota anterior "GPU: NO DISPONIBLE". Ejecutar los scripts con `make` (o exportando la variable) para usar la GPU.

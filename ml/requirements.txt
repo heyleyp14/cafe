@@ -1,6 +1,8 @@
 # Verified on 2026-10-10 with CPython 3.12.8 (uv venv at ml/.venv): installs
 # cleanly and the TFLite conversion smoke test passes (see docs/bitacora.md).
 # tensorflow 2.21.0 ships cp310-cp313 wheels only; Python 3.14 is not supported.
+# For a local NVIDIA GPU install `tensorflow[and-cuda]==2.21.0` instead (adds the
+# nvidia-*-cu12 wheels) and run through `make`, which sets LD_LIBRARY_PATH.
 tensorflow==2.21.0
 keras==3.15.1
 numpy==2.5.4

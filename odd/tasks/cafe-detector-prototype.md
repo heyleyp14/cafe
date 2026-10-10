@@ -42,11 +42,10 @@ Strategy `ask-on-risk`. Forecast exceeds 400 authored lines (ML scripts plus And
 
 ## Known gaps
 
-- No GPU visible to TensorFlow; training runs on CPU.
-- NVIDIA driver/library mismatch (kernel module 615.71.09 vs nvidia-utils 615.78.08).
+- GPU works only with the venv `nvidia/*/lib` folders on `LD_LIBRARY_PATH` (the Makefile exports it).
 - Android SDK and adb missing; only JDK 21 installed (plan asks for 17).
 - The project report (source for phase 7 texts) is not in the repository.
 
 ## Next step
 
-T1: download datasets (Mendeley `c5yvn32dzg`, Zenodo `19931904`) and write `ml/01_preparar_datos.py`.
+T1: datasets are downloaded in `ml/data/raw/{rocole,decafia}`; extract, inspect annotations and write `ml/01_preparar_datos.py`.
