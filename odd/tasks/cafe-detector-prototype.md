@@ -31,8 +31,8 @@ Strategy `ask-on-risk`. Forecast exceeds 400 authored lines (ML scripts plus And
 - [x] T7 Phase 7 `conditions.json` — route: inline; texts copied from the report in docs/, unit test green
 - [x] T8 Phase 8 classifier — route: inline; app ships the fp32 model (human decision); unit 8/8, instrumented 4/4 on the emulator (level 1 max diff 1.7e-6, level 2 10/10)
 - [x] T9 Phase 9 UI — route: delegated writer (7 new files); parent verified camera, gallery, rotation and permission-denied flows on the emulator
-- [ ] T10 Phase 10 performance and robustness
-- [ ] T11 Phase 11 tests — needs device or x86_64 emulator
+- [x] T10 Phase 10 performance and robustness — route: inline; robustness tests green, library-added permissions removed, thread comparison inconclusive on emulator
+- [x] T11 Phase 11 tests — unit 11/11, instrumented 9/9 on the x86_64 emulator
 - [ ] T12 Phase 12 field evaluation and docs — needs a phone and human-taken photos
 
 ## Evidence
@@ -47,8 +47,7 @@ Strategy `ask-on-risk`. Forecast exceeds 400 authored lines (ML scripts plus And
 ## Known gaps
 
 - GPU works only with the venv `nvidia/*/lib` folders on `LD_LIBRARY_PATH` (the Makefile exports it).
-- LiteRT 2.3.0 pulls extra manifest permissions (network state, wake lock, boot, foreground service); review in phase 10.
 
 ## Next step
 
-T10 performance and robustness: thread count 2 vs 4, error cases (corrupt file, huge image), LiteRT extra permissions; then T11 full test pass and T12 field test with a phone. Open questions for the human: version golden images in git; SANAS_ROCOLE exclusion.
+T12 field evaluation: needs the human's physical phone over adb and real leaf photos; then docs/resultados.md and README. Open questions for the human: version golden images in git; SANAS_ROCOLE exclusion.

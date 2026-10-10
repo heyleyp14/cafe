@@ -27,7 +27,7 @@
     <string name="about_model_version_unavailable">No disponible</string>
     <string name="about_datasets_title">Créditos de los datasets</string>
     <string name="about_dataset_rocole">RoCoLe. Parraga-Alava et al., 2019. Licencia CC BY 4.0.</string>
-    <string name="about_dataset_decafia">DECAFIA / CoffeeLeaf-CO. Rosas Ruiz, Salom Medina y Barrero Pérez, 2026. Licencia CC BY 4.0.</string>
+    <string name="about_dataset_decafia">DECAFIA / CoffeeLeaf-CO. Rosas Ruiz, Salom Medina y Barrero Perez, 2026. Licencia CC BY 4.0.</string>
     <string name="about_dataset_silva">Silva et al., 2020. Licencia CC BY 4.0.</string>
 
     <!-- Camera -->

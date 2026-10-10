@@ -382,3 +382,56 @@ La cámara del emulador muestra una sala virtual (un mueble y un televisor), no 
 - Los estados de error (archivo corrupto, modelo que no carga, poca memoria) y el diálogo "Acerca de" no se recorrieron en el emulador.
 - Recuperación tras muerte del proceso: el resultado no se restaura (vuelve al inicio).
 - Prueba en teléfono físico y con hojas reales (fase 12).
+
+## Fase 10 — Rendimiento y robustez (2026-10-10)
+
+**Estado: CERRADA** en lo que puede comprobarse en el emulador. El plan no define un criterio de aceptación para esta fase.
+
+### Qué se hizo
+
+- Pruebas instrumentadas nuevas (`RobustnessTest`): archivo corrupto, JPEG truncado, imagen de 12 MP, rotación EXIF y comparación de hilos.
+- Se quitaron del manifiesto cinco permisos que añadían las dependencias de LiteRT (ver `docs/decisiones.md`).
+
+### Qué se comprobó
+
+- El modelo se carga al crear el ViewModel, en un hilo de fondo (`Dispatchers.Default`).
+- **Archivo corrupto, vacío o ilegible:** `decodeUpright` devuelve `null` y no lanza excepción; el ViewModel lo muestra como error.
+- **JPEG truncado:** no provoca fallo.
+- **Imagen enorme (4000×3000, 12 MP):** se decodifica submuestreada a 1000×750 en `ARGB_8888` y se clasifica.
+- **Rotación EXIF:** una imagen 600×480 marcada como rotada 90° sale 480×600.
+- **Permiso denegado:** comprobado en la fase 9.
+- **Permisos del APK** (`aapt2 dump permissions`): solo `CAMERA` y un permiso interno de AndroidX. **Sin `INTERNET`** y sin los cinco que añadía LiteRT. Con ellos quitados, la app abre, muestra "Acerca de" (versión `v1-2026-10` y créditos) y completa cámara → resultado sin fallos.
+- **Hilos (2 vs 4)**, emulador, 5 de calentamiento + 50 medidas por configuración:
+  - 2 hilos: mediana 9.0 ms, p95 11 ms.
+  - 4 hilos: mediana 12.0 ms, p95 15 ms.
+  - Las 10 predicciones de referencia son idénticas con 2 y con 4 hilos.
+  - **No es concluyente:** en la misma ejecución, otra prueba con 4 hilos midió mediana 9.0 ms. Las diferencias están dentro del ruido del emulador.
+- APK de depuración: 45 702 962 bytes.
+
+### NO EJECUTADO
+
+- Delegado GPU (opcional en el plan).
+- **Poca memoria** y **cámara no disponible:** el código los maneja (captura de `OutOfMemoryError`, pantalla "Cámara no disponible"), pero no se provocaron en el emulador.
+- Medición de hilos en un teléfono real.
+
+## Fase 11 — Pruebas (2026-10-10)
+
+**Estado: CERRADA.** Criterio cumplido: todas pasan en un emulador x86_64 (`sdk_gphone64_x86_64`, Android 17).
+
+| Conjunto | Pruebas | Resultado |
+|---|---|---|
+| Unitarias (`src/test`) | 11 | 11 en verde |
+| Instrumentadas (`src/androidTest`) | 9 | 9 en verde |
+
+- Unitarias: top-3 y regla de umbral con probabilidades simuladas, `labels.txt` ↔ `conditions.json`, lectura de `threshold.json`, muestreo y formato del porcentaje.
+- Instrumentadas:
+  - Nivel 1 (modelo aislado, `.rgb`): misma clase en las 10; diferencia máxima de probabilidad 0.0000017 (límite 0.01).
+  - Nivel 2 (flujo completo, `.jpg`): 10 de 10 clases coinciden (se exige ≥ 9).
+  - Latencia: mediana 9.0 ms, p95 11 ms, 4 hilos, guardada en `latency.json` junto con el modelo del dispositivo.
+  - `labels.size` = nº de salidas del modelo.
+  - Las cinco de robustez de la fase 10.
+- Los archivos de resultados del emulador se copiaron a `ml/outputs/android_emulator/`.
+
+### NO EJECUTADO
+
+- Las mismas pruebas en un dispositivo físico (fase 12). Las latencias del emulador no representan un teléfono.

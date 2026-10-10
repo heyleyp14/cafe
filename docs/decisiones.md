@@ -85,3 +85,12 @@ Formato: fecha, decisión, motivo. Las marcadas **DECISIÓN** en el plan usan el
 
 - **Decisión:** la clase obtenida en Android con el `.jpg` se compara con la clase que predice TFLite en Python (el máximo de `probs_tflite`), no con la etiqueta real.
 - **Motivo:** el nivel 2 es una prueba de paridad del flujo completo; la exactitud frente a la etiqueta real ya se mide en la fase 3.
+
+## 2026-10-10 — Fase 10: permisos, hilos y delegado GPU
+
+- **Decisión:** se quitan del manifiesto, con `tools:node="remove"`, los permisos que añaden las dependencias de LiteRT 2.3.0: `ACCESS_NETWORK_STATE`, `WAKE_LOCK`, `RECEIVE_BOOT_COMPLETED`, `FOREGROUND_SERVICE` y `FOREGROUND_SERVICE_DATA_SYNC`.
+- **Motivo:** la app no usa red ni tareas en segundo plano; el plan exige que no haya `INTERNET` y una app sin conexión no debería declarar permisos que no necesita. Tras quitarlos, todas las pruebas y el flujo de la app siguen funcionando. Es una decisión propia, compatible con el plan y reversible.
+- **Decisión:** se mantiene `setNumThreads(4)`, el valor del código del plan.
+- **Motivo:** en el emulador la comparación 2 vs 4 hilos no es concluyente (ver bitácora); se decide con un teléfono real en la fase 12.
+- **Decisión:** no se adopta el delegado GPU.
+- **Motivo:** el plan lo marca como opcional y no se probó.
