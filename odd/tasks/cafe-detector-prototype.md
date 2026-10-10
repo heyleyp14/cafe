@@ -23,10 +23,10 @@ Strategy `ask-on-risk`. Forecast exceeds 400 authored lines (ML scripts plus And
 
 - [x] T0 Phase 0 environment — route: inline (mechanical files). Unblocked with uv + CPython 3.12.8 venv at `ml/.venv`; install and TFLite conversion smoke test observed.
 - [x] T1 Phase 1 data preparation (`ml/01_preparar_datos.py`) — route: inline (one script). Test-first exception: no deterministic expected output existed before inspecting the datasets; checked through the leakage verification built into the script plus an independent recount.
-- [ ] T2 Phase 2 training (`ml/02_entrenar.py`)
-- [ ] T3 Phase 3 evaluation and threshold (`ml/03_evaluar.py`)
-- [ ] T4 Phase 4 TFLite conversion (`ml/04_convertir_tflite.py`)
-- [ ] T5 Phase 5 parity and golden vectors (`ml/05_paridad_tflite.py`)
+- [ ] T2 Phase 2 training (`ml/02_entrenar.py`) — script ready and smoke-tested; real run pending in Colab/Kaggle
+- [ ] T3 Phase 3 evaluation and threshold (`ml/03_evaluar.py`) — script ready; run pending in Colab/Kaggle
+- [ ] T4 Phase 4 TFLite conversion (`ml/04_convertir_tflite.py`) — script ready; run pending
+- [ ] T5 Phase 5 parity and golden vectors (`ml/05_paridad_tflite.py`) — script ready; run pending
 - [ ] T6 Phase 6 Android project base — needs Android SDK
 - [ ] T7 Phase 7 `conditions.json` — needs the report text (sections 1.1, 1.2)
 - [ ] T8 Phase 8 classifier
@@ -50,4 +50,4 @@ Strategy `ask-on-risk`. Forecast exceeds 400 authored lines (ML scripts plus And
 
 ## Next step
 
-T2: write `ml/02_entrenar.py` and a Colab notebook; training and reported numbers come from Colab/Kaggle per plan section 2.
+Human runs `ml/colab_entrenamiento.ipynb` with `cafe_ml_bundle.zip` in Colab/Kaggle and returns `cafe_outputs.zip`; then verify acceptance of phases 2-5 from those files, write the bitácora, copy assets.

@@ -131,3 +131,26 @@ El humano indicó ceñirse totalmente al plan. Cambios:
 
 - Revisión manual de una muestra de los recortes reincorporados.
 - Revisión de etiquetas por una persona experta. Las hojas de contacto están en `ml/data/review/` para quien quiera hacerla.
+
+## Fases 2 a 5 — Scripts listos, ejecución pendiente en la nube (2026-10-10)
+
+**Estado: NINGUNA de estas fases está cerrada.** Los criterios de aceptación se verifican con la ejecución en Colab o Kaggle, que todavía no se ha hecho.
+
+### Qué se hizo
+
+- `ml/02_entrenar.py`, `ml/03_evaluar.py`, `ml/04_convertir_tflite.py`, `ml/05_paridad_tflite.py`.
+- `ml/colab_entrenamiento.ipynb`: ejecuta las fases 1 a 5 en orden; al final de cada fase comprueba sus criterios de aceptación y se detiene si no se cumplen.
+- `make colab-bundle` genera `cafe_ml_bundle.zip` (solo código) para subirlo al cuaderno.
+- `MODEL_VERSION = "v1-2026-10"` en `ml/config.py`.
+
+### Qué se comprobó
+
+- Prueba de humo local de la cadena completa (fases 2 a 5) con **una sola época por etapa**, únicamente para confirmar que los scripts corren y producen todos los archivos con el formato esperado: los 4 scripts terminan sin error, `model_io.json` cumple el contrato de la sección 4 y cada `NN.rgb` pesa 150528 bytes (224·224·3).
+- Los archivos de esa prueba **se borraron**: no son resultados y ninguna cifra suya se usa en el proyecto.
+- Nota de transparencia: la prueba de humo evaluó sobre test con un modelo de una época. No se usó para decidir nada (ni hiperparámetros ni umbral).
+
+### NO EJECUTADO
+
+- **Entrenamiento real (fase 2), evaluación (3), conversión (4) y paridad (5):** pendientes de ejecutar en Colab o Kaggle por el humano.
+- **El cuaderno no se ha probado en Colab ni en Kaggle** (no hay acceso desde aquí). En particular no está verificado que `tensorflow[and-cuda]==2.21.0` detecte la GPU allí; la primera celda de comprobación falla con un mensaje claro si no la ve.
+- Comparación opcional con EfficientNet-B0 y ResNet50: no implementada.

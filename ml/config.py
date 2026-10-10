@@ -12,3 +12,6 @@ RAW_DIR = DATA_DIR / "raw"
 PROCESSED_DIR = DATA_DIR / "processed"
 OUTPUTS_DIR = ML_DIR / "outputs"
 SPLITS = ("train", "val", "test")
+
+# Shown by the app in "Acerca de" (contract, section 4).
+MODEL_VERSION = "v1-2026-10"

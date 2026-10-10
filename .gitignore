@@ -16,3 +16,7 @@ __pycache__/
 .idea/
 *.iml
 .codegraph/
+
+# Colab hand-off bundles
+cafe_ml_bundle.zip
+cafe_outputs.zip
