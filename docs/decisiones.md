@@ -65,3 +65,11 @@ Formato: fecha, decisión, motivo. Las marcadas **DECISIÓN** en el plan usan el
 
 - **Estado:** se mantiene la exclusión de las 454 imágenes `SANAS_ROCOLE_*` de DECAFIA, que el plan no menciona de forma literal.
 - **Motivo:** el plan exige que ninguna imagen esté en dos particiones y que las fotos de una misma planta vayan juntas. Estas imágenes son copias transformadas de RoCoLe que el hash solo detecta en parte, así que incluirlas rompería ese criterio. Si el humano prefiere la lectura literal, se quita la constante `DECAFIA_DERIVED_PREFIXES`.
+
+## 2026-10-10 — Fase 6: librería de inferencia y versiones
+
+- **Decisión:** LiteRT `com.google.ai.edge.litert:litert:2.3.0` en todo el proyecto, con el import `org.tensorflow.lite.Interpreter`.
+- **Motivo:** es la primera opción del plan. Se inspeccionó el AAR 2.3.0: la clase que contiene es `org.tensorflow.lite.Interpreter` (no `com.google.ai.edge.litert.Interpreter`, que el plan da como ejemplo), así que ese es el import válido para esta versión.
+- **Decisión:** no se usa `litert-support`; el modelo se cargará con `assets.openFd` + `FileChannel.map`, una de las dos opciones que da el plan.
+- **Decisión:** versiones tomadas de Google Maven y Maven Central el 2026-10-10 (`android/gradle/libs.versions.toml`): AGP 9.4.1, Kotlin 2.4.21, Compose BOM 2026.09.00, CameraX 1.6.2, Lifecycle 2.11.0, Navigation 2.10.2, kotlinx-serialization-json 1.11.0, Gradle 9.8.1.
+- **Decisión:** `compileSdk` y `targetSdk` 37 (la única plataforma instalada), `minSdk` 26 como pide el plan. Se compila con JDK 21 (el plan menciona JDK 17; el JDK 21 instalado funciona con AGP 9.4.1).

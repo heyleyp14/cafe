@@ -217,3 +217,30 @@ Matriz de confusión (filas = clase real; columnas = predicción minador, roya, 
 - Comparación opcional con EfficientNet-B0 y ResNet50.
 - Las imágenes `NN.jpg` y `NN.rgb` de `golden/` no se han subido a git: son imágenes de los datasets y el plan pide a la vez no redistribuir imágenes (fase 0) y copiarlas a `androidTest` (fase 5). Pendiente de decisión del humano.
 - Sigue sin confirmar la exclusión de `SANAS_ROCOLE_*`; si se cambia, hay que repetir las fases 1 a 5.
+
+## Fase 6 — Proyecto Android: base (2026-10-10)
+
+**Estado: CERRADA.** Criterio de aceptación cumplido: `./gradlew assembleDebug` compila y la app abre sin fallar.
+
+### Qué se hizo
+
+- Proyecto Compose en `android/`: paquete `co.edu.unipamplona.cafedetector`, `minSdk 26`, un módulo `app`, `gradle/libs.versions.toml`, wrapper de Gradle 9.8.1.
+- Dependencias del plan (CameraX, LiteRT, lifecycle-viewmodel-compose, navigation-compose, kotlinx-serialization) con versiones verificadas en su fuente.
+- `noCompress += "tflite"`; manifiesto con permiso `CAMERA` y cámara no obligatoria; sin `INTERNET`.
+- `MainActivity` mínima que muestra el título y el aviso de herramienta de apoyo, ambos desde `strings.xml`.
+
+### Qué se comprobó
+
+- `./gradlew assembleDebug`: compila. APK de depuración: 38 455 400 bytes.
+- Emulador `Medium_Phone_API_37.0` (Android 17, API 37, x86_64): la app se instala, abre en 1423 ms, el proceso sigue vivo y no hay ningún `FATAL EXCEPTION` en logcat. Captura revisada: se ven el título y el aviso.
+- `aapt2 dump permissions`: **no hay `INTERNET`**.
+- `model.tflite` va sin comprimir dentro del APK (2 531 920 bytes almacenados).
+
+### Hallazgo que hay que revisar en la fase 10
+
+LiteRT 2.3.0 arrastra dependencias (`play:asset-delivery`, `work-runtime`, `media3-common`) que añaden al manifiesto permisos que la app no pidió: `ACCESS_NETWORK_STATE`, `WAKE_LOCK`, `RECEIVE_BOOT_COMPLETED`, `FOREGROUND_SERVICE` y `FOREGROUND_SERVICE_DATA_SYNC`. Ninguno es `INTERNET`, así que la regla del plan se cumple, pero no encajan con una app sin conexión y contribuyen al tamaño del APK. Opciones para la fase 10: quitarlos del manifiesto o cambiar a la librería clásica `org.tensorflow:tensorflow-lite`, que el plan también permite.
+
+### NO EJECUTADO / pendiente
+
+- `conditions.json` todavía no está en `assets/` (es la fase 7 y necesita el texto del informe).
+- Prueba en teléfono físico (fase 12).
