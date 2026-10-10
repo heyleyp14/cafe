@@ -271,3 +271,43 @@ Los textos son copia literal, con dos retoques de puntuación en la ficha del mi
 
 - No se observó la prueba en rojo antes de implementarla: el archivo y la prueba se escribieron a la vez.
 - `conditions.json` todavía no se muestra en pantalla (fase 9).
+
+## Fase 8 — Clasificador (2026-10-10)
+
+**Estado: NO CERRADA.** Su criterio es "pruebas de la fase 11 en verde" y una prueba instrumentada falla (paridad nivel 1). Se necesita una decisión del humano.
+
+### Qué se hizo
+
+- `ml/ClassifierLogic.kt`: `Prediction`, `ClassificationResult`, selección del top-3, regla de umbral y lectura de `threshold.json`, sin dependencias de Android para poder probarlo en la JVM.
+- `ml/CoffeeLeafClassifier.kt`: según el plan (una instancia, llamadas sincronizadas, `classify(bitmap)` y `classifyRgbBytes`). Carga el modelo con `assets.openFd` + `FileChannel.map` y falla con un mensaje claro si el número de salidas no coincide con `labels.txt`. La app no normaliza la imagen.
+- `ml/ImageUtils.kt`: decodificación con muestreo previo, rotación EXIF, rotación de fotos de CameraX y conversión a `ARGB_8888`.
+- Pruebas unitarias (`ClassifierLogicTest`) e instrumentadas (`CoffeeLeafClassifierTest`).
+
+### Qué se comprobó
+
+- **Unitarias: 8 de 8 en verde** (top-3, umbral, `threshold.json`, `labels.txt` ↔ `conditions.json`, muestreo).
+- **Instrumentadas en el emulador** (`sdk_gphone64_x86_64`, Android 17, x86_64): 3 de 4 en verde.
+  - `labels.size` = nº de salidas del modelo: pasa.
+  - **Nivel 2, flujo completo con los `.jpg`: 10 de 10 clases coinciden** (se exige ≥ 9). Se compara contra la clase que predice TFLite en Python, porque es una prueba de paridad.
+  - Latencia en el emulador (4 hilos, 5 de calentamiento + 50 medidas): mediana 14.0 ms, p95 16 ms. Es un emulador en un PC, no un teléfono.
+  - **Nivel 1, modelo aislado con los `.rgb`: FALLA.** La clase coincide en las 10 imágenes, pero la diferencia máxima de probabilidad supera 0.01 en 2 de ellas: `03` (0.0138) y `07` (0.0152). En las otras 8 es ≤ 0.0017.
+- Un error propio corregido por el camino: `ImageUtils.decodeUpright` devolvía siempre `null` (trataba como fallo el `null` que el decodificador devuelve a propósito al leer solo las dimensiones).
+
+### Diagnóstico del fallo de nivel 1
+
+Se hizo una prueba de diagnóstico temporal (ya borrada) en el emulador y en Python local:
+
+- Con el modelo **fp32**, Android y Python coinciden con diferencia < 0.0001 en las 10 imágenes. El preprocesado, el contrato de la sección 4 y la ruta de inferencia de la app están bien.
+- Con el modelo **cuantizado**, el resultado depende de qué implementación de los núcleos ejecuta la CPU:
+  - Python en Colab, Python local con TensorFlow 2.21.0 y Python local con LiteRT 2.3.0 dan exactamente lo mismo (diferencia 0.0000).
+  - Python local **sin** XNNPack difiere hasta 0.0344, y Android sin XNNPack da esas mismas diferencias (0.0344 y 0.0240).
+  - Android con XNNPack difiere 0.0138 y 0.0152. La CPU del emulador expone AVX pero no AVX2, así que usa otros núcleos que el PC.
+- Conclusión: la cuantización de rango dinámico no es numéricamente idéntica entre CPUs. Las dos imágenes afectadas son las de menor confianza (0.744 y 0.761), donde un cambio pequeño en los valores internos mueve más la probabilidad. En un teléfono ARM cabe esperar otra diferencia distinta.
+
+### Pendiente de decisión del humano
+
+El plan pide a la vez modelo cuantizado de rango dinámico (fase 4) y diferencia < 0.01 en el nivel 1 (fase 11); con este modelo y este emulador no se cumplen las dos cosas. No se ha relajado la tolerancia ni cambiado el modelo.
+
+### NO EJECUTADO
+
+- Pruebas en dispositivo físico ARM.
