@@ -28,7 +28,7 @@ Strategy `ask-on-risk`. Forecast exceeds 400 authored lines (ML scripts plus And
 - [x] T4 Phase 4 TFLite conversion (`ml/04_convertir_tflite.py`) — run on Colab T4 via google-colab-cli; acceptance observed from ml/outputs
 - [x] T5 Phase 5 parity and golden vectors (`ml/05_paridad_tflite.py`) — run on Colab T4 via google-colab-cli; acceptance observed from ml/outputs
 - [x] T6 Phase 6 Android project base — route: inline; `assembleDebug` builds, app opens on the API 37 emulator, no INTERNET permission
-- [ ] T7 Phase 7 `conditions.json` — needs the report text (sections 1.1, 1.2)
+- [x] T7 Phase 7 `conditions.json` — route: inline; texts copied from the report in docs/, unit test green
 - [ ] T8 Phase 8 classifier
 - [ ] T9 Phase 9 UI — needs device or emulator
 - [ ] T10 Phase 10 performance and robustness
@@ -48,8 +48,7 @@ Strategy `ask-on-risk`. Forecast exceeds 400 authored lines (ML scripts plus And
 
 - GPU works only with the venv `nvidia/*/lib` folders on `LD_LIBRARY_PATH` (the Makefile exports it).
 - LiteRT 2.3.0 pulls extra manifest permissions (network state, wake lock, boot, foreground service); review in phase 10.
-- The project report (source for phase 7 texts) is not in the repository.
 
 ## Next step
 
-T7: `conditions.json`. Blocked: the project report (sections 1.1, 1.2) is not in the repository. Open questions for the human: version golden images in git; SANAS_ROCOLE exclusion.
+T8: classifier and ImageUtils, then T9 UI using docs/maqueta-v0 as visual reference. Open questions for the human: version golden images in git; SANAS_ROCOLE exclusion.

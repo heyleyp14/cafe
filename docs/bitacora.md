@@ -244,3 +244,30 @@ LiteRT 2.3.0 arrastra dependencias (`play:asset-delivery`, `work-runtime`, `medi
 
 - `conditions.json` todavía no está en `assets/` (es la fase 7 y necesita el texto del informe).
 - Prueba en teléfono físico (fase 12).
+
+## Fase 7 — Contenido informativo (2026-10-10)
+
+**Estado: CERRADA.** Criterio de aceptación cumplido: cada línea de `labels.txt` tiene entrada en `conditions.json` (prueba unitaria en verde).
+
+### Qué se hizo
+
+- `android/app/src/main/assets/conditions.json` con una ficha por clase. Fuente: el informe aportado por el humano (`docs/Protocolo de entrega del Documento final de Proyecto_cursos 2026_2 (1).docx`).
+  - `sintomas` de minador y roya: texto de las secciones 1.2.1.2 y 1.2.2.1 (sin el prefijo "Descripción:").
+  - `condiciones` de minador y roya: las frases sobre condiciones favorables de las secciones 1.1.1.2 y 1.1.2.1.
+  - `sana`: el texto que da el propio plan.
+- `data/ConditionsRepository.kt`, que lo carga con `kotlinx.serialization`.
+- Prueba unitaria `ConditionsTest` (`labels.txt` ↔ `conditions.json`).
+
+### Qué se comprobó
+
+- `./gradlew testDebugUnitTest assembleDebug`: compila y la prueba pasa (1 prueba, 0 fallos).
+- No se incluyó ninguna recomendación de manejo.
+
+### Fidelidad al informe
+
+Los textos son copia literal, con dos retoques de puntuación en la ficha del minador: se quitó un espacio doble y se añadió el punto que faltaba entre "los niveles de la plaga" y "Si la temperatura". **No se corrigió la redacción.** La frase de la roya conserva su forma original ("la humedad relativamente superior al 70%", "condiciones que prolonga la permanencia de la humedad y favorecer el desarrollo"), que tiene errores de concordancia; conviene corregirla primero en el informe y luego aquí.
+
+### NO EJECUTADO / pendiente
+
+- No se observó la prueba en rojo antes de implementarla: el archivo y la prueba se escribieron a la vez.
+- `conditions.json` todavía no se muestra en pantalla (fase 9).

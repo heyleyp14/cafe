@@ -1,0 +1,17 @@
+{
+  "minador": {
+    "nombre": "Minador de las hojas del cafeto",
+    "sintomas": "Hojas que presentan galerías o minas visibles en su interior, producidas por la alimentación de las larvas. Estas zonas pueden adquirir una coloración clara o café y, cuando varias minas se unen, forman áreas extensas de necrosis sobre la hoja.",
+    "condiciones": "La dinámica de la infestación del minador de la hoja del café está influenciada por factores climáticos como la temperatura, la precipitación, la altitud, la humedad relativa y la edad del cultivo, aunque ataca cultivos de todas las edades, tiene preferencia por aquellos menores de 18 meses. La temperatura es la que tiene mayor influencia en el aumento de la población del minador. Por lo tanto, el aumento de temperatura incrementa los niveles de la plaga. Si la temperatura promedio es de 18°C es posible obtener seis generaciones al año, mientras que con 22°C se obtienen diez generaciones."
+  },
+  "roya": {
+    "nombre": "Roya del café",
+    "sintomas": "Hojas con manchas amarillentas en la parte superior y presencia de pústulas pulverulentas de color naranja en el envés. Estas estructuras pueden darle a la superficie inferior de la hoja una apariencia anaranjada característica de la enfermedad.",
+    "condiciones": "Las condiciones que favorecen el desarrollo de la enfermedad son la humedad relativamente superior al 70% y temperaturas entre 18 °C y 24 °C. Asimismo, la alta densidad de plantas, el exceso de sombra y la poca circulación de aire, condiciones que prolonga la permanencia de la humedad y favorecer el desarrollo de la enfermedad."
+  },
+  "sana": {
+    "nombre": "Hoja sana",
+    "sintomas": "No se observan signos de plagas o enfermedades.",
+    "condiciones": ""
+  }
+}
