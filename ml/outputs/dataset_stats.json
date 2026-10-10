@@ -16,12 +16,11 @@
   },
   "loaded_after_label_rules": {
     "rocole": 1393,
-    "decafia": 1647
+    "decafia": 1889
   },
   "discarded_by_rule": {
     "decafia_derived_from_rocole": 454,
-    "decafia_lesion_crop": 398,
-    "decafia_not_v1:coco": 270,
+    "decafia_not_v1:coco": 426,
     "rocole_not_v1:red_spider_mite": 167
   },
   "duplicates": {
@@ -29,38 +28,38 @@
     "related_max_distance": 52,
     "duplicates_across_datasets": 61,
     "duplicates_conflicting_labels": 11,
-    "duplicates_removed": 510
+    "duplicates_removed": 535
   },
-  "final_images": 2519,
+  "final_images": 2736,
   "counts": {
     "train": {
-      "minador": 185,
-      "roya": 559,
+      "minador": 260,
+      "roya": 636,
       "sana": 1019
     },
     "val": {
-      "minador": 40,
-      "roya": 120,
+      "minador": 56,
+      "roya": 136,
       "sana": 219
     },
     "test": {
-      "minador": 39,
-      "roya": 120,
+      "minador": 56,
+      "roya": 136,
       "sana": 218
     }
   },
   "per_class_total": {
-    "minador": 264,
-    "roya": 799,
+    "minador": 372,
+    "roya": 908,
     "sana": 1456
   },
   "per_class_by_source": {
     "minador": {
-      "decafia": 264
+      "decafia": 372
     },
     "roya": {
       "rocole": 568,
-      "decafia": 231
+      "decafia": 340
     },
     "sana": {
       "rocole": 745,
@@ -69,14 +68,14 @@
   },
   "split_fractions_actual": {
     "minador": {
-      "train": 0.7008,
-      "val": 0.1515,
-      "test": 0.1477
+      "train": 0.6989,
+      "val": 0.1505,
+      "test": 0.1505
     },
     "roya": {
-      "train": 0.6996,
-      "val": 0.1502,
-      "test": 0.1502
+      "train": 0.7004,
+      "val": 0.1498,
+      "test": 0.1498
     },
     "sana": {
       "train": 0.6999,
@@ -84,9 +83,9 @@
       "test": 0.1497
     }
   },
-  "imbalance_ratio_train": 5.508,
+  "imbalance_ratio_train": 3.919,
   "groups": {
-    "count": 1465,
+    "count": 1680,
     "largest": 74
   },
   "leakage_check": {

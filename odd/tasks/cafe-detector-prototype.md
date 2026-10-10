@@ -40,7 +40,7 @@ Strategy `ask-on-risk`. Forecast exceeds 400 authored lines (ML scripts plus And
 - T0: tool check and license verification recorded in `docs/bitacora.md` and `docs/decisiones.md` (2026-10-10).
 - T0: commit `a514810` on `feat/phase-0-setup`. RDD off (global), so no native review; assessed tier not applicable.
 
-- T1: `ml/outputs/dataset_stats.json` — 2519 images, leakage check 0/0/0, train minimum 185, imbalance 5.508.
+- T1: `ml/outputs/dataset_stats.json` — 2736 images, leakage check 0/0/0, train minimum 260, imbalance 3.919 (crop exclusion reverted on human instruction).
 
 ## Known gaps
 
@@ -50,4 +50,4 @@ Strategy `ask-on-risk`. Forecast exceeds 400 authored lines (ML scripts plus And
 
 ## Next step
 
-T2: write `ml/02_entrenar.py` (use `class_weight`, GPU through `make train`).
+T2: write `ml/02_entrenar.py` and a Colab notebook; training and reported numbers come from Colab/Kaggle per plan section 2.

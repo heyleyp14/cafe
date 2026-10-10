@@ -32,9 +32,6 @@ DECAFIA_NAMES = {0: "roya", 1: "coco", 2: "hojas", 3: "minador"}
 # SANAS_ROCOLE_* are declared by DECAFIA as re-annotated RoCoLe images; the
 # originals are already loaded from RoCoLe with their plant grouping.
 DECAFIA_DERIVED_PREFIXES = ("SANAS_ROCOLE",)
-# *_RECORTE(S)_* are lesion close-ups, not whole leaves: they do not match the
-# app input (one whole leaf) and may be crops of photos present in another split.
-DECAFIA_CROP_PREFIXES = ("COCO_RECORTE", "MINADO_RECORTES", "ROYA_RECORTES")
 
 # 256-bit dHash, compared over the 8 rotations/mirrors of each image. Thresholds
 # were chosen by looking at sampled pairs per distance (docs/decisiones.md).
@@ -84,9 +81,6 @@ def load_decafia():
         prefix = re.match(r"[A-Za-z_]+", image.stem).group(0).rstrip("_")
         if prefix in DECAFIA_DERIVED_PREFIXES:
             discarded["decafia_derived_from_rocole"] += 1
-            continue
-        if prefix in DECAFIA_CROP_PREFIXES:
-            discarded["decafia_lesion_crop"] += 1
             continue
         label, reason = decafia_label(DECAFIA_DIR / "labels" / image.parent.name / f"{image.stem}.txt")
         if label is None:

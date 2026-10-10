@@ -44,8 +44,8 @@ Formato: fecha, decisión, motivo. Las marcadas **DECISIÓN** en el plan usan el
 
 - **Decisión:** se excluyen las imágenes `SANAS_ROCOLE_*` (454).
 - **Motivo:** DECAFIA las declara derivadas de RoCoLe. Solo una parte se detecta por hash (están rotadas, reflejadas o reescaladas), así que conservarlas dejaría la misma hoja en particiones distintas. Los originales ya entran por RoCoLe, con su identificador de planta.
-- **Decisión:** se excluyen los recortes `COCO_RECORTE_*`, `MINADO_RECORTES_*` y `ROYA_RECORTES_*` (398).
-- **Motivo:** son acercamientos de la lesión, no hojas completas. No corresponden a la entrada de la app (una hoja completa) y podrían ser recortes de fotos presentes en otra partición, algo que un hash no detecta. **Es una decisión propia, no del plan, y es reversible** (constante `DECAFIA_CROP_PREFIXES` en `ml/01_preparar_datos.py`). Costo: menos imágenes de `minador` y `roya`.
+- **Decisión REVERTIDA el 2026-10-10 por instrucción del humano (ceñirse al plan):** se habían excluido los recortes `COCO_RECORTE_*`, `MINADO_RECORTES_*` y `ROYA_RECORTES_*`. Ya no se excluyen; pasan por la regla de clase dominante como cualquier otra imagen.
+- **Motivo:** son acercamientos de la lesión, no hojas completas. No corresponden a la entrada de la app (una hoja completa) y podrían ser recortes de fotos presentes en otra partición, algo que un hash no detecta. Ese riesgo queda anotado como limitación en la bitácora.
 
 ## 2026-10-10 — Fase 1: duplicados y agrupación
 
@@ -55,3 +55,13 @@ Formato: fecha, decisión, motivo. Las marcadas **DECISIÓN** en el plan usan el
 - **Motivo:** los umbrales se eligieron mirando pares de muestra por distancia. Hasta ~45 los pares eran la misma foto (a menudo rotada); a partir de ~53 eran hojas distintas sobre fondo blanco o tomas distintas de una misma hoja, que el hash no puede unir (limitación anotada en la bitácora). Un primer intento con dHash de 64 bits daba falsos duplicados y se desechó.
 - **Decisión:** las fotos de RoCoLe de la misma planta (`C<cultivo>P<planta>` en el nombre) van juntas a una sola partición.
 - **Decisión:** se ignora la partición original de DECAFIA y se divide de nuevo 70/15/15 con semilla 42, estratificado por clase y respetando los grupos.
+
+## 2026-10-10 — Entorno de entrenamiento
+
+- **Decisión:** el entrenamiento y las cifras del informe se obtienen en Google Colab o Kaggle con GPU, como indica la sección 2 del plan.
+- **Motivo:** instrucción del humano de ceñirse totalmente al plan. Se había preparado la GPU local (RTX 4050) sin que el plan lo pidiera; queda solo para pruebas de humo de los scripts.
+
+## 2026-10-10 — Desviación pendiente de confirmar: `SANAS_ROCOLE_*`
+
+- **Estado:** se mantiene la exclusión de las 454 imágenes `SANAS_ROCOLE_*` de DECAFIA, que el plan no menciona de forma literal.
+- **Motivo:** el plan exige que ninguna imagen esté en dos particiones y que las fotos de una misma planta vayan juntas. Estas imágenes son copias transformadas de RoCoLe que el hash solo detecta en parte, así que incluirlas rompería ese criterio. Si el humano prefiere la lectura literal, se quita la constante `DECAFIA_DERIVED_PREFIXES`.

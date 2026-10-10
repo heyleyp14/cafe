@@ -75,7 +75,7 @@ Las entradas "NO EJECUTADO" de arriba sobre instalación y conversión quedan re
 
 - **DECAFIA trae 2769 imágenes, no las 2786 que anuncia** su descripción (su propia partición suma 1934 + 549 + 286 = 2769).
 - "coco" = defoliación por gorgojos; no se usa.
-- Hay muchas copias: 510 duplicados eliminados (61 de ellos entre los dos datasets) y 11 imágenes descartadas por ser copias con etiquetas contradictorias. `SANAS_NUEVAS_*` contiene copias rotadas de `SANAS_SOCORRO_*`, y RoCoLe repite fotos bajo identificadores de planta distintos.
+- Hay muchas copias: 535 duplicados eliminados (61 de ellos entre los dos datasets) y 11 imágenes descartadas por ser copias con etiquetas contradictorias. `SANAS_NUEVAS_*` contiene copias rotadas de `SANAS_SOCORRO_*`, y RoCoLe repite fotos bajo identificadores de planta distintos.
 - Algunas imágenes `ROYA_*` de DECAFIA son copias de RoCoLe, aunque su documentación dice que solo reutilizó hojas sanas.
 
 ### Descartes (por regla)
@@ -83,27 +83,26 @@ Las entradas "NO EJECUTADO" de arriba sobre instalación y conversión quedan re
 | Regla | Imágenes |
 |---|---|
 | DECAFIA `SANAS_ROCOLE_*` (derivadas de RoCoLe) | 454 |
-| DECAFIA recortes de lesión | 398 |
-| DECAFIA con clase dominante `coco` | 270 |
+| DECAFIA con clase dominante `coco` | 426 |
 | RoCoLe arañita roja | 167 |
-| Duplicados eliminados | 510 |
+| Duplicados eliminados | 535 |
 | Copias con etiquetas contradictorias | 11 |
 | Empates de clase dominante | 0 |
 
-### Resultado: 2519 imágenes
+### Resultado: 2736 imágenes
 
 | Clase | train | val | test | Total | Origen |
 |---|---|---|---|---|---|
-| minador | 185 | 40 | 39 | 264 | DECAFIA 264 |
-| roya | 559 | 120 | 120 | 799 | RoCoLe 568, DECAFIA 231 |
+| minador | 260 | 56 | 56 | 372 | DECAFIA 372 |
+| roya | 636 | 136 | 136 | 908 | RoCoLe 568, DECAFIA 340 |
 | sana | 1019 | 219 | 218 | 1456 | RoCoLe 745, DECAFIA 711 |
 
 ### Qué se comprobó (criterios de aceptación)
 
 - **Ninguna imagen en dos particiones:** 0 coincidencias por MD5, 0 pares con distancia perceptual ≤ 52 entre particiones y 0 grupos repartidos. Verificado además con un cálculo independiente sobre los archivos ya copiados: la distancia mínima entre particiones es 53.
-- **≥ 100 imágenes de entrenamiento por clase:** sí; la menor es `minador` con 185.
-- **Desbalance reportado:** razón clase mayor/menor en train = 5.508 (`sana`/`minador`). La fase 2 debe usar `class_weight`.
-- Fracciones reales por clase: entre 0.6996 y 0.7008 en train; entre 0.1477 y 0.1515 en val y test.
+- **≥ 100 imágenes de entrenamiento por clase:** sí; la menor es `minador` con 260.
+- **Desbalance reportado:** razón clase mayor/menor en train = 3.919 (`sana`/`minador`). La fase 2 debe usar `class_weight`.
+- Fracciones reales por clase: entre 0.6989 y 0.7004 en train; entre 0.1497 y 0.1505 en val y test.
 
 ### Revisión manual de etiquetas (20 imágenes por clase)
 
@@ -116,10 +115,19 @@ Hecha por el agente mirando miniaturas, **no por una persona experta en café**:
 ### Limitaciones que hay que llevar al informe
 
 - **Sesgo de fondo en `minador`:** 19 de las 20 imágenes revisadas son hojas sobre fondo blanco o de laboratorio, mientras que casi todas las de `sana` son fotos de campo. El modelo puede aprender "fondo blanco = minador". Hay que comprobarlo en la fase 12 con fotos reales.
-- **`minador` es pequeña** (39 imágenes de test): sus métricas tendrán intervalos amplios.
+- **`minador` es pequeña** (56 imágenes de test): sus métricas tendrán intervalos amplios.
 - **Fuga residual no eliminada en `sana`:** DECAFIA contiene varias tomas distintas de una misma hoja (otra posición, otro encuadre) y no trae metadatos para agruparlas. El hash no las une porque no son la misma foto. Entre las series `SANAS_NUEVAS_*` y `SANAS_SOCORRO_*` quedan 26 pares en particiones distintas con distancia 53–64; al mirarlos, varios son la misma hoja fotografiada dos veces. Puede inflar un poco las métricas de `sana` en test. En `minador` y `roya` los pares revisados con distancia > 52 eran hojas distintas sobre fondo blanco.
 - Dominio: RoCoLe es Robusta (Ecuador) y las imágenes `MINEIRO_*` son de Brasil.
 
+### Corrección por instrucción del humano (2026-10-10)
+
+El humano indicó ceñirse totalmente al plan. Cambios:
+
+- **Se revirtió la exclusión de recortes de lesión** (`*_RECORTE(S)_*`), que era una regla propia y no del plan. Las cifras de esta sección ya son las de la ejecución sin esa exclusión. La revisión manual y el recuento independiente de arriba se hicieron con la versión anterior (2519 imágenes); la comprobación de fugas integrada en el script se repitió y sigue en 0/0/0.
+- **Riesgo que se asume al incluirlos:** un recorte puede provenir de una foto que quedó en otra partición, y un hash no lo detecta. Además son acercamientos, distintos de la hoja completa que recibirá la app.
+- **El entrenamiento (fase 2) se hará en Google Colab o Kaggle**, como indica el plan. La GPU local queda solo para pruebas de humo de los scripts; ninguna cifra del informe saldrá de ella.
+
 ### NO EJECUTADO
 
+- Revisión manual de una muestra de los recortes reincorporados.
 - Revisión de etiquetas por una persona experta. Las hojas de contacto están en `ml/data/review/` para quien quiera hacerla.
