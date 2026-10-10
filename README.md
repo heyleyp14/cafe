@@ -11,6 +11,7 @@ Proyecto "Sistema de Detección Temprana de Plagas y Enfermedades en Cultivos de
 | `docs/resultados.md` | Métricas, umbral, paridad, latencia y limitaciones (generado, no editar) |
 | `docs/bitacora.md` | Qué se hizo, qué se comprobó y qué no se ejecutó en cada fase |
 | `docs/decisiones.md` | Decisiones tomadas y su motivo |
+| `docs/MANUAL_WINDOWS.md` | Instalación paso a paso en Windows (sin probar en Windows) |
 
 ## Requisitos
 
