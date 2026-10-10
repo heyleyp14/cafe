@@ -208,10 +208,12 @@ Solo si cambias los datos o el entrenamiento. Necesitas una cuenta de Google.
 Desde la raíz del proyecto, con el entorno de la ruta B:
 
 ```powershell
-ml\.venv\Scripts\python.exe -m zipfile -c cafe_ml_bundle.zip ml/config.py ml/requirements.txt ml/01_preparar_datos.py ml/02_entrenar.py ml/03_evaluar.py ml/04_convertir_tflite.py ml/05_paridad_tflite.py ml/colab_run.py
+cd ml
+.\.venv\Scripts\python.exe crear_bundle.py
+cd ..
 ```
 
-Usa las barras `/` tal como están: Colab es Linux y necesita esas rutas dentro del zip.
+El archivo `cafe_ml_bundle.zip` queda en la raíz del proyecto.
 
 ### C2. Ejecutar el cuaderno
 
