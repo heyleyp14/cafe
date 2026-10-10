@@ -1,0 +1,12 @@
+# ESTADO: versiones comprobadas en PyPI el 2026-10-10, pero la instalación y la
+# conversión TFLite están SIN VERIFICAR (falta un intérprete Python 3.10-3.13;
+# ver docs/bitacora.md, fase 0). No dar por fijadas hasta completar esa prueba.
+#
+# tensorflow 2.21.0 solo publica wheels cp310-cp313 (no hay cp314).
+tensorflow==2.21.0
+# numpy, scikit-learn, matplotlib y Pillow se fijarán con `pip freeze` tras la
+# primera instalación verificada; sus últimas versiones exigen Python >= 3.11/3.12.
+numpy
+scikit-learn
+matplotlib
+Pillow

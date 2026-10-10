@@ -1,0 +1,18 @@
+# Datasets and heavy training artifacts never go to git (plan section 3)
+ml/data/
+*.keras
+
+# Build outputs
+build/
+.gradle/
+local.properties
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# IDE
+.idea/
+*.iml
+.codegraph/
