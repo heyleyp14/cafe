@@ -53,6 +53,28 @@ def phone_section():
     ]
 
 
+def external_section():
+    external = load("external_bracol/metrics.json")
+    if not external:
+        return []
+    high = external["confidence_ge_0.9"]
+    return [
+        "## Validación externa (dataset que no se usó para entrenar)",
+        f"Dataset: {external['dataset']}. Clasificado en el teléfono ({external['device']}) con el mismo "
+        f"proceso de la app. Imágenes: {external['images']}.",
+        f"Exactitud: {external['accuracy']}. **F1 macro: {external['f1_macro']}**.",
+        table(["Clase", "Precisión", "Recall", "F1", "Imágenes"],
+              [[c, m["precision"], m["recall"], m["f1"], m["support"]] for c, m in external["per_class"].items()]),
+        "Filas: clase real. Columnas: predicción.",
+        table(["", *CLASSES], [[c, *row] for c, row in zip(CLASSES, external["confusion_matrix"]["values"])]),
+        f"Imágenes por debajo del umbral ({external['below_threshold']['threshold']}): "
+        f"{external['below_threshold']['images']}. Con confianza ≥ 0.9: {high['images']} imágenes, exactitud "
+        f"{high['accuracy']}; errores con confianza ≥ 0.9: {external['wrong_with_confidence_ge_0.9']}.",
+        "No son fotos de campo tomadas por el equipo: son hojas de café arábica fotografiadas sobre fondo "
+        "blanco en Brasil, con la etiqueta de estrés predominante que da el propio dataset.",
+    ]
+
+
 def main():
     stats, history, metrics = load("dataset_stats.json"), load("history.json"), load("metrics.json")
     parity, model_io = load("parity.json"), load("model_io.json")
@@ -115,12 +137,14 @@ def main():
             f"{k.split('_')[1]} hilos, mediana {v['median_ms']} ms y p95 {v['p95_ms']} ms"
             for k, v in threads.items() if k.startswith("threads_")) + ".",
         *phone_section(),
+        *external_section(),
         "## Resultados en campo",
         field_section(),
         "## Limitaciones",
         "\n".join("- " + line for line in [
-            "Las métricas se midieron con imágenes de los mismos datasets usados para entrenar (RoCoLe y DECAFIA); "
-            "no miden el rendimiento con fotos nuevas.",
+            "Las métricas de test se midieron con imágenes de los mismos datasets usados para entrenar (RoCoLe y "
+            "DECAFIA). En un dataset externo la exactitud baja de forma marcada (ver la validación externa): las "
+            "cifras de test no predicen el rendimiento con fotos nuevas.",
             "Posible fuga entre particiones que el hash no detecta: recortes de lesión que pueden provenir de fotos "
             "de otra partición y varias tomas de una misma hoja en la clase sana. Tiende a inflar las métricas.",
             "Casi todas las imágenes de minador son hojas sobre fondo blanco y casi todas las sanas son de campo: "

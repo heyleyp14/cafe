@@ -100,13 +100,37 @@ Dispositivo: motorola motorola edge 30, Android 14, arm64-v8a.
 
 - Comparación de hilos: 2 hilos, mediana 21.0 ms y p95 23 ms; 4 hilos, mediana 21.0 ms y p95 22 ms.
 
+## Validación externa (dataset que no se usó para entrenar)
+
+Dataset: BRACOL (Mendeley yy2k5y8mxg v1, CC BY 4.0), leaf subset, predominant_stress 0/1/2. Clasificado en el teléfono (motorola edge 30, Android 14) con el mismo proceso de la app. Imágenes: 860.
+
+Exactitud: 0.6872. **F1 macro: 0.626**.
+
+| Clase | Precisión | Recall | F1 | Imágenes |
+|---|---|---|---|---|
+| minador | 0.6807 | 0.4466 | 0.5394 | 253 |
+| roya | 0.6748 | 0.8925 | 0.7685 | 465 |
+| sana | 0.7975 | 0.4437 | 0.5701 | 142 |
+
+Filas: clase real. Columnas: predicción.
+
+|  | minador | roya | sana |
+|---|---|---|---|
+| minador | 113 | 132 | 8 |
+| roya | 42 | 415 | 8 |
+| sana | 11 | 68 | 63 |
+
+Imágenes por debajo del umbral (0.4): 1. Con confianza ≥ 0.9: 351 imágenes, exactitud 0.8604; errores con confianza ≥ 0.9: 49.
+
+No son fotos de campo tomadas por el equipo: son hojas de café arábica fotografiadas sobre fondo blanco en Brasil, con la etiqueta de estrés predominante que da el propio dataset.
+
 ## Resultados en campo
 
 NO EJECUTADO. Falta instalar el APK en un teléfono y probar con fotos reales tomadas por el humano (fase 12). Registrar los casos en `docs/campo.csv` y volver a ejecutar `make results`.
 
 ## Limitaciones
 
-- Las métricas se midieron con imágenes de los mismos datasets usados para entrenar (RoCoLe y DECAFIA); no miden el rendimiento con fotos nuevas.
+- Las métricas de test se midieron con imágenes de los mismos datasets usados para entrenar (RoCoLe y DECAFIA). En un dataset externo la exactitud baja de forma marcada (ver la validación externa): las cifras de test no predicen el rendimiento con fotos nuevas.
 - Posible fuga entre particiones que el hash no detecta: recortes de lesión que pueden provenir de fotos de otra partición y varias tomas de una misma hoja en la clase sana. Tiende a inflar las métricas.
 - Casi todas las imágenes de minador son hojas sobre fondo blanco y casi todas las sanas son de campo: el modelo puede apoyarse en el fondo.
 - El modelo solo conoce hojas. Una imagen que no es una hoja recibe igualmente una clase con confianza alta; en el emulador, una sala se clasificó como hoja sana.

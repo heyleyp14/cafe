@@ -94,3 +94,12 @@ Formato: fecha, decisión, motivo. Las marcadas **DECISIÓN** en el plan usan el
 - **Motivo:** en el emulador la comparación 2 vs 4 hilos no es concluyente (ver bitácora); se decide con un teléfono real en la fase 12.
 - **Decisión:** no se adopta el delegado GPU.
 - **Motivo:** el plan lo marca como opcional y no se probó.
+
+## 2026-10-10 — Validación externa con BRACOL (a petición del humano)
+
+- **Decisión:** se añade una prueba con un dataset externo descargado de internet, **BRACOL** (Krohling, Esgario y Ventura; Mendeley Data `10.17632/yy2k5y8mxg.1`, CC BY 4.0).
+- **Motivo:** el humano pidió no tomar él las fotos y usar imágenes de internet. Se eligió un dataset con etiquetas de sus autores en lugar de imágenes sueltas de la web, cuyas etiquetas no se pueden verificar.
+- **Qué NO es:** no sustituye el paso 2 de la fase 12 (fotos reales tomadas por el humano en condiciones de campo), que sigue sin ejecutarse.
+- **Reglas aplicadas:** subconjunto `leaf`; `predominant_stress` 0 → `sana`, 1 → `minador`, 2 → `roya`. Se excluyen 3 (phoma), 4 (cercospora) y 5 (sin documentar en el CSV), que no son clases de la v1. La codificación 1 y 2 se comprobó contra las columnas `miner` y `rust` del propio CSV.
+- **Independencia:** ninguna imagen coincide por MD5 con los datos de entrenamiento; las más parecidas por hash perceptual (distancia ≥ 40) se revisaron a la vista y son hojas distintas.
+- **Limitación del archivo:** el zip publicado está truncado en origen (el tamaño y el SHA-256 descargados coinciden con los que declara Mendeley, pero le falta el final). Se recuperaron 1402 de las 1747 imágenes; de las tres clases usadas quedaron 860.

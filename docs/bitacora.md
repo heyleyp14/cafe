@@ -482,3 +482,46 @@ La cámara del emulador muestra una sala virtual (un mueble y un televisor), no 
 
 - Paso 2: fotos reales tomadas por el humano y exactitud en campo.
 - Recorrido manual de la interfaz en el teléfono por parte del agente (solo se comprobó que abre).
+
+## Fase 12 — Validación externa con BRACOL (2026-10-10)
+
+**Estado: la fase sigue SIN CERRAR.** El paso 2 del plan (fotos reales tomadas por el humano) no se ha hecho; esto es una prueba adicional pedida por el humano.
+
+### Qué se hizo
+
+- Descarga de BRACOL (café arábica, Brasil, CC BY 4.0) a `ml/data/external/` (fuera de git).
+- `BatchClassificationTest`: prueba instrumentada que pasa todas las fotos de una carpeta por el mismo camino de la app (`decodeUpright` + `classify`) y escribe un CSV. Sirve también para las fotos del humano.
+- Las 860 imágenes se clasificaron **en el teléfono** (Motorola Edge 30) en 31 s. Predicciones en `ml/outputs/external_bracol/predicciones_telefono.csv`; métricas en `metrics.json` de la misma carpeta. Las imágenes se borraron del teléfono al terminar.
+
+### Resultado
+
+| | Test interno (fase 3) | BRACOL externo |
+|---|---|---|
+| Imágenes | 410 | 860 |
+| Exactitud | 0.9561 | **0.6872** |
+| F1 macro | 0.9587 | **0.6260** |
+
+| Clase | Precisión | Recall | F1 | Imágenes |
+|---|---|---|---|---|
+| minador | 0.6807 | 0.4466 | 0.5394 | 253 |
+| roya | 0.6748 | 0.8925 | 0.7685 | 465 |
+| sana | 0.7975 | 0.4437 | 0.5701 | 142 |
+
+Matriz de confusión (filas = clase real; columnas = minador, roya, sana): `[113, 132, 8]`, `[42, 415, 8]`, `[11, 68, 63]`.
+
+### Lectura
+
+- **El modelo no generaliza a este dataset.** Fuera de los datos de entrenamiento la exactitud cae 27 puntos.
+- **Sesgo hacia `roya`:** más de la mitad de las hojas con minador (132 de 253) y casi la mitad de las sanas (68 de 142) salen como roya.
+- **Confianza mal calibrada:** 49 errores tienen confianza ≥ 0.9, y solo 1 imagen de 860 queda por debajo del umbral 0.40. El umbral no protege.
+- Es coherente con las advertencias de las fases 1 y 3 (fugas que inflan el test, sesgo de fondo, softmax sobreconfiado).
+
+### Cautelas sobre esta prueba
+
+- BRACOL son hojas sobre fondo blanco, no fotos de campo, y la etiqueta es el estrés **predominante**: una hoja puede tener además otros daños.
+- En el entrenamiento, las hojas sobre fondo blanco eran sobre todo de minador y de roya, y casi ninguna sana. No se ha comprobado cuánto del error se debe al fondo.
+- No se investigaron las causas ni se reentrenó.
+
+### NO EJECUTADO
+
+- Paso 2 de la fase 12: fotos reales tomadas por el humano (sol, sombra, fondo complicado) y exactitud en campo.
