@@ -1,7 +1,8 @@
 """Phase 5: Keras vs TFLite parity and golden vectors for the Android tests.
 
 Level 1: 100 test images through model.keras, model_fp32.tflite and model.tflite.
-Level 2: 10 test images exported to outputs/golden/ as NN.jpg, NN.rgb and golden.json.
+Level 2: 10 test images exported to outputs/golden/ as NN.jpg, NN.rgb and golden.json,
+with probabilities from the model shipped in the app (config.APP_MODEL_FILE).
 Writes outputs/parity.json (including PC latency, reference only).
 """
 import json
@@ -13,7 +14,7 @@ import time
 import numpy as np
 import tensorflow as tf
 
-from config import CLASSES, IMG_SIZE, OUTPUTS_DIR, PROCESSED_DIR, SEED
+from config import APP_MODEL_FILE, CLASSES, IMG_SIZE, OUTPUTS_DIR, PROCESSED_DIR, SEED
 
 PARITY_IMAGES = 100
 GOLDEN_PER_CLASS = {"minador": 3, "roya": 3, "sana": 4}  # 10 images, at least 2 per class
@@ -57,7 +58,7 @@ def measure_latency(model, image):
     return {"median_ms": round(float(np.median(times)), 2), "p95_ms": round(float(np.percentile(times, 95)), 2)}
 
 
-def export_golden(quantized, rng):
+def export_golden(app_model, rng):
     golden_dir = OUTPUTS_DIR / "golden"
     shutil.rmtree(golden_dir, ignore_errors=True)
     golden_dir.mkdir(parents=True)
@@ -70,7 +71,7 @@ def export_golden(quantized, rng):
             rgb = np.clip(np.rint(load_resized(path)), 0, 255).astype(np.uint8)
             (golden_dir / f"{name}.rgb").write_bytes(rgb.tobytes())  # 224*224*3 raw RGB bytes
             # Probabilities come from the .rgb bytes: exactly what Android will feed the model.
-            probabilities = quantized(rgb.astype(np.float32))
+            probabilities = app_model(rgb.astype(np.float32))
             entries.append({"file": name, "expected_class": label, "source": path.name,
                             "predicted_class": CLASSES[int(probabilities.argmax())],
                             "probs_tflite": [float(p) for p in probabilities]})
@@ -91,13 +92,15 @@ def main():
     fp32_probabilities = np.stack([fp32(image) for image in images])
     quantized_probabilities = np.stack([quantized(image) for image in images])
 
-    golden = export_golden(quantized, rng)
+    # Golden probabilities must come from the model the app ships.
+    golden = export_golden(TFLiteModel(OUTPUTS_DIR / APP_MODEL_FILE), rng)
     parity = {
         "images": PARITY_IMAGES,
         "keras_vs_fp32": compare(keras_probabilities, fp32_probabilities),
         "keras_vs_quantized": compare(keras_probabilities, quantized_probabilities),
         "fp32_vs_quantized": compare(fp32_probabilities, quantized_probabilities),
-        "golden": {"images": len(golden),
+        "golden": {"model": APP_MODEL_FILE,
+                   "images": len(golden),
                    "per_class": dict(GOLDEN_PER_CLASS),
                    "predicted_matches_expected": sum(g["predicted_class"] == g["expected_class"] for g in golden)},
         "pc_latency_reference_only": {

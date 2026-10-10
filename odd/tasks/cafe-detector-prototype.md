@@ -29,7 +29,7 @@ Strategy `ask-on-risk`. Forecast exceeds 400 authored lines (ML scripts plus And
 - [x] T5 Phase 5 parity and golden vectors (`ml/05_paridad_tflite.py`) — run on Colab T4 via google-colab-cli; acceptance observed from ml/outputs
 - [x] T6 Phase 6 Android project base — route: inline; `assembleDebug` builds, app opens on the API 37 emulator, no INTERNET permission
 - [x] T7 Phase 7 `conditions.json` — route: inline; texts copied from the report in docs/, unit test green
-- [ ] T8 Phase 8 classifier — code and tests written; unit 8/8, instrumented 3/4. BLOCKED: level-1 parity fails for 2/10 images (0.0138, 0.0152 > 0.01) with the dynamic-range model on the x86_64 emulator; fp32 matches < 0.0001. Human decision needed
+- [x] T8 Phase 8 classifier — route: inline; app ships the fp32 model (human decision); unit 8/8, instrumented 4/4 on the emulator (level 1 max diff 1.7e-6, level 2 10/10)
 - [ ] T9 Phase 9 UI — needs device or emulator
 - [ ] T10 Phase 10 performance and robustness
 - [ ] T11 Phase 11 tests — needs device or x86_64 emulator
@@ -51,4 +51,4 @@ Strategy `ask-on-risk`. Forecast exceeds 400 authored lines (ML scripts plus And
 
 ## Next step
 
-Human decides how to resolve the level-1 parity conflict (ship fp32, or keep quantized with a different tolerance). Then T9 UI using docs/maqueta-v0 as visual reference. Open questions for the human: version golden images in git; SANAS_ROCOLE exclusion.
+T9 UI in Compose using docs/maqueta-v0 as visual reference (delegated writer). Open questions for the human: version golden images in git; SANAS_ROCOLE exclusion.

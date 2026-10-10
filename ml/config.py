@@ -15,3 +15,7 @@ SPLITS = ("train", "val", "test")
 
 # Shown by the app in "Acerca de" (contract, section 4).
 MODEL_VERSION = "v1-2026-10"
+
+# Model shipped in the app as assets/model.tflite. The float32 file is used because the
+# dynamic-range one gives CPU-dependent probabilities (docs/decisiones.md, phase 8).
+APP_MODEL_FILE = "model_fp32.tflite"

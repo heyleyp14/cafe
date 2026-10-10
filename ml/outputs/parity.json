@@ -2,17 +2,18 @@
   "images": 100,
   "keras_vs_fp32": {
     "argmax_agreement": 1.0,
-    "max_abs_probability_difference": 3e-06
+    "max_abs_probability_difference": 0.002211
   },
   "keras_vs_quantized": {
     "argmax_agreement": 0.98,
-    "max_abs_probability_difference": 0.143045
+    "max_abs_probability_difference": 0.145258
   },
   "fp32_vs_quantized": {
     "argmax_agreement": 0.98,
     "max_abs_probability_difference": 0.143047
   },
   "golden": {
+    "model": "model_fp32.tflite",
     "images": 10,
     "per_class": {
       "minador": 3,
@@ -24,12 +25,12 @@
   "pc_latency_reference_only": {
     "machine": "x86_64",
     "fp32": {
-      "median_ms": 13.68,
-      "p95_ms": 15.79
+      "median_ms": 6.46,
+      "p95_ms": 6.81
     },
     "quantized": {
-      "median_ms": 29.88,
-      "p95_ms": 34.37
+      "median_ms": 9.03,
+      "p95_ms": 9.22
     }
   }
 }

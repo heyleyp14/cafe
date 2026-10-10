@@ -73,3 +73,15 @@ Formato: fecha, decisión, motivo. Las marcadas **DECISIÓN** en el plan usan el
 - **Decisión:** no se usa `litert-support`; el modelo se cargará con `assets.openFd` + `FileChannel.map`, una de las dos opciones que da el plan.
 - **Decisión:** versiones tomadas de Google Maven y Maven Central el 2026-10-10 (`android/gradle/libs.versions.toml`): AGP 9.4.1, Kotlin 2.4.21, Compose BOM 2026.09.00, CameraX 1.6.2, Lifecycle 2.11.0, Navigation 2.10.2, kotlinx-serialization-json 1.11.0, Gradle 9.8.1.
 - **Decisión:** `compileSdk` y `targetSdk` 37 (la única plataforma instalada), `minSdk` 26 como pide el plan. Se compila con JDK 21 (el plan menciona JDK 17; el JDK 21 instalado funciona con AGP 9.4.1).
+
+## 2026-10-10 — Modelo que se entrega en la app: fp32 (decisión del humano)
+
+- **Decisión:** la app lleva el modelo **sin cuantizar** (`model_fp32.tflite`, copiado a `assets/` como `model.tflite`). Lo fija `APP_MODEL_FILE` en `ml/config.py`.
+- **Motivo:** el plan pide a la vez cuantización de rango dinámico (fase 4) y diferencia de probabilidad < 0.01 entre Android y Python (fase 11). Con el modelo cuantizado esa prueba falla en 2 de 10 imágenes (0.0138 y 0.0152), porque sus resultados dependen de la CPU. El humano eligió la opción más exacta.
+- **Qué cambia respecto al plan:** la fase 4 sigue generando los dos archivos, pero el que se usa es el fp32. Costo: 8.9 MB en lugar de 2.5 MB.
+- **Consecuencia:** `probs_tflite` de `golden.json` se calcula ahora con el modelo fp32, que es el que ejecuta la app.
+
+## 2026-10-10 — Fase 11, nivel 2: contra qué se compara la clase
+
+- **Decisión:** la clase obtenida en Android con el `.jpg` se compara con la clase que predice TFLite en Python (el máximo de `probs_tflite`), no con la etiqueta real.
+- **Motivo:** el nivel 2 es una prueba de paridad del flujo completo; la exactitud frente a la etiqueta real ya se mide en la fase 3.

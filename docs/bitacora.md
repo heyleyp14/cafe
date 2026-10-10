@@ -311,3 +311,36 @@ El plan pide a la vez modelo cuantizado de rango dinámico (fase 4) y diferencia
 ### NO EJECUTADO
 
 - Pruebas en dispositivo físico ARM.
+
+## Fase 8 — Cierre (2026-10-10)
+
+**Estado: CERRADA.** Criterio cumplido: las pruebas de la fase 11 que corresponden al clasificador están en verde.
+
+### Qué cambió
+
+- Por decisión del humano, la app lleva el modelo sin cuantizar (ver `docs/decisiones.md`).
+- `ml/05_paridad_tflite.py` calcula ahora `probs_tflite` con el modelo que se entrega. Se volvió a ejecutar **en el PC local** (el plan sitúa la paridad Keras vs TFLite en el PC); no hubo entrenamiento ni evaluación nuevos.
+- Los `.rgb` regenerados son idénticos byte a byte a los de Colab y las 10 imágenes son las mismas.
+
+### Qué se comprobó
+
+- Unitarias: 8 de 8 en verde.
+- Instrumentadas en el emulador (`sdk_gphone64_x86_64`, Android 17, x86_64): **4 de 4 en verde**.
+  - Nivel 1: diferencia máxima de probabilidad 0.0000017 (límite 0.01).
+  - Nivel 2: 10 de 10 clases coinciden (se exige ≥ 9).
+  - Latencia con 4 hilos: mediana 9.0 ms, p95 12 ms. Es un emulador en un PC, no un teléfono.
+- APK de depuración: 47 379 018 bytes.
+
+### `parity.json` actualizado (ejecución local)
+
+- Keras vs fp32: 100 % de coincidencia de clase; diferencia máxima 0.0022 (en Colab fue 0.000003; aquí Keras corre en la GPU local).
+- Keras vs cuantizado: 98 % de coincidencia; diferencia máxima 0.145.
+- Latencia en el PC local, solo de referencia: fp32 mediana 6.46 ms; cuantizado 9.03 ms.
+
+### Lo que el modelo fp32 no arregla
+
+"Más exacto" significa aquí que la app da las mismas probabilidades que el modelo evaluado en la fase 3. No significa que acierte más: la imagen de referencia `03` es `roya` y el modelo fp32 también la predice como `sana` (0.578). Las métricas de la fase 3 no cambian.
+
+### NO EJECUTADO
+
+- Pruebas en dispositivo físico ARM (fase 12).
