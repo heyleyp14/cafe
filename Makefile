@@ -8,7 +8,7 @@ ifneq ($(NVIDIA_LIBS),)
 export LD_LIBRARY_PATH := $(NVIDIA_LIBS):$(LD_LIBRARY_PATH)
 endif
 
-.PHONY: data train eval tflite parity colab-bundle
+.PHONY: data train eval tflite parity results colab-bundle
 
 data:
 	cd ml && $(PYTHON) 01_preparar_datos.py
@@ -24,6 +24,9 @@ tflite:
 
 parity:
 	cd ml && $(PYTHON) 05_paridad_tflite.py
+
+results:
+	cd ml && $(PYTHON) generar_resultados.py
 
 # Code-only bundle to upload to Colab/Kaggle together with ml/colab_entrenamiento.ipynb.
 colab-bundle:
