@@ -20,3 +20,10 @@ __pycache__/
 # Colab hand-off bundles
 cafe_ml_bundle.zip
 cafe_outputs.zip
+
+# Golden test images come from the datasets: not versioned until the human decides
+# (plan phase 0 says not to redistribute images; plan phase 5 says to copy them here).
+ml/outputs/golden/*.jpg
+ml/outputs/golden/*.rgb
+android/app/src/androidTest/assets/golden/*.jpg
+android/app/src/androidTest/assets/golden/*.rgb

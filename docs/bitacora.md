@@ -154,3 +154,66 @@ El humano indicó ceñirse totalmente al plan. Cambios:
 - **Entrenamiento real (fase 2), evaluación (3), conversión (4) y paridad (5):** pendientes de ejecutar en Colab o Kaggle por el humano.
 - **El cuaderno no se ha probado en Colab ni en Kaggle** (no hay acceso desde aquí). En particular no está verificado que `tensorflow[and-cuda]==2.21.0` detecte la GPU allí; la primera celda de comprobación falla con un mensaje claro si no la ve.
 - Comparación opcional con EfficientNet-B0 y ResNet50: no implementada.
+
+## Fases 2 a 5 — Ejecución en Google Colab (2026-10-10)
+
+**Estado: fases 2, 3, 4 y 5 CERRADAS.** Todas las cifras salen de los archivos de `ml/outputs/` generados en Colab; no hay ninguna cifra de la GPU local.
+
+### Cómo se ejecutó
+
+- Google Colab, GPU **Tesla T4**, mediante la CLI oficial `google-colab-cli` 0.7.4 (sesión `cafe`, autorizada por el humano con su cuenta). La sesión se cerró al terminar.
+- El proceso desatendido `ml/colab_run.py` instaló las dependencias fijadas, comprobó la GPU, descargó los datasets y corrió las fases 1 a 5 comprobando la aceptación de cada una.
+- Versiones en Colab (de `history.json`): TensorFlow 2.21.0, Keras 3.15.1, **Python 3.13.15** (en local es 3.12.8).
+- La fase 1 se repitió en Colab y su `dataset_stats.json` es **idéntico** al obtenido en local.
+
+### Fase 2 — Entrenamiento
+
+- Hardware: Tesla T4. Tiempo de entrenamiento: 1038.2 s (unos 17 min).
+- Se ejecutaron las 15 épocas de la cabeza y las 10 de ajuste fino; `EarlyStopping` no llegó a detener ninguna etapa.
+- `class_weight`: minador 2.455, roya 1.004, sana 0.626.
+- **Aceptación:** se generan `model.keras`, `labels.txt` y `history.json`; la pérdida de validación baja de 0.671 (época 1) a 0.159 (mínimo, última época de ajuste fino).
+- **Curvas:** sin sobreajuste extremo. Al final del ajuste fino la exactitud es 0.910 en entrenamiento y 0.951 en validación (la de entrenamiento se mide con aumento de datos y dropout). La pérdida de validación oscila entre épocas (por ejemplo 0.180 → 0.228 → 0.159) y su mínimo cae en la última época, así que el modelo podría mejorar con más épocas; no se probó.
+
+### Fase 3 — Evaluación y umbral
+
+Sobre test (410 imágenes): exactitud 0.9561, **F1 macro 0.9587**.
+
+| Clase | Precisión | Recall | F1 | Imágenes |
+|---|---|---|---|---|
+| minador | 0.9649 | 0.9821 | 0.9735 | 56 |
+| roya | 0.9286 | 0.9559 | 0.9420 | 136 |
+| sana | 0.9718 | 0.9495 | 0.9606 | 218 |
+
+Matriz de confusión (filas = clase real; columnas = predicción minador, roya, sana): `[55, 1, 0]`, `[0, 130, 6]`, `[2, 9, 207]`. Los errores más frecuentes son `sana` predicha como `roya` (9) y `roya` predicha como `sana` (6).
+
+- **Umbral elegido: 0.40**, por la regla del plan (menor umbral con exactitud aceptada ≥ 0.90 en validación).
+- **Consecuencia que hay que declarar:** la exactitud en validación sin umbral ya es 0.9513, así que el menor umbral de la lista cumple la meta. Con 0.40 se acepta el 100 % de las imágenes en validación (411 de 411) y en test (410 de 410): **el umbral, tal como lo define el plan, no rechaza nada** en estos datos. La pantalla "No se pudo determinar con seguridad" casi nunca aparecería con hojas parecidas a las del dataset.
+- Referencia de la curva en validación: con 0.60 se acepta el 95.86 % con exactitud 0.9619; con 0.80, el 86.37 % con 0.9803; con 0.95, el 64.96 % con 0.9925.
+- **Aceptación:** `metrics.json`, `confusion_matrix.png` y `threshold.json` generados. Ninguna clase tiene recall bajo (el menor es 0.9495).
+
+### Fase 4 — Conversión
+
+- `model_fp32.tflite`: 8 901 272 bytes. `model.tflite` (rango dinámico): 2 531 920 bytes, unas 3.5 veces menor.
+- **Aceptación:** ambos con entrada `[1,224,224,3] float32` y salida `[1,3] float32` (`model_io.json`, `contract_ok: true`).
+
+### Fase 5 — Paridad y vectores de referencia
+
+- Nivel 1, 100 imágenes de test:
+  - Keras vs fp32: 100 % de coincidencia de clase; diferencia máxima de probabilidad 0.000003.
+  - Keras vs cuantizado: **98 %** de coincidencia; diferencia máxima de probabilidad **0.143**. Cumple lo esperado (≥ 98 %) justo en el límite: la cuantización cambia la clase en 2 de 100 imágenes.
+- Nivel 2: 10 imágenes en `ml/outputs/golden/` (3 minador, 3 roya, 4 sana) con `NN.jpg`, `NN.rgb` (150 528 bytes cada uno) y `golden.json`.
+  - El modelo cuantizado acierta la clase real en 9 de 10. La imagen `03` es `roya` y la predice como `sana` (0.744).
+- Latencia en la CPU de Colab, solo de referencia: fp32 mediana 13.68 ms (p95 15.79); cuantizado mediana 29.88 ms (p95 34.37). El cuantizado es más lento ahí; en el teléfono puede ser distinto y se mide en la fase 11.
+- **Aceptación:** `parity.json` y `golden/` generados. Copiados `model.tflite`, `labels.txt` y `threshold.json` a `android/app/src/main/assets/`, y `golden/` a `android/app/src/androidTest/assets/golden/`.
+
+### Advertencias sobre estas cifras
+
+- Las métricas son sobre imágenes de los mismos datasets. Siguen vigentes las limitaciones de la fase 1 (recortes que pueden venir de fotos de otra partición, varias tomas de una misma hoja en `sana`, fondo blanco en `minador`), que tienden a **inflar** los resultados. La exactitud en campo se mide en la fase 12.
+- Para la fase 11: el nivel 2 exige coincidencia de clase en ≥ 9 de 10. Si se compara contra la clase real, Python ya está en 9 de 10 y no queda margen; hay que definir si se compara contra la clase real o contra la que predice TFLite en Python.
+
+### NO EJECUTADO / pendiente
+
+- `ml/colab_entrenamiento.ipynb` sigue **sin probar en el navegador**; la ejecución real fue con `ml/colab_run.py`, que hace los mismos pasos.
+- Comparación opcional con EfficientNet-B0 y ResNet50.
+- Las imágenes `NN.jpg` y `NN.rgb` de `golden/` no se han subido a git: son imágenes de los datasets y el plan pide a la vez no redistribuir imágenes (fase 0) y copiarlas a `androidTest` (fase 5). Pendiente de decisión del humano.
+- Sigue sin confirmar la exclusión de `SANAS_ROCOLE_*`; si se cambia, hay que repetir las fases 1 a 5.

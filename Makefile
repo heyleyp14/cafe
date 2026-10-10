@@ -28,5 +28,5 @@ parity:
 # Code-only bundle to upload to Colab/Kaggle together with ml/colab_entrenamiento.ipynb.
 colab-bundle:
 	rm -f cafe_ml_bundle.zip
-	zip -q cafe_ml_bundle.zip ml/config.py ml/requirements.txt ml/0*.py
+	zip -q cafe_ml_bundle.zip ml/config.py ml/requirements.txt ml/0*.py ml/colab_run.py
 	@echo "cafe_ml_bundle.zip listo"

@@ -1,0 +1,112 @@
+[
+  {
+    "file": "00",
+    "expected_class": "minador",
+    "source": "decafia__MINADO_RECORTES_35.jpg",
+    "predicted_class": "minador",
+    "probs_tflite": [
+      0.9999204874038696,
+      7.060306961648166e-05,
+      8.964915650722105e-06
+    ]
+  },
+  {
+    "file": "01",
+    "expected_class": "minador",
+    "source": "decafia__MINADOR_44.jpg",
+    "predicted_class": "minador",
+    "probs_tflite": [
+      0.9993663430213928,
+      0.0006299279630184174,
+      3.7438278468471253e-06
+    ]
+  },
+  {
+    "file": "02",
+    "expected_class": "minador",
+    "source": "decafia__MINADO_RECORTES_28.jpg",
+    "predicted_class": "minador",
+    "probs_tflite": [
+      0.9999986886978149,
+      1.3508458778233035e-06,
+      2.817341204774948e-08
+    ]
+  },
+  {
+    "file": "03",
+    "expected_class": "roya",
+    "source": "decafia__ROYA_P_A_59.jpg",
+    "predicted_class": "sana",
+    "probs_tflite": [
+      1.8703012756304815e-05,
+      0.25559332966804504,
+      0.7443879246711731
+    ]
+  },
+  {
+    "file": "04",
+    "expected_class": "roya",
+    "source": "decafia__ROYA_Muy_A_15.jpg",
+    "predicted_class": "roya",
+    "probs_tflite": [
+      1.7436921552871354e-05,
+      0.9996510744094849,
+      0.0003314317436888814
+    ]
+  },
+  {
+    "file": "05",
+    "expected_class": "roya",
+    "source": "rocole__C12P30H2.jpg",
+    "predicted_class": "roya",
+    "probs_tflite": [
+      4.010072734672576e-05,
+      0.9968756437301636,
+      0.0030842325650155544
+    ]
+  },
+  {
+    "file": "06",
+    "expected_class": "sana",
+    "source": "decafia__SANAS_NUEVAS_417.jpg",
+    "predicted_class": "sana",
+    "probs_tflite": [
+      0.02023293823003769,
+      0.009628836065530777,
+      0.9701381325721741
+    ]
+  },
+  {
+    "file": "07",
+    "expected_class": "sana",
+    "source": "decafia__SANAS_NUEVAS_620.jpg",
+    "predicted_class": "sana",
+    "probs_tflite": [
+      0.0001356441789539531,
+      0.2391870766878128,
+      0.7606772780418396
+    ]
+  },
+  {
+    "file": "08",
+    "expected_class": "sana",
+    "source": "decafia__SANAS_NUEVAS_463.jpg",
+    "predicted_class": "sana",
+    "probs_tflite": [
+      0.0054806433618068695,
+      0.04838866740465164,
+      0.946130633354187
+    ]
+  },
+  {
+    "file": "09",
+    "expected_class": "sana",
+    "source": "decafia__SANAS_NUEVAS_240.jpg",
+    "predicted_class": "sana",
+    "probs_tflite": [
+      5.028484224567364e-07,
+      0.06448134034872055,
+      0.9355180859565735
+    ]
+  }
+]

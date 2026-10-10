@@ -23,10 +23,10 @@ Strategy `ask-on-risk`. Forecast exceeds 400 authored lines (ML scripts plus And
 
 - [x] T0 Phase 0 environment — route: inline (mechanical files). Unblocked with uv + CPython 3.12.8 venv at `ml/.venv`; install and TFLite conversion smoke test observed.
 - [x] T1 Phase 1 data preparation (`ml/01_preparar_datos.py`) — route: inline (one script). Test-first exception: no deterministic expected output existed before inspecting the datasets; checked through the leakage verification built into the script plus an independent recount.
-- [ ] T2 Phase 2 training (`ml/02_entrenar.py`) — script ready and smoke-tested; real run pending in Colab/Kaggle
-- [ ] T3 Phase 3 evaluation and threshold (`ml/03_evaluar.py`) — script ready; run pending in Colab/Kaggle
-- [ ] T4 Phase 4 TFLite conversion (`ml/04_convertir_tflite.py`) — script ready; run pending
-- [ ] T5 Phase 5 parity and golden vectors (`ml/05_paridad_tflite.py`) — script ready; run pending
+- [x] T2 Phase 2 training (`ml/02_entrenar.py`) — run on Colab T4 via google-colab-cli; acceptance observed from ml/outputs
+- [x] T3 Phase 3 evaluation and threshold (`ml/03_evaluar.py`) — run on Colab T4 via google-colab-cli; acceptance observed from ml/outputs
+- [x] T4 Phase 4 TFLite conversion (`ml/04_convertir_tflite.py`) — run on Colab T4 via google-colab-cli; acceptance observed from ml/outputs
+- [x] T5 Phase 5 parity and golden vectors (`ml/05_paridad_tflite.py`) — run on Colab T4 via google-colab-cli; acceptance observed from ml/outputs
 - [ ] T6 Phase 6 Android project base — needs Android SDK
 - [ ] T7 Phase 7 `conditions.json` — needs the report text (sections 1.1, 1.2)
 - [ ] T8 Phase 8 classifier
@@ -42,6 +42,8 @@ Strategy `ask-on-risk`. Forecast exceeds 400 authored lines (ML scripts plus And
 
 - T1: `ml/outputs/dataset_stats.json` — 2736 images, leakage check 0/0/0, train minimum 260, imbalance 3.919 (crop exclusion reverted on human instruction).
 
+- T2-T5: Colab run 2026-10-10 — test accuracy 0.9561, F1 macro 0.9587, threshold 0.40 (accepts 100%), quantized parity 0.98, model.tflite 2531920 bytes.
+
 ## Known gaps
 
 - GPU works only with the venv `nvidia/*/lib` folders on `LD_LIBRARY_PATH` (the Makefile exports it).
@@ -50,4 +52,4 @@ Strategy `ask-on-risk`. Forecast exceeds 400 authored lines (ML scripts plus And
 
 ## Next step
 
-Human runs `ml/colab_entrenamiento.ipynb` with `cafe_ml_bundle.zip` in Colab/Kaggle and returns `cafe_outputs.zip`; then verify acceptance of phases 2-5 from those files, write the bitácora, copy assets.
+T6: Android project base. Blocked: Android SDK and adb are not installed. Open questions for the human: version golden images in git; SANAS_ROCOLE exclusion.
