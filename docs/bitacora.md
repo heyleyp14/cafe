@@ -525,3 +525,37 @@ Matriz de confusión (filas = clase real; columnas = minador, roya, sana): `[113
 ### NO EJECUTADO
 
 - Paso 2 de la fase 12: fotos reales tomadas por el humano (sol, sombra, fondo complicado) y exactitud en campo.
+
+## Reentrenamiento v2 — R0: diagnóstico (2026-10-10)
+
+El humano decidió reentrenar tras la validación externa, manteniendo las tres clases. Plan en `docs/PLAN_reentrenamiento_v2.md`. Este paso es solo diagnóstico, con el modelo v1 y en el PC local.
+
+### Hallazgo 1: la partición de la fase 1 quedó sesgada por origen (error propio)
+
+| Partición | Imágenes | De RoCoLe |
+|---|---|---|
+| train | 1915 | 67.2 % |
+| val | 411 | 3.6 % |
+| test | 410 | 2.7 % |
+
+- El test interno tiene solo 11 imágenes de RoCoLe (todas de roya, ninguna sana), aunque RoCoLe aporta 1313 imágenes al conjunto. También la roya de DECAFIA quedó descompensada: 89 en train, 126 en val y 125 en test.
+- **Causa:** el algoritmo de reparto que escribí en `01_preparar_datos.py` asigna primero los grupos grandes y los manda a train hasta llenar su cuota; las plantas de RoCoLe (varias fotos cada una) son los grupos grandes. El reparto se estratificó por clase, no por origen, y las comprobaciones de aceptación (fugas, mínimo por clase, desbalance) no lo detectan.
+- **Consecuencia:** las métricas de la fase 3 (exactitud 0.9561, F1 macro 0.9587) miden casi solo imágenes de DECAFIA. **No dicen cómo rinde el modelo en RoCoLe**, y validación y test no representan lo que se entrenó. El umbral también se eligió con esa validación sesgada.
+
+### Hallazgo 2: el fallo en BRACOL no se explica solo por el fondo blanco
+
+Mismo modelo, mismas 860 imágenes, tres variantes (clasificación en Python con el modelo fp32):
+
+| Variante | Exactitud | Recall minador | Recall roya | Recall sana |
+|---|---|---|---|---|
+| Imagen original | 0.6860 | 0.474 | 0.890 | 0.394 |
+| Recortada a la hoja | 0.5093 | 0.822 | 0.329 | 0.542 |
+| Fondo blanco sustituido por un tono oscuro | 0.6651 | 0.340 | 0.927 | 0.387 |
+
+- Cambiar el color del fondo casi no mueve el resultado, así que "fondo blanco = cierta clase" no es la explicación principal.
+- Recortar a la hoja lo empeora y vuelca las predicciones hacia `minador` (545 de 860). El modelo es sensible al encuadre y a la escala: en el entrenamiento, los acercamientos eran en buena parte recortes de minador.
+- Conclusión: no hay un único atajo que corregir; el modelo generaliza mal por falta de variedad en los datos. La exactitud original en Python (0.6860) y en el teléfono (0.6872) difieren en una imagen, lo esperable por la decodificación.
+
+### NO EJECUTADO
+
+- No se midió el rendimiento del modelo v1 sobre RoCoLe con una partición correcta.
