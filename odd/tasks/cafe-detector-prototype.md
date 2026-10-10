@@ -30,7 +30,7 @@ Strategy `ask-on-risk`. Forecast exceeds 400 authored lines (ML scripts plus And
 - [x] T6 Phase 6 Android project base — route: inline; `assembleDebug` builds, app opens on the API 37 emulator, no INTERNET permission
 - [x] T7 Phase 7 `conditions.json` — route: inline; texts copied from the report in docs/, unit test green
 - [x] T8 Phase 8 classifier — route: inline; app ships the fp32 model (human decision); unit 8/8, instrumented 4/4 on the emulator (level 1 max diff 1.7e-6, level 2 10/10)
-- [ ] T9 Phase 9 UI — needs device or emulator
+- [x] T9 Phase 9 UI — route: delegated writer (7 new files); parent verified camera, gallery, rotation and permission-denied flows on the emulator
 - [ ] T10 Phase 10 performance and robustness
 - [ ] T11 Phase 11 tests — needs device or x86_64 emulator
 - [ ] T12 Phase 12 field evaluation and docs — needs a phone and human-taken photos
@@ -51,4 +51,4 @@ Strategy `ask-on-risk`. Forecast exceeds 400 authored lines (ML scripts plus And
 
 ## Next step
 
-T9 UI in Compose using docs/maqueta-v0 as visual reference (delegated writer). Open questions for the human: version golden images in git; SANAS_ROCOLE exclusion.
+T10 performance and robustness: thread count 2 vs 4, error cases (corrupt file, huge image), LiteRT extra permissions; then T11 full test pass and T12 field test with a phone. Open questions for the human: version golden images in git; SANAS_ROCOLE exclusion.

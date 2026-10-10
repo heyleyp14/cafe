@@ -344,3 +344,41 @@ El plan pide a la vez modelo cuantizado de rango dinámico (fase 4) y diferencia
 ### NO EJECUTADO
 
 - Pruebas en dispositivo físico ARM (fase 12).
+
+## Fase 9 — Interfaz (2026-10-10)
+
+**Estado: CERRADA.** Criterio cumplido en el emulador: flujo foto → resultado completo y la rotación no pierde el estado.
+
+### Qué se hizo
+
+- `ui/ClassifierViewModel.kt` (`UiState` como `StateFlow`, clasificador creado una vez en hilo de fondo y cerrado en `onCleared()`, clasificación en `Dispatchers.Default`, errores como recursos de texto, miniatura de ~512 px).
+- `ui/HomeScreen.kt`, `ui/CameraScreen.kt`, `ui/ResultScreen.kt`, `ui/Theme.kt`, `ui/Components.kt`, `ui/Formatting.kt` y `MainActivity.kt` con `NavHost` (rutas `home`, `camera`, `result`).
+- Todos los textos en `strings.xml`, en español; `contentDescription` en imágenes y botón de captura.
+- La escritura se delegó a un agente; la maqueta de v0 (`docs/maqueta-v0/`, React con estilo iOS) se usó solo como referencia de colores, distribución y textos. Las pantallas son Material 3, como pide el plan.
+
+### Qué se comprobó en el emulador (Android 17, x86_64)
+
+- `./gradlew testDebugUnitTest assembleDebug`: compila; 11 pruebas unitarias en verde (3 nuevas de formato del porcentaje).
+- **Cámara → resultado:** inicio → "Tomar foto" → vista previa con marco guía → captura → pantalla de resultado con miniatura, clase, barra de confianza, top-3 y ficha.
+- **Galería → resultado:** una hoja con roya del dataset elegida con el selector de fotos se clasifica como "Roya del café" y muestra su ficha con "Síntomas" y "Condiciones favorables".
+- **Rotación:** al girar la pantalla en el resultado, el resultado sigue ahí.
+- **Permiso denegado:** aparece la pantalla explicativa; "Abrir ajustes" abre los ajustes de la app y "Volver al inicio" regresa.
+- Sin cierres inesperados en logcat durante todo el recorrido. El APK sigue sin `INTERNET`.
+
+### Hallazgo importante para el informe
+
+La cámara del emulador muestra una sala virtual (un mueble y un televisor), no una hoja. La app la clasificó como **"Hoja sana" con 100 % de confianza**. Confirma el aviso de la fase 3: el modelo nunca vio "otras cosas" y el umbral de 0.40 no rechaza nada. La clase opcional `no_hoja` (v1.1 del plan) es la mitigación prevista.
+
+### Diferencias respecto a la maqueta y al encargo
+
+- El verde principal es más oscuro que el de la maqueta, para tener contraste suficiente.
+- No hay iconos: "Atrás" y "Cancelar" son botones de texto, porque no se añadió la dependencia de iconos.
+- La captura se pide a unos 1280×960 para no gastar memoria en una entrada de 224 px.
+- Con confianza baja no se muestra el top-3 (el plan pide mensaje y consejos, sin ficha).
+
+### NO EJECUTADO
+
+- La pantalla "No se pudo determinar con seguridad": no se pudo provocar, porque con el umbral 0.40 ninguna imagen probada queda por debajo.
+- Los estados de error (archivo corrupto, modelo que no carga, poca memoria) y el diálogo "Acerca de" no se recorrieron en el emulador.
+- Recuperación tras muerte del proceso: el resultado no se restaura (vuelve al inicio).
+- Prueba en teléfono físico y con hojas reales (fase 12).

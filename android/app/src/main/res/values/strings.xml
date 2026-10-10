@@ -2,4 +2,70 @@
 <resources>
     <string name="app_name">Detector de hojas de café</string>
     <string name="support_tool_notice">Prototipo académico de apoyo. No es una herramienta de diagnóstico.</string>
+
+    <!-- Shared -->
+    <string name="action_back">Atrás</string>
+    <string name="action_back_home">Volver al inicio</string>
+    <string name="action_close">Cerrar</string>
+    <string name="percent_value">%1$d %%</string>
+
+    <!-- Home -->
+    <string name="home_subtitle">Clasificador de plagas y enfermedades en hojas de café</string>
+    <string name="home_instructions_title">Cómo tomar la foto</string>
+    <string name="home_tip_single_leaf">Una sola hoja</string>
+    <string name="home_tip_light">Buena luz natural</string>
+    <string name="home_tip_focus">Imagen enfocada</string>
+    <string name="home_tip_background">Fondo simple</string>
+    <string name="home_take_photo">Tomar foto</string>
+    <string name="home_pick_gallery">Elegir de galería</string>
+    <string name="home_about">Acerca de</string>
+
+    <!-- About -->
+    <string name="about_title">Acerca de</string>
+    <string name="about_model_title">Modelo</string>
+    <string name="about_model_version">Versión: %1$s</string>
+    <string name="about_model_version_unavailable">No disponible</string>
+    <string name="about_datasets_title">Créditos de los datasets</string>
+    <string name="about_dataset_rocole">RoCoLe. Parraga-Alava et al., 2019. Licencia CC BY 4.0.</string>
+    <string name="about_dataset_decafia">DECAFIA / CoffeeLeaf-CO. Rosas Ruiz, Salom Medina y Barrero Pérez, 2026. Licencia CC BY 4.0.</string>
+    <string name="about_dataset_silva">Silva et al., 2020. Licencia CC BY 4.0.</string>
+
+    <!-- Camera -->
+    <string name="camera_cancel">Cancelar</string>
+    <string name="camera_frame_hint">Encuadre una sola hoja dentro del marco</string>
+    <string name="camera_capture">Capturar foto</string>
+    <string name="camera_preview_description">Vista previa de la cámara</string>
+    <string name="camera_capture_error">No se pudo tomar la foto. Inténtelo de nuevo.</string>
+    <string name="camera_denied_title">Sin acceso a la cámara</string>
+    <string name="camera_denied_message">La aplicación necesita la cámara para fotografiar la hoja. Puede conceder el permiso en los ajustes de la aplicación o elegir una imagen de la galería desde el inicio.</string>
+    <string name="camera_open_settings">Abrir ajustes</string>
+    <string name="camera_unavailable_title">Cámara no disponible</string>
+    <string name="camera_unavailable_message">No fue posible iniciar la cámara de este dispositivo. Puede elegir una imagen de la galería desde el inicio.</string>
+
+    <!-- Result -->
+    <string name="result_title">Resultado</string>
+    <string name="result_loading">Analizando la imagen…</string>
+    <string name="result_thumbnail_description">Miniatura de la hoja analizada</string>
+    <string name="result_detected_class">Clase detectada</string>
+    <string name="result_confidence">Confianza</string>
+    <string name="result_confidence_description">Confianza del modelo: %1$d por ciento</string>
+    <string name="result_top_title">Clases más probables</string>
+    <string name="result_sheet_title">Ficha informativa</string>
+    <string name="result_symptoms">Síntomas</string>
+    <string name="result_favorable_conditions">Condiciones favorables</string>
+    <string name="result_new_photo">Nueva foto</string>
+    <string name="result_uncertain_title">No se pudo determinar con seguridad</string>
+    <string name="result_uncertain_message">La confianza del modelo fue de %1$d %%, por debajo del mínimo requerido para mostrar un resultado.</string>
+    <string name="result_tips_title">Consejos para la próxima captura</string>
+    <string name="result_tip_close">Acerque la cámara: la hoja debe ocupar la mayor parte del marco.</string>
+    <string name="result_tip_light">Use luz natural, sin sombras fuertes ni reflejos.</string>
+    <string name="result_tip_background">Coloque la hoja sobre un fondo liso y de un solo color.</string>
+    <string name="result_tip_steady">Sostenga el teléfono firme para evitar fotos borrosas.</string>
+    <string name="result_error_title">No se pudo analizar la imagen</string>
+
+    <!-- Errors -->
+    <string name="error_model_load">No se pudo cargar el modelo de clasificación. Reinstale la aplicación e inténtelo de nuevo.</string>
+    <string name="error_image_unreadable">No se pudo leer la imagen. Es posible que el archivo esté dañado o no sea una imagen.</string>
+    <string name="error_out_of_memory">No hay memoria suficiente para procesar la imagen. Cierre otras aplicaciones e inténtelo de nuevo.</string>
+    <string name="error_classification">Ocurrió un error al analizar la imagen. Inténtelo de nuevo.</string>
 </resources>
