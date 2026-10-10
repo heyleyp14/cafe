@@ -435,3 +435,25 @@ La cámara del emulador muestra una sala virtual (un mueble y un televisor), no 
 ### NO EJECUTADO
 
 - Las mismas pruebas en un dispositivo físico (fase 12). Las latencias del emulador no representan un teléfono.
+
+## Fase 12 — Evaluación en campo y documentación (2026-10-10)
+
+**Estado: NO CERRADA.** Falta todo lo que requiere un teléfono y fotos reales del humano.
+
+### Qué se hizo
+
+- `ml/generar_resultados.py` y `make results`: generan `docs/resultados.md` a partir de `ml/outputs/`, sin cifras escritas a mano. Incluye métricas por clase, matriz de confusión, cobertura frente a exactitud del umbral, tamaños, paridad, latencia del emulador y limitaciones.
+- `README.md` con los pasos para reproducir.
+- La sección de resultados en campo se rellena sola cuando exista `docs/campo.csv` (columnas `foto,clase_real,prediccion,confianza`) y siempre indica que n es pequeño.
+
+### Qué se comprobó
+
+- `make results` se ejecuta y el archivo generado coincide con los JSON de origen.
+
+### NO EJECUTADO
+
+- **Paso 1:** instalar el APK en un teléfono de gama media y anotar modelo y versión de Android.
+- **Paso 2:** probar con fotos reales tomadas por el humano (sol directo, sombra, fondo complicado, hoja con y sin enfermedad) y calcular la exactitud en campo.
+- **Paso 3:** latencia en teléfono. El tamaño sí está medido: APK de depuración 45 702 962 bytes; modelo entregado 8 901 272 bytes.
+- El comando `./gradlew connectedDebugAndroidTest` que cita el README no se ejecutó tal cual: las pruebas instrumentadas se lanzaron con `adb shell am instrument`, para poder leer los archivos de resultados antes de desinstalar.
+- Comparación opcional de modelos (EfficientNet-B0, ResNet50).

@@ -33,7 +33,7 @@ Strategy `ask-on-risk`. Forecast exceeds 400 authored lines (ML scripts plus And
 - [x] T9 Phase 9 UI — route: delegated writer (7 new files); parent verified camera, gallery, rotation and permission-denied flows on the emulator
 - [x] T10 Phase 10 performance and robustness — route: inline; robustness tests green, library-added permissions removed, thread comparison inconclusive on emulator
 - [x] T11 Phase 11 tests — unit 11/11, instrumented 9/9 on the x86_64 emulator
-- [ ] T12 Phase 12 field evaluation and docs — needs a phone and human-taken photos
+- [ ] T12 Phase 12 field evaluation and docs — resultados.md generator and README done; field steps 1-3 pending (need the human's phone and real photos)
 
 ## Evidence
 
