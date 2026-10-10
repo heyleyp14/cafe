@@ -2,7 +2,7 @@
 
 ## Fase 0 — Preparación del entorno (2026-10-10)
 
-**Estado: BLOQUEADA en el paso 2** (falta un Python compatible con TensorFlow). Los pasos 1, 3, 4 y 5 están hechos.
+**Estado: CERRADA.** Criterios de aceptación cumplidos: estructura creada, entorno comprobado, licencias anotadas. (Estuvo bloqueada en el paso 2 hasta que el humano instaló `uv`.)
 
 ### Qué se hizo
 
@@ -41,3 +41,14 @@
 - Decisión del humano sobre cómo obtener Python 3.12 (ver resumen de la fase).
 - Android SDK + `adb` antes de la fase 6.
 - Hallazgos que afectan la fase 1: DECAFIA contiene hojas sanas de RoCoLe (`SANAS_ROCOLE_*`) e imágenes de Silva et al. (`MINEIRO_*`); hay que deduplicar entre datasets antes de dividir.
+
+### Actualización: paso 2 desbloqueado (2026-10-10)
+
+- El humano instaló `uv 0.13.0`. Se creó `ml/.venv` con CPython 3.12.8 (`uv venv --python 3.12 ml/.venv`).
+- Instalación verificada y versiones fijadas en `ml/requirements.txt`: tensorflow 2.21.0, keras 3.15.1, numpy 2.5.4, scikit-learn 1.9.1, matplotlib 3.11.2, pillow 12.3.0.
+- Prueba de conversión TFLite ejecutada con un MobileNetV2 **sin pesos entrenados** (solo comprueba que la conversión funciona, no mide calidad): los dos archivos (fp32 y rango dinámico) se generan con entrada `[1,224,224,3] float32` y salida `[1,3] float32`, como exige el contrato de la sección 4.
+- `tf.lite.Interpreter` emite un aviso de obsolescencia que recomienda `ai_edge_litert`; sigue funcionando en 2.21.0 y es la API que indica el plan.
+- **GPU: NO DISPONIBLE.** TensorFlow no detecta GPU (`list_physical_devices("GPU")` devuelve vacío) y `nvidia-smi` sigue fallando por el desajuste del controlador. El entrenamiento se hará en CPU (16 hilos, 23 GB de RAM) salvo que se corrija; el plan lo permite ("también corre en CPU, más lento").
+- `Makefile` usa ahora `ml/.venv/bin/python` por defecto.
+
+Las entradas "NO EJECUTADO" de arriba sobre instalación y conversión quedan resueltas. Siguen pendientes: Android SDK y `adb` (fase 6) y el informe del proyecto (fase 7).

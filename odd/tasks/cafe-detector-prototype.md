@@ -21,7 +21,7 @@ Strategy `ask-on-risk`. Forecast exceeds 400 authored lines (ML scripts plus And
 
 ## Tasks
 
-- [ ] T0 Phase 0 environment — route: inline (mechanical files). **Blocked at step 2**: no Python 3.10–3.13, so `requirements.txt` install and TFLite conversion are unverified. Steps 1, 3, 4, 5 done.
+- [x] T0 Phase 0 environment — route: inline (mechanical files). Unblocked with uv + CPython 3.12.8 venv at `ml/.venv`; install and TFLite conversion smoke test observed.
 - [ ] T1 Phase 1 data preparation (`ml/01_preparar_datos.py`)
 - [ ] T2 Phase 2 training (`ml/02_entrenar.py`)
 - [ ] T3 Phase 3 evaluation and threshold (`ml/03_evaluar.py`)
@@ -42,11 +42,11 @@ Strategy `ask-on-risk`. Forecast exceeds 400 authored lines (ML scripts plus And
 
 ## Known gaps
 
-- Python 3.10–3.13 interpreter (system has only 3.14.8; TensorFlow 2.21.0 ships cp310–cp313 wheels).
+- No GPU visible to TensorFlow; training runs on CPU.
 - NVIDIA driver/library mismatch (kernel module 615.71.09 vs nvidia-utils 615.78.08).
 - Android SDK and adb missing; only JDK 21 installed (plan asks for 17).
 - The project report (source for phase 7 texts) is not in the repository.
 
 ## Next step
 
-Human decides how to provide Python 3.12, then finish T0 step 2 and start T1 (datasets are open access: Mendeley `c5yvn32dzg`, Zenodo `19931904`).
+T1: download datasets (Mendeley `c5yvn32dzg`, Zenodo `19931904`) and write `ml/01_preparar_datos.py`.

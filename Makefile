@@ -1,5 +1,5 @@
 # Shortcuts for the ML pipeline. Run from the repository root.
-PYTHON ?= python
+PYTHON ?= .venv/bin/python
 
 .PHONY: data train eval tflite parity
 
