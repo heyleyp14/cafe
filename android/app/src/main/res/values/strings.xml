@@ -55,6 +55,9 @@
     <string name="result_favorable_conditions">Condiciones favorables</string>
     <string name="result_take_photo">Tomar foto</string>
     <string name="result_pick_gallery">Elegir de galería</string>
+    <string name="result_doubt_title">Puede ser %1$s o %2$s</string>
+    <string name="result_doubt_message">El modelo no distingue con seguridad entre estas dos afectaciones. Compare la hoja con los síntomas de cada una.</string>
+    <string name="result_doubt_candidates">Posibilidades</string>
     <string name="result_uncertain_title">No se pudo determinar con seguridad</string>
     <string name="result_uncertain_message">La confianza del modelo fue de %1$d %%, por debajo del mínimo requerido para mostrar un resultado.</string>
     <string name="result_tips_title">Consejos para la próxima captura</string>

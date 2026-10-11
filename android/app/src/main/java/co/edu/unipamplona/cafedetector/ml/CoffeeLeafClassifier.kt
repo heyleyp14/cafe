@@ -66,7 +66,7 @@ class CoffeeLeafClassifier(context: Context, numThreads: Int = DEFAULT_THREADS) 
         val t0 = SystemClock.elapsedRealtime()
         interpreter.run(input, out)
         val ms = SystemClock.elapsedRealtime() - t0
-        return buildResult(out[0], labels, threshold, ms)
+        return buildResult(out[0], labels, threshold, ms, config.doubt)
     }
 
     @Synchronized

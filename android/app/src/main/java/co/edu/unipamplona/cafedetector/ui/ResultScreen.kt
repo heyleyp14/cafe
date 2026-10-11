@@ -104,10 +104,11 @@ fun ResultScreen(
         val modifier = Modifier.fillMaxSize().padding(padding)
         when (state) {
             is UiState.Success ->
-                if (state.result.accepted) {
-                    AcceptedResult(state.result, state.bitmap, conditionFor, modifier)
-                } else {
-                    UncertainResult(state.result, state.bitmap, modifier)
+                // Doubt goes first: naming the two candidates is more useful than a generic "could not tell".
+                when {
+                    state.result.doubt -> DoubtResult(state.result, state.bitmap, conditionFor, modifier)
+                    !state.result.accepted -> UncertainResult(state.result, state.bitmap, modifier)
+                    else -> AcceptedResult(state.result, state.bitmap, conditionFor, modifier)
                 }
             is UiState.Error -> MessagePanel(
                 title = stringResource(R.string.result_error_title),
@@ -225,6 +226,76 @@ private fun AcceptedResult(
                         SheetSection(stringResource(R.string.result_favorable_conditions), condition.condiciones)
                     }
                 }
+            }
+        }
+        SupportNotice()
+    }
+}
+
+/** The model cannot tell two classes apart: show both, with their sheets, instead of affirming one. */
+@Composable
+private fun DoubtResult(
+    result: ClassificationResult,
+    thumbnail: Bitmap,
+    conditionFor: (String) -> Condition?,
+    modifier: Modifier,
+) {
+    val candidates = result.top.take(2)
+    val names = candidates.map { conditionFor(it.label)?.nombre ?: it.label }
+
+    Column(
+        modifier = modifier.verticalScroll(rememberScrollState()).padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(24.dp),
+    ) {
+        Column(
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+        ) {
+            Thumbnail(thumbnail, Modifier.size(120.dp))
+            Text(
+                text = stringResource(R.string.result_doubt_title, names[0], names[1]),
+                style = MaterialTheme.typography.headlineSmall,
+                fontWeight = FontWeight.Bold,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.semantics { heading() },
+            )
+            Text(
+                text = stringResource(R.string.result_doubt_message),
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                textAlign = TextAlign.Center,
+            )
+        }
+
+        Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            SectionLabel(stringResource(R.string.result_doubt_candidates))
+            SectionCard {
+                candidates.forEachIndexed { index, prediction ->
+                    if (index > 0) HorizontalDivider(Modifier.padding(start = 16.dp))
+                    Column(
+                        modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp),
+                        verticalArrangement = Arrangement.spacedBy(6.dp),
+                    ) {
+                        Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                            Text(names[index], style = MaterialTheme.typography.bodyLarge, modifier = Modifier.weight(1f))
+                            Text(
+                                text = stringResource(R.string.percent_value, confidencePercent(prediction.confidence)),
+                                style = MaterialTheme.typography.bodyLarge,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                        }
+                        ConfidenceBar(prediction.confidence, Modifier.clearAndSetSemantics { })
+                    }
+                }
+            }
+        }
+
+        candidates.forEachIndexed { index, prediction ->
+            val condition = conditionFor(prediction.label) ?: return@forEachIndexed
+            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                SectionLabel(names[index])
+                SectionCard { SheetSection(stringResource(R.string.result_symptoms), condition.sintomas) }
             }
         }
         SupportNotice()

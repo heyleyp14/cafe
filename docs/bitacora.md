@@ -909,3 +909,51 @@ No se cambia la receta de entrenamiento. Se añadirá a la app una regla de "dud
 - Control de tamaño de lote: las variantes de 320 px usan lote 16 y la base lote 32, así que no es una comparación pura de resolución. No se corrió la base con lote 16.
 - Repetición con otras semillas. Se está corriendo una segunda vez la base, que servirá también para ver cuánto cambia el resultado entre ejecuciones idénticas.
 - Arquitecturas más grandes y resoluciones mayores de 320.
+
+## Regla de "duda entre arañita roja y roya" (2026-10-11)
+
+**Estado: implementada y probada en el emulador. Sin publicar.**
+
+### Qué hace
+
+Cuando las dos clases más probables son arañita roja y roya y la diferencia entre sus probabilidades es menor de 0.40, la app no afirma una: muestra "Puede ser … o …", las dos posibilidades con su porcentaje y los síntomas de ambas. Esta comprobación va antes que el umbral general: nombrar a las dos candidatas es más útil que un "No se pudo determinar".
+
+### Cómo se eligió el 0.40
+
+- Con las probabilidades de la validación cruzada de la receta base (segunda corrida, 3736 imágenes; `ml/outputs/cv/regla_duda.json`).
+- Al subir el margen, la precisión de lo que la app afirma como arañita roja pasa de 0.58 (sin regla) a 0.74 con 0.40, y a partir de ahí deja de mejorar mientras se siguen ocultando aciertos.
+- Con 0.40 en la validación cruzada: 197 imágenes (5.3 %) pasan a "duda"; se evitan 77 errores y se ocultan 120 aciertos; en 190 de las 197 la clase real es una de las dos que se muestran.
+- La segunda corrida de la base dio para la arañita roja recall 0.5921, precisión 0.5806 y F1 0.5863 (la primera, 0.5772): la misma receta varía cerca de 0.01 de F1 entre ejecuciones, y hasta 0.05 en una partición.
+
+### Efecto en el modelo que se entrega (test interno, 556 imágenes)
+
+| | Sin regla | Con regla |
+|---|---|---|
+| Respuestas de "duda" | 0 | 16 |
+| De esas, errores evitados | | 7 |
+| De esas, aciertos que quedan como duda | | 9 |
+| Clase real entre las dos mostradas | | 16 de 16 |
+| Veces que afirma "arañita roja" | 24 | 16 |
+| Precisión al afirmar "arañita roja" | 0.5417 | 0.6875 |
+| Precisión al afirmar "roya" | 0.9268 | 0.9468 |
+| Exactitud de lo que afirma | 0.9388 | 0.9599 (524 imágenes) |
+
+Otras 16 imágenes quedan por debajo del umbral 0.60 ("No se pudo determinar"). Detalle en `ml/outputs/final/regla_duda_modelo_final.json`.
+
+### Qué se hizo en la app
+
+- `DoubtRule` en `ClassifierLogic.kt`, leída de `threshold.json` (`"doubt": {"classes": ["arana_roja", "roya"], "margin": 0.4}`); `ClassificationResult.doubt`; pantalla `DoubtResult`.
+- Pruebas unitarias escritas antes de implementar (fallaban al compilar; ahora 16 de 16 en verde): caso dudoso, ganador claro, pareja distinta, sin regla y lectura del archivo.
+- Emulador, con el APK firmado: una hoja de arañita roja del test que el modelo daba como roya (57 % frente a 33 %) muestra ahora "Puede ser Roya del café o Arañita roja del café" con las dos fichas. Sin cierres inesperados.
+- APK firmado regenerado (`dist/BioCafe-v3.0.apk`, 47 466 955 bytes) e instalado en el teléfono; copiado a la página de descarga.
+
+### Límites
+
+- **No mejora el modelo:** reparte de otra forma lo que ya sabe. El recall de la arañita roja como respuesta afirmada baja, porque parte de sus aciertos quedan como "duda".
+- El margen se calibró con modelos de validación cruzada de la misma receta, no con el modelo entregado.
+- Las cifras del modelo entregado son sobre 556 imágenes de las mismas fuentes; 16 casos de duda son pocos.
+
+### NO EJECUTADO
+
+- Pruebas instrumentadas tras este cambio (la regla no toca la inferencia; las de paridad se corrieron antes de añadirla).
+- La pantalla de duda en el teléfono físico.

@@ -39,6 +39,47 @@ class ClassifierLogicTest {
         }
     }
 
+    private val fourLabels = listOf("arana_roja", "minador", "roya", "sana")
+    private val doubtRule = DoubtRule(classes = listOf("arana_roja", "roya"), margin = 0.4f)
+
+    @Test
+    fun closeCallBetweenTheDoubtClassesIsFlagged() {
+        val result = buildResult(floatArrayOf(0.50f, 0.02f, 0.45f, 0.03f), fourLabels, 0.4f, 0, doubtRule)
+
+        assertTrue(result.accepted)
+        assertTrue(result.doubt)
+        assertEquals(listOf("arana_roja", "roya"), result.top.take(2).map { it.label })
+    }
+
+    @Test
+    fun clearWinnerIsNotFlaggedEvenInsideTheDoubtPair() {
+        val result = buildResult(floatArrayOf(0.20f, 0.02f, 0.75f, 0.03f), fourLabels, 0.4f, 0, doubtRule)
+
+        assertFalse(result.doubt)
+    }
+
+    @Test
+    fun closeCallWithAnotherClassIsNotFlagged() {
+        val result = buildResult(floatArrayOf(0.02f, 0.03f, 0.50f, 0.45f), fourLabels, 0.4f, 0, doubtRule)
+
+        assertFalse(result.doubt)
+    }
+
+    @Test
+    fun withoutARuleNothingIsFlagged() {
+        assertFalse(buildResult(floatArrayOf(0.50f, 0.02f, 0.45f, 0.03f), fourLabels, 0.4f, 0).doubt)
+    }
+
+    @Test
+    fun thresholdJsonWithDoubtRuleIsParsed() {
+        val config = parseThreshold(
+            """{"threshold": 0.6, "model_version": "v3", "doubt": {"classes": ["arana_roja", "roya"], "margin": 0.4}}""",
+        )
+
+        assertEquals(listOf("arana_roja", "roya"), config.doubt?.classes)
+        assertEquals(0.4f, config.doubt!!.margin, 0f)
+    }
+
     @Test
     fun thresholdJsonIsParsed() {
         val config = parseThreshold("""{"threshold": 0.6, "model_version": "v1-2026-10"}""")

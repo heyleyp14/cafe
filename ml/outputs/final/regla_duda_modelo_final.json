@@ -1,0 +1,51 @@
+{
+  "model": "final/model_fp32.tflite",
+  "order": "doubt rule first, then the 0.6 threshold",
+  "margin": 0.4,
+  "test": {
+    "images": 556,
+    "doubt": 16,
+    "doubt_errors_avoided": 7,
+    "doubt_correct_hidden": 9,
+    "doubt_true_class_in_pair": 16,
+    "below_threshold": 16,
+    "affirmed": 524,
+    "accuracy_all": 0.9388,
+    "accuracy_affirmed": 0.9599,
+    "arana_roja_affirmed": [
+      16,
+      0.6875
+    ],
+    "roya_affirmed": [
+      188,
+      0.9468
+    ],
+    "arana_roja_without_rule": [
+      24,
+      0.5417
+    ]
+  },
+  "val+test": {
+    "images": 1114,
+    "doubt": 39,
+    "doubt_errors_avoided": 22,
+    "doubt_correct_hidden": 17,
+    "doubt_true_class_in_pair": 36,
+    "below_threshold": 40,
+    "affirmed": 1035,
+    "accuracy_all": 0.9264,
+    "accuracy_affirmed": 0.9556,
+    "arana_roja_affirmed": [
+      30,
+      0.6667
+    ],
+    "roya_affirmed": [
+      368,
+      0.9429
+    ],
+    "arana_roja_without_rule": [
+      51,
+      0.4706
+    ]
+  }
+}

@@ -2,5 +2,11 @@
   "threshold": 0.6,
   "chosen_from": "stage1_v3 (holdout source bracol): lowest threshold with accepted accuracy >= 0.90 on a source unseen in training",
   "internal_validation_rule_would_give": 0.4,
-  "why": "the final model trains on every source, so no unseen source is left to choose a threshold; the internal rule accepts everything"
+  "why": "the final model trains on every source, so no unseen source is left to choose a threshold; the internal rule accepts everything",
+  "doubt": {
+    "rule": "doubt when the two most probable classes are arana_roja and roya and p1 - p2 < margin",
+    "margin": 0.4,
+    "chosen_from": "ml/outputs/cv/regla_duda.json: 3-fold cross-validation of the baseline recipe (3736 images); 0.4 is where the precision of affirmed arana_roja stops improving (0.58 -> 0.74)",
+    "note": "calibrated on cross-validation models of the same recipe, not on the shipped model itself"
+  }
 }
