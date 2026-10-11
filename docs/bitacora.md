@@ -957,3 +957,27 @@ Otras 16 imágenes quedan por debajo del umbral 0.60 ("No se pudo determinar"). 
 
 - Pruebas instrumentadas tras este cambio (la regla no toca la inferencia; las de paridad se corrieron antes de añadirla).
 - La pantalla de duda en el teléfono físico.
+
+## Informe: secciones completadas (2026-10-11)
+
+### Qué se hizo
+
+- El informe (`docs/Protocolo de entrega del Documento final…docx`) tenía sin desarrollar los objetivos específicos 3 y 4 y las conclusiones, que conservaban el texto de la plantilla.
+- Se generó una copia completada, `docs/Informe_BioCafe_completado.docx`. **El original no se modificó.**
+- Contenido añadido: desarrollo del objetivo 3 (datos, entrenamiento con CUDA, integración en el móvil, alcance), desarrollo del objetivo 4 (prueba interna, conjunto externo, análisis de la arañita roja, tiempos y pruebas, limitaciones), conclusiones por objetivo, recomendaciones, cuatro tablas, cuatro imágenes (tres capturas de la app y la matriz de confusión) y seis referencias nuevas ([39] a [44]).
+- Las cifras de las tablas se leen de `ml/outputs/`; el script que lo genera quedó en `docs/herramientas/completar_informe.py`.
+
+### Qué se comprobó
+
+- El archivo es un `.docx` válido como ZIP y su XML está bien formado; las 15 imágenes referenciadas existen; no queda texto de plantilla en las tres secciones reemplazadas.
+- El texto nuevo se leyó completo en versión de texto plano.
+
+### NO EJECUTADO
+
+- **No se abrió en Word ni se convirtió a PDF** (no hay LibreOffice en el equipo): la maquetación, los saltos de página y el aspecto de tablas e imágenes están sin revisar.
+- No se tocaron el índice ni las indicaciones de plantilla que quedan en la introducción.
+- Las seis referencias nuevas están como texto; el informe exige que salgan de Zotero o Mendeley.
+
+### Incoherencia que el humano debe resolver
+
+La sección 2.4 del informe afirma que se entrena en la nube «debido a la falta de una unidad de procesamiento gráfico (GPU) física en el equipo de desarrollo local». El texto nuevo dice, porque es lo que ocurrió, que los experimentos de validación cruzada se ejecutaron en un equipo local con GPU NVIDIA. Una de las dos frases debe ajustarse.
