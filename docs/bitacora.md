@@ -592,3 +592,45 @@ Mismo modelo, mismas 860 imágenes, tres variantes (clasificación en Python con
 - Entrenamiento real (R4).
 - La descarga del conjunto final (JMuBEN) sigue en curso; no se ha abierto.
 - `04_convertir_tflite.py`, `05_paridad_tflite.py` y `generar_resultados.py` aún no están adaptados a la nueva estructura de carpetas (R5).
+
+## Reentrenamiento v2 — R4, etapa 1: selección de arquitectura (2026-10-11)
+
+**Estado: etapa 1 hecha. Etapa 2 (modelo final) lanzada en Colab.**
+
+### Cómo se ejecutó
+
+- Google Colab, Tesla T4, con `ml/colab_run_v2.py`. Datos subidos ya preparados (`cafe_data_v2.zip`, en 10 partes de 16 MB porque la subida en una sola petición fallaba; SHA-256 comprobado al unirlas).
+- Las dos arquitecturas se entrenaron con RoCoLe y DECAFIA únicamente. BRACOL (860 imágenes) quedó fuera del entrenamiento y de la validación y se usó solo para medir.
+- Resultados en `ml/outputs/stage1_mobilenetv2/` y `ml/outputs/stage1_efficientnetb0/`.
+
+### Resultado
+
+| | v1 (MobileNetV2) | v2 MobileNetV2 | v2 EfficientNet-B0 |
+|---|---|---|---|
+| BRACOL, exactitud | 0.6872 | 0.7767 | **0.8581** |
+| BRACOL, F1 macro | 0.6260 | 0.7313 | **0.8494** |
+| BRACOL, recall minador | 0.4466 | 0.3676 | 0.6087 |
+| BRACOL, recall roya | 0.8925 | 0.9419 | 0.9613 |
+| BRACOL, recall sana | 0.4437 | 0.9648 | 0.9648 |
+| Test interno, F1 macro | 0.9587 (test sesgado) | 0.9819 | 0.9900 |
+| Tiempo de entrenamiento | 1038 s | 1206 s | 1337 s |
+| Épocas (cabeza + ajuste fino) | 15 + 10 | 10 + 24 | 10 + 26 |
+
+- **Arquitectura elegida: EfficientNet-B0**, por la regla del plan (mayor F1 macro en la fuente no vista).
+- Por origen, en el test interno (EfficientNet-B0): DECAFIA 212 de 212; RoCoLe exactitud 0.9745 (roya recall 0.9529, sana 0.9910). Es la primera vez que hay una cifra fiable para RoCoLe.
+- Matriz de confusión de EfficientNet-B0 en BRACOL (filas = clase real; columnas = minador, roya, sana): `[154, 84, 15]`, `[17, 447, 1]`, `[0, 5, 137]`.
+
+### Lectura
+
+- La mejora en BRACOL es real y no se debe a haberlo visto: ningún modelo de esta etapa se entrenó con BRACOL.
+- **Punto débil que persiste:** el minador. Con EfficientNet-B0, 84 de 253 hojas con minador se confunden con roya (recall 0.61).
+- Las hojas sanas pasan de 0.44 a 0.96 de recall.
+- Calibración (error esperado, 15 intervalos): EfficientNet-B0 0.083 en el test interno y 0.109 en BRACOL; MobileNetV2 0.081 y 0.039.
+- Umbral elegido con BRACOL: 0.55 para EfficientNet-B0 (acepta el 99.3 % del test interno, con exactitud 0.9926) y 0.85 para MobileNetV2.
+
+### Cautelas
+
+- BRACOL sirvió para **elegir** la arquitectura y el umbral, así que sus cifras ya no son una estimación limpia. La estimación limpia es el conjunto final (JMuBEN), que sigue sin abrirse.
+- El test interno de la v1 y el de la v2 no son comparables: tienen distinto reparto y la v1 no incluía casi nada de RoCoLe.
+- Un solo entrenamiento por arquitectura, con una sola semilla: no se midió la variabilidad entre ejecuciones.
+- Cambia el modelo base respecto al plan original, que fijaba MobileNetV2 y dejaba EfficientNet-B0 como comparación opcional.
