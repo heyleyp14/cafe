@@ -1,0 +1,55 @@
+{
+  "model_fp32.tflite": {
+    "file": "model_fp32.tflite",
+    "bytes": 8901272,
+    "inputs": [
+      {
+        "name": "serving_default_input_layer_2:0",
+        "shape": [
+          1,
+          224,
+          224,
+          3
+        ],
+        "dtype": "float32"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "StatefulPartitionedCall_1:0",
+        "shape": [
+          1,
+          3
+        ],
+        "dtype": "float32"
+      }
+    ]
+  },
+  "model.tflite": {
+    "file": "model.tflite",
+    "bytes": 2531920,
+    "inputs": [
+      {
+        "name": "serving_default_input_layer_2:0",
+        "shape": [
+          1,
+          224,
+          224,
+          3
+        ],
+        "dtype": "float32"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "StatefulPartitionedCall_1:0",
+        "shape": [
+          1,
+          3
+        ],
+        "dtype": "float32"
+      }
+    ]
+  },
+  "contract_ok": true
+}

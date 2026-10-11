@@ -1,0 +1,96 @@
+{
+  "seed": 42,
+  "classes": [
+    "minador",
+    "roya",
+    "sana"
+  ],
+  "split_fractions_target": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "raw_images": {
+    "rocole": 1560,
+    "decafia": 2769
+  },
+  "loaded_after_label_rules": {
+    "rocole": 1393,
+    "decafia": 1889
+  },
+  "discarded_by_rule": {
+    "decafia_derived_from_rocole": 454,
+    "decafia_not_v1:coco": 426,
+    "rocole_not_v1:red_spider_mite": 167
+  },
+  "duplicates": {
+    "duplicate_max_distance": 40,
+    "related_max_distance": 52,
+    "duplicates_across_datasets": 61,
+    "duplicates_conflicting_labels": 11,
+    "duplicates_removed": 535
+  },
+  "final_images": 2736,
+  "counts": {
+    "train": {
+      "minador": 260,
+      "roya": 636,
+      "sana": 1019
+    },
+    "val": {
+      "minador": 56,
+      "roya": 136,
+      "sana": 219
+    },
+    "test": {
+      "minador": 56,
+      "roya": 136,
+      "sana": 218
+    }
+  },
+  "per_class_total": {
+    "minador": 372,
+    "roya": 908,
+    "sana": 1456
+  },
+  "per_class_by_source": {
+    "minador": {
+      "decafia": 372
+    },
+    "roya": {
+      "rocole": 568,
+      "decafia": 340
+    },
+    "sana": {
+      "rocole": 745,
+      "decafia": 711
+    }
+  },
+  "split_fractions_actual": {
+    "minador": {
+      "train": 0.6989,
+      "val": 0.1505,
+      "test": 0.1505
+    },
+    "roya": {
+      "train": 0.7004,
+      "val": 0.1498,
+      "test": 0.1498
+    },
+    "sana": {
+      "train": 0.6999,
+      "val": 0.1504,
+      "test": 0.1497
+    }
+  },
+  "imbalance_ratio_train": 3.919,
+  "groups": {
+    "count": 1680,
+    "largest": 74
+  },
+  "leakage_check": {
+    "md5_in_two_splits": 0,
+    "perceptual_pairs_in_two_splits": 0,
+    "groups_in_two_splits": 0
+  }
+}

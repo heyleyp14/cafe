@@ -1,0 +1,61 @@
+{
+  "dataset": "BRACOL (Mendeley yy2k5y8mxg v1, CC BY 4.0), leaf subset, predominant_stress 0/1/2",
+  "device": "motorola edge 30, Android 14",
+  "images": 860,
+  "unreadable": 0,
+  "accuracy": 0.6872,
+  "f1_macro": 0.626,
+  "per_class": {
+    "minador": {
+      "precision": 0.6807,
+      "recall": 0.4466,
+      "f1": 0.5394,
+      "support": 253
+    },
+    "roya": {
+      "precision": 0.6748,
+      "recall": 0.8925,
+      "f1": 0.7685,
+      "support": 465
+    },
+    "sana": {
+      "precision": 0.7975,
+      "recall": 0.4437,
+      "f1": 0.5701,
+      "support": 142
+    }
+  },
+  "confusion_matrix": {
+    "rows_true_columns_predicted": [
+      "minador",
+      "roya",
+      "sana"
+    ],
+    "values": [
+      [
+        113,
+        132,
+        8
+      ],
+      [
+        42,
+        415,
+        8
+      ],
+      [
+        11,
+        68,
+        63
+      ]
+    ]
+  },
+  "below_threshold": {
+    "threshold": 0.4,
+    "images": 1
+  },
+  "confidence_ge_0.9": {
+    "images": 351,
+    "accuracy": 0.8604
+  },
+  "wrong_with_confidence_ge_0.9": 49
+}

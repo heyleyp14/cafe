@@ -1,0 +1,1 @@
+{"device": "motorola motorola edge 30", "android": "14", "abi": "arm64-v8a", "threads": 4, "warmup_runs": 5, "measured_runs": 50, "median_ms": 21.0, "p95_ms": 22}

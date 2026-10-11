@@ -1,0 +1,1 @@
+{"device": "Google sdk_gphone64_x86_64", "android": "17", "abi": "x86_64", "threads": 4, "warmup_runs": 5, "measured_runs": 50, "median_ms": 9.0, "p95_ms": 11}
