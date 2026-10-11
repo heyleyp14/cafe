@@ -1,0 +1,393 @@
+{
+  "model_version": "v3-2026-10",
+  "run": "stage1_v3",
+  "arch": "efficientnetb0",
+  "internal": {
+    "images": 428,
+    "accuracy": 0.9369,
+    "f1_macro": 0.8741,
+    "f1_macro_classes": [
+      "arana_roja",
+      "minador",
+      "roya",
+      "sana"
+    ],
+    "per_class": {
+      "arana_roja": {
+        "precision": 0.6087,
+        "recall": 0.6364,
+        "f1": 0.6222,
+        "support": 22
+      },
+      "minador": {
+        "precision": 0.9821,
+        "recall": 1.0,
+        "f1": 0.991,
+        "support": 55
+      },
+      "roya": {
+        "precision": 0.9237,
+        "recall": 0.903,
+        "f1": 0.9132,
+        "support": 134
+      },
+      "sana": {
+        "precision": 0.9679,
+        "recall": 0.9724,
+        "f1": 0.9701,
+        "support": 217
+      }
+    },
+    "confusion_matrix": {
+      "rows_true_columns_predicted": [
+        "arana_roja",
+        "minador",
+        "roya",
+        "sana"
+      ],
+      "values": [
+        [
+          14,
+          0,
+          5,
+          3
+        ],
+        [
+          0,
+          55,
+          0,
+          0
+        ],
+        [
+          8,
+          1,
+          121,
+          4
+        ],
+        [
+          1,
+          0,
+          5,
+          211
+        ]
+      ]
+    }
+  },
+  "by_source": {
+    "decafia": {
+      "images": 212,
+      "accuracy": 0.9953,
+      "f1_macro": 0.9937,
+      "f1_macro_classes": [
+        "minador",
+        "roya",
+        "sana"
+      ],
+      "per_class": {
+        "arana_roja": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        },
+        "minador": {
+          "precision": 0.9821,
+          "recall": 1.0,
+          "f1": 0.991,
+          "support": 55
+        },
+        "roya": {
+          "precision": 1.0,
+          "recall": 0.9804,
+          "f1": 0.9901,
+          "support": 51
+        },
+        "sana": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 106
+        }
+      },
+      "confusion_matrix": {
+        "rows_true_columns_predicted": [
+          "arana_roja",
+          "minador",
+          "roya",
+          "sana"
+        ],
+        "values": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            55,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            50,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            106
+          ]
+        ]
+      }
+    },
+    "rocole": {
+      "images": 216,
+      "accuracy": 0.8796,
+      "f1_macro": 0.8099,
+      "f1_macro_classes": [
+        "arana_roja",
+        "roya",
+        "sana"
+      ],
+      "per_class": {
+        "arana_roja": {
+          "precision": 0.6087,
+          "recall": 0.6364,
+          "f1": 0.6222,
+          "support": 22
+        },
+        "minador": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0
+        },
+        "roya": {
+          "precision": 0.8765,
+          "recall": 0.8554,
+          "f1": 0.8659,
+          "support": 83
+        },
+        "sana": {
+          "precision": 0.9375,
+          "recall": 0.9459,
+          "f1": 0.9417,
+          "support": 111
+        }
+      },
+      "confusion_matrix": {
+        "rows_true_columns_predicted": [
+          "arana_roja",
+          "minador",
+          "roya",
+          "sana"
+        ],
+        "values": [
+          [
+            14,
+            0,
+            5,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            8,
+            0,
+            71,
+            4
+          ],
+          [
+            1,
+            0,
+            5,
+            105
+          ]
+        ]
+      }
+    }
+  },
+  "holdout_source": {
+    "source": "bracol",
+    "images": 860,
+    "accuracy": 0.8663,
+    "f1_macro": 0.8637,
+    "f1_macro_classes": [
+      "minador",
+      "roya",
+      "sana"
+    ],
+    "per_class": {
+      "arana_roja": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "minador": {
+        "precision": 0.9133,
+        "recall": 0.6245,
+        "f1": 0.7418,
+        "support": 253
+      },
+      "roya": {
+        "precision": 0.8318,
+        "recall": 0.9677,
+        "f1": 0.8946,
+        "support": 465
+      },
+      "sana": {
+        "precision": 0.9448,
+        "recall": 0.9648,
+        "f1": 0.9547,
+        "support": 142
+      }
+    },
+    "confusion_matrix": {
+      "rows_true_columns_predicted": [
+        "arana_roja",
+        "minador",
+        "roya",
+        "sana"
+      ],
+      "values": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          158,
+          86,
+          8
+        ],
+        [
+          0,
+          15,
+          450,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          137
+        ]
+      ]
+    }
+  },
+  "calibration": {
+    "internal_test": {
+      "images": 428,
+      "bins": 15,
+      "expected_calibration_error": 0.0772,
+      "mean_confidence": 0.8597,
+      "accuracy": 0.9369
+    },
+    "holdout_source": {
+      "images": 860,
+      "bins": 15,
+      "expected_calibration_error": 0.1154,
+      "mean_confidence": 0.7509,
+      "accuracy": 0.8663
+    }
+  },
+  "threshold": {
+    "chosen": 0.6,
+    "reason": "lowest threshold reaching the target on holdout source bracol",
+    "selection_data": "holdout source bracol",
+    "selection_images": 860,
+    "target_accepted_accuracy": 0.9,
+    "selection_sweep": [
+      {
+        "threshold": 0.4,
+        "accepted": 849,
+        "accepted_fraction": 0.9872,
+        "accepted_accuracy": 0.8693
+      },
+      {
+        "threshold": 0.45,
+        "accepted": 831,
+        "accepted_fraction": 0.9663,
+        "accepted_accuracy": 0.8761
+      },
+      {
+        "threshold": 0.5,
+        "accepted": 791,
+        "accepted_fraction": 0.9198,
+        "accepted_accuracy": 0.8862
+      },
+      {
+        "threshold": 0.55,
+        "accepted": 731,
+        "accepted_fraction": 0.85,
+        "accepted_accuracy": 0.896
+      },
+      {
+        "threshold": 0.6,
+        "accepted": 677,
+        "accepted_fraction": 0.7872,
+        "accepted_accuracy": 0.9202
+      },
+      {
+        "threshold": 0.65,
+        "accepted": 629,
+        "accepted_fraction": 0.7314,
+        "accepted_accuracy": 0.938
+      },
+      {
+        "threshold": 0.7,
+        "accepted": 583,
+        "accepted_fraction": 0.6779,
+        "accepted_accuracy": 0.952
+      },
+      {
+        "threshold": 0.75,
+        "accepted": 509,
+        "accepted_fraction": 0.5919,
+        "accepted_accuracy": 0.9548
+      },
+      {
+        "threshold": 0.8,
+        "accepted": 414,
+        "accepted_fraction": 0.4814,
+        "accepted_accuracy": 0.971
+      },
+      {
+        "threshold": 0.85,
+        "accepted": 288,
+        "accepted_fraction": 0.3349,
+        "accepted_accuracy": 0.9792
+      },
+      {
+        "threshold": 0.9,
+        "accepted": 144,
+        "accepted_fraction": 0.1674,
+        "accepted_accuracy": 0.9931
+      },
+      {
+        "threshold": 0.95,
+        "accepted": 14,
+        "accepted_fraction": 0.0163,
+        "accepted_accuracy": 1.0
+      }
+    ],
+    "selection_accuracy_without_threshold": 0.8663,
+    "internal_test_at_chosen": {
+      "threshold": 0.6,
+      "accepted": 397,
+      "accepted_fraction": 0.9276,
+      "accepted_accuracy": 0.9547
+    }
+  }
+}

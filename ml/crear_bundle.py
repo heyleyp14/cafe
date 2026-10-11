@@ -8,7 +8,7 @@ import zipfile
 
 from config import ML_DIR, OUTPUTS_DIR, PROCESSED_DIR
 
-FILES = ["config.py", "requirements.txt", "colab_run.py", "colab_run_v2.py",
+FILES = ["config.py", "requirements.txt", "colab_run.py", "colab_run_v2.py", "colab_run_v3.py",
          *sorted(p.name for p in ML_DIR.glob("0*.py"))]
 
 
