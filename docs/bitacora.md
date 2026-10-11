@@ -726,3 +726,29 @@ Matriz de confusión del v2 (filas = clase real; columnas = minador, roya, sana)
 - No se vio el ícono en el teléfono: tenía la pantalla apagada al capturar.
 - No se recorrió el flujo foto → resultado con la compilación `release` (solo se comprobó que abre). Las pruebas instrumentadas se hicieron sobre la compilación de depuración del mismo código y modelo.
 - El código no está ofuscado ni reducido (`isMinifyEnabled = false`).
+
+## Página de descarga (2026-10-11)
+
+### Qué se hizo
+
+- El humano generó la plantilla con v0 (`docs/landing-detector-hojas-cafe`, Next.js). Se refinó con las skills `impeccable` y `design-taste-frontend` hacia el estilo de listas agrupadas tipo iOS que ya tienen las pantallas de la app. La escritura se delegó a un agente.
+- Se añadieron a `public/` el APK firmado, el ícono real y dos capturas reales de la app tomadas en el emulador con el modelo v2 (inicio y un resultado de roya al 93 %).
+- Se quitó la dependencia de analítica de la plantilla y los recursos de relleno de v0; el título, la descripción y el idioma de la página se corrigieron.
+- Paquete para publicar: `dist/landing-detector-hojas-cafe.zip` (sin `node_modules` ni `.next`).
+
+### Qué se comprobó
+
+- `pnpm build` compila con comprobación de tipos (la plantilla de v0 la tenía desactivada).
+- Capturas en móvil (390×844) y escritorio (1440×900), revisadas: el aviso de prototipo, el botón de descarga y la línea de versión quedan visibles sin desplazarse.
+- El enlace de descarga sigue siendo `/DetectorHojasCafe-v2.0.apk` con `download`; los textos de versión, el aviso y las cifras 99 % y 80 % están presentes; no aparece "App Store", "Google Play", "iPhone" ni analítica.
+- El APK dentro de `public/` conserva sus 47 442 771 bytes.
+
+### Cambios de texto
+
+Ninguna cifra ni afirmación cambió. Se quitaron las etiquetas visibles "Paso 1/2/3" de "Cómo funciona" (las tres frases siguen iguales) y se añadieron textos alternativos a las dos capturas.
+
+### NO EJECUTADO
+
+- La página no se ha publicado en Vercel ni se ha probado la descarga desde un teléfono.
+- El modo oscuro se revisó solo en escritorio.
+- La carpeta de la página no está en git (incluye el APK de 47 MB).
