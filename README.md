@@ -49,7 +49,7 @@ make data        # particiones 70/15/15 y ml/outputs/dataset_stats.json
 
 ### 3. Entrenamiento y evaluación en Colab
 
-El modelo actual (v2, EfficientNet-B0) se entrena en Colab con GPU. El plan y sus motivos están en `docs/PLAN_reentrenamiento_v2.md`.
+El modelo actual (v3, EfficientNet-B0, cuatro clases) se entrena en Colab con GPU. El plan y sus motivos están en `docs/PLAN_reentrenamiento_v2.md`.
 
 ```bash
 make data                      # incluye BRACOL en ml/data/external/bracol (ver docs/decisiones.md)
@@ -59,11 +59,10 @@ make colab-bundle colab-data   # cafe_ml_bundle.zip (código) y cafe_data_v2.zip
 Sube los dos zip a `/content/` de una sesión de Colab con GPU, descomprímelos y ejecuta desde `/content/ml`:
 
 ```bash
-python colab_run_v2.py                                # etapa 1: compara arquitecturas sin BRACOL
-python colab_run_v2.py --stage 2 --arch efficientnetb0  # etapa 2: modelo final
+python colab_run_v3.py   # mide sin BRACOL y luego entrena el modelo final de cuatro clases
 ```
 
-Descarga `cafe_outputs_v2.zip` y copia `outputs/final/` a `ml/outputs/final/`.
+Descarga `cafe_outputs_v3.zip` y copia `outputs/final/` a `ml/outputs/final/`. Después revisa `ml/outputs/final/threshold.json`: el umbral 0.60 y la regla de duda entre arañita roja y roya se fijaron a mano (ver `docs/decisiones.md`).
 
 ### 4. Conversión, paridad y archivos para la app
 

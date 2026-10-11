@@ -107,7 +107,7 @@ En el panel `Terminal` de Android Studio (queda en la carpeta `android`):
 .\gradlew.bat testDebugUnitTest assembleDebug
 ```
 
-Resultado esperado: `BUILD SUCCESSFUL`, 11 pruebas unitarias sin fallos y el APK en `app\build\outputs\apk\debug\app-debug.apk`.
+Resultado esperado: `BUILD SUCCESSFUL`, 16 pruebas unitarias sin fallos y el APK en `app\build\outputs\apk\debug\app-debug.apk`.
 
 Con el emulador encendido:
 
@@ -258,7 +258,7 @@ ml\data\external\bracol\x\coffee-datasets\coffee-datasets\leaf\dataset.csv
 ml\data\external\bracol\x\coffee-datasets\coffee-datasets\leaf\images\*.jpg
 ```
 
-Después ejecuta `01_preparar_datos.py` (paso B3). Resultado esperado: 3596 imágenes y la línea de comprobación de fugas con los tres contadores en 0. Si el número difiere, revisa que los tres datasets estén completos.
+Después ejecuta `01_preparar_datos.py` (paso B3). Resultado esperado: 3736 imágenes y la línea de comprobación de fugas con los tres contadores en 0. Si el número difiere, revisa que los tres datasets estén completos.
 
 ### B5. Descargar el conjunto final, JMuBEN (solo para repetir la evaluación final)
 
@@ -293,7 +293,7 @@ Con el entorno de la ruta B y los datos ya preparados (`01_preparar_datos.py`, q
 ```powershell
 cd ml
 .\.venv\Scripts\python.exe crear_bundle.py          # cafe_ml_bundle.zip (código)
-.\.venv\Scripts\python.exe crear_bundle.py --data   # cafe_data_v2.zip (datos, unos 166 MB)
+.\.venv\Scripts\python.exe crear_bundle.py --data   # cafe_data_v2.zip (datos, unos 175 MB)
 cd ..
 ```
 
@@ -306,16 +306,16 @@ cd ..
 
 ```
 !cd /content && unzip -q -o cafe_ml_bundle.zip && unzip -q -o cafe_data_v2.zip
-!cd /content/ml && python colab_run_v2.py --stage 2 --arch efficientnetb0
+!cd /content/ml && python colab_run_v3.py
 ```
 
-5. Cuando imprima `ALL DONE`, descarga `/content/cafe_outputs_v2.zip`.
+5. Cuando imprima `ALL DONE`, descarga `/content/cafe_outputs_v3.zip`.
 
-Duración de referencia: el modelo final tardó unos 25 minutos en una T4. Sin `--stage 2`, el script compara dos arquitecturas (etapa 1) y tarda cerca del doble.
+El script hace dos entrenamientos de EfficientNet-B0 con las cuatro clases: uno sin BRACOL, para medir en una fuente no vista, y el modelo final con todas las fuentes. Duración de referencia en una T4: unos 50 minutos en total.
 
 ### C3. Llevar el modelo nuevo a la app
 
-Descomprime `cafe_outputs_v2.zip`, copia su carpeta `outputs\final` a `ml\outputs\final` y, desde la raíz del proyecto:
+Descomprime `cafe_outputs_v3.zip`, copia su carpeta `outputs\final` a `ml\outputs\final` y, desde la raíz del proyecto:
 
 ```powershell
 cd ml
@@ -328,7 +328,9 @@ Copy-Item ml\outputs\final\golden\* android\app\src\androidTest\assets\golden\
 ml\.venv\Scripts\python.exe ml\generar_resultados.py
 ```
 
-La app usa el modelo **sin cuantizar** (`model_fp32.tflite`). El umbral de `threshold.json` se fijó a mano en 0.55; el motivo está en `docs/decisiones.md`, y hay que revisarlo si se reentrena.
+La app usa el modelo **sin cuantizar** (`model_fp32.tflite`).
+
+**Cuidado con `threshold.json`:** el del proyecto se escribió a mano, con el umbral 0.60 y la regla de duda entre arañita roja y roya (`"doubt": {"classes": ["arana_roja", "roya"], "margin": 0.4}`). Al reentrenar, `03_evaluar.py` lo sobrescribe con otro umbral y sin esa regla. Antes de copiarlo a la app, vuelve a poner los valores que correspondan; el motivo de cada uno está en `docs/decisiones.md` y en `ml\outputs\final\threshold_source.json`.
 
 Después repite el paso A6: las pruebas deben seguir en verde con el modelo nuevo.
 
@@ -357,7 +359,7 @@ Si generas un APK nuevo, reemplaza `public\BioCafe-v3.0.apk` y actualiza la vers
 
 - [ ] Android Studio abre la carpeta `android` y la sincronización de Gradle termina sin errores.
 - [ ] `.\gradlew.bat testDebugUnitTest assembleDebug` termina con `BUILD SUCCESSFUL`.
-- [ ] La app abre en el emulador y muestra "Detector de hojas de café".
+- [ ] La app abre en el emulador y muestra "BioCafe".
 - [ ] "Elegir de galería" con una foto de hoja lleva a la pantalla de resultado.
 - [ ] `.\gradlew.bat connectedDebugAndroidTest` pasa las 10 pruebas con el emulador encendido.
 
@@ -369,7 +371,7 @@ Si generas un APK nuevo, reemplaza `public\BioCafe-v3.0.apk` y actualiza la vers
 | Error de sincronización que menciona `compileSdk 37` o una plataforma no encontrada | Falta la plataforma API 37 | Paso A2 |
 | Error de versión de Java al sincronizar | JDK no compatible | Instala Temurin 21 y selecciónalo (paso A3) |
 | `assembleRelease` genera un APK que el teléfono no instala | Falta el almacén de claves y el APK salió sin firmar | Paso A8 |
-| `01_preparar_datos.py` da menos de 3596 imágenes o falla al leer BRACOL | Falta un dataset o BRACOL no se extrajo con `tar` | Paso B4 |
+| `01_preparar_datos.py` da menos de 3736 imágenes o falla al leer BRACOL | Falta un dataset o BRACOL no se extrajo con `tar` | Paso B4 |
 | `No matching distribution found for tensorflow==2.21.0` | Python 3.14 u otra versión no admitida | Usa `--python 3.12` (paso B2) |
 | El emulador clasifica una sala como "Hoja sana" | La cámara del emulador no muestra una hoja y el modelo solo conoce hojas | Es una limitación conocida; prueba con fotos desde la galería |
 
