@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="18 18 72 72" width="512" height="512" role="img" aria-label="Detector de hojas de café">
+  <rect x="18" y="18" width="72" height="72" rx="18" fill="#1B6E3A"/>
+  <path d="M37,71 C36,50 50,36 71,37 C72,58 58,72 37,71 Z" fill="#F2F8F0"/>
+  <path d="M40,68 L67,41 M48,60 L48,50 M48,60 L58,60 M56,52 L56,44 M56,52 L64,52" fill="none" stroke="#1B6E3A" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M30,38 L30,30 L38,30 M70,30 L78,30 L78,38 M78,70 L78,78 L70,78 M38,78 L30,78 L30,70" fill="none" stroke="#BFE3C6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

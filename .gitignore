@@ -34,3 +34,8 @@ cafe_outputs_v2.zip
 
 ml/outputs/*/golden/*.jpg
 ml/outputs/*/golden/*.rgb
+
+# Release signing material and distributable builds
+android/keystore.properties
+android/*.jks
+dist/

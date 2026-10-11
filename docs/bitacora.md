@@ -704,3 +704,25 @@ Matriz de confusión del v2 (filas = clase real; columnas = minador, roya, sana)
 - Pruebas instrumentadas del modelo v2 en el emulador (se hicieron en el teléfono).
 - `ml/colab_entrenamiento.ipynb` quedó desactualizado: corresponde a la v1.
 - El camino de Colab desde el navegador descrito en el manual de Windows.
+
+## Versión instalable (2026-10-11)
+
+### Qué se hizo
+
+- Ícono adaptativo de la app (`res/drawable/ic_launcher_*.xml`, `res/mipmap-anydpi-v26/`).
+- Firma de la compilación `release` leída de `android/keystore.properties` (fuera de git); sin ese archivo, la compilación queda sin firmar.
+- APK firmado en `dist/DetectorHojasCafe-v2.0.apk`.
+
+### Qué se comprobó
+
+- `./gradlew testDebugUnitTest assembleRelease`: compila; pruebas unitarias en verde.
+- `apksigner verify`: firma válida, certificado `CN=Detector de hojas de cafe, O=Universidad de Pamplona`.
+- APK: 47 442 771 bytes, versión 2.0, permisos `CAMERA` y uno interno de AndroidX, sin `INTERNET`. SHA-256 `c9f0154b10c8256f38b027b2aef5506020103e7d68d143b1a0ac55093d73550b`.
+- Instalado en el teléfono (Motorola Edge 30) tras desinstalar la versión de depuración: abre sin cierres inesperados.
+- Instalado en el emulador: abre, y el ícono se ve correcto en la pantalla de información de la app.
+
+### NO EJECUTADO
+
+- No se vio el ícono en el teléfono: tenía la pantalla apagada al capturar.
+- No se recorrió el flujo foto → resultado con la compilación `release` (solo se comprobó que abre). Las pruebas instrumentadas se hicieron sobre la compilación de depuración del mismo código y modelo.
+- El código no está ofuscado ni reducido (`isMinifyEnabled = false`).

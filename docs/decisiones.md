@@ -125,3 +125,11 @@ Formato: fecha, decisión, motivo. Las marcadas **DECISIÓN** en el plan usan el
 - **Motivo:** es el que dio la regla del plan aplicada a EfficientNet-B0 sobre una fuente no vista (etapa 1). El modelo final se entrena con todas las fuentes, así que ya no queda una fuente no vista para elegirlo; con la validación interna la regla da 0.40, que lo acepta todo. El origen del valor queda en `ml/outputs/final/threshold_source.json`.
 - **Decisión:** la app sigue llevando el modelo sin cuantizar (`model_fp32.tflite`), ahora de 16 072 468 bytes.
 - **Congelación:** modelo, umbral y código quedan confirmados en git **antes** de abrir el conjunto final (JMuBEN). Lo que se mida en él no se usa para cambiar nada.
+
+## 2026-10-11 — Versión instalable: ícono y firma
+
+- **Decisión:** ícono adaptativo vectorial (hoja dentro de las esquinas del marco guía, sobre el verde de la app). Copia para web en `docs/icono-app.svg`.
+- **Decisión:** el APK de distribución es la compilación `release`, firmada con un almacén de claves nuevo creado para este proyecto. `versionName` 2.0, `versionCode` 2.
+- **Dónde está la firma:** `android/cafe-detector-release.jks` y `android/keystore.properties` (contraseña generada al azar). **Ninguno de los dos está en git.** Hay que guardar copia: sin ese almacén no se pueden publicar actualizaciones que se instalen encima de esta versión.
+- **Dónde está el APK:** `dist/DetectorHojasCafe-v2.0.apk` (fuera de git).
+- **Nota:** una compilación de depuración y una de `release` tienen firmas distintas; para pasar de una a otra en el mismo teléfono hay que desinstalar primero.
