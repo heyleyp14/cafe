@@ -2,111 +2,111 @@
   {
     "file": "00",
     "expected_class": "minador",
-    "source": "decafia__MINADO_RECORTES_35.jpg",
+    "source": "bracol__44.jpg",
     "predicted_class": "minador",
     "probs_tflite": [
-      0.9999744892120361,
-      2.3324644644162618e-05,
-      2.1967598513583653e-06
+      0.9330909252166748,
+      0.034517042338848114,
+      0.03239196166396141
     ]
   },
   {
     "file": "01",
     "expected_class": "minador",
-    "source": "decafia__MINADOR_44.jpg",
+    "source": "decafia__MINEIRO_63.jpg",
     "predicted_class": "minador",
     "probs_tflite": [
-      0.9994723200798035,
-      0.0005216015269979835,
-      6.109612968430156e-06
+      0.9601845145225525,
+      0.024429218843579292,
+      0.015386257320642471
     ]
   },
   {
     "file": "02",
     "expected_class": "minador",
-    "source": "decafia__MINADO_RECORTES_28.jpg",
+    "source": "decafia__MINADOR_19.jpg",
     "predicted_class": "minador",
     "probs_tflite": [
-      0.9999986886978149,
-      1.3629685327032348e-06,
-      2.8122837392174915e-08
+      0.9479333162307739,
+      0.023710070177912712,
+      0.028356650844216347
     ]
   },
   {
     "file": "03",
     "expected_class": "roya",
-    "source": "decafia__ROYA_P_A_59.jpg",
-    "predicted_class": "sana",
+    "source": "rocole__C9P10H1.jpg",
+    "predicted_class": "roya",
     "probs_tflite": [
-      2.7859385227202438e-05,
-      0.421949177980423,
-      0.5780229568481445
+      0.028631949797272682,
+      0.9509024024009705,
+      0.020465675741434097
     ]
   },
   {
     "file": "04",
     "expected_class": "roya",
-    "source": "decafia__ROYA_Muy_A_15.jpg",
+    "source": "rocole__C9P14H1.jpg",
     "predicted_class": "roya",
     "probs_tflite": [
-      9.233523996954318e-06,
-      0.9997461438179016,
-      0.000244586612097919
+      0.020462246611714363,
+      0.9385265707969666,
+      0.04101112112402916
     ]
   },
   {
     "file": "05",
     "expected_class": "roya",
-    "source": "rocole__C12P30H2.jpg",
+    "source": "bracol__1290.jpg",
     "predicted_class": "roya",
     "probs_tflite": [
-      5.760062049375847e-05,
-      0.9961251616477966,
-      0.0038173014763742685
+      0.010553622618317604,
+      0.9729340076446533,
+      0.016512395814061165
     ]
   },
   {
     "file": "06",
     "expected_class": "sana",
-    "source": "decafia__SANAS_NUEVAS_417.jpg",
+    "source": "decafia__SANAS_NUEVAS_349.jpg",
     "predicted_class": "sana",
     "probs_tflite": [
-      0.008508361876010895,
-      0.007825122214853764,
-      0.9836665391921997
+      0.02944243513047695,
+      0.03639549762010574,
+      0.9341620802879333
     ]
   },
   {
     "file": "07",
     "expected_class": "sana",
-    "source": "decafia__SANAS_NUEVAS_620.jpg",
+    "source": "rocole__C6P37E2.jpg",
     "predicted_class": "sana",
     "probs_tflite": [
-      6.0777965700253844e-05,
-      0.2310458868741989,
-      0.7688933610916138
+      0.027132365852594376,
+      0.025034695863723755,
+      0.9478328824043274
     ]
   },
   {
     "file": "08",
     "expected_class": "sana",
-    "source": "decafia__SANAS_NUEVAS_463.jpg",
+    "source": "bracol__1370.jpg",
     "predicted_class": "sana",
     "probs_tflite": [
-      0.004289570264518261,
-      0.09223836660385132,
-      0.9034720659255981
+      0.042092371731996536,
+      0.3273472785949707,
+      0.6305603384971619
     ]
   },
   {
     "file": "09",
     "expected_class": "sana",
-    "source": "decafia__SANAS_NUEVAS_240.jpg",
+    "source": "rocole__C6P35E1.jpg",
     "predicted_class": "sana",
     "probs_tflite": [
-      3.003180495397828e-07,
-      0.07671133428812027,
-      0.9232882857322693
+      0.032915521413087845,
+      0.07396601140499115,
+      0.8931184411048889
     ]
   }
 ]

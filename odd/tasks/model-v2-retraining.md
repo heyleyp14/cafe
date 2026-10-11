@@ -18,8 +18,8 @@ Retrain the three-class model so it generalizes beyond its training datasets, wi
 - [x] R1 Evaluation design — route: delegated writer; source-and-class stratified split (test RED then GREEN, worst deviation 0.0042); holdout download in progress
 - [x] R2 Data — 3596 images, BRACOL added (MD5-only dedup), stratum sample weights
 - [x] R3 Robustness — stronger augmentation in the data pipeline; background replacement not implemented
-- [ ] R4 Training on Colab: full fine-tuning, MobileNetV2 vs EfficientNet-B0, calibration and threshold
-- [ ] R5 Close: conversion, parity, emulator and phone tests, open the final holdout once
+- [x] R4 Training on Colab — stage 1: BRACOL F1 0.7313 (MobileNetV2) vs 0.8494 (EfficientNet-B0); stage 2: final EfficientNet-B0, internal F1 0.9902, threshold 0.55
+- [x] R5 Close — fp32 model 16.07 MB, phone tests green (latency 48 ms), final holdout JMuBEN once: accuracy 0.8003, F1 macro 0.7658 (v1: 0.6137, 0.5895)
 
 ## Evidence
 
@@ -27,4 +27,4 @@ Retrain the three-class model so it generalizes beyond its training datasets, wi
 
 ## Next step
 
-R4: needs a Colab T4 session; upload `cafe_ml_bundle.zip` and `cafe_data_v2.zip`, run `ml/colab_run_v2.py` (stage 1, both architectures, BRACOL held out).
+None inside this feature. Open: field photos by the human (original plan phase 12 step 2); minador vs roya confusion remains the main weakness.

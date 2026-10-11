@@ -1,6 +1,6 @@
 # Detector de plagas y enfermedades en hojas de café (prototipo)
 
-Prototipo académico de apoyo, **no es una herramienta de diagnóstico**. Clasifica una foto de una hoja de café en `minador`, `roya` o `sana` con un modelo MobileNetV2 que corre en el teléfono, sin internet.
+Prototipo académico de apoyo, **no es una herramienta de diagnóstico**. Clasifica una foto de una hoja de café en `minador`, `roya` o `sana` con un modelo EfficientNet-B0 que corre en el teléfono, sin internet.
 
 Proyecto "Sistema de Detección Temprana de Plagas y Enfermedades en Cultivos de Café" (FCPD 2026-2, Universidad de Pamplona). El plan está en `PLAN_Prototipo_Cafe_Kotlin.md`.
 
@@ -38,26 +38,33 @@ make data        # particiones 70/15/15 y ml/outputs/dataset_stats.json
 
 ### 3. Entrenamiento y evaluación en Colab
 
-El entrenamiento se hace en Colab o Kaggle con GPU. Hay dos caminos equivalentes:
-
-- **Cuaderno:** `make colab-bundle`, sube `ml/colab_entrenamiento.ipynb` y `cafe_ml_bundle.zip`, y ejecuta las celdas en orden. Este camino no se ha probado en el navegador.
-- **CLI de Colab** (el que se usó): con `google-colab-cli` instalado y una sesión con GPU, sube `cafe_ml_bundle.zip` a `/content/`, descomprímelo y lanza `ml/colab_run.py`. Descarga los datasets y corre las fases 1 a 5 comprobando la aceptación de cada una.
-
-Ambos dejan `cafe_outputs.zip`; descomprímelo sobre `ml/outputs/`.
-
-En un equipo con GPU propia también se puede ejecutar `make data train eval tflite parity`.
-
-### 4. Paridad y archivos para la app
+El modelo actual (v2, EfficientNet-B0) se entrena en Colab con GPU. El plan y sus motivos están en `docs/PLAN_reentrenamiento_v2.md`.
 
 ```bash
-make parity      # parity.json y los vectores de referencia de ml/outputs/golden/
-cp ml/outputs/model_fp32.tflite android/app/src/main/assets/model.tflite
-cp ml/outputs/labels.txt ml/outputs/threshold.json android/app/src/main/assets/
-cp ml/outputs/golden/* android/app/src/androidTest/assets/golden/
-make results     # regenera docs/resultados.md
+make data                      # incluye BRACOL en ml/data/external/bracol (ver docs/decisiones.md)
+make colab-bundle colab-data   # cafe_ml_bundle.zip (código) y cafe_data_v2.zip (datos preparados)
 ```
 
-La app usa el modelo sin cuantizar; el motivo está en `docs/decisiones.md`.
+Sube los dos zip a `/content/` de una sesión de Colab con GPU, descomprímelos y ejecuta desde `/content/ml`:
+
+```bash
+python colab_run_v2.py                                # etapa 1: compara arquitecturas sin BRACOL
+python colab_run_v2.py --stage 2 --arch efficientnetb0  # etapa 2: modelo final
+```
+
+Descarga `cafe_outputs_v2.zip` y copia `outputs/final/` a `ml/outputs/final/`.
+
+### 4. Conversión, paridad y archivos para la app
+
+```bash
+make tflite parity             # ml/outputs/final/: modelos TFLite, parity.json y golden/
+cp ml/outputs/final/model_fp32.tflite android/app/src/main/assets/model.tflite
+cp ml/outputs/final/labels.txt ml/outputs/final/threshold.json android/app/src/main/assets/
+cp ml/outputs/final/golden/* android/app/src/androidTest/assets/golden/
+make results                   # regenera docs/resultados.md
+```
+
+La app usa el modelo sin cuantizar y un umbral elegido con una fuente no vista; los motivos están en `docs/decisiones.md`. El conjunto final (JMuBEN) se evalúa una sola vez con `ml/evaluar_conjunto_final.py`.
 
 ## Compilar y probar la app
 
@@ -69,7 +76,7 @@ echo "sdk.dir=$HOME/Android/Sdk" > local.properties
 adb install -r app/build/outputs/apk/debug/app-debug.apk
 ```
 
-Las imágenes de referencia (`golden/*.jpg`, `golden/*.rgb`) no están en git; se regeneran con `make parity`.
+Las imágenes de referencia (`golden/*.jpg`, `golden/*.rgb`) no están en git; se regeneran con `make parity` (necesita `ml/outputs/final/model.keras`).
 
 ## Datasets
 

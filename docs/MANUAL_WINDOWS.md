@@ -25,8 +25,8 @@ Quien comparte debe incluir estas carpetas, que **no están en git** pero hacen 
 | Carpeta o archivo | Para qué sirve | Sin esto… |
 |---|---|---|
 | `android/app/src/androidTest/assets/golden/` | Imágenes de referencia de las pruebas | Fallan las pruebas instrumentadas |
-| `ml/outputs/golden/` | Las mismas imágenes, del lado de Python | No se puede comparar la paridad |
-| `ml/outputs/model.keras` | Modelo en formato Keras | No se pueden repetir las fases 3 a 5 sin reentrenar |
+| `ml/outputs/final/golden/` | Las mismas imágenes, del lado de Python | No se puede comparar la paridad |
+| `ml/outputs/final/model.keras` | Modelo en formato Keras | No se pueden repetir las fases 3 a 5 sin reentrenar |
 
 Y debe **excluir** estas, que son pesadas o propias de cada equipo: `ml/.venv/`, `ml/data/`, `android/build/`, `android/app/build/`, `android/.gradle/` y `android/local.properties`.
 
@@ -91,7 +91,7 @@ Con el emulador encendido y la carpeta `golden` en su sitio:
 .\gradlew.bat connectedDebugAndroidTest
 ```
 
-Resultado esperado: 9 pruebas instrumentadas sin fallos.
+Resultado esperado: 10 pruebas instrumentadas sin fallos (una de ellas se omite si no hay fotos de lote).
 
 **Si `gradlew.bat` dice que no encuentra Java:** en esa terminal, ejecuta primero
 
@@ -154,9 +154,9 @@ El proyecto usa un `Makefile`, que no funciona en Windows sin herramientas extra
 ```powershell
 cd ml
 .\.venv\Scripts\python.exe 01_preparar_datos.py      # equivale a: make data
-.\.venv\Scripts\python.exe 03_evaluar.py             # make eval
-.\.venv\Scripts\python.exe 04_convertir_tflite.py    # make tflite
-.\.venv\Scripts\python.exe 05_paridad_tflite.py      # make parity
+.\.venv\Scripts\python.exe 03_evaluar.py --run final             # make eval
+.\.venv\Scripts\python.exe 04_convertir_tflite.py --run final    # make tflite
+.\.venv\Scripts\python.exe 05_paridad_tflite.py --run final      # make parity
 .\.venv\Scripts\python.exe generar_resultados.py     # make results
 ```
 
@@ -165,7 +165,7 @@ Qué necesita cada uno:
 | Script | Necesita |
 |---|---|
 | `01_preparar_datos.py` | Los datasets descargados (paso B4) |
-| `03`, `04`, `05` | `ml\outputs\model.keras` y los datos preparados |
+| `03`, `04`, `05` | `ml\outputs\final\model.keras` y los datos preparados |
 | `generar_resultados.py` | Solo los archivos de `ml\outputs\` (ya vienen en el proyecto) |
 
 ### B4. Descargar los datasets (solo si vas a preparar datos)
@@ -201,43 +201,51 @@ ml\data\raw\decafia\CoffeeLeaf-CO\labels\...
 
 Solo si cambias los datos o el entrenamiento. Necesitas una cuenta de Google.
 
-> El entrenamiento original se lanzó desde Linux con la CLI de Colab, que **no funciona en Windows**. En Windows se usa el cuaderno desde el navegador. **El cuaderno no se ha probado en el navegador**; hace los mismos pasos que el proceso que sí se ejecutó.
+> El entrenamiento se lanzó desde Linux con la CLI de Colab, que **no funciona en Windows**. En Windows hay que hacerlo desde el navegador. **Este camino no se ha probado.** El cuaderno `ml/colab_entrenamiento.ipynb` corresponde al modelo v1 y está desactualizado; usa los pasos de abajo.
 
-### C1. Preparar el paquete de código
+### C1. Preparar los dos paquetes
 
-Desde la raíz del proyecto, con el entorno de la ruta B:
+Con el entorno de la ruta B y los datos ya preparados (`01_preparar_datos.py`, que además necesita BRACOL en `ml\data\external\bracol`):
 
 ```powershell
 cd ml
-.\.venv\Scripts\python.exe crear_bundle.py
+.\.venv\Scripts\python.exe crear_bundle.py          # cafe_ml_bundle.zip (código)
+.\.venv\Scripts\python.exe crear_bundle.py --data   # cafe_data_v2.zip (datos, unos 166 MB)
 cd ..
 ```
 
-El archivo `cafe_ml_bundle.zip` queda en la raíz del proyecto.
+### C2. Ejecutar en Colab
 
-### C2. Ejecutar el cuaderno
-
-1. Abre https://colab.research.google.com/ → `Archivo` → `Subir cuaderno` → elige `ml\colab_entrenamiento.ipynb`.
+1. Abre https://colab.research.google.com/ y crea un cuaderno nuevo.
 2. `Entorno de ejecución` → `Cambiar tipo de entorno de ejecución` → **GPU T4**.
-3. Ejecuta las celdas **en orden**. La primera pide subir `cafe_ml_bundle.zip`.
-4. Cada fase termina con una línea `ACEPTACIÓN FASE N: OK`. Si una celda falla, **no sigas**: copia el error.
-5. La última celda descarga `cafe_outputs.zip`.
+3. Sube los dos zip con el panel de archivos (icono de carpeta) a `/content/`.
+4. En una celda, ejecuta:
 
-Duración de referencia: el entrenamiento tardó unos 17 minutos en una T4, más las descargas de los datasets.
+```
+!cd /content && unzip -q -o cafe_ml_bundle.zip && unzip -q -o cafe_data_v2.zip
+!cd /content/ml && python colab_run_v2.py --stage 2 --arch efficientnetb0
+```
+
+5. Cuando imprima `ALL DONE`, descarga `/content/cafe_outputs_v2.zip`.
+
+Duración de referencia: el modelo final tardó unos 25 minutos en una T4. Sin `--stage 2`, el script compara dos arquitecturas (etapa 1) y tarda cerca del doble.
 
 ### C3. Llevar el modelo nuevo a la app
 
-Descomprime `cafe_outputs.zip` y, desde la raíz del proyecto:
+Descomprime `cafe_outputs_v2.zip`, copia su carpeta `outputs\final` a `ml\outputs\final` y, desde la raíz del proyecto:
 
 ```powershell
-Expand-Archive cafe_outputs.zip -DestinationPath ml -Force
-Copy-Item ml\outputs\model_fp32.tflite android\app\src\main\assets\model.tflite
-Copy-Item ml\outputs\labels.txt, ml\outputs\threshold.json android\app\src\main\assets\
-Copy-Item ml\outputs\golden\* android\app\src\androidTest\assets\golden\
+cd ml
+.\.venv\Scripts\python.exe 04_convertir_tflite.py --run final
+.\.venv\Scripts\python.exe 05_paridad_tflite.py --run final
+cd ..
+Copy-Item ml\outputs\final\model_fp32.tflite android\app\src\main\assets\model.tflite
+Copy-Item ml\outputs\final\labels.txt, ml\outputs\final\threshold.json android\app\src\main\assets\
+Copy-Item ml\outputs\final\golden\* android\app\src\androidTest\assets\golden\
 ml\.venv\Scripts\python.exe ml\generar_resultados.py
 ```
 
-La app usa el modelo **sin cuantizar** (`model_fp32.tflite`); el motivo está en `docs/decisiones.md`.
+La app usa el modelo **sin cuantizar** (`model_fp32.tflite`). El umbral de `threshold.json` se fijó a mano en 0.55; el motivo está en `docs/decisiones.md`, y hay que revisarlo si se reentrena.
 
 Después repite el paso A6: las pruebas deben seguir en verde con el modelo nuevo.
 
@@ -249,7 +257,7 @@ Después repite el paso A6: las pruebas deben seguir en verde con el modelo nuev
 - [ ] `.\gradlew.bat testDebugUnitTest assembleDebug` termina con `BUILD SUCCESSFUL`.
 - [ ] La app abre en el emulador y muestra "Detector de hojas de café".
 - [ ] "Elegir de galería" con una foto de hoja lleva a la pantalla de resultado.
-- [ ] (Si copiaste `golden`) `.\gradlew.bat connectedDebugAndroidTest` pasa las 9 pruebas.
+- [ ] (Si copiaste `golden`) `.\gradlew.bat connectedDebugAndroidTest` pasa las 10 pruebas.
 
 ## Problemas frecuentes
 

@@ -1,0 +1,59 @@
+{
+  "dataset": "JMuBEN and JMuBEN2 (Mendeley t2r6rszp5c and tgv3zb82nd, CC BY 4.0): Leaf rust, Healthy, Miner",
+  "model": "final/model_fp32.tflite",
+  "images": 44297,
+  "unreadable": 1,
+  "accuracy": 0.8003,
+  "f1_macro": 0.7658,
+  "per_class": {
+    "minador": {
+      "precision": 0.9764,
+      "recall": 0.5458,
+      "f1": 0.7002,
+      "support": 16978
+    },
+    "roya": {
+      "precision": 0.5011,
+      "recall": 0.8637,
+      "f1": 0.6342,
+      "support": 8336
+    },
+    "sana": {
+      "precision": 0.9288,
+      "recall": 1.0,
+      "f1": 0.9631,
+      "support": 18983
+    }
+  },
+  "confusion_matrix": {
+    "rows_true_columns_predicted": [
+      "minador",
+      "roya",
+      "sana"
+    ],
+    "values": [
+      [
+        9266,
+        7168,
+        544
+      ],
+      [
+        224,
+        7200,
+        912
+      ],
+      [
+        0,
+        0,
+        18983
+      ]
+    ]
+  },
+  "expected_calibration_error": 0.1198,
+  "mean_confidence": 0.766,
+  "at_threshold": {
+    "threshold": 0.55,
+    "accepted_fraction": 0.9359,
+    "accepted_accuracy": 0.8196
+  }
+}

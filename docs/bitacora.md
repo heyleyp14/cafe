@@ -634,3 +634,73 @@ Mismo modelo, mismas 860 imágenes, tres variantes (clasificación en Python con
 - El test interno de la v1 y el de la v2 no son comparables: tienen distinto reparto y la v1 no incluía casi nada de RoCoLe.
 - Un solo entrenamiento por arquitectura, con una sola semilla: no se midió la variabilidad entre ejecuciones.
 - Cambia el modelo base respecto al plan original, que fijaba MobileNetV2 y dejaba EfficientNet-B0 como comparación opcional.
+
+## Reentrenamiento v2 — R4 etapa 2 y R5: modelo final y cierre (2026-10-11)
+
+**Estado: R4 y R5 CERRADOS.** Sigue sin ejecutarse la prueba de campo con fotos del humano (fase 12, paso 2).
+
+### Modelo final (etapa 2)
+
+- EfficientNet-B0 entrenado en Colab (Tesla T4) con las tres fuentes: 1483.8 s, 10 épocas de cabeza y 23 de ajuste fino (la parada temprana cortó antes de las 40). Pérdida de validación: 0.6837 en la época 1, mínimo 0.3447.
+- Test interno, equilibrado por origen (536 imágenes): exactitud 0.9907, F1 macro 0.9902. Por origen: DECAFIA 1.0000 (212), RoCoLe 0.9847 (196), BRACOL 0.9844 (128).
+- La sesión de Colab se cerró al descargar los resultados.
+
+### Conversión y paridad (PC local)
+
+- `model_fp32.tflite`: 16 072 468 bytes. `model.tflite` (rango dinámico): 4 572 672 bytes. Ambos cumplen el contrato de la sección 4.
+- Keras vs fp32: 100 % de coincidencia de clase, diferencia máxima 0.00097. Keras vs cuantizado: 100 %, diferencia máxima 0.136.
+- La app lleva el fp32. Vectores de referencia regenerados (10 imágenes; el modelo acierta la clase real en las 10).
+
+### Umbral
+
+0.55, tomado de la etapa 1 (ver `docs/decisiones.md`). `ml/outputs/final/threshold.json` se escribió a mano con ese valor; `threshold_source.json` documenta su origen. `metrics.json` conserva el 0.40 que da la regla sobre la validación interna.
+
+### Pruebas con el modelo v2
+
+- Unitarias: 11 de 11.
+- Instrumentadas en el teléfono (Motorola Edge 30, Android 14): todas en verde (la de lote se omite porque no había fotos cargadas).
+  - Nivel 1: diferencia máxima 0.0000004. Nivel 2: 10 de 10.
+  - Latencia: mediana 48.0 ms, p95 48 ms con 4 hilos; igual con 2 hilos (el modelo v1 medía 21 ms).
+- La app abre en el teléfono sin cierres inesperados. APK de depuración: 61 775 482 bytes.
+
+### Conjunto final (JMuBEN), abierto una sola vez
+
+Modelo, umbral y código se confirmaron en git (commit `6297064`) antes de abrirlo. 44 298 archivos; 1 ilegible; 44 297 evaluados con el modelo fp32 que lleva la app.
+
+| | v1 | v2 (final) |
+|---|---|---|
+| Exactitud | 0.6137 | **0.8003** |
+| F1 macro | 0.5895 | **0.7658** |
+| Recall minador | 0.3374 | 0.5458 |
+| Recall roya | 0.8388 | 0.8637 |
+| Recall sana | 0.7619 | 1.0000 |
+| Precisión roya | 0.3486 | 0.5011 |
+
+Matriz de confusión del v2 (filas = clase real; columnas = minador, roya, sana): `[9266, 7168, 544]`, `[224, 7200, 912]`, `[0, 0, 18983]`.
+
+- Con el umbral 0.55 se acepta el 93.6 % de las imágenes, con exactitud 0.8196 sobre las aceptadas.
+- Error de calibración esperado: 0.1198 (confianza media 0.766, exactitud 0.800).
+- El v1 se midió después sobre el mismo conjunto solo como referencia; no se usó para decidir nada.
+
+### Lectura
+
+- **El reentrenamiento mejoró de verdad:** en datos nunca usados, la exactitud sube de 0.61 a 0.80 y el F1 macro de 0.59 a 0.77.
+- **No está resuelto:** el modelo sigue confundiendo minador con roya. Reconoce el 55 % de las hojas con minador (7168 de 16 978 las da como roya) y solo la mitad de lo que llama roya lo es.
+- La brecha entre el test interno (0.99) y el conjunto final (0.80) confirma que el test interno no mide generalización.
+
+### Cautelas
+
+- JMuBEN son recortes de hoja ampliados con aumento de datos por sus autores: muchas imágenes derivan de una misma foto, así que 44 297 no son 44 297 hojas independientes.
+- No son fotos de campo de hojas completas ni de Colombia.
+- Un solo entrenamiento, una sola semilla.
+
+### Otros cambios
+
+- `docs/resultados.md` regenerado con la estructura nueva; `README.md`, `docs/MANUAL_WINDOWS.md` y el `Makefile` actualizados al modelo v2 (`RUN ?= final`).
+
+### NO EJECUTADO
+
+- Fotos reales del humano en campo (fase 12, paso 2).
+- Pruebas instrumentadas del modelo v2 en el emulador (se hicieron en el teléfono).
+- `ml/colab_entrenamiento.ipynb` quedó desactualizado: corresponde a la v1.
+- El camino de Colab desde el navegador descrito en el manual de Windows.

@@ -31,3 +31,6 @@ android/app/src/androidTest/assets/golden/*.rgb
 # v2 dataset bundle for Colab
 cafe_data_v2.zip
 cafe_outputs_v2.zip
+
+ml/outputs/*/golden/*.jpg
+ml/outputs/*/golden/*.rgb

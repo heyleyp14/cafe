@@ -1,5 +1,7 @@
 # Shortcuts for the ML pipeline. Run from the repository root.
 PYTHON ?= .venv/bin/python
+# Training run to work on: every run keeps its files in ml/outputs/$(RUN)/.
+RUN ?= final
 
 # TensorFlow does not find the CUDA libraries that pip installs inside the venv
 # (tensorflow[and-cuda]) unless they are on the loader path. Empty on CPU-only setups.
@@ -14,16 +16,16 @@ data:
 	cd ml && $(PYTHON) 01_preparar_datos.py
 
 train:
-	cd ml && $(PYTHON) 02_entrenar.py
+	cd ml && $(PYTHON) 02_entrenar.py --run $(RUN)
 
 eval:
-	cd ml && $(PYTHON) 03_evaluar.py
+	cd ml && $(PYTHON) 03_evaluar.py --run $(RUN)
 
 tflite:
-	cd ml && $(PYTHON) 04_convertir_tflite.py
+	cd ml && $(PYTHON) 04_convertir_tflite.py --run $(RUN)
 
 parity:
-	cd ml && $(PYTHON) 05_paridad_tflite.py
+	cd ml && $(PYTHON) 05_paridad_tflite.py --run $(RUN)
 
 results:
 	cd ml && $(PYTHON) generar_resultados.py
