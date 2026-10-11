@@ -13,7 +13,7 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: 'BioCafe',
   description:
-    'Clasifica una foto de una hoja de café en sana, roya o minador. Funciona en el teléfono, sin internet. Prototipo académico de apoyo para Android.',
+    'Clasifica una foto de una hoja de café en sana, roya, minador o arañita roja. Funciona en el teléfono, sin internet. Prototipo académico de apoyo para Android.',
   icons: {
     icon: [{ url: '/icono-app.svg', type: 'image/svg+xml' }],
     shortcut: '/icono-app.svg',

@@ -2,7 +2,8 @@ import { Minus } from 'lucide-react'
 import { Group, GroupRow, Section } from './section'
 
 const items = [
-  'Solo reconoce tres clases: hoja sana, roya y minador.',
+  'Solo reconoce cuatro clases: hoja sana, roya, minador y arañita roja.',
+  'La arañita roja es la clase menos fiable: se entrenó con imágenes de una sola fuente y en la prueba acertó 13 de 22.',
   'Solo conoce hojas: si la foto no es una hoja, igual dará una respuesta.',
   'No da recomendaciones de tratamiento.',
 ]

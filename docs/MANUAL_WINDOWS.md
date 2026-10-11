@@ -52,7 +52,7 @@ Esto es lo que tienes que conseguir o generar tú. Solo necesitas lo que corresp
 - El modelo en formato Keras (`ml\outputs\final\model.keras`), para repetir la conversión sin reentrenar.
 - Las imágenes de referencia de las pruebas (`golden`).
 - Todos los resultados (`ml\outputs\`) y la documentación (`docs\`).
-- El APK ya firmado, dentro de la página de descarga (`docs\landing-detector-hojas-cafe\public\DetectorHojasCafe-v2.0.apk`).
+- El APK ya firmado, dentro de la página de descarga (`docs\landing-detector-hojas-cafe\public\BioCafe-v3.0.apk`).
 
 **Para abrir, compilar y modificar la app basta con clonar el repositorio y seguir la ruta A.** No hace falta ningún dataset.
 
@@ -349,7 +349,7 @@ pnpm build    # comprueba que compila antes de publicar
 
 Para publicarla en Vercel, importa el repositorio y pon como "Root Directory" `docs/landing-detector-hojas-cafe`.
 
-Si generas un APK nuevo, reemplaza `public\DetectorHojasCafe-v2.0.apk` y actualiza la versión y el tamaño en `components\landing\hero.tsx`.
+Si generas un APK nuevo, reemplaza `public\BioCafe-v3.0.apk` y actualiza la versión y el tamaño en `components\landing\hero.tsx`.
 
 ---
 

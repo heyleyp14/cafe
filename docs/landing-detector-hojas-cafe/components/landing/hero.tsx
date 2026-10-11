@@ -25,13 +25,13 @@ export function Hero() {
             BioCafe
           </h1>
           <p className="max-w-[34rem] text-lg leading-relaxed text-pretty text-muted-foreground sm:text-xl">
-            Clasifica una foto de una hoja de café en sana, roya o minador. Funciona en el teléfono,
+            Clasifica una foto de una hoja de café en sana, roya, minador o arañita roja. Funciona en el teléfono,
             sin internet.
           </p>
         </div>
         <div className="flex w-full flex-col items-start gap-3">
           <a
-            href="/DetectorHojasCafe-v2.0.apk"
+            href="/BioCafe-v3.0.apk"
             download
             className="inline-flex h-14 w-full items-center justify-center gap-3 rounded-full bg-primary px-9 text-lg font-medium whitespace-nowrap text-primary-foreground transition-[background-color,transform] duration-200 ease-out hover:bg-primary-hover active:scale-[0.98] sm:w-auto"
           >
@@ -39,13 +39,13 @@ export function Hero() {
             Descargar APK
           </a>
           <p className="text-sm text-muted-foreground tabular-nums">
-            Versión 2.0 · 47 MB · Android 8.0 o superior
+            Versión 3.0 · 47 MB · Android 8.0 o superior
           </p>
         </div>
         <Notice />
       </div>
       <PhoneFrame
-        src="/app-inicio.png"
+        src="/app-inicio-v3.png"
         alt="Captura de la pantalla de inicio de la app, con los consejos para tomar la foto y los botones Tomar foto y Elegir de galería."
         eager
         className="phone-enter mx-auto"

@@ -12,8 +12,12 @@ from config import CLASSES, ML_DIR, OUTPUTS_DIR, SPLITS
 DOCS_DIR = ML_DIR.parent / "docs"
 FIELD_CSV = DOCS_DIR / "campo.csv"
 V1_DIR = ML_DIR / "outputs_v1"
+V2_DIR = OUTPUTS_DIR / "v2_final"
+# Classes shared by every model version and present in the external datasets.
+SHARED_CLASSES = ["minador", "roya", "sana"]
 FINAL_DIR = OUTPUTS_DIR / "final"
-STAGE1_RUNS = {"MobileNetV2": "stage1_mobilenetv2", "EfficientNet-B0": "stage1_efficientnetb0"}
+STAGE1_RUNS = {"v2 MobileNetV2 (3 clases)": "stage1_mobilenetv2", "v2 EfficientNet-B0 (3 clases)": "stage1_efficientnetb0",
+               "v3 EfficientNet-B0 (4 clases)": "stage1_v3"}
 
 
 def load(path):
@@ -35,6 +39,15 @@ def confusion_table(matrix):
         ["", *CLASSES], [[c, *row] for c, row in zip(CLASSES, matrix["values"])])
 
 
+def shared_macro_f1(report):
+    """Macro F1 over the classes every version has; a class with no images would drag it to zero."""
+    return round(sum(report["per_class"][c]["f1"] for c in SHARED_CLASSES) / len(SHARED_CLASSES), 4)
+
+
+def shared_recalls(report):
+    return [report["per_class"][c]["recall"] for c in SHARED_CLASSES]
+
+
 def field_section():
     if not FIELD_CSV.exists():
         return ("NO EJECUTADO. Faltan fotos reales tomadas por el humano en condiciones de campo (fase 12, paso 2). "
@@ -53,6 +66,7 @@ def main():
     parity, model_io = load(FINAL_DIR / "parity.json"), load(FINAL_DIR / "model_io.json")
     threshold_source = load(FINAL_DIR / "threshold_source.json")
     holdout, holdout_v1 = load(FINAL_DIR / "final_holdout.json"), load(V1_DIR / "final_holdout.json")
+    holdout_v2 = load(V2_DIR / "final_holdout.json")
     v1_metrics, v1_external = load(V1_DIR / "metrics.json"), load(V1_DIR / "external_bracol" / "metrics.json")
     stage1 = {name: load(OUTPUTS_DIR / run / "metrics.json") for name, run in STAGE1_RUNS.items()}
     phone = {name: load(FINAL_DIR / "android_phone" / f"{name}.json")
@@ -72,7 +86,7 @@ def main():
             ["Test interno", "Imágenes de las mismas fuentes del entrenamiento", internal["images"],
              internal["accuracy"], internal["f1_macro"]],
             ["Conjunto final (JMuBEN)", "Fuente nunca usada para entrenar ni para decidir", holdout["images"],
-             f"**{holdout['accuracy']}**", f"**{holdout['f1_macro']}**"],
+             f"**{holdout['accuracy']}**", f"**{shared_macro_f1(holdout)}** (3 clases presentes)"],
         ]),
         "La cifra que estima el comportamiento con imágenes nuevas es la del conjunto final, no la del test interno.",
 
@@ -95,12 +109,12 @@ def main():
         f"Pérdida de validación: {val_loss[0]:.4f} en la época 1, mínimo {min(val_loss):.4f}.",
 
         "## Cómo se eligió la arquitectura (etapa 1)",
-        "Las dos arquitecturas se entrenaron sin BRACOL y se midieron en BRACOL, una fuente que no habían visto.",
+        "Cada modelo de esta tabla se entrenó sin BRACOL y se midió en BRACOL, una fuente que no había visto. El F1 "
+        "macro es sobre las tres clases que BRACOL contiene.",
         table(["Modelo", "BRACOL exactitud", "BRACOL F1 macro", "Recall minador", "Recall roya", "Recall sana"], [
-            ["v1 (MobileNetV2)", v1_external["accuracy"], v1_external["f1_macro"],
-             *[v1_external["per_class"][c]["recall"] for c in CLASSES]],
-            *[[f"v2 {name}", m["holdout_source"]["accuracy"], m["holdout_source"]["f1_macro"],
-               *[m["holdout_source"]["per_class"][c]["recall"] for c in CLASSES]] for name, m in stage1.items()],
+            ["v1 MobileNetV2 (3 clases)", v1_external["accuracy"], v1_external["f1_macro"], *shared_recalls(v1_external)],
+            *[[name, m["holdout_source"]["accuracy"], shared_macro_f1(m["holdout_source"]),
+               *shared_recalls(m["holdout_source"])] for name, m in stage1.items()],
         ]),
         "BRACOL se usó para elegir la arquitectura y el umbral, y después se añadió al entrenamiento del modelo "
         "final; por eso sus cifras no son una estimación independiente.",
@@ -115,14 +129,16 @@ def main():
               [[s, m["images"], m["accuracy"], m["f1_macro"]] for s, m in sorted(metrics["by_source"].items())]),
 
         f"## Conjunto final: JMuBEN ({holdout['images']} imágenes)",
-        f"{holdout['dataset']}. Se evaluó una sola vez, con el modelo y el umbral ya confirmados en git.",
+        f"{holdout['dataset']}. Cada versión se evaluó con su modelo y su umbral ya confirmados en git.",
         table(["Modelo", "Exactitud", "F1 macro", "Recall minador", "Recall roya", "Recall sana"], [
-            ["v1", holdout_v1["accuracy"], holdout_v1["f1_macro"],
-             *[holdout_v1["per_class"][c]["recall"] for c in CLASSES]],
-            ["v2 (final)", holdout["accuracy"], holdout["f1_macro"],
-             *[holdout["per_class"][c]["recall"] for c in CLASSES]],
+            ["v1 (3 clases)", holdout_v1["accuracy"], shared_macro_f1(holdout_v1), *shared_recalls(holdout_v1)],
+            ["v2 (3 clases)", holdout_v2["accuracy"], shared_macro_f1(holdout_v2), *shared_recalls(holdout_v2)],
+            ["v3 (4 clases, actual)", holdout["accuracy"], shared_macro_f1(holdout), *shared_recalls(holdout)],
         ]),
-        "Detalle del modelo v2:",
+        "El F1 macro se calcula sobre las tres clases que este conjunto contiene. JMuBEN no tiene arañita roja, así "
+        "que no dice nada sobre esa clase. Este conjunto ya se había usado una vez para medir la v2; no se usó para "
+        "decidir nada de la v3.",
+        "Detalle del modelo actual:",
         class_table(holdout["per_class"]),
         confusion_table(holdout["confusion_matrix"]),
         "JMuBEN son recortes de hojas de café arábica tomados en Kenia y ampliados por sus autores con aumento de "
@@ -161,6 +177,8 @@ def main():
                 for k, v in phone["latency_threads"].items() if k.startswith("threads_")) + ".",
         ]),
 
+        "## Referencia: modelo v2",
+        "EfficientNet-B0 de tres clases (sin arañita roja). Archivos en `ml/outputs/v2_final/`.",
         "## Referencia: modelo v1",
         f"MobileNetV2 entrenado con RoCoLe y DECAFIA. Test interno: exactitud {v1_metrics['test']['accuracy']}, "
         f"F1 macro {v1_metrics['test']['f1_macro']}. Ese test estaba sesgado (casi sin imágenes de RoCoLe), así que "
@@ -171,6 +189,12 @@ def main():
 
         "## Limitaciones",
         "\n".join("- " + line for line in [
+            f"La arañita roja es la clase menos respaldada: una sola fuente (RoCoLe, Robusta de Ecuador), "
+            f"{internal['per_class']['arana_roja']['support']} imágenes de test, recall "
+            f"{internal['per_class']['arana_roja']['recall']} y precisión {internal['per_class']['arana_roja']['precision']}. "
+            "Ningún conjunto externo la contiene, así que no se sabe cómo generaliza.",
+            "Añadir la arañita roja bajó el acierto en RoCoLe, donde se confunde con roya y con hoja sana "
+            f"(exactitud en RoCoLe: {metrics['by_source']['rocole']['accuracy']}).",
             "El modelo confunde minador con roya en imágenes nuevas: en el conjunto final reconoce "
             f"{holdout['per_class']['minador']['recall']:.0%} de las hojas con minador y solo "
             f"{holdout['per_class']['roya']['precision']:.0%} de lo que llama roya lo es.",

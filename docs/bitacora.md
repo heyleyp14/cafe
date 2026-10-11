@@ -782,3 +782,60 @@ Ninguna cifra ni afirmación cambió. Se quitaron las etiquetas visibles "Paso 1
 - Entrenamiento del modelo v3, conversión, paridad y pruebas.
 - Ficha de la arañita roja en la app (el texto ya está localizado en el informe, secciones 1.1.1.4 y 1.2.1.4).
 - APK firmado y página de descarga con estos cambios.
+
+## Modelo v3 — Entrenamiento, pruebas y versión 3.0 (2026-10-11)
+
+**Estado: modelo v3 entrenado, probado en el teléfono y empaquetado. Sin publicar** (cambios confirmados en git local, pendientes de subir).
+
+### Entrenamiento (Colab, Tesla T4)
+
+- Paso de medición (`stage1_v3`, sin BRACOL): 1258 s, 10 + 21 épocas. Modelo final: 1671 s, 10 + 22 épocas. La sesión se cerró al terminar.
+- Test interno del modelo final (556 imágenes): exactitud 0.9388, F1 macro 0.8611.
+
+| Clase | Precisión | Recall | F1 | Imágenes |
+|---|---|---|---|---|
+| arana_roja | 0.5417 | 0.5909 | 0.5652 | 22 |
+| minador | 0.9891 | 0.9785 | 0.9838 | 93 |
+| roya | 0.9268 | 0.9360 | 0.9314 | 203 |
+| sana | 0.9702 | 0.9580 | 0.9641 | 238 |
+
+Matriz de confusión (filas = clase real; columnas = arana_roja, minador, roya, sana): `[13, 0, 6, 3]`, `[0, 91, 2, 0]`, `[8, 1, 190, 4]`, `[3, 0, 7, 228]`.
+
+### Qué pasó con la arañita roja
+
+- **Es una clase débil:** de 22 hojas con arañita roja, el modelo reconoce 13; y de 24 que llamó arañita roja, 13 lo eran.
+- **Se confunde con roya y con hoja sana**, todas dentro de RoCoLe: 6 arañitas salen como roya, 8 royas como arañita.
+- **Tuvo costo en RoCoLe:** la exactitud en esa fuente baja de 0.9847 (v2) a 0.8565 (v3); el recall de roya pasa de 0.9647 a 0.8554 y el de sana de 1.0000 a 0.9099.
+
+### Qué pasó con las otras tres clases fuera de los datos
+
+| Medida | v2 (3 clases) | v3 (4 clases) |
+|---|---|---|
+| BRACOL sin haberlo visto, F1 macro de 3 clases | 0.8494 | 0.8637 |
+| JMuBEN, exactitud | 0.8003 | 0.8125 |
+| JMuBEN, F1 macro de 3 clases | 0.7658 | 0.7806 |
+| JMuBEN, recall minador | 0.5458 | 0.5722 |
+
+- En los dos conjuntos externos las tres clases originales quedan iguales o algo mejor. La diferencia es pequeña y hay un solo entrenamiento por versión, así que no se puede afirmar que sea una mejora real.
+- En JMuBEN, 96 hojas con minador se clasificaron como arañita roja (de 16 978).
+- Con el umbral 0.60, en JMuBEN se acepta el 86.7 % de las imágenes, con exactitud 0.8528 sobre las aceptadas.
+
+### Conversión, paridad y pruebas
+
+- `model_fp32.tflite`: 16 077 592 bytes, salida `[1,4]`. Keras vs fp32: 100 % de coincidencia, diferencia máxima 0.00044.
+- Vectores de referencia: 10 imágenes (2 arañita, 2 minador, 3 roya, 3 sana); el modelo acierta la clase real en 8.
+- Unitarias: 11 de 11. Instrumentadas en el teléfono (Motorola Edge 30): todas en verde tras corregir la prueba de nivel 1, que asumía tres clases. Nivel 1: diferencia máxima 0.0000006. Nivel 2: 10 de 10. Latencia: mediana 48 ms.
+
+### Versión 3.0 de la app
+
+- Nombre **BioCafe**, flecha de retroceso, botones "Tomar foto" y "Elegir de galería" en el resultado, ficha de la arañita roja.
+- APK firmado con la misma firma: `dist/BioCafe-v3.0.apk`, 47 465 559 bytes, sin `INTERNET`. Instalado en el teléfono y en el emulador: abre sin cierres inesperados. En el emulador, una hoja con roya da "Roya del café 87 %" y muestra la arañita roja entre las tres clases.
+- Página de descarga actualizada: nombre, capturas nuevas, enlace a `BioCafe-v3.0.apk`, cuatro clases, cifras 94 % (interno) y 81 % (externo) y dos notas nuevas sobre la arañita roja. Compila; revisada en móvil y escritorio.
+- `docs/resultados.md` regenerado con la comparación v1, v2 y v3.
+
+### NO EJECUTADO
+
+- Subir los cambios a GitHub y, con ello, publicar la página y el APK nuevos.
+- Recorrido completo foto → resultado en el teléfono con la versión firmada (solo se comprobó que abre; el recorrido se hizo en el emulador).
+- Prueba de la arañita roja con imágenes de otra fuente: no existe ninguna.
+- Fotos de campo del humano (fase 12, paso 2).

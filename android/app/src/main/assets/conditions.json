@@ -1,4 +1,9 @@
 {
+  "arana_roja": {
+    "nombre": "Arañita roja del café",
+    "sintomas": "Hojas con pérdida de su brillo natural y una coloración parda o bronceada como consecuencia del daño producido por los ácaros. En casos de mayor afectación puede observarse una tonalidad pardo-rojiza en el follaje, reducción del área foliar, caída de hojas y presencia de una fina capa de telaraña sobre las hojas.",
+    "condiciones": "Las condiciones que favorecen la distribución y desarrollo en abundancia de las arañitas rojas son los factores climáticos como la temperatura, la humedad, la lluvia, la sequía y el viento. Dado que este ácaro no tiene alas, su movilidad depende del viento, el cual es el principal factor de dispersión de un lote a otro y entre fincas. Es una especie estacional que se incrementa en temporadas de sequía y altas temperaturas, tan pronto llegan los periodos de lluvia se reducen las poblaciones."
+  },
   "minador": {
     "nombre": "Minador de las hojas del cafeto",
     "sintomas": "Hojas que presentan galerías o minas visibles en su interior, producidas por la alimentación de las larvas. Estas zonas pueden adquirir una coloración clara o café y, cuando varias minas se unen, forman áreas extensas de necrosis sobre la hoja.",

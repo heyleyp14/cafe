@@ -66,8 +66,8 @@ class CoffeeLeafClassifierTest {
             val result = classifier.classifyRgbBytes(rgb)
 
             assertEquals("class of ${golden.file}", golden.probabilities.argmaxLabel(), result.top.first().label)
-            val byLabel = result.top.associate { it.label to it.confidence }
-            golden.file to labels.indices.maxOf { abs(byLabel.getValue(labels[it]) - golden.probabilities[it]) }
+            // The result only carries the top three classes, so those are the ones compared.
+            golden.file to result.top.maxOf { abs(it.confidence - golden.probabilities[labels.indexOf(it.label)]) }
         }
         File(appContext.getExternalFilesDir(null), "parity_level1.json")
             .writeText(maxDifferences.entries.joinToString(", ", "{", "}") { "\"${it.key}\": ${it.value}" })

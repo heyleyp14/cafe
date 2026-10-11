@@ -2,11 +2,11 @@ import { Group, Section } from './section'
 
 const metrics = [
   {
-    value: '99 %',
+    value: '94 %',
     text: 'de exactitud en imágenes de los mismos conjuntos con que se entrenó.',
   },
   {
-    value: '80 %',
+    value: '81 %',
     text: 'de exactitud en un conjunto externo que el modelo nunca vio.',
   },
 ]
@@ -33,7 +33,8 @@ export function Performance() {
       </Group>
       <p className="px-4 leading-relaxed text-pretty text-muted-foreground">
         La segunda cifra es la que mejor estima el uso real. El modelo confunde con frecuencia el
-        minador con la roya, y no se ha evaluado con fotos de campo en Colombia.
+        minador con la roya, y no se ha evaluado con fotos de campo en Colombia. El conjunto externo
+        no incluye arañita roja.
       </p>
     </Section>
   )

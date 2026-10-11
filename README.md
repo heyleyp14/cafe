@@ -1,6 +1,6 @@
 # Detector de plagas y enfermedades en hojas de café (prototipo)
 
-Prototipo académico de apoyo, **no es una herramienta de diagnóstico**. Clasifica una foto de una hoja de café en `minador`, `roya` o `sana` con un modelo EfficientNet-B0 que corre en el teléfono, sin internet.
+Prototipo académico de apoyo, **no es una herramienta de diagnóstico**. Clasifica una foto de una hoja de café en `arana_roja`, `minador`, `roya` o `sana` con un modelo EfficientNet-B0 que corre en el teléfono, sin internet.
 
 Proyecto "Sistema de Detección Temprana de Plagas y Enfermedades en Cultivos de Café" (FCPD 2026-2, Universidad de Pamplona). El plan está en `PLAN_Prototipo_Cafe_Kotlin.md`.
 

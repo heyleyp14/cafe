@@ -21,7 +21,7 @@ export function HowItWorks() {
   return (
     <div className="grid items-center gap-12 lg:grid-cols-[auto_minmax(0,1fr)] lg:gap-20">
       <PhoneFrame
-        src="/app-resultado.png"
+        src="/app-resultado-v3.png"
         alt="Captura de la pantalla de resultado de la app, con la clase detectada, la confianza y la ficha informativa."
         className="order-last mx-auto lg:order-none"
       />

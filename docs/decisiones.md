@@ -141,3 +141,13 @@ Formato: fecha, decisión, motivo. Las marcadas **DECISIÓN** en el plan usan el
 - **Qué sigue fuera (confirmado por el humano el 2026-10-11: git se queda así):**
   - Los datasets (`ml/data/`, unos 5 GB): varios archivos superan el límite de 100 MB por archivo de GitHub. Se descargan de sus fuentes.
   - El almacén de claves de la firma y su contraseña (`android/cafe-detector-release.jks`, `android/keystore.properties`): los guarda el humano fuera de git, como pide el plan original. `docs/MANUAL_WINDOWS.md` explica qué falta en el repositorio y cómo conseguirlo.
+
+## 2026-10-11 — Modelo v3: arañita roja, nombre de la app y umbral
+
+- **Decisión del humano:** añadir la arañita roja como cuarta clase y llamar a la app **BioCafe**.
+- **Datos:** la única fuente con esa clase es RoCoLe (`red_spider_mite` → `arana_roja`). El modelo se reentrenó completo con las cuatro clases (EfficientNet-B0, la arquitectura ya elegida).
+- **Umbral 0.60:** el que da la regla sobre BRACOL como fuente no vista en el paso de medición (`stage1_v3`); la regla sobre la validación interna daría 0.40.
+- **Conjunto final:** JMuBEN ya se había usado una vez para medir la v2. Se volvió a medir con la v3 solo para comparar las tres clases compartidas; no se usó para decidir nada. No contiene arañita roja.
+- **Ficha de la arañita roja:** síntomas de la sección 1.2.1.4 del informe; condiciones favorables con frases literales de la sección 1.1.1.4 (dos del párrafo de condiciones y una del párrafo de descripción sobre la estacionalidad).
+- **Identificador de la app:** se mantiene `co.edu.unipamplona.cafedetector` para que la versión nueva se instale sobre la anterior con la misma firma.
+- **Prueba de paridad nivel 1:** compara ahora las tres clases que devuelve el clasificador (top-3). Con cuatro clases, la menos probable ya no se compara directamente; el límite de 0.01 no cambió.
