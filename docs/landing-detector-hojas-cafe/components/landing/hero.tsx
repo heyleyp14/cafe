@@ -12,7 +12,7 @@ export function Hero() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/icono-app.svg"
-          alt="Logotipo de Detector de hojas de café"
+          alt="Logotipo de BioCafe"
           width={72}
           height={72}
           className="size-16 sm:size-[4.5rem]"
@@ -22,7 +22,7 @@ export function Hero() {
             id="titulo"
             className="text-[2.5rem] leading-[1.05] font-bold tracking-[-0.025em] text-balance sm:text-6xl"
           >
-            Detector de hojas de café
+            BioCafe
           </h1>
           <p className="max-w-[34rem] text-lg leading-relaxed text-pretty text-muted-foreground sm:text-xl">
             Clasifica una foto de una hoja de café en sana, roya o minador. Funciona en el teléfono,

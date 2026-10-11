@@ -11,7 +11,7 @@ const roboto = Roboto({
 })
 
 export const metadata: Metadata = {
-  title: 'Detector de hojas de café',
+  title: 'BioCafe',
   description:
     'Clasifica una foto de una hoja de café en sana, roya o minador. Funciona en el teléfono, sin internet. Prototipo académico de apoyo para Android.',
   icons: {
