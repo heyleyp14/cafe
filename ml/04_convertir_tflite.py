@@ -3,6 +3,7 @@
 Writes outputs/model_fp32.tflite (reference), outputs/model.tflite (dynamic-range
 quantization: int8 weights, float32 input/output) and outputs/model_io.json.
 """
+import argparse
 import json
 
 import numpy as np
@@ -25,6 +26,12 @@ def describe(path):
 
 
 def main():
+    # Every training run keeps its files in outputs/<run>/ (see 02_entrenar.py).
+    global OUTPUTS_DIR
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--run", default="final")
+    OUTPUTS_DIR = OUTPUTS_DIR / parser.parse_args().run
+
     model = tf.keras.models.load_model(OUTPUTS_DIR / "model.keras")
 
     # fp32 reference

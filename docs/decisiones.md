@@ -116,3 +116,12 @@ Formato: fecha, decisión, motivo. Las marcadas **DECISIÓN** en el plan usan el
 - **Decisión:** selección de modelo en dos etapas. Etapa 1: entrenar con RoCoLe y DECAFIA y medir en BRACOL como fuente no vista. Etapa 2: reentrenar la arquitectura elegida con las tres fuentes y evaluarla una sola vez en JMuBEN.
 - **Decisión:** el desbalance se corrige con pesos por muestra según su estrato (origen y clase), en lugar de `class_weight`.
 - **No implementado:** sustitución de fondo en el aumento de datos (requiere segmentar la hoja, y el diagnóstico R0 mostró que el fondo no es la causa principal).
+
+## 2026-10-11 — Modelo v2: arquitectura, umbral y congelación antes del conjunto final
+
+- **Decisión:** el modelo v2 es **EfficientNet-B0**, entrenado con las tres fuentes (RoCoLe, DECAFIA y BRACOL).
+- **Motivo:** en la etapa 1, sin haber visto BRACOL, obtuvo F1 macro 0.8494 en BRACOL frente a 0.7313 de MobileNetV2. Cambia el modelo base del plan original (MobileNetV2).
+- **Decisión:** umbral de confianza **0.55**.
+- **Motivo:** es el que dio la regla del plan aplicada a EfficientNet-B0 sobre una fuente no vista (etapa 1). El modelo final se entrena con todas las fuentes, así que ya no queda una fuente no vista para elegirlo; con la validación interna la regla da 0.40, que lo acepta todo. El origen del valor queda en `ml/outputs/final/threshold_source.json`.
+- **Decisión:** la app sigue llevando el modelo sin cuantizar (`model_fp32.tflite`), ahora de 16 072 468 bytes.
+- **Congelación:** modelo, umbral y código quedan confirmados en git **antes** de abrir el conjunto final (JMuBEN). Lo que se mida en él no se usa para cambiar nada.

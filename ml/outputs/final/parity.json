@@ -1,0 +1,36 @@
+{
+  "images": 100,
+  "keras_vs_fp32": {
+    "argmax_agreement": 1.0,
+    "max_abs_probability_difference": 0.000973
+  },
+  "keras_vs_quantized": {
+    "argmax_agreement": 1.0,
+    "max_abs_probability_difference": 0.136427
+  },
+  "fp32_vs_quantized": {
+    "argmax_agreement": 1.0,
+    "max_abs_probability_difference": 0.136297
+  },
+  "golden": {
+    "model": "model_fp32.tflite",
+    "images": 10,
+    "per_class": {
+      "minador": 3,
+      "roya": 3,
+      "sana": 4
+    },
+    "predicted_matches_expected": 10
+  },
+  "pc_latency_reference_only": {
+    "machine": "x86_64",
+    "fp32": {
+      "median_ms": 11.77,
+      "p95_ms": 12.01
+    },
+    "quantized": {
+      "median_ms": 14.77,
+      "p95_ms": 15.17
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "threshold": 0.55,
+  "chosen_from": "stage1_efficientnetb0 (holdout source bracol): lowest threshold with accepted accuracy >= 0.90 on a source unseen in training",
+  "internal_validation_rule_would_give": 0.4,
+  "why": "the final model trains on every source, so no unseen source is left to choose a threshold; the internal rule accepts everything"
+}

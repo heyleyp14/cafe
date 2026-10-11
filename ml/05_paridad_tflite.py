@@ -5,6 +5,7 @@ Level 2: 10 test images exported to outputs/golden/ as NN.jpg, NN.rgb and golden
 with probabilities from the model shipped in the app (config.APP_MODEL_FILE).
 Writes outputs/parity.json (including PC latency, reference only).
 """
+import argparse
 import json
 import platform
 import random
@@ -81,6 +82,12 @@ def export_golden(app_model, rng):
 
 
 def main():
+    # Every training run keeps its files in outputs/<run>/ (see 02_entrenar.py).
+    global OUTPUTS_DIR
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--run", default="final")
+    OUTPUTS_DIR = OUTPUTS_DIR / parser.parse_args().run
+
     rng = random.Random(SEED)
     keras_model = tf.keras.models.load_model(OUTPUTS_DIR / "model.keras")
     fp32 = TFLiteModel(OUTPUTS_DIR / "model_fp32.tflite")

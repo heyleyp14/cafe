@@ -1,0 +1,112 @@
+[
+  {
+    "file": "00",
+    "expected_class": "minador",
+    "source": "bracol__44.jpg",
+    "predicted_class": "minador",
+    "probs_tflite": [
+      0.9330909252166748,
+      0.034517042338848114,
+      0.03239196166396141
+    ]
+  },
+  {
+    "file": "01",
+    "expected_class": "minador",
+    "source": "decafia__MINEIRO_63.jpg",
+    "predicted_class": "minador",
+    "probs_tflite": [
+      0.9601845145225525,
+      0.024429218843579292,
+      0.015386257320642471
+    ]
+  },
+  {
+    "file": "02",
+    "expected_class": "minador",
+    "source": "decafia__MINADOR_19.jpg",
+    "predicted_class": "minador",
+    "probs_tflite": [
+      0.9479333162307739,
+      0.023710070177912712,
+      0.028356650844216347
+    ]
+  },
+  {
+    "file": "03",
+    "expected_class": "roya",
+    "source": "rocole__C9P10H1.jpg",
+    "predicted_class": "roya",
+    "probs_tflite": [
+      0.028631949797272682,
+      0.9509024024009705,
+      0.020465675741434097
+    ]
+  },
+  {
+    "file": "04",
+    "expected_class": "roya",
+    "source": "rocole__C9P14H1.jpg",
+    "predicted_class": "roya",
+    "probs_tflite": [
+      0.020462246611714363,
+      0.9385265707969666,
+      0.04101112112402916
+    ]
+  },
+  {
+    "file": "05",
+    "expected_class": "roya",
+    "source": "bracol__1290.jpg",
+    "predicted_class": "roya",
+    "probs_tflite": [
+      0.010553622618317604,
+      0.9729340076446533,
+      0.016512395814061165
+    ]
+  },
+  {
+    "file": "06",
+    "expected_class": "sana",
+    "source": "decafia__SANAS_NUEVAS_349.jpg",
+    "predicted_class": "sana",
+    "probs_tflite": [
+      0.02944243513047695,
+      0.03639549762010574,
+      0.9341620802879333
+    ]
+  },
+  {
+    "file": "07",
+    "expected_class": "sana",
+    "source": "rocole__C6P37E2.jpg",
+    "predicted_class": "sana",
+    "probs_tflite": [
+      0.027132365852594376,
+      0.025034695863723755,
+      0.9478328824043274
+    ]
+  },
+  {
+    "file": "08",
+    "expected_class": "sana",
+    "source": "bracol__1370.jpg",
+    "predicted_class": "sana",
+    "probs_tflite": [
+      0.042092371731996536,
+      0.3273472785949707,
+      0.6305603384971619
+    ]
+  },
+  {
+    "file": "09",
+    "expected_class": "sana",
+    "source": "rocole__C6P35E1.jpg",
+    "predicted_class": "sana",
+    "probs_tflite": [
+      0.032915521413087845,
+      0.07396601140499115,
+      0.8931184411048889
+    ]
+  }
+]
