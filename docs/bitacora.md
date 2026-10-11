@@ -752,3 +752,33 @@ Ninguna cifra ni afirmación cambió. Se quitaron las etiquetas visibles "Paso 1
 - La página no se ha publicado en Vercel ni se ha probado la descarga desde un teléfono.
 - El modo oscuro se revisó solo en escritorio.
 - La carpeta de la página no está en git (incluye el APK de 47 MB).
+
+## Modelo v3: arañita roja y ajustes de la app (2026-10-11)
+
+**Estado: EN CURSO.** Los ajustes de la app están hechos; el modelo de cuatro clases tiene los datos preparados y falta entrenarlo en Colab.
+
+### Ajustes de la pantalla de resultado (hechos)
+
+- La palabra "Atrás" de la esquina superior izquierda se sustituyó por una flecha (`res/drawable/ic_arrow_back.xml`), con "Atrás" como descripción para lectores de pantalla.
+- El botón "Nueva foto", que solo abría la cámara, se sustituyó por dos: "Tomar foto" y "Elegir de galería". Elegir de galería desde el resultado clasifica la imagen nueva sin salir de la pantalla.
+- Comprobado en el emulador con la compilación de depuración: galería → resultado; "Elegir de galería" desde el resultado → resultado nuevo; flecha → inicio; "Tomar foto" desde el resultado → cámara. Sin cierres inesperados. Pruebas unitarias: 11 de 11.
+
+### Arañita roja: datos (hechos)
+
+- Nueva clase `arana_roja`. `CLASSES = ["arana_roja", "minador", "roya", "sana"]`, `MODEL_VERSION = "v3-2026-10"`.
+- **Única fuente: RoCoLe** (`red_spider_mite`, 167 imágenes de café Robusta de Ecuador). Ni DECAFIA, ni BRACOL, ni JMuBEN tienen esta clase.
+- `make data`: 3736 imágenes. Arañita roja: 152 tras quitar duplicados (108 train, 22 val, 22 test). Fugas: 0/0/0. Equilibrio por origen: correcto, desviación máxima 0.0105.
+- Las copias con etiquetas contradictorias pasan de 11 a 35: hay fotos de RoCoLe repetidas con una etiqueta de arañita roja y otra distinta; se descartan todas, como fija la regla.
+- Los resultados del modelo v2 se conservan en `ml/outputs/v2_final/`.
+
+### Limitaciones que ya se conocen de esta clase
+
+- Con una sola fuente no se puede medir cómo generaliza: no hay otro dataset con arañita roja para validarla ni para el conjunto final.
+- 22 imágenes de test dan una cifra muy imprecisa.
+- Son hojas de Robusta de un solo lugar; el modelo puede aprender rasgos de esas fotos y no de la plaga.
+
+### NO EJECUTADO
+
+- Entrenamiento del modelo v3, conversión, paridad y pruebas.
+- Ficha de la arañita roja en la app (el texto ya está localizado en el informe, secciones 1.1.1.4 y 1.2.1.4).
+- APK firmado y página de descarga con estos cambios.

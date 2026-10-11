@@ -18,7 +18,7 @@ import tensorflow as tf
 from config import APP_MODEL_FILE, CLASSES, IMG_SIZE, OUTPUTS_DIR, PROCESSED_DIR, SEED
 
 PARITY_IMAGES = 100
-GOLDEN_PER_CLASS = {"minador": 3, "roya": 3, "sana": 4}  # 10 images, at least 2 per class
+GOLDEN_PER_CLASS = {"arana_roja": 2, "minador": 2, "roya": 3, "sana": 3}  # 10 images, at least 2 per class
 LATENCY_WARMUP, LATENCY_RUNS = 5, 50
 
 

@@ -35,6 +35,7 @@ ROCOLE_CLASS_MAP = {
     "rust_level_2": "roya",
     "rust_level_3": "roya",
     "rust_level_4": "roya",
+    "red_spider_mite": "arana_roja",
 }
 DECAFIA_NAMES = {0: "roya", 1: "coco", 2: "hojas", 3: "minador"}
 # SANAS_ROCOLE_* are declared by DECAFIA as re-annotated RoCoLe images; the

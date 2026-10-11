@@ -2,7 +2,7 @@
 from pathlib import Path
 
 # Alphabetical and fixed: this is the order of labels.txt (contract, section 4).
-CLASSES = ["minador", "roya", "sana"]
+CLASSES = ["arana_roja", "minador", "roya", "sana"]
 IMG_SIZE = 224
 SEED = 42
 
@@ -43,7 +43,7 @@ def list_processed(splits, exclude_source=None, only_source=None):
     return paths, labels, sources
 
 # Shown by the app in "Acerca de" (contract, section 4).
-MODEL_VERSION = "v2-2026-10"
+MODEL_VERSION = "v3-2026-10"
 
 # Model shipped in the app as assets/model.tflite. The float32 file is used because the
 # dynamic-range one gives CPU-dependent probabilities (docs/decisiones.md, phase 8).
