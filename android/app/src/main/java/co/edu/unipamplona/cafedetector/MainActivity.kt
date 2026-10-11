@@ -78,12 +78,14 @@ private fun CafeDetectorApp(viewModel: ClassifierViewModel = viewModel()) {
                 state = state,
                 conditionFor = viewModel::conditionFor,
                 onBack = backHome,
-                onNewPhoto = {
+                onTakePhoto = {
                     navController.navigate(Routes.CAMERA) {
                         popUpTo(Routes.HOME)
                         launchSingleTop = true
                     }
                 },
+                // Stays on this screen: the state goes back to loading and then to the new result.
+                onImagePicked = viewModel::classify,
             )
         }
     }

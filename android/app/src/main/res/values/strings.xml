@@ -53,7 +53,8 @@
     <string name="result_sheet_title">Ficha informativa</string>
     <string name="result_symptoms">Síntomas</string>
     <string name="result_favorable_conditions">Condiciones favorables</string>
-    <string name="result_new_photo">Nueva foto</string>
+    <string name="result_take_photo">Tomar foto</string>
+    <string name="result_pick_gallery">Elegir de galería</string>
     <string name="result_uncertain_title">No se pudo determinar con seguridad</string>
     <string name="result_uncertain_message">La confianza del modelo fue de %1$d %%, por debajo del mínimo requerido para mostrar un resultado.</string>
     <string name="result_tips_title">Consejos para la próxima captura</string>

@@ -1,6 +1,10 @@
 package co.edu.unipamplona.cafedetector.ui
 
 import android.graphics.Bitmap
+import android.net.Uri
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.PickVisualMediaRequest
+import androidx.activity.result.contract.ActivityResultContracts.PickVisualMedia
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -19,9 +23,11 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.FilledTonalButton
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
@@ -30,6 +36,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
@@ -55,27 +62,41 @@ fun ResultScreen(
     state: UiState,
     conditionFor: (String) -> Condition?,
     onBack: () -> Unit,
-    onNewPhoto: () -> Unit,
+    onTakePhoto: () -> Unit,
+    onImagePicked: (Uri) -> Unit,
 ) {
+    val picker = rememberLauncherForActivityResult(PickVisualMedia()) { uri -> uri?.let(onImagePicked) }
     Scaffold(
         topBar = {
             TopAppBar(
                 title = { Text(stringResource(R.string.result_title)) },
-                navigationIcon = { TextButton(onClick = onBack) { Text(stringResource(R.string.action_back)) } },
+                navigationIcon = {
+                    IconButton(onClick = onBack) {
+                        Icon(painterResource(R.drawable.ic_arrow_back), contentDescription = stringResource(R.string.action_back))
+                    }
+                },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.background),
             )
         },
         bottomBar = {
             if (state is UiState.Success || state is UiState.Error) {
-                Button(
-                    onClick = onNewPhoto,
+                // Same two ways to bring a new image as the home screen.
+                Row(
                     modifier = Modifier
                         .navigationBarsPadding()
                         .fillMaxWidth()
-                        .padding(horizontal = 16.dp, vertical = 12.dp)
-                        .heightIn(min = 52.dp),
+                        .padding(horizontal = 16.dp, vertical = 12.dp),
+                    horizontalArrangement = Arrangement.spacedBy(12.dp),
                 ) {
-                    Text(stringResource(R.string.result_new_photo))
+                    Button(onClick = onTakePhoto, modifier = Modifier.weight(1f).heightIn(min = 52.dp)) {
+                        Text(stringResource(R.string.result_take_photo), textAlign = TextAlign.Center)
+                    }
+                    FilledTonalButton(
+                        onClick = { picker.launch(PickVisualMediaRequest(PickVisualMedia.ImageOnly)) },
+                        modifier = Modifier.weight(1f).heightIn(min = 52.dp),
+                    ) {
+                        Text(stringResource(R.string.result_pick_gallery), textAlign = TextAlign.Center)
+                    }
                 }
             }
         },
