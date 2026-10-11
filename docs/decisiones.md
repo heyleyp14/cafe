@@ -138,6 +138,6 @@ Formato: fecha, decisión, motivo. Las marcadas **DECISIÓN** en el plan usan el
 
 - **Decisión del humano:** subir el proyecto completo al repositorio privado `josuerangel2005/cafe`, en la rama `main`.
 - **Qué se versionó por esa instrucción** y antes estaba fuera: la página de descarga (con el APK de 47 MB), la maqueta de v0, el informe en Word, las 10 imágenes de referencia de las pruebas y `ml/outputs/final/model.keras`. Las imágenes de referencia son de los datasets (CC BY 4.0, citados en el README); el plan original pedía no redistribuir imágenes, y el humano decidió incluirlas.
-- **Qué sigue fuera:**
+- **Qué sigue fuera (confirmado por el humano el 2026-10-11: git se queda así):**
   - Los datasets (`ml/data/`, unos 5 GB): varios archivos superan el límite de 100 MB por archivo de GitHub. Se descargan de sus fuentes.
-  - El almacén de claves de la firma y su contraseña (`android/cafe-detector-release.jks`, `android/keystore.properties`): pendiente de confirmación del humano; el plan original prohíbe subir claves a git.
+  - El almacén de claves de la firma y su contraseña (`android/cafe-detector-release.jks`, `android/keystore.properties`): los guarda el humano fuera de git, como pide el plan original. `docs/MANUAL_WINDOWS.md` explica qué falta en el repositorio y cómo conseguirlo.

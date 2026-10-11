@@ -16,21 +16,45 @@ Depende de lo que vayas a hacer. La mayoría solo necesita la ruta A.
 
 **Sobre Colab:** el modelo ya entrenado viene dentro del proyecto (`android/app/src/main/assets/model.tflite`). Solo hace falta Colab si se cambian los datos o el entrenamiento.
 
-## Antes de empezar: cómo recibir el proyecto
+## Antes de empezar: obtener el proyecto y saber qué falta
 
-El repositorio todavía no está publicado en GitHub, así que se comparte como carpeta comprimida.
+### Obtener el proyecto
 
-Quien comparte debe incluir estas carpetas, que **no están en git** pero hacen falta:
+El código está en GitHub, en un repositorio **privado**: https://github.com/josuerangel2005/cafe
 
-| Carpeta o archivo | Para qué sirve | Sin esto… |
-|---|---|---|
-| `android/app/src/androidTest/assets/golden/` | Imágenes de referencia de las pruebas | Fallan las pruebas instrumentadas |
-| `ml/outputs/final/golden/` | Las mismas imágenes, del lado de Python | No se puede comparar la paridad |
-| `ml/outputs/final/model.keras` | Modelo en formato Keras | No se pueden repetir las fases 3 a 5 sin reentrenar |
+1. Pide al dueño del repositorio que te invite como colaborador (`Settings` → `Collaborators` en GitHub) y acepta la invitación.
+2. Instala Git (https://git-scm.com/download/win).
+3. En PowerShell, en una ruta **corta y sin espacios ni tildes** (por ejemplo `C:\dev`):
 
-Y debe **excluir** estas, que son pesadas o propias de cada equipo: `ml/.venv/`, `ml/data/`, `android/build/`, `android/app/build/`, `android/.gradle/` y `android/local.properties`.
+```powershell
+git clone https://github.com/josuerangel2005/cafe.git
+cd cafe
+```
 
-Descomprime el proyecto en una ruta **corta y sin espacios ni tildes**, por ejemplo `C:\dev\cafe-detector`. Las rutas largas o con espacios dan problemas con Gradle en Windows.
+Las rutas largas o con espacios dan problemas con Gradle en Windows.
+
+### Qué NO viene en el repositorio
+
+Esto es lo que tienes que conseguir o generar tú. Solo necesitas lo que corresponda a tu ruta.
+
+| Qué falta | Por qué no está | Lo necesitas para | Cómo conseguirlo |
+|---|---|---|---|
+| Datasets de entrenamiento (unos 900 MB comprimidos) | Pesan demasiado para GitHub | Preparar datos y reentrenar (rutas B y C) | Paso B4 |
+| Dataset del conjunto final, JMuBEN (unos 1.3 GB) | Pesa demasiado para GitHub | Repetir la evaluación final | Paso B5 |
+| Entorno de Python (`ml\.venv`) | Es propio de cada equipo | Cualquier script de Python (ruta B) | Pasos B1 y B2 |
+| Dependencias de la página web (`node_modules`) | Se regeneran | Modificar la página de descarga | Sección "La página de descarga" |
+| Almacén de claves de la firma (`android\cafe-detector-release.jks` y `android\keystore.properties`) | Son secretos; no se suben a git | Generar un APK de distribución firmado con la misma firma | Pídeselos al dueño del proyecto, o crea los tuyos (paso A8) |
+| `android\local.properties` | Contiene la ruta del SDK de tu equipo | Compilar la app | Android Studio lo crea solo |
+
+### Qué SÍ viene y no tienes que generar
+
+- El modelo ya entrenado, dentro de la app (`android\app\src\main\assets\model.tflite`).
+- El modelo en formato Keras (`ml\outputs\final\model.keras`), para repetir la conversión sin reentrenar.
+- Las imágenes de referencia de las pruebas (`golden`).
+- Todos los resultados (`ml\outputs\`) y la documentación (`docs\`).
+- El APK ya firmado, dentro de la página de descarga (`docs\landing-detector-hojas-cafe\public\DetectorHojasCafe-v2.0.apk`).
+
+**Para abrir, compilar y modificar la app basta con clonar el repositorio y seguir la ruta A.** No hace falta ningún dataset.
 
 ---
 
@@ -85,7 +109,7 @@ En el panel `Terminal` de Android Studio (queda en la carpeta `android`):
 
 Resultado esperado: `BUILD SUCCESSFUL`, 11 pruebas unitarias sin fallos y el APK en `app\build\outputs\apk\debug\app-debug.apk`.
 
-Con el emulador encendido y la carpeta `golden` en su sitio:
+Con el emulador encendido:
 
 ```powershell
 .\gradlew.bat connectedDebugAndroidTest
@@ -117,6 +141,37 @@ Reglas del proyecto que no deben romperse:
 - La app **no normaliza** la imagen: el modelo lo hace por dentro.
 - No se añade el permiso `INTERNET`.
 - Los textos de las fichas salen del informe; no se añaden recomendaciones de fungicidas ni dosis.
+
+### A8. Generar un APK firmado (opcional)
+
+La compilación de depuración (`assembleDebug`) funciona sin nada más y sirve para probar. Para un APK de distribución (`assembleRelease`) hace falta un almacén de claves; sin él, el APK sale **sin firmar** y Android no lo instala.
+
+**Si tienes el almacén original:** copia `cafe-detector-release.jks` y `keystore.properties` a la carpeta `android\`.
+
+**Si no lo tienes, crea uno propio** (desde la carpeta `android`; `keytool` viene con el JDK de Android Studio):
+
+```powershell
+& "C:\Program Files\Android\Android Studio\jbr\bin\keytool.exe" -genkeypair -keystore mi-firma.jks -alias cafedetector -keyalg RSA -keysize 2048 -validity 10000
+```
+
+Te pedirá una contraseña y unos datos. Después crea el archivo `android\keystore.properties` con este contenido:
+
+```
+storeFile=mi-firma.jks
+storePassword=TU_CONTRASEÑA
+keyAlias=cafedetector
+keyPassword=TU_CONTRASEÑA
+```
+
+Y compila:
+
+```powershell
+.\gradlew.bat assembleRelease
+```
+
+El APK queda en `app\build\outputs\apk\release\app-release.apk`.
+
+Importante: un APK firmado con **otra** firma no se instala encima de la versión original; hay que desinstalar primero la app del teléfono. Guarda tu almacén y su contraseña fuera de git.
 
 ---
 
@@ -168,23 +223,29 @@ Qué necesita cada uno:
 | `03`, `04`, `05` | `ml\outputs\final\model.keras` y los datos preparados |
 | `generar_resultados.py` | Solo los archivos de `ml\outputs\` (ya vienen en el proyecto) |
 
-### B4. Descargar los datasets (solo si vas a preparar datos)
+### B4. Descargar los datasets de entrenamiento (solo si vas a preparar datos)
 
-Ocupan unos 900 MB comprimidos. No se incluyen en el proyecto.
+Ocupan unos 900 MB comprimidos y unos 3 GB descomprimidos. Los tres tienen licencia CC BY 4.0.
 
 | Dataset | Enlace | Archivos que hay que bajar |
 |---|---|---|
 | RoCoLe | https://data.mendeley.com/datasets/c5yvn32dzg/2 | `RoCoLe-voc.tar.gz` y `RoCoLE-json.json` |
 | DECAFIA | https://zenodo.org/records/19931904 | `CoffeeLeaf-CO.zip` |
+| BRACOL | https://data.mendeley.com/datasets/yy2k5y8mxg/1 | `BRACOL_coffee_leaf_ images_datasets.zip` |
 
-Colócalos y descomprímelos así (desde la raíz del proyecto):
+Desde la raíz del proyecto, crea las carpetas, copia en ellas los archivos descargados y descomprime:
 
 ```powershell
-mkdir ml\data\raw\rocole, ml\data\raw\decafia
-# copia aquí los tres archivos descargados y luego:
+mkdir ml\data\raw\rocole, ml\data\raw\decafia, ml\data\external\bracol\x
+# copia RoCoLe-voc.tar.gz y RoCoLE-json.json a ml\data\raw\rocole
+# copia CoffeeLeaf-CO.zip a ml\data\raw\decafia
+# copia el zip de BRACOL a ml\data\external\bracol y renómbralo a bracol.zip
 tar -xzf ml\data\raw\rocole\RoCoLe-voc.tar.gz -C ml\data\raw\rocole
 Expand-Archive ml\data\raw\decafia\CoffeeLeaf-CO.zip -DestinationPath ml\data\raw\decafia
+tar -xf ml\data\external\bracol\bracol.zip -C ml\data\external\bracol\x
 ```
+
+**Sobre BRACOL:** el archivo publicado está incompleto de origen. El Explorador de Windows y `Expand-Archive` lo rechazan; por eso se usa `tar`, que extrae lo que hay. Es normal que termine con un error de descompresión en el último archivo: se recuperan 1402 imágenes de 1747 y el script ya cuenta con ello.
 
 Debe quedar esta estructura:
 
@@ -193,7 +254,29 @@ ml\data\raw\rocole\RoCoLE-json.json
 ml\data\raw\rocole\export\*.jpeg
 ml\data\raw\decafia\CoffeeLeaf-CO\images\...
 ml\data\raw\decafia\CoffeeLeaf-CO\labels\...
+ml\data\external\bracol\x\coffee-datasets\coffee-datasets\leaf\dataset.csv
+ml\data\external\bracol\x\coffee-datasets\coffee-datasets\leaf\images\*.jpg
 ```
+
+Después ejecuta `01_preparar_datos.py` (paso B3). Resultado esperado: 3596 imágenes y la línea de comprobación de fugas con los tres contadores en 0. Si el número difiere, revisa que los tres datasets estén completos.
+
+### B5. Descargar el conjunto final, JMuBEN (solo para repetir la evaluación final)
+
+Son unos 1.3 GB. No se usa para entrenar; sirve únicamente para `evaluar_conjunto_final.py`.
+
+| Página | Archivos que hay que bajar |
+|---|---|
+| https://data.mendeley.com/datasets/t2r6rszp5c/1 | El zip de `Leaf rust` |
+| https://data.mendeley.com/datasets/tgv3zb82nd/1 | Los zip de `Healthy` y `Miner` |
+
+Copia los tres zip, sin descomprimir, a `ml\data\final_holdout\jmuben\`. El script los descomprime solo:
+
+```powershell
+cd ml
+.\.venv\Scripts\python.exe evaluar_conjunto_final.py --run final
+```
+
+Este conjunto ya se evaluó una vez con el modelo actual (resultado en `docs\resultados.md`). Si lo usas para tomar decisiones sobre un modelo nuevo, deja de ser un conjunto final independiente.
 
 ---
 
@@ -251,13 +334,32 @@ Después repite el paso A6: las pruebas deben seguir en verde con el modelo nuev
 
 ---
 
+## La página de descarga
+
+Está en `docs\landing-detector-hojas-cafe` (Next.js). Solo hace falta si vas a modificarla.
+
+1. Instala Node.js (https://nodejs.org/, versión LTS) y después pnpm: `npm install -g pnpm`.
+2. Desde esa carpeta:
+
+```powershell
+pnpm install
+pnpm dev      # la abre en http://localhost:3000
+pnpm build    # comprueba que compila antes de publicar
+```
+
+Para publicarla en Vercel, importa el repositorio y pon como "Root Directory" `docs/landing-detector-hojas-cafe`.
+
+Si generas un APK nuevo, reemplaza `public\DetectorHojasCafe-v2.0.apk` y actualiza la versión y el tamaño en `components\landing\hero.tsx`.
+
+---
+
 ## Lista de comprobación
 
 - [ ] Android Studio abre la carpeta `android` y la sincronización de Gradle termina sin errores.
 - [ ] `.\gradlew.bat testDebugUnitTest assembleDebug` termina con `BUILD SUCCESSFUL`.
 - [ ] La app abre en el emulador y muestra "Detector de hojas de café".
 - [ ] "Elegir de galería" con una foto de hoja lleva a la pantalla de resultado.
-- [ ] (Si copiaste `golden`) `.\gradlew.bat connectedDebugAndroidTest` pasa las 10 pruebas.
+- [ ] `.\gradlew.bat connectedDebugAndroidTest` pasa las 10 pruebas con el emulador encendido.
 
 ## Problemas frecuentes
 
@@ -266,7 +368,8 @@ Después repite el paso A6: las pruebas deben seguir en verde con el modelo nuev
 | `SDK location not found` | Falta `android\local.properties` | Abre el proyecto con Android Studio, que lo crea |
 | Error de sincronización que menciona `compileSdk 37` o una plataforma no encontrada | Falta la plataforma API 37 | Paso A2 |
 | Error de versión de Java al sincronizar | JDK no compatible | Instala Temurin 21 y selecciónalo (paso A3) |
-| Fallan las pruebas instrumentadas con `FileNotFoundException: golden/...` | No se copió la carpeta `golden` | Pídela a quien compartió el proyecto |
+| `assembleRelease` genera un APK que el teléfono no instala | Falta el almacén de claves y el APK salió sin firmar | Paso A8 |
+| `01_preparar_datos.py` da menos de 3596 imágenes o falla al leer BRACOL | Falta un dataset o BRACOL no se extrajo con `tar` | Paso B4 |
 | `No matching distribution found for tensorflow==2.21.0` | Python 3.14 u otra versión no admitida | Usa `--python 3.12` (paso B2) |
 | El emulador clasifica una sala como "Hoja sana" | La cámara del emulador no muestra una hoja y el modelo solo conoce hojas | Es una limitación conocida; prueba con fotos desde la galería |
 

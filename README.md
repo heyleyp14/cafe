@@ -13,6 +13,16 @@ Proyecto "Sistema de Detección Temprana de Plagas y Enfermedades en Cultivos de
 | `docs/decisiones.md` | Decisiones tomadas y su motivo |
 | `docs/MANUAL_WINDOWS.md` | Instalación paso a paso en Windows (sin probar en Windows) |
 
+## Qué no está en el repositorio
+
+| Qué falta | Cómo conseguirlo |
+|---|---|
+| Datasets (`ml/data/`, unos 5 GB) | Se descargan de sus fuentes; ver "Datasets" abajo y `docs/MANUAL_WINDOWS.md`, pasos B4 y B5 |
+| Entorno de Python (`ml/.venv`) y dependencias de la página (`node_modules`) | Se recrean con los comandos de este README |
+| Almacén de claves de la firma (`android/*.jks`, `android/keystore.properties`) | Lo guarda el dueño del proyecto; sin él, `assembleRelease` genera un APK sin firmar |
+
+Para compilar y modificar la app no hace falta nada de eso: el modelo entrenado ya viene en `android/app/src/main/assets/`.
+
 ## Requisitos
 
 - Python 3.10 a 3.13 (TensorFlow 2.21.0 no admite 3.14) y `uv`.
@@ -76,14 +86,16 @@ echo "sdk.dir=$HOME/Android/Sdk" > local.properties
 adb install -r app/build/outputs/apk/debug/app-debug.apk
 ```
 
-Las imágenes de referencia (`golden/*.jpg`, `golden/*.rgb`) no están en git; se regeneran con `make parity` (necesita `ml/outputs/final/model.keras`).
+Las imágenes de referencia de las pruebas (`golden/`) y `ml/outputs/final/model.keras` están versionadas.
 
 ## Datasets
 
-Las imágenes no se incluyen en este repositorio.
+Los datasets no se incluyen en este repositorio; solo las 10 imágenes de referencia de las pruebas.
 
 - **RoCoLe.** Parraga-Alava, J., Cusme, K., Loor, A., Santander, E. (2019). *RoCoLe: A robusta coffee leaf images dataset*. Mendeley Data, v2. https://doi.org/10.17632/c5yvn32dzg.2 — CC BY 4.0.
 - **DECAFIA (CoffeeLeaf-CO).** Rosas Ruiz, L. E., Salom Medina, A. F., Barrero Perez, J. G. (2026). *DECAFIA: A Field-Collected Coffee Leaf Disease Detection Dataset from Santander, Colombia*. Zenodo. https://doi.org/10.5281/zenodo.19931904 — CC BY 4.0.
+- **BRACOL.** Krohling, R. A., Esgario, G. J. M., Ventura, J. A. (2019). *BRACOL - A Brazilian Arabica Coffee Leaf images dataset to identification and quantification of coffee diseases and pests*. Mendeley Data, v1. https://doi.org/10.17632/yy2k5y8mxg.1 — CC BY 4.0. El archivo publicado está truncado: se extrae con `bsdtar` o `tar`.
+- **JMuBEN y JMuBEN2** (conjunto final, no se usa para entrenar). Mendeley Data, 2021. https://data.mendeley.com/datasets/t2r6rszp5c/1 y https://data.mendeley.com/datasets/tgv3zb82nd/1 — CC BY 4.0.
 - DECAFIA incluye imágenes de: Silva, L. B. et al. (2020). *Rust and leaf miner in coffee crop (Coffea arabica)*. Mendeley Data. https://doi.org/10.17632/vfxf4trtcg.5 — CC BY 4.0.
 
 Licencia CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
