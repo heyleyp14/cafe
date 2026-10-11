@@ -12,13 +12,20 @@
   },
   "raw_images": {
     "rocole": 1560,
-    "decafia": 2769
+    "decafia": 2769,
+    "bracol": 1402
   },
   "loaded_after_label_rules": {
     "rocole": 1393,
-    "decafia": 1889
+    "decafia": 1889,
+    "bracol": 860
   },
   "discarded_by_rule": {
+    "bracol_image_missing": 329,
+    "bracol_image_unreadable": 1,
+    "bracol_not_v1:predominant_stress_3": 348,
+    "bracol_not_v1:predominant_stress_4": 147,
+    "bracol_not_v1:predominant_stress_5": 62,
     "decafia_derived_from_rocole": 454,
     "decafia_not_v1:coco": 426,
     "rocole_not_v1:red_spider_mite": 167
@@ -26,66 +33,177 @@
   "duplicates": {
     "duplicate_max_distance": 40,
     "related_max_distance": 52,
+    "md5_only_sources": [
+      "bracol"
+    ],
     "duplicates_across_datasets": 61,
     "duplicates_conflicting_labels": 11,
     "duplicates_removed": 535
   },
-  "final_images": 2736,
+  "final_images": 3596,
+  "processed_max_side": 512,
   "counts": {
     "train": {
-      "minador": 260,
-      "roya": 636,
-      "sana": 1019
+      "minador": 438,
+      "roya": 962,
+      "sana": 1121
     },
     "val": {
-      "minador": 56,
-      "roya": 136,
-      "sana": 219
+      "minador": 94,
+      "roya": 206,
+      "sana": 239
     },
     "test": {
-      "minador": 56,
-      "roya": 136,
-      "sana": 218
+      "minador": 93,
+      "roya": 205,
+      "sana": 238
+    }
+  },
+  "counts_by_source": {
+    "train": {
+      "bracol": {
+        "minador": 177,
+        "roya": 326,
+        "sana": 100
+      },
+      "decafia": {
+        "minador": 261,
+        "roya": 238,
+        "sana": 499
+      },
+      "rocole": {
+        "minador": 0,
+        "roya": 398,
+        "sana": 522
+      }
+    },
+    "val": {
+      "bracol": {
+        "minador": 38,
+        "roya": 70,
+        "sana": 21
+      },
+      "decafia": {
+        "minador": 56,
+        "roya": 51,
+        "sana": 106
+      },
+      "rocole": {
+        "minador": 0,
+        "roya": 85,
+        "sana": 112
+      }
+    },
+    "test": {
+      "bracol": {
+        "minador": 38,
+        "roya": 69,
+        "sana": 21
+      },
+      "decafia": {
+        "minador": 55,
+        "roya": 51,
+        "sana": 106
+      },
+      "rocole": {
+        "minador": 0,
+        "roya": 85,
+        "sana": 111
+      }
     }
   },
   "per_class_total": {
-    "minador": 372,
-    "roya": 908,
-    "sana": 1456
+    "minador": 625,
+    "roya": 1373,
+    "sana": 1598
   },
   "per_class_by_source": {
     "minador": {
-      "decafia": 372
+      "decafia": 372,
+      "bracol": 253
     },
     "roya": {
       "rocole": 568,
-      "decafia": 340
+      "decafia": 340,
+      "bracol": 465
     },
     "sana": {
       "rocole": 745,
-      "decafia": 711
+      "decafia": 711,
+      "bracol": 142
     }
   },
   "split_fractions_actual": {
     "minador": {
-      "train": 0.6989,
-      "val": 0.1505,
-      "test": 0.1505
+      "train": 0.7008,
+      "val": 0.1504,
+      "test": 0.1488
     },
     "roya": {
-      "train": 0.7004,
-      "val": 0.1498,
-      "test": 0.1498
+      "train": 0.7007,
+      "val": 0.15,
+      "test": 0.1493
     },
     "sana": {
-      "train": 0.6999,
-      "val": 0.1504,
-      "test": 0.1497
+      "train": 0.7015,
+      "val": 0.1496,
+      "test": 0.1489
     }
   },
-  "imbalance_ratio_train": 3.919,
+  "stratum_split_fractions": {
+    "bracol/minador": {
+      "train": 0.6996,
+      "val": 0.1502,
+      "test": 0.1502
+    },
+    "bracol/roya": {
+      "train": 0.7011,
+      "val": 0.1505,
+      "test": 0.1484
+    },
+    "bracol/sana": {
+      "train": 0.7042,
+      "val": 0.1479,
+      "test": 0.1479
+    },
+    "decafia/minador": {
+      "train": 0.7016,
+      "val": 0.1505,
+      "test": 0.1478
+    },
+    "decafia/roya": {
+      "train": 0.7,
+      "val": 0.15,
+      "test": 0.15
+    },
+    "decafia/sana": {
+      "train": 0.7018,
+      "val": 0.1491,
+      "test": 0.1491
+    },
+    "rocole/roya": {
+      "train": 0.7007,
+      "val": 0.1496,
+      "test": 0.1496
+    },
+    "rocole/sana": {
+      "train": 0.7007,
+      "val": 0.1503,
+      "test": 0.149
+    }
+  },
+  "source_balance_check": {
+    "passed": true,
+    "min_stratum_images": 40,
+    "tolerance": 0.05,
+    "strata_checked": 8,
+    "strata_too_small": {},
+    "worst_deviation": 0.0042,
+    "failures": []
+  },
+  "imbalance_ratio_train": 2.559,
   "groups": {
-    "count": 1680,
+    "count": 2540,
     "largest": 74
   },
   "leakage_check": {

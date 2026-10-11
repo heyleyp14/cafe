@@ -15,9 +15,9 @@ Retrain the three-class model so it generalizes beyond its training datasets, wi
 ## Tasks
 
 - [x] R0 Diagnosis — route: inline. Split of v1 is source-skewed (RoCoLe 67% of train, about 3% of val/test); background replacement does not change BRACOL accuracy; leaf cropping lowers it to 0.509.
-- [ ] R1 Evaluation design: class-and-source stratified group split; final holdout; leave-one-source-out validation
-- [ ] R2 Data: add BRACOL, group by leaf and source, balanced sampling
-- [ ] R3 Robustness: stronger augmentation
+- [x] R1 Evaluation design — route: delegated writer; source-and-class stratified split (test RED then GREEN, worst deviation 0.0042); holdout download in progress
+- [x] R2 Data — 3596 images, BRACOL added (MD5-only dedup), stratum sample weights
+- [x] R3 Robustness — stronger augmentation in the data pipeline; background replacement not implemented
 - [ ] R4 Training on Colab: full fine-tuning, MobileNetV2 vs EfficientNet-B0, calibration and threshold
 - [ ] R5 Close: conversion, parity, emulator and phone tests, open the final holdout once
 
@@ -27,4 +27,4 @@ Retrain the three-class model so it generalizes beyond its training datasets, wi
 
 ## Next step
 
-R1: fix the split in `ml/01_preparar_datos.py` (stratify by class and source), download JMuBEN as the untouched final holdout.
+R4: needs a Colab T4 session; upload `cafe_ml_bundle.zip` and `cafe_data_v2.zip`, run `ml/colab_run_v2.py` (stage 1, both architectures, BRACOL held out).

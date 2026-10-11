@@ -559,3 +559,36 @@ Mismo modelo, mismas 860 imágenes, tres variantes (clasificación en Python con
 ### NO EJECUTADO
 
 - No se midió el rendimiento del modelo v1 sobre RoCoLe con una partición correcta.
+
+## Reentrenamiento v2 — R1 a R3: datos, reparto y tubería de entrenamiento (2026-10-10)
+
+**Estado: R1, R2 y R3 hechos en local. R4 (entrenamiento en Colab) pendiente.** La escritura se delegó a un agente; lo que sigue se volvió a comprobar después.
+
+### Qué se hizo
+
+- `ml/01_preparar_datos.py`: fuente BRACOL, reparto estratificado por origen y clase, imágenes procesadas a 512 px de lado mayor, comprobación de equilibrio por origen.
+- `ml/02_entrenar.py`: argumentos `--arch`, `--run` y `--holdout-source`; aumento de datos más fuerte (rotación, acercamiento y alejamiento, traslación, brillo, contraste, tono y saturación); pesos por estrato; ajuste fino de toda la red con las `BatchNormalization` congeladas; suavizado de etiquetas.
+- `ml/03_evaluar.py`: métricas del test interno, por origen y de la fuente apartada; error de calibración; umbral elegido con la fuente apartada.
+- `ml/colab_run_v2.py` y `make colab-data` (genera `cafe_data_v2.zip`, fuera de git).
+- `ml/tests/test_split.py`: prueba del reparto con datos sintéticos.
+
+### Qué se comprobó
+
+- **Prueba del reparto:** falla con el algoritmo antiguo (reproduce el sesgo: un estrato con 95.7 % en entrenamiento) y pasa con el nuevo (4 de 4).
+- **`make data`:** 3596 imágenes (RoCoLe 1313, DECAFIA 1423, BRACOL 860). Fugas: 0 por MD5, 0 por hash perceptual, 0 grupos repartidos. Equilibrio por origen: 8 estratos comprobados, desviación máxima 0.0042 respecto a 70/15/15.
+
+| Partición | BRACOL (minador / roya / sana) | DECAFIA (minador / roya / sana) | RoCoLe (roya / sana) |
+|---|---|---|---|
+| train | 177 / 326 / 100 | 261 / 238 / 499 | 398 / 522 |
+| val | 38 / 70 / 21 | 56 / 51 / 106 | 85 / 112 |
+| test | 38 / 69 / 21 | 55 / 51 / 106 | 85 / 111 |
+
+- BRACOL descartado: 329 filas sin imagen (archivo truncado), 1 ilegible, y 557 de clases que no son de la v1.
+- **Prueba de humo** de entrenamiento y evaluación con una época por etapa, para las dos arquitecturas: corre y produce todos los archivos; ambos modelos guardados aceptan `float32 [1,224,224,3]` en 0–255 y devuelven `[1,3]`. Los archivos se borraron; ninguna cifra suya se usa.
+
+### NO EJECUTADO
+
+- `ml/colab_run_v2.py` no se ha ejecutado nunca.
+- Entrenamiento real (R4).
+- La descarga del conjunto final (JMuBEN) sigue en curso; no se ha abierto.
+- `04_convertir_tflite.py`, `05_paridad_tflite.py` y `generar_resultados.py` aún no están adaptados a la nueva estructura de carpetas (R5).

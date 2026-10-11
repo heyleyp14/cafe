@@ -103,3 +103,16 @@ Formato: fecha, decisión, motivo. Las marcadas **DECISIÓN** en el plan usan el
 - **Reglas aplicadas:** subconjunto `leaf`; `predominant_stress` 0 → `sana`, 1 → `minador`, 2 → `roya`. Se excluyen 3 (phoma), 4 (cercospora) y 5 (sin documentar en el CSV), que no son clases de la v1. La codificación 1 y 2 se comprobó contra las columnas `miner` y `rust` del propio CSV.
 - **Independencia:** ninguna imagen coincide por MD5 con los datos de entrenamiento; las más parecidas por hash perceptual (distancia ≥ 40) se revisaron a la vista y son hojas distintas.
 - **Limitación del archivo:** el zip publicado está truncado en origen (el tamaño y el SHA-256 descargados coinciden con los que declara Mendeley, pero le falta el final). Se recuperaron 1402 de las 1747 imágenes; de las tres clases usadas quedaron 860.
+
+## 2026-10-10 — Reentrenamiento v2: datos y evaluación (R1 y R2)
+
+- **Decisión:** el reparto 70/15/15 se estratifica por **origen y clase** (por ejemplo `rocole/roya`), respetando los grupos. Una prueba automática (`ml/tests/test_split.py`) y una comprobación dentro del script lo verifican.
+- **Motivo:** corregir el sesgo de la v1, donde RoCoLe era el 67 % del entrenamiento y cerca del 3 % de validación y test.
+- **Decisión:** se añade BRACOL como tercera fuente (`predominant_stress` 0 → `sana`, 1 → `minador`, 2 → `roya`).
+- **Decisión:** para BRACOL los duplicados se detectan **solo por MD5**, no por hash perceptual.
+- **Motivo:** con los umbrales calibrados para RoCoLe y DECAFIA, el hash perceptual marcaba como duplicadas 419 de las 860 imágenes de BRACOL. Revisadas a la vista las parejas más cercanas, eran hojas distintas: el hash solo capta la silueta de una hoja centrada sobre fondo liso. **Costo:** la comprobación perceptual de fugas ya no cubre los pares con BRACOL; si BRACOL tuviera varias tomas de una misma hoja, no se detectarían.
+- **Decisión:** las imágenes procesadas se guardan reducidas a 512 px de lado mayor (sin ampliar, conservando la proporción). Los hashes se siguen calculando sobre los originales.
+- **Motivo:** permite subir los datos ya preparados a Colab. El modelo sigue recibiendo la imagen aplastada a 224×224, como fija el contrato.
+- **Decisión:** selección de modelo en dos etapas. Etapa 1: entrenar con RoCoLe y DECAFIA y medir en BRACOL como fuente no vista. Etapa 2: reentrenar la arquitectura elegida con las tres fuentes y evaluarla una sola vez en JMuBEN.
+- **Decisión:** el desbalance se corrige con pesos por muestra según su estrato (origen y clase), en lugar de `class_weight`.
+- **No implementado:** sustitución de fondo en el aumento de datos (requiere segmentar la hoja, y el diagnóstico R0 mostró que el fondo no es la causa principal).
