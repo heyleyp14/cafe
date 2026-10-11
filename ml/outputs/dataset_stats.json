@@ -236,5 +236,11 @@
     "md5_in_two_splits": 0,
     "perceptual_pairs_in_two_splits": 0,
     "groups_in_two_splits": 0
+  },
+  "manifest_images": 3736,
+  "leaf_boxes": {
+    "bracol": 0,
+    "decafia": 1206,
+    "rocole": 1453
   }
 }

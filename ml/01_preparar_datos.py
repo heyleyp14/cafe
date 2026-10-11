@@ -28,6 +28,8 @@ SPLIT_FRACTIONS = {"train": 0.70, "val": 0.15, "test": 0.15}
 # Acceptance check of the split (plan v2, R1): strata this big must be this close to the target.
 BALANCE_MIN_STRATUM = 40
 BALANCE_TOLERANCE = 0.05
+# Leaf boxes of the manifest: narrower or shorter than this fraction of the image is not a usable box.
+MIN_LEAF_BOX_SIDE = 0.05
 PROCESSED_JPEG_QUALITY = 92
 ROCOLE_CLASS_MAP = {
     "healthy": "sana",
@@ -72,6 +74,9 @@ def load_rocole():
             "path": ROCOLE_DIR / "export" / f"{entry['ID']}.jpeg",
             "label": label,
             "group": f"rocole:{plant}",
+            # Leaf outlines, in pixels of the original image.
+            "leaf_points": [(point["x"], point["y"]) for leaf in entry["Label"].get("Leaf", [])
+                            for point in leaf["geometry"]],
         })
     return items, discarded
 
@@ -98,7 +103,8 @@ def load_decafia():
         if prefix in DECAFIA_DERIVED_PREFIXES:
             discarded["decafia_derived_from_rocole"] += 1
             continue
-        label, reason = decafia_label(DECAFIA_DIR / "labels" / image.parent.name / f"{image.stem}.txt")
+        label_file = DECAFIA_DIR / "labels" / image.parent.name / f"{image.stem}.txt"
+        label, reason = decafia_label(label_file)
         if label is None:
             discarded[reason] += 1
             continue
@@ -108,6 +114,7 @@ def load_decafia():
             "path": image,
             "label": label,
             "group": f"decafia:{image.stem}",
+            "label_file": label_file,
         })
     return items, discarded
 
@@ -254,8 +261,11 @@ def stratum(item):
     return item["source"], item["label"]
 
 
-def split_by_group(items):
+def split_by_group(items, fractions=SPLIT_FRACTIONS, seed=SEED, key="split"):
     """Greedy group-aware split stratified by (source, class).
+
+    Writes into `item[key]` one of the names of `fractions` (name -> target fraction);
+    cv_experimentos.py reuses it to build folds.
 
     Each group goes whole to the split that stays emptiest relative to its target
     (assigned / target) in the strata the group holds. v1 compared absolute class
@@ -266,10 +276,10 @@ def split_by_group(items):
     for item in items:
         groups[item["group"]].append(item)
     totals = Counter(stratum(item) for item in items)
-    assigned = {split: Counter() for split in SPLITS}
+    assigned = {split: Counter() for split in fractions}
 
     order = sorted(groups)
-    random.Random(SEED).shuffle(order)
+    random.Random(seed).shuffle(order)
     # Stable: big groups first (the hardest to fit), seeded order within a size. The
     # single-image groups that follow even out whatever the big ones left unbalanced.
     order.sort(key=lambda g: -len(groups[g]))
@@ -277,13 +287,13 @@ def split_by_group(items):
         strata = Counter(stratum(item) for item in groups[group])
 
         def fill_after(split):
-            return sum(n * (assigned[split][key] + n) / (SPLIT_FRACTIONS[split] * totals[key])
-                       for key, n in strata.items())
+            return sum(n * (assigned[split][stratum_key] + n) / (fractions[split] * totals[stratum_key])
+                       for stratum_key, n in strata.items())
 
-        best = min(SPLITS, key=fill_after)  # ties resolve in SPLITS order
+        best = min(fractions, key=fill_after)  # ties resolve in the order of `fractions`
         assigned[best].update(strata)
         for item in groups[group]:
-            item["split"] = best
+            item[key] = best
 
 
 def stratum_split_fractions(items):
@@ -342,6 +352,46 @@ def write_processed(items):
         item["output"] = target / processed_name(item["source"], item["name"])
     with Pool() as pool:
         pool.map(write_downscaled, [(item["path"], item["output"]) for item in items], chunksize=16)
+
+
+def leaf_box(item):
+    """[x0, y0, x1, y1] of the leaf, normalized to 0..1 in the image, or None.
+
+    The processed image is the original one downscaled, so the normalized box holds for both.
+    """
+    if item["source"] == "rocole":
+        if not item["leaf_points"]:
+            return None
+        with Image.open(item["path"]) as image:
+            width, height = image.size
+        xs, ys = zip(*item["leaf_points"])
+        box = [min(xs) / width, min(ys) / height, max(xs) / width, max(ys) / height]
+    elif item["source"] == "decafia":
+        rows = [[float(value) for value in line.split()[1:5]]
+                for line in item["label_file"].read_text().splitlines()
+                if line.strip() and DECAFIA_NAMES[int(line.split()[0])] == "hojas"]
+        if not rows:
+            return None
+        box = [min(cx - w / 2 for cx, _, w, _ in rows), min(cy - h / 2 for _, cy, _, h in rows),
+               max(cx + w / 2 for cx, _, w, _ in rows), max(cy + h / 2 for _, cy, _, h in rows)]
+    else:
+        return None
+    x0, y0, x1, y1 = (min(1.0, max(0.0, value)) for value in box)
+    if x1 - x0 < MIN_LEAF_BOX_SIDE or y1 - y0 < MIN_LEAF_BOX_SIDE:
+        return None
+    return [round(value, 4) for value in (x0, y0, x1, y1)]
+
+
+def write_manifest(items):
+    """One entry per processed image; read by cv_experimentos.py. Returns the entries."""
+    manifest = [{"file": item["output"].relative_to(PROCESSED_DIR).as_posix(),
+                 "source": item["source"],
+                 "label": item["label"],
+                 "split": item["split"],
+                 "group": item["group"],
+                 "leaf_box": leaf_box(item)} for item in items]
+    (PROCESSED_DIR / "manifest.json").write_text(json.dumps(manifest, indent=1) + "\n")
+    return manifest
 
 
 def verify_no_leakage(items, variants):
@@ -403,6 +453,7 @@ def main():
     merge_related_groups(items, variants)
     split_by_group(items)
     write_processed(items)
+    manifest = write_manifest(items)
     write_review_sheets(items)
 
     counts = {split: {label: 0 for label in CLASSES} for split in SPLITS}
@@ -443,6 +494,10 @@ def main():
         "imbalance_ratio_train": round(max(counts["train"].values()) / min(counts["train"].values()), 3),
         "groups": {"count": len(group_sizes), "largest": max(group_sizes.values())},
         "leakage_check": verify_no_leakage(items, variants),
+        "manifest_images": len(manifest),
+        "leaf_boxes": {source: sum(1 for entry in manifest
+                                   if entry["source"] == source and entry["leaf_box"] is not None)
+                       for source in sources},
     }
     OUTPUTS_DIR.mkdir(exist_ok=True)
     (OUTPUTS_DIR / "dataset_stats.json").write_text(json.dumps(stats, indent=2, ensure_ascii=False) + "\n")
