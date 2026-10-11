@@ -839,3 +839,19 @@ Matriz de confusión (filas = clase real; columnas = arana_roja, minador, roya, 
 - Recorrido completo foto → resultado en el teléfono con la versión firmada (solo se comprobó que abre; el recorrido se hizo en el emulador).
 - Prueba de la arañita roja con imágenes de otra fuente: no existe ninguna.
 - Fotos de campo del humano (fase 12, paso 2).
+
+## Búsqueda de más imágenes de arañita roja (2026-10-11)
+
+**Resultado: no hay imágenes nuevas.** Los tres datasets públicos encontrados son copias de RoCoLe.
+
+| Dataset (Roboflow Universe, CC BY 4.0) | Qué resultó ser | Cómo se comprobó |
+|---|---|---|
+| `coffee-leaf-detection/rocolem` (1490 imágenes) | Copia de RoCoLe | Conteos por clase casi idénticos a RoCoLe (757 sanas, 165 arañita roja); no se descargó |
+| `coffee-leaf-detection/classifier-lubn1` (19 676 imágenes exportadas) | RoCoLe con aumento de datos | Los 19 676 archivos conservan nombres de RoCoLe (`C<n>P<n>H<n>` / `E<n>`) |
+| `silvivision/red-spider-mite-9vj09` (6719 imágenes, 930 de arañita roja) | En arañita roja, 27 fotos originales repetidas unas 34 veces con aumento | 24 de las 27 coinciden por hash perceptual con arañitas de RoCoLe (distancia mediana 6) |
+
+- El tercero también trae roya y minador sobre fondo blanco (parecidos a BRACOL y a Silva et al.) y "brown eye spot" (mancha de hierro) en campo; no se analizaron porque no eran el objetivo.
+- Los buscadores de Zenodo y Mendeley Data rechazaron las consultas automáticas (HTTP 403 y 500): **esa parte quedó sin revisar**.
+- Las descargas se borraron del equipo. La clave de Roboflow del humano está en `ml/data/roboflow_key.txt`, fuera de git.
+
+Conclusión: con datos públicos, la arañita roja queda limitada a las 152 imágenes de RoCoLe. Mejorarla requiere fotos nuevas.
