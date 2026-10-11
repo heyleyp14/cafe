@@ -42,7 +42,8 @@
  * Shape rule: groups 20px, icon tiles 10px, buttons and number badges full pill.
  */
 :root {
-  color-scheme: light dark;
+  /* Light only by decision of the owner: the page does not follow the device's dark mode. */
+  color-scheme: light;
   --background: #f2f2f7;
   --foreground: #1c1c1e;
   --card: #ffffff;
@@ -69,35 +70,6 @@
   --phone: #1c1c1e;
   --phone-shadow: rgb(28 46 36 / 0.32);
   --radius: 0.75rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0e0f10;
-    --foreground: #f2f2f7;
-    --card: #1c1c1e;
-    --card-foreground: #f2f2f7;
-    --popover: #1c1c1e;
-    --popover-foreground: #f2f2f7;
-    --primary: #1b6e3a;
-    --primary-hover: #22824a;
-    --primary-foreground: #ffffff;
-    --tint: #7dd699;
-    --secondary: #173a22;
-    --secondary-foreground: #bfe3c6;
-    --muted: #1c1c1e;
-    --muted-foreground: #a9a9b2;
-    --accent: #173a22;
-    --accent-foreground: #bfe3c6;
-    --warning: #3a2e0c;
-    --warning-foreground: #f6dc91;
-    --separator: #38383c;
-    --border: #38383c;
-    --input: #38383c;
-    --ring: #7dd699;
-    --phone: #3a3a3e;
-    --phone-shadow: rgb(0 0 0 / 0.6);
-  }
 }
 
 @layer base {
