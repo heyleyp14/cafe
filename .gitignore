@@ -37,3 +37,6 @@ dist/
 
 # Local agent tooling
 .atl/
+
+# v3 Colab outputs bundle
+cafe_outputs_v3.zip
