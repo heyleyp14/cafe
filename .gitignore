@@ -34,3 +34,6 @@ cafe_outputs_v2.zip
 android/keystore.properties
 android/*.jks
 dist/
+
+# Local agent tooling
+.atl/

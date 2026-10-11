@@ -133,3 +133,11 @@ Formato: fecha, decisión, motivo. Las marcadas **DECISIÓN** en el plan usan el
 - **Dónde está la firma:** `android/cafe-detector-release.jks` y `android/keystore.properties` (contraseña generada al azar). **Ninguno de los dos está en git.** Hay que guardar copia: sin ese almacén no se pueden publicar actualizaciones que se instalen encima de esta versión.
 - **Dónde está el APK:** `dist/DetectorHojasCafe-v2.0.apk` (fuera de git).
 - **Nota:** una compilación de depuración y una de `release` tienen firmas distintas; para pasar de una a otra en el mismo teléfono hay que desinstalar primero.
+
+## 2026-10-11 — Publicación en GitHub
+
+- **Decisión del humano:** subir el proyecto completo al repositorio privado `josuerangel2005/cafe`, en la rama `main`.
+- **Qué se versionó por esa instrucción** y antes estaba fuera: la página de descarga (con el APK de 47 MB), la maqueta de v0, el informe en Word, las 10 imágenes de referencia de las pruebas y `ml/outputs/final/model.keras`. Las imágenes de referencia son de los datasets (CC BY 4.0, citados en el README); el plan original pedía no redistribuir imágenes, y el humano decidió incluirlas.
+- **Qué sigue fuera:**
+  - Los datasets (`ml/data/`, unos 5 GB): varios archivos superan el límite de 100 MB por archivo de GitHub. Se descargan de sus fuentes.
+  - El almacén de claves de la firma y su contraseña (`android/cafe-detector-release.jks`, `android/keystore.properties`): pendiente de confirmación del humano; el plan original prohíbe subir claves a git.
