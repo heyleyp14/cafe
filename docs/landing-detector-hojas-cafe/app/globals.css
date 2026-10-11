@@ -1,0 +1,142 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@theme inline {
+  --font-sans: var(--font-roboto), system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-tint: var(--tint);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-separator: var(--separator);
+  --color-phone: var(--phone);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+}
+
+/*
+ * Look inspired by the grouped-list style of the mobile app (soft grey page,
+ * white inset groups, hairline separators, pill buttons, one green tint).
+ * Shape rule: groups 20px, icon tiles 10px, buttons and number badges full pill.
+ */
+:root {
+  color-scheme: light dark;
+  --background: #f2f2f7;
+  --foreground: #1c1c1e;
+  --card: #ffffff;
+  --card-foreground: #1c1c1e;
+  --popover: #ffffff;
+  --popover-foreground: #1c1c1e;
+  --primary: #1b6e3a;
+  --primary-hover: #165c30;
+  --primary-foreground: #ffffff;
+  --tint: #1b6e3a;
+  --secondary: #dcf1e0;
+  --secondary-foreground: #124a27;
+  --muted: #e9e9ee;
+  --muted-foreground: #5a5a62;
+  --accent: #dcf1e0;
+  --accent-foreground: #124a27;
+  --destructive: #b42318;
+  --warning: #fff1cc;
+  --warning-foreground: #5c4000;
+  --separator: #d4d4da;
+  --border: #d4d4da;
+  --input: #d4d4da;
+  --ring: #1b6e3a;
+  --phone: #1c1c1e;
+  --phone-shadow: rgb(28 46 36 / 0.32);
+  --radius: 0.75rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0e0f10;
+    --foreground: #f2f2f7;
+    --card: #1c1c1e;
+    --card-foreground: #f2f2f7;
+    --popover: #1c1c1e;
+    --popover-foreground: #f2f2f7;
+    --primary: #1b6e3a;
+    --primary-hover: #22824a;
+    --primary-foreground: #ffffff;
+    --tint: #7dd699;
+    --secondary: #173a22;
+    --secondary-foreground: #bfe3c6;
+    --muted: #1c1c1e;
+    --muted-foreground: #a9a9b2;
+    --accent: #173a22;
+    --accent-foreground: #bfe3c6;
+    --warning: #3a2e0c;
+    --warning-foreground: #f6dc91;
+    --separator: #38383c;
+    --border: #38383c;
+    --input: #38383c;
+    --ring: #7dd699;
+    --phone: #3a3a3e;
+    --phone-shadow: rgb(0 0 0 / 0.6);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+    scrollbar-color: var(--separator) var(--background);
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  ::selection {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+  }
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
+  }
+}
+
+.phone-frame {
+  box-shadow: 0 32px 56px -28px var(--phone-shadow);
+}
+
+/* One authored moment: the phone settles into place when the page opens. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+  .phone-enter {
+    animation: phone-enter 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  @keyframes phone-enter {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.98);
+    }
+  }
+}

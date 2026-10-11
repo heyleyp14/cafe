@@ -1,6 +1,8 @@
 # Datasets and heavy training artifacts never go to git (plan section 3)
 ml/data/
 *.keras
+# The final model is versioned so parity and conversion can be repeated without retraining.
+!ml/outputs/final/model.keras
 
 # Build outputs
 build/
@@ -21,19 +23,12 @@ __pycache__/
 cafe_ml_bundle.zip
 cafe_outputs.zip
 
-# Golden test images come from the datasets: not versioned until the human decides
-# (plan phase 0 says not to redistribute images; plan phase 5 says to copy them here).
-ml/outputs/golden/*.jpg
-ml/outputs/golden/*.rgb
-android/app/src/androidTest/assets/golden/*.jpg
-android/app/src/androidTest/assets/golden/*.rgb
+# Golden test images (10 CC BY 4.0 dataset images) are versioned by decision of the human, 2026-10-11.
 
 # v2 dataset bundle for Colab
 cafe_data_v2.zip
 cafe_outputs_v2.zip
 
-ml/outputs/*/golden/*.jpg
-ml/outputs/*/golden/*.rgb
 
 # Release signing material and distributable builds
 android/keystore.properties
