@@ -220,10 +220,13 @@ def main():
     (CV_DIR / f"{args.variant}.json").write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n")
     with open(CV_DIR / f"{args.variant}_predicciones.csv", "w", newline="") as handle:
         writer = csv.writer(handle)
-        writer.writerow(["file", "source", "label", "fold", "predicted", "confidence"])
+        # Every class probability is kept so decision rules can be studied without retraining.
+        writer.writerow(["file", "source", "label", "fold", "predicted", "confidence",
+                         *[f"p_{name}" for name in CLASSES]])
         for item, row in zip(items, probabilities):
             writer.writerow([item["file"], item["source"], item["label"], item["fold"],
-                             CLASSES[int(row.argmax())], f"{float(row.max()):.4f}"])
+                             CLASSES[int(row.argmax())], f"{float(row.max()):.4f}",
+                             *[f"{float(p):.4f}" for p in row]])
 
     focus = pooled["per_class"][FOCUS_CLASS]
     say(f"{args.variant} done: {len(items)} images tested once | accuracy {pooled['accuracy']:.4f}, "

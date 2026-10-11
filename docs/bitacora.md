@@ -855,3 +855,57 @@ Matriz de confusión (filas = clase real; columnas = arana_roja, minador, roya, 
 - Las descargas se borraron del equipo. La clave de Roboflow del humano está en `ml/data/roboflow_key.txt`, fuera de git.
 
 Conclusión: con datos públicos, la arañita roja queda limitada a las 152 imágenes de RoCoLe. Mejorarla requiere fotos nuevas.
+
+## Experimentos para mejorar la arañita roja (2026-10-11)
+
+**Resultado: ninguna variante de entrenamiento mejora la arañita roja.** El límite está en los datos.
+
+### Por qué y cómo
+
+- La arañita roja acierta poco y se comprobó que no hay más imágenes públicas. Se probaron cambios de método.
+- **Validación cruzada de 3 particiones** sobre las 3736 imágenes, por grupos (una planta o un grupo de casi duplicados nunca se reparte) y estratificada por origen y clase. Cada imagen se prueba exactamente una vez, así que la arañita roja se evalúa con 152 imágenes en lugar de 22.
+- Todas las variantes se evalúan con la imagen completa aplastada al tamaño de entrada, como la envía la app. El recorte solo se usa al entrenar.
+- Script: `ml/cv_experimentos.py`; pruebas: `ml/tests/test_cv_folds.py`. Resultados y predicciones imagen por imagen en `ml/outputs/cv/`.
+- **Dónde se ejecutó: en el equipo local** (NVIDIA GeForce RTX 4050 Laptop, TensorFlow 2.21.0, Python 3.12.8), para agilizar. Son experimentos de exploración; el modelo que se entrega sigue siendo el entrenado en Colab.
+
+### Variantes
+
+| Variante | Configuración |
+|---|---|
+| Base | Receta actual: EfficientNet-B0, 224 px, lote 32, entropía cruzada con suavizado 0.1 |
+| Recorte a la hoja | Como la base; al entrenar, con probabilidad 0.5 se recorta hacia el contorno de la hoja antes de reducir |
+| Refuerzo | Pérdida focal (gamma 2) y peso doble para la arañita roja |
+| Resolución 320 | Entrada de 320 px, lote 16 (el lote 32 no cabe en 6 GB) |
+| Recorte + resolución | Las dos anteriores juntas |
+
+Todas: hasta 6 épocas de cabeza y 25 de ajuste fino con parada temprana, semilla 42.
+
+### Resultados (arañita roja, 152 imágenes probadas una vez)
+
+| Variante | Recall | Precisión | F1 | IC 95 % del F1 | Exactitud general | Exactitud en RoCoLe | Tiempo |
+|---|---|---|---|---|---|---|---|
+| Base | 0.5658 | 0.5890 | 0.5772 | 0.508–0.639 | 0.9390 | 0.8727 | 759 s |
+| Recorte a la hoja | 0.6053 | 0.5198 | 0.5593 | 0.491–0.622 | 0.9331 | 0.8582 | 722 s |
+| Refuerzo | 0.7039 | 0.4672 | 0.5617 | 0.504–0.618 | 0.9221 | 0.8431 | 770 s |
+| Resolución 320 | 0.6053 | 0.5542 | 0.5786 | 0.512–0.637 | 0.9419 | 0.8796 | 1364 s |
+| Recorte + resolución | 0.5789 | 0.5570 | 0.5677 | 0.502–0.631 | 0.9416 | 0.8775 | 1085 s |
+
+Intervalos por remuestreo (1000 repeticiones) de las predicciones agrupadas. La desviación del F1 entre particiones va de 0.036 a 0.073 según la variante.
+
+### Lectura
+
+- **El F1 queda entre 0.56 y 0.58 en las cinco.** Todos los intervalos se solapan casi por completo: las diferencias son indistinguibles del azar.
+- **El error es siempre arañita roja contra roya.** En la base, 57 de 152 arañitas salen como roya y 51 royas salen como arañita; con minador y con hoja sana casi no se confunde (recall: minador 0.9744, sana 0.9781, roya 0.9185).
+- **Los ajustes solo mueven el punto de corte.** El refuerzo sube el recall a 0.70, pero duplica las falsas alarmas (103 royas como arañita) y baja la exactitud general a 0.9221.
+- **La mayor resolución no ayuda a la arañita roja.** Sube la exactitud general de 0.9390 a 0.9419, dentro del margen de azar, y cuesta más tiempo de cómputo.
+- La validación cruzada confirma la cifra del test del modelo v3 (13 de 22): no era casualidad.
+
+### Decisión
+
+No se cambia la receta de entrenamiento. Se añadirá a la app una regla de "duda entre arañita roja y roya" (pendiente de calibrar con las probabilidades de la validación cruzada).
+
+### NO EJECUTADO
+
+- Control de tamaño de lote: las variantes de 320 px usan lote 16 y la base lote 32, así que no es una comparación pura de resolución. No se corrió la base con lote 16.
+- Repetición con otras semillas. Se está corriendo una segunda vez la base, que servirá también para ver cuánto cambia el resultado entre ejecuciones idénticas.
+- Arquitecturas más grandes y resoluciones mayores de 320.

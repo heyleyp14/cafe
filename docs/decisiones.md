@@ -151,3 +151,10 @@ Formato: fecha, decisión, motivo. Las marcadas **DECISIÓN** en el plan usan el
 - **Ficha de la arañita roja:** síntomas de la sección 1.2.1.4 del informe; condiciones favorables con frases literales de la sección 1.1.1.4 (dos del párrafo de condiciones y una del párrafo de descripción sobre la estacionalidad).
 - **Identificador de la app:** se mantiene `co.edu.unipamplona.cafedetector` para que la versión nueva se instale sobre la anterior con la misma firma.
 - **Prueba de paridad nivel 1:** compara ahora las tres clases que devuelve el clasificador (top-3). Con cuatro clases, la menos probable ya no se compara directamente; el límite de 0.01 no cambió.
+
+## 2026-10-11 — Experimentos de mejora: dónde se ejecutan y qué se concluye
+
+- **Decisión del humano:** los experimentos de exploración se corren en la GPU local para agilizar. El modelo que se entrega se sigue entrenando en Colab.
+- **Registro:** se anota la verdad sobre dónde corrió cada cosa. Los archivos de `ml/outputs/cv/` guardan el hardware usado.
+- **Decisión:** no se cambia la receta de entrenamiento. En validación cruzada, ninguna de las cinco variantes probadas mejora la arañita roja más allá del margen de azar.
+- **Motivo:** el error es la confusión entre arañita roja y roya con una sola fuente de imágenes (RoCoLe), que además contiene fotos repetidas con etiquetas contradictorias. Es un límite de datos.

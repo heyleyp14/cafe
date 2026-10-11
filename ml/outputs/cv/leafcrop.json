@@ -1,0 +1,466 @@
+{
+  "variant": "leafcrop",
+  "settings": {
+    "arch": "efficientnetb0",
+    "img_size": 224,
+    "batch_size": 32,
+    "leaf_crop_probability": 0.5,
+    "loss_name": "cce",
+    "class_boost": null,
+    "epochs_head": 6,
+    "epochs_finetune": 25,
+    "seed": 42,
+    "limit": null,
+    "validation_fraction": 0.15,
+    "evaluation": "whole image squashed to img_size (bilinear), never cropped"
+  },
+  "folds": 3,
+  "images": 3736,
+  "per_fold": [
+    {
+      "fold": 0,
+      "images": {
+        "train": 2117,
+        "val": 371,
+        "test": 1248
+      },
+      "accuracy": 0.9351,
+      "f1_macro": 0.8654,
+      "per_class": {
+        "arana_roja": {
+          "precision": 0.5397,
+          "recall": 0.6667,
+          "f1": 0.5965,
+          "support": 51
+        },
+        "minador": {
+          "precision": 0.9808,
+          "recall": 0.9761,
+          "f1": 0.9784,
+          "support": 209
+        },
+        "roya": {
+          "precision": 0.9444,
+          "recall": 0.8967,
+          "f1": 0.92,
+          "support": 455
+        },
+        "sana": {
+          "precision": 0.956,
+          "recall": 0.9775,
+          "f1": 0.9666,
+          "support": 533
+        }
+      },
+      "seconds": 284.1,
+      "epochs_run": {
+        "head": 6,
+        "finetune": 25
+      },
+      "gpu_peak_mib": 1698
+    },
+    {
+      "fold": 1,
+      "images": {
+        "train": 2123,
+        "val": 368,
+        "test": 1245
+      },
+      "accuracy": 0.9309,
+      "f1_macro": 0.8447,
+      "per_class": {
+        "arana_roja": {
+          "precision": 0.5682,
+          "recall": 0.4902,
+          "f1": 0.5263,
+          "support": 51
+        },
+        "minador": {
+          "precision": 0.9668,
+          "recall": 0.9808,
+          "f1": 0.9737,
+          "support": 208
+        },
+        "roya": {
+          "precision": 0.9123,
+          "recall": 0.9163,
+          "f1": 0.9143,
+          "support": 454
+        },
+        "sana": {
+          "precision": 0.9625,
+          "recall": 0.9662,
+          "f1": 0.9644,
+          "support": 532
+        }
+      },
+      "seconds": 215.4,
+      "epochs_run": {
+        "head": 6,
+        "finetune": 15
+      },
+      "gpu_peak_mib": 1747
+    },
+    {
+      "fold": 2,
+      "images": {
+        "train": 2123,
+        "val": 370,
+        "test": 1243
+      },
+      "accuracy": 0.9332,
+      "f1_macro": 0.8544,
+      "per_class": {
+        "arana_roja": {
+          "precision": 0.4714,
+          "recall": 0.66,
+          "f1": 0.55,
+          "support": 50
+        },
+        "minador": {
+          "precision": 0.9673,
+          "recall": 0.9952,
+          "f1": 0.981,
+          "support": 208
+        },
+        "roya": {
+          "precision": 0.9543,
+          "recall": 0.8764,
+          "f1": 0.9137,
+          "support": 453
+        },
+        "sana": {
+          "precision": 0.9632,
+          "recall": 0.9831,
+          "f1": 0.973,
+          "support": 532
+        }
+      },
+      "seconds": 220.5,
+      "epochs_run": {
+        "head": 6,
+        "finetune": 16
+      },
+      "gpu_peak_mib": 1797
+    }
+  ],
+  "pooled": {
+    "images": 3736,
+    "accuracy": 0.9331,
+    "f1_macro": 0.8552,
+    "f1_macro_classes": [
+      "arana_roja",
+      "minador",
+      "roya",
+      "sana"
+    ],
+    "per_class": {
+      "arana_roja": {
+        "precision": 0.5198,
+        "recall": 0.6053,
+        "f1": 0.5593,
+        "support": 152
+      },
+      "minador": {
+        "precision": 0.9716,
+        "recall": 0.984,
+        "f1": 0.9777,
+        "support": 625
+      },
+      "roya": {
+        "precision": 0.9363,
+        "recall": 0.8965,
+        "f1": 0.916,
+        "support": 1362
+      },
+      "sana": {
+        "precision": 0.9605,
+        "recall": 0.9756,
+        "f1": 0.968,
+        "support": 1597
+      }
+    },
+    "confusion_matrix": {
+      "rows_true_columns_predicted": [
+        "arana_roja",
+        "minador",
+        "roya",
+        "sana"
+      ],
+      "values": [
+        [
+          92,
+          1,
+          51,
+          8
+        ],
+        [
+          0,
+          615,
+          9,
+          1
+        ],
+        [
+          69,
+          17,
+          1221,
+          55
+        ],
+        [
+          16,
+          0,
+          23,
+          1558
+        ]
+      ]
+    },
+    "by_source": {
+      "bracol": {
+        "images": 860,
+        "accuracy": 0.9709,
+        "f1_macro": 0.9733,
+        "f1_macro_classes": [
+          "minador",
+          "roya",
+          "sana"
+        ],
+        "per_class": {
+          "arana_roja": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "minador": {
+            "precision": 0.9455,
+            "recall": 0.9605,
+            "f1": 0.9529,
+            "support": 253
+          },
+          "roya": {
+            "precision": 0.9783,
+            "recall": 0.9699,
+            "f1": 0.9741,
+            "support": 465
+          },
+          "sana": {
+            "precision": 0.993,
+            "recall": 0.993,
+            "f1": 0.993,
+            "support": 142
+          }
+        },
+        "confusion_matrix": {
+          "rows_true_columns_predicted": [
+            "arana_roja",
+            "minador",
+            "roya",
+            "sana"
+          ],
+          "values": [
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              243,
+              9,
+              1
+            ],
+            [
+              0,
+              14,
+              451,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              141
+            ]
+          ]
+        }
+      },
+      "decafia": {
+        "images": 1423,
+        "accuracy": 0.9866,
+        "f1_macro": 0.9869,
+        "f1_macro_classes": [
+          "minador",
+          "roya",
+          "sana"
+        ],
+        "per_class": {
+          "arana_roja": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "minador": {
+            "precision": 0.992,
+            "recall": 1.0,
+            "f1": 0.996,
+            "support": 372
+          },
+          "roya": {
+            "precision": 0.9939,
+            "recall": 0.9529,
+            "f1": 0.973,
+            "support": 340
+          },
+          "sana": {
+            "precision": 0.9874,
+            "recall": 0.9958,
+            "f1": 0.9916,
+            "support": 711
+          }
+        },
+        "confusion_matrix": {
+          "rows_true_columns_predicted": [
+            "arana_roja",
+            "minador",
+            "roya",
+            "sana"
+          ],
+          "values": [
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              372,
+              0,
+              0
+            ],
+            [
+              4,
+              3,
+              324,
+              9
+            ],
+            [
+              1,
+              0,
+              2,
+              708
+            ]
+          ]
+        }
+      },
+      "rocole": {
+        "images": 1453,
+        "accuracy": 0.8582,
+        "f1_macro": 0.7798,
+        "f1_macro_classes": [
+          "arana_roja",
+          "roya",
+          "sana"
+        ],
+        "per_class": {
+          "arana_roja": {
+            "precision": 0.5349,
+            "recall": 0.6053,
+            "f1": 0.5679,
+            "support": 152
+          },
+          "minador": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "roya": {
+            "precision": 0.8627,
+            "recall": 0.8007,
+            "f1": 0.8305,
+            "support": 557
+          },
+          "sana": {
+            "precision": 0.9292,
+            "recall": 0.953,
+            "f1": 0.9409,
+            "support": 744
+          }
+        },
+        "confusion_matrix": {
+          "rows_true_columns_predicted": [
+            "arana_roja",
+            "minador",
+            "roya",
+            "sana"
+          ],
+          "values": [
+            [
+              92,
+              1,
+              51,
+              8
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              65,
+              0,
+              446,
+              46
+            ],
+            [
+              15,
+              0,
+              20,
+              709
+            ]
+          ]
+        }
+      }
+    },
+    "arana_roja_ci95": {
+      "method": "percentile bootstrap, 1000 resamples of the pooled predictions, seed 42",
+      "recall": [
+        0.5248,
+        0.6867
+      ],
+      "precision": [
+        0.4483,
+        0.5883
+      ],
+      "f1": [
+        0.4906,
+        0.6223
+      ]
+    }
+  },
+  "across_folds": {
+    "std": "sample standard deviation (ddof = 1)",
+    "arana_roja_f1": {
+      "mean": 0.5576,
+      "std": 0.0357
+    },
+    "f1_macro": {
+      "mean": 0.8548,
+      "std": 0.0104
+    }
+  },
+  "hardware": {
+    "gpu": [
+      "NVIDIA GeForce RTX 4050 Laptop GPU"
+    ],
+    "tensorflow": "2.21.0",
+    "keras": "3.15.1",
+    "python": "3.12.8",
+    "platform": "Linux-7.2.9-arch1-1-x86_64-with-glibc2.44",
+    "seconds": 722.1
+  }
+}
