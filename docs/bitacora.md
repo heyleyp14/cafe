@@ -991,3 +991,12 @@ La sección 2.4 del informe afirma que se entrena en la nube «debido a la falta
 - **Defecto del original, sin tocar:** el pie de página muestra un número fijo («1» en las primeras páginas y «10» en el resto) en lugar del número real, porque en la plantilla es texto y no un campo de numeración.
 - Se añadió la versión PDF: `docs/Informe_BioCafe_completado.pdf`.
 - No se comprobó en Microsoft Word; la conversión se hizo con OnlyOffice y puede haber diferencias menores.
+
+## Póster actualizado con los objetivos 3 y 4 (2026-10-13)
+
+- El póster original (`docs/Poster_Deteccion_Plagas_Cafe(1).pptx`) solo cubría los objetivos 1 y 2 y decía que quedaba por construir el sistema. Se generó una copia actualizada, `docs/Poster_BioCafe_actualizado.pptx` (y su PDF), con `docs/herramientas/ajustar_poster.py`. El original no se modificó.
+- **Cambios:** el resumen y la fase de modelado reflejan lo construido; las cuatro tarjetas del objetivo 2 dicen lo que se eligió de verdad (EfficientNet-B0 frente a MobileNetV2, RoCoLe + DECAFIA + BRACOL con 3736 imágenes, Mask R-CNN sin implementar, CUDA en Colab y TensorFlow Lite en el teléfono); el flujo dice «Modelo EfficientNet-B0»; se añadió un bloque de objetivos 3 y 4 con tres capturas de la app (las mismas del informe) y tres cifras (94 %, 81 %, 48 ms); se reescribieron las conclusiones; se añadieron las referencias de BRACOL, RoCoLe y EfficientNet.
+- Para hacer sitio se compactaron la tabla de viabilidad, las tarjetas y el flujo. No se cambió el diseño (colores, tipografía, encabezado, pie).
+- **Cifras, todas de `ml/outputs/final/`:** exactitud interna 0,9388, exactitud en JMuBEN 0,8125, latencia mediana 48 ms, F1 de arañita roja 0,5652, F1 macro en BRACOL no visto 0,8494 frente a 0,7313.
+- **Comprobado:** el archivo abre y se convierte a PDF con OnlyOffice; en el render no hay texto desbordado ni elementos solapados.
+- **No comprobado:** no se abrió en Microsoft PowerPoint. Las fuentes pueden medir distinto y conviene revisar las tarjetas y las conclusiones antes de imprimir.
