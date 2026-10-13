@@ -981,3 +981,13 @@ Otras 16 imágenes quedan por debajo del umbral 0.60 ("No se pudo determinar"). 
 ### Incoherencia que el humano debe resolver
 
 La sección 2.4 del informe afirma que se entrena en la nube «debido a la falta de una unidad de procesamiento gráfico (GPU) física en el equipo de desarrollo local». El texto nuevo dice, porque es lo que ocurrió, que los experimentos de validación cruzada se ejecutaron en un equipo local con GPU NVIDIA. Una de las dos frases debe ajustarse.
+
+## Informe: revisión de la maquetación (2026-10-13)
+
+- Se convirtió `docs/Informe_BioCafe_completado.docx` a PDF con el conversor de OnlyOffice (instalado en el equipo) y se revisaron las 13 páginas que contienen el texto nuevo (34 a 46 de 46).
+- **Bien alineado:** texto justificado dentro de los márgenes, objetivos 3 y 4 numerados a continuación del 1 y el 2, tablas e imágenes centradas y dentro del ancho de página, pies de figura centrados, referencias nuevas al final de la lista.
+- **Corregido:** el encabezado «Sensibilidad» de la tabla de validación cruzada se partía en dos líneas; se ensanchó la columna.
+- **Corregido, aunque venía del original:** el título «Conclusiones y recomendaciones» se partía dejando la «C» sola en una línea, por una sangría de primera línea heredada de la plantilla. Se igualó a la del título «Bibliografía».
+- **Defecto del original, sin tocar:** el pie de página muestra un número fijo («1» en las primeras páginas y «10» en el resto) en lugar del número real, porque en la plantilla es texto y no un campo de numeración.
+- Se añadió la versión PDF: `docs/Informe_BioCafe_completado.pdf`.
+- No se comprobó en Microsoft Word; la conversión se hizo con OnlyOffice y puede haber diferencias menores.
