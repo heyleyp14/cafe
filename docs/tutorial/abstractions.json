@@ -1,0 +1,128 @@
+{
+ "abstractions": [
+  {
+   "name": "El contrato del modelo",
+   "description": "Como el plano acordado entre dos carpinteros que trabajan en talleres distintos: Python y Kotlin se comprometen a usar la misma entrada (224x224, RGB, 0 a 255), la misma salida (probabilidades) y el mismo orden de clases, para que la pieza encaje al primer intento.",
+   "file_indices": [
+    1,
+    9,
+    10,
+    36,
+    33,
+    14,
+    44
+   ]
+  },
+  {
+   "name": "Preparación de datos",
+   "description": "Como una bodega que recibe café de tres fincas: etiqueta cada saco, retira los repetidos y reparte los lotes entre entrenamiento, validación y prueba sin que un mismo saco termine en dos montones.",
+   "file_indices": [
+    30,
+    36,
+    50,
+    25,
+    29
+   ]
+  },
+  {
+   "name": "Entrenamiento",
+   "description": "Como contratar a un catador experto en frutas (EfficientNet-B0 entrenado con ImageNet) y enseñarle a distinguir hojas de café: primero solo aprende el vocabulario nuevo (la cabeza) y luego afina todo su paladar con calma (ajuste fino).",
+   "file_indices": [
+    31,
+    35,
+    36,
+    29
+   ]
+  },
+  {
+   "name": "Evaluación, umbral y regla de duda",
+   "description": "Como el examen final de un estudiante con preguntas que nunca vio: se mide qué tan bien acierta, se decide desde qué nivel de seguridad se le cree (umbral) y se reconoce en qué par de temas se confunde (arañita roja y roya).",
+   "file_indices": [
+    32,
+    39,
+    38,
+    43,
+    42,
+    46,
+    47,
+    48,
+    49,
+    29,
+    25
+   ]
+  },
+  {
+   "name": "Conversión a TFLite y paridad",
+   "description": "Como traducir un libro a otro idioma y luego comprobar, frase por frase, que la traducción dice lo mismo: el modelo Keras se convierte a TensorFlow Lite y se verifica que dé las mismas probabilidades.",
+   "file_indices": [
+    33,
+    34,
+    44,
+    45,
+    4,
+    5,
+    25
+   ]
+  },
+  {
+   "name": "El clasificador en el teléfono",
+   "description": "Como el laboratorio portátil dentro de la app: recibe la foto, la endereza, la reduce a 224x224, la convierte en números y se la entrega al intérprete de LiteRT, que devuelve las probabilidades.",
+   "file_indices": [
+    14,
+    15,
+    6,
+    3,
+    23,
+    7
+   ]
+  },
+  {
+   "name": "La lógica de decisión",
+   "description": "Como el juez que lee el informe del laboratorio y decide qué decir: afirma una clase, advierte que hay duda entre dos, o admite que no está seguro.",
+   "file_indices": [
+    13,
+    22,
+    10,
+    19
+   ]
+  },
+  {
+   "name": "Estado y navegación de la app",
+   "description": "Como la recepción de un consultorio: lleva el turno de cada paciente (cargando, listo, error), sobrevive a los cambios de turno (rotación de pantalla) y dirige a cada uno a la sala correcta.",
+   "file_indices": [
+    17,
+    11,
+    12
+   ]
+  },
+  {
+   "name": "Las pantallas",
+   "description": "Como las vitrinas de una tienda: la de inicio invita a tomar o elegir una foto, la de cámara guía el encuadre y la de resultado muestra la respuesta con su ficha informativa y el aviso de que no es un diagnóstico.",
+   "file_indices": [
+    20,
+    16,
+    21,
+    18,
+    8,
+    12
+   ]
+  },
+  {
+   "name": "Orquestación y entrega",
+   "description": "Como la línea de empaque de una fábrica: el Makefile ordena los pasos, los zip llevan el trabajo a Colab, un script redacta el informe de resultados y al final sale un APK firmado que una página web ofrece para descargar.",
+   "file_indices": [
+    0,
+    2,
+    37,
+    35,
+    40,
+    29,
+    3,
+    26,
+    27,
+    28,
+    24
+   ]
+  }
+ ]
+}

@@ -1,0 +1,347 @@
+{
+ "target": "/home/josue/Documentos/Cursos/proyecto",
+ "generated_by": "codebase-tutorial",
+ "max_file_size_bytes": 102400,
+ "include": [
+  "**/*.py",
+  "**/*.kt",
+  "**/*.kts",
+  "**/*.toml",
+  "**/*.xml",
+  "**/*.json",
+  "**/*.txt",
+  "**/*.md",
+  "**/*.tsx",
+  "**/Makefile"
+ ],
+ "exclude": [
+  "**/.git/**",
+  "**/node_modules/**",
+  "**/.next/**",
+  "**/.venv/**",
+  "**/__pycache__/**",
+  "**/build/**",
+  "**/*.lock",
+  "**/pnpm-lock.yaml",
+  "docs/maqueta-v0/**",
+  "docs/herramientas/**",
+  "ml/data/**",
+  "ml/outputs_v1/**",
+  "**/*_predicciones.csv"
+ ],
+ "files": [
+  {
+   "index": 0,
+   "path": "Makefile",
+   "size": 1225
+  },
+  {
+   "index": 1,
+   "path": "PLAN_Prototipo_Cafe_Kotlin.md",
+   "size": 27243
+  },
+  {
+   "index": 2,
+   "path": "README.md",
+   "size": 5549
+  },
+  {
+   "index": 3,
+   "path": "android/app/build.gradle.kts",
+   "size": 2737
+  },
+  {
+   "index": 4,
+   "path": "android/app/src/androidTest/assets/golden/golden.json",
+   "size": 2653
+  },
+  {
+   "index": 5,
+   "path": "android/app/src/androidTest/java/co/edu/unipamplona/cafedetector/ml/CoffeeLeafClassifierTest.kt",
+   "size": 5092
+  },
+  {
+   "index": 6,
+   "path": "android/app/src/androidTest/java/co/edu/unipamplona/cafedetector/ml/RobustnessTest.kt",
+   "size": 4268
+  },
+  {
+   "index": 7,
+   "path": "android/app/src/main/AndroidManifest.xml",
+   "size": 1723
+  },
+  {
+   "index": 8,
+   "path": "android/app/src/main/assets/conditions.json",
+   "size": 2703
+  },
+  {
+   "index": 9,
+   "path": "android/app/src/main/assets/labels.txt",
+   "size": 29
+  },
+  {
+   "index": 10,
+   "path": "android/app/src/main/assets/threshold.json",
+   "size": 111
+  },
+  {
+   "index": 11,
+   "path": "android/app/src/main/java/co/edu/unipamplona/cafedetector/MainActivity.kt",
+   "size": 3670
+  },
+  {
+   "index": 12,
+   "path": "android/app/src/main/java/co/edu/unipamplona/cafedetector/data/ConditionsRepository.kt",
+   "size": 862
+  },
+  {
+   "index": 13,
+   "path": "android/app/src/main/java/co/edu/unipamplona/cafedetector/ml/ClassifierLogic.kt",
+   "size": 1903
+  },
+  {
+   "index": 14,
+   "path": "android/app/src/main/java/co/edu/unipamplona/cafedetector/ml/CoffeeLeafClassifier.kt",
+   "size": 3634
+  },
+  {
+   "index": 15,
+   "path": "android/app/src/main/java/co/edu/unipamplona/cafedetector/ml/ImageUtils.kt",
+   "size": 4257
+  },
+  {
+   "index": 16,
+   "path": "android/app/src/main/java/co/edu/unipamplona/cafedetector/ui/CameraScreen.kt",
+   "size": 12387
+  },
+  {
+   "index": 17,
+   "path": "android/app/src/main/java/co/edu/unipamplona/cafedetector/ui/ClassifierViewModel.kt",
+   "size": 5202
+  },
+  {
+   "index": 18,
+   "path": "android/app/src/main/java/co/edu/unipamplona/cafedetector/ui/Components.kt",
+   "size": 3511
+  },
+  {
+   "index": 19,
+   "path": "android/app/src/main/java/co/edu/unipamplona/cafedetector/ui/Formatting.kt",
+   "size": 317
+  },
+  {
+   "index": 20,
+   "path": "android/app/src/main/java/co/edu/unipamplona/cafedetector/ui/HomeScreen.kt",
+   "size": 7005
+  },
+  {
+   "index": 21,
+   "path": "android/app/src/main/java/co/edu/unipamplona/cafedetector/ui/ResultScreen.kt",
+   "size": 17005
+  },
+  {
+   "index": 22,
+   "path": "android/app/src/test/java/co/edu/unipamplona/cafedetector/ml/ClassifierLogicTest.kt",
+   "size": 3611
+  },
+  {
+   "index": 23,
+   "path": "android/gradle/libs.versions.toml",
+   "size": 2616
+  },
+  {
+   "index": 24,
+   "path": "docs/COMO_SE_CONSTRUYO.md",
+   "size": 13333
+  },
+  {
+   "index": 25,
+   "path": "docs/decisiones.md",
+   "size": 17944
+  },
+  {
+   "index": 26,
+   "path": "docs/landing-detector-hojas-cafe/app/page.tsx",
+   "size": 870
+  },
+  {
+   "index": 27,
+   "path": "docs/landing-detector-hojas-cafe/components/landing/hero.tsx",
+   "size": 2125
+  },
+  {
+   "index": 28,
+   "path": "docs/landing-detector-hojas-cafe/components/landing/performance.tsx",
+   "size": 1361
+  },
+  {
+   "index": 29,
+   "path": "docs/resultados.md",
+   "size": 8087
+  },
+  {
+   "index": 30,
+   "path": "ml/01_preparar_datos.py",
+   "size": 21933
+  },
+  {
+   "index": 31,
+   "path": "ml/02_entrenar.py",
+   "size": 13891
+  },
+  {
+   "index": 32,
+   "path": "ml/03_evaluar.py",
+   "size": 9470
+  },
+  {
+   "index": 33,
+   "path": "ml/04_convertir_tflite.py",
+   "size": 2356
+  },
+  {
+   "index": 34,
+   "path": "ml/05_paridad_tflite.py",
+   "size": 5270
+  },
+  {
+   "index": 35,
+   "path": "ml/colab_run_v3.py",
+   "size": 2603
+  },
+  {
+   "index": 36,
+   "path": "ml/config.py",
+   "size": 1865
+  },
+  {
+   "index": 37,
+   "path": "ml/crear_bundle.py",
+   "size": 1901
+  },
+  {
+   "index": 38,
+   "path": "ml/cv_experimentos.py",
+   "size": 12039
+  },
+  {
+   "index": 39,
+   "path": "ml/evaluar_conjunto_final.py",
+   "size": 4717
+  },
+  {
+   "index": 40,
+   "path": "ml/generar_resultados.py",
+   "size": 13955
+  },
+  {
+   "index": 41,
+   "path": "ml/outputs/final/android_phone/latency.json",
+   "size": 162
+  },
+  {
+   "index": 42,
+   "path": "ml/outputs/final/final_holdout.json",
+   "size": 1301
+  },
+  {
+   "index": 43,
+   "path": "ml/outputs/final/metrics.json",
+   "size": 7544
+  },
+  {
+   "index": 44,
+   "path": "ml/outputs/final/model_io.json",
+   "size": 927
+  },
+  {
+   "index": 45,
+   "path": "ml/outputs/final/parity.json",
+   "size": 747
+  },
+  {
+   "index": 46,
+   "path": "ml/outputs/final/regla_duda_modelo_final.json",
+   "size": 990
+  },
+  {
+   "index": 47,
+   "path": "ml/outputs/final/threshold.json",
+   "size": 111
+  },
+  {
+   "index": 48,
+   "path": "ml/outputs/final/threshold_source.json",
+   "size": 780
+  },
+  {
+   "index": 49,
+   "path": "ml/tests/test_cv_folds.py",
+   "size": 5213
+  },
+  {
+   "index": 50,
+   "path": "ml/tests/test_split.py",
+   "size": 4260
+  }
+ ],
+ "skipped": [
+  {
+   "path": "docs/landing-detector-hojas-cafe/pnpm-lock.yaml",
+   "reason": "lockfile, exceeds max_file_size"
+  },
+  {
+   "path": "docs/maqueta-v0/",
+   "reason": "v0 visual mockup of the app, not part of the running system"
+  },
+  {
+   "path": "docs/herramientas/",
+   "reason": "helpers that fill the report and poster, not part of the system"
+  },
+  {
+   "path": "docs/bitacora.md",
+   "reason": "work log, 72 KB of history; decisions are taken from docs/decisiones.md"
+  },
+  {
+   "path": "ml/outputs/cv/*_predicciones.csv",
+   "reason": "large prediction tables"
+  },
+  {
+   "path": "ml/outputs/final/model.keras",
+   "reason": "binary model, exceeds max_file_size"
+  },
+  {
+   "path": "ml/outputs/final/model_fp32.tflite",
+   "reason": "binary model"
+  },
+  {
+   "path": "ml/outputs/final/history.json",
+   "reason": "per-epoch curves; the training summary is in docs/resultados.md"
+  },
+  {
+   "path": "ml/colab_run.py",
+   "reason": "superseded by ml/colab_run_v3.py"
+  },
+  {
+   "path": "ml/colab_run_v2.py",
+   "reason": "superseded by ml/colab_run_v3.py"
+  },
+  {
+   "path": "android/app/src/main/java/co/edu/unipamplona/cafedetector/ui/Theme.kt",
+   "reason": "colour and typography boilerplate"
+  },
+  {
+   "path": "android/app/src/androidTest/java/co/edu/unipamplona/cafedetector/ml/BatchClassificationTest.kt",
+   "reason": "manual batch helper, not needed to understand the flow"
+  },
+  {
+   "path": "docs/landing-detector-hojas-cafe/components/ui/",
+   "reason": "generic UI kit components"
+  },
+  {
+   "path": "docs/landing-detector-hojas-cafe/public/BioCafe-v3.0.apk",
+   "reason": "binary"
+  }
+ ]
+}

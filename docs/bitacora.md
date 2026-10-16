@@ -1000,3 +1000,9 @@ La sección 2.4 del informe afirma que se entrena en la nube «debido a la falta
 - **Cifras, todas de `ml/outputs/final/`:** exactitud interna 0,9388, exactitud en JMuBEN 0,8125, latencia mediana 48 ms, F1 de arañita roja 0,5652, F1 macro en BRACOL no visto 0,8494 frente a 0,7313.
 - **Comprobado:** el archivo abre y se convierte a PDF con OnlyOffice; en el render no hay texto desbordado ni elementos solapados.
 - **No comprobado:** no se abrió en Microsoft PowerPoint. Las fuentes pueden medir distinto y conviene revisar las tarjetas y las conclusiones antes de imprimir.
+
+## Tutorial del código con glosario (2026-10-16)
+
+- Se generó `docs/tutorial/` con la skill `codebase-tutorial`: `index.md` (resumen, diagrama Mermaid y enlaces), 10 capítulos en orden de aprendizaje, `glosario.md` y los archivos de trabajo (`manifest.json`, `abstractions.json`, `relationships.json`, `order.json`).
+- **Comprobado:** todos los enlaces internos resuelven, cada capítulo aparece una vez en el orden y las cifras citadas salen de `ml/outputs/final/` y de `docs/resultados.md`.
+- **No comprobado:** el diagrama no se abrió en un visor de Mermaid; solo se revisó su sintaxis.
