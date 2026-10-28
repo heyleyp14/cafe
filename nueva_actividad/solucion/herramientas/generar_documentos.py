@@ -210,6 +210,7 @@ def build_article(out, fig_path):
     for name in C.AUTORES:
         p = para(doc, align=WD_ALIGN_PARAGRAPH.CENTER, after=0); set_font(p.add_run(name), 11)
         set_font(p.add_run(f"  ·  Identificación {C.IDENTIFICACION[name]}"), 9)
+        p = para(doc, align=WD_ALIGN_PARAGRAPH.CENTER, after=2); add_hyperlink(p, "mailto:" + C.CORREO[name], C.CORREO[name], 9)
     para(doc, "", after=2)
     for line in C.AFILIACION: para(doc, line, 10, WD_ALIGN_PARAGRAPH.CENTER, italic=True)
     para(doc, "", after=6)

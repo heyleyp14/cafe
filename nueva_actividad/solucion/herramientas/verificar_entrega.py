@@ -17,6 +17,7 @@ def text_and_links(path):
     return text, links
 
 art, art_links = text_and_links(root / "Articulo_IEEE_Revision_MPI_BioCafe.docx")
+check("mailto:heyley.paradapar@unipamplona.edu.co" in art_links and "mailto:lisbeth.corderotov@unipamplona.edu.co" in art_links, "artículo enlaza el correo de ambas autoras")
 for s in ("Resumen—", "Abstract—", "I. Introducción", "II. Materiales y métodos", "III. Resultados y discusión", "IV. Conclusiones", "Referencias", "Universidad de Pamplona", "Heyley Yurani Parada Parada"):
     check(s in art, f"artículo contiene «{s}»")
 cited = {int(n) for g in re.findall(r"\[(\d+(?:\], \[\d+)*)\]", art) for n in re.findall(r"\d+", g)}
@@ -28,6 +29,7 @@ tra, _ = text_and_links(root / "Trazabilidad_Revision_MPI_BioCafe.docx")
 seed_text, _ = text_and_links(root / "Semilla_Zotero_Referencias.docx")
 for doc_text, name in ((art, "artículo"), (tra, "trazabilidad"), (seed_text, "semilla Word")):
     check("1093887319" in doc_text and "1093293375" in doc_text, f"{name} incluye la identificación de ambas autoras")
+    check(name == "artículo" or ("heyley.paradapar@unipamplona.edu.co" in doc_text and "lisbeth.corderotov@unipamplona.edu.co" in doc_text), f"{name} incluye el correo de ambas autoras")
 for s in ("2. Resumen y abstract", "3. Constructos", "4. Prompts", "6. Fichas", "7. Relación de los resúmenes", "8. Cuadro comparativo", "9. Evaluación de la revisión: cinco preguntas", "10. Ajustes y correcciones"):
     check(s in tra, f"trazabilidad contiene «{s}»")
 check(len(re.findall(r"^Grupo \d+\.", tra, re.M)) >= 8, "trazabilidad agrupa los resúmenes de 2 o 3")
