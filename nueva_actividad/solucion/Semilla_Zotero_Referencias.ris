@@ -1,0 +1,508 @@
+TY  - JOUR
+TI  - Simulation-based optimization and sensibility analysis of MPI applications: Variability matters
+AU  - Cornebize, Tom
+AU  - Legrand, Arnaud
+T2  - Journal of Parallel and Distributed Computing
+PY  - 2022
+VL  - 166
+SP  - 111-125
+DO  - 10.1016/j.jpdc.2022.04.002
+UR  - https://doi.org/10.1016/j.jpdc.2022.04.002
+SN  - 0743-7315
+PB  - Elsevier BV
+AB  - Finely tuning MPI applications and understanding the influence of key parameters (number of processes, granularity, collective operation algorithms, virtual topology, and process placement) is critical to obtain good performance on supercomputers. With the high consumption of running applications at scale, doing so solely to optimize their performance is particularly costly. Having inexpensive but faithful predictions of expected performance could be a great help for researchers and system administrators. The methodology we propose decouples the complexity of the platform, which is captured through statistical models of the performance of its main components (MPI communications, BLAS operations), from the complexity of adaptive applications by emulating the application and skipping regular non-MPI parts of the code. We demonstrate the capability of our method with High-Performance Linpack (HPL), the benchmark used to rank supercomputers in the TOP500, which requires careful tuning. We briefly present (1) how the open-source version of HPL can be slightly modified to allow a fast emulation on a single commodity server at the scale of a supercomputer. Then we present (2) an extensive (in)validation study that compares simulation with real experiments and demonstrates our ability to predict the performance of HPL within a few percent consistently. This study allows us to identify the main modeling pitfalls (e.g., spatial and temporal node variability or network heterogeneity and irregular behavior) that need to be considered. Last, we show (3) how our "surrogate" allows studying several subtle HPL parameter optimization problems while accounting for uncertainty on the platform.
+KW  - C1 Paradigma de paso de mensajes (MPI)
+ER  - 
+
+TY  - JOUR
+TI  - Tuned your MPI library? Now check the performance guidelines
+AU  - Hunold, Sascha
+AU  - Träff, Jesper Larsson
+AU  - Laso, Ruben
+T2  - Parallel Computing
+PY  - 2026
+VL  - 129
+SP  - 103205
+DO  - 10.1016/j.parco.2026.103205
+UR  - https://doi.org/10.1016/j.parco.2026.103205
+SN  - 0167-8191
+PB  - Elsevier BV
+AB  - The MPI standard provides the foundational building blocks for most parallel applications running on large-scale HPC systems. Collective communication operations in MPI are critical components for the scalability of these applications. Most MPI libraries offer several algorithms for each specific collective operation, and each library selects the algorithm to be used based on the number of processes, the message size, and possibly other factors. Each collective algorithm may perform better in certain scenarios, and thus, selecting the most suitable algorithm for each use case is essential. However, even the best algorithm in a given MPI library may deliver suboptimal performance. Self-consistent MPI performance guidelines capture semantic relationships between different collective operations and exploit these to express performance expectations that collectives should reasonably satisfy to be considered performance-consistent. For collective communication, such performance guidelines typically state that a specialized collective call should not be slower than less specialized counterparts. In this article, we demonstrate how the consistency of MPI libraries with respect to performance guidelines can be analyzed. For this purpose, we present a tool that checks guideline compliance. For regular collective operations such as MPI_Bcast , the tool contains multiple emulated versions of the collective by composing less specialized operations. Then, for a specific number of processes and message sizes, the tool experimentally assesses whether the algorithm selected by the MPI library is slower than its emulated counterparts. If that is the case, a performance-guideline violation is detected. In a broader empirical study, we assess the current state of performance consistency in MPI libraries on modern supercomputers.
+KW  - C1 Paradigma de paso de mensajes (MPI)
+ER  - 
+
+TY  - JOUR
+TI  - Using long vector extensions for MPI reductions
+AU  - Zhong, Dong
+AU  - Cao, Qinglei
+AU  - Bosilca, George
+AU  - Dongarra, Jack
+T2  - Parallel Computing
+PY  - 2022
+VL  - 109
+SP  - 102871
+DO  - 10.1016/j.parco.2021.102871
+UR  - https://doi.org/10.1016/j.parco.2021.102871
+SN  - 0167-8191
+PB  - Elsevier BV
+AB  - The modern CPU’s design, including the deep memory hierarchies and SIMD/vectorization capability have a more significant impact on algorithms’ efficiency than the modest frequency increase observed recently. The current introduction of wide vector instruction set extensions (AVX and SVE) motivated vectorization to become a critical software component to increase efficiency and close the gap to peak performance. In this paper, we investigate the impact of the vectorization of MPI reduction operations. We propose an implementation of predefined MPI reduction operations using vector intrinsics (AVX and SVE) to improve the time-to-solution of the predefined MPI reduction operations. The evaluation of the resulting software stack under different scenarios demonstrates that the approach is not only efficient but also generalizable to many vector architectures. Experiments conducted on varied architectures (Intel Xeon Gold, AMD Zen 2, and Arm A64FX), show that the proposed vector extension optimized reduction operations significantly reduce completion time for collective communication reductions. With these optimizations, we achieve higher memory bandwidth and an increased efficiency for local computations, which directly benefit the overall cost of collective reductions and applications based on them.
+KW  - C1 Paradigma de paso de mensajes (MPI)
+ER  - 
+
+TY  - JOUR
+TI  - SUARA: A scalable universal allreduce communication algorithm for acceleration of parallel deep learning applications
+AU  - Nuriyev, Emin
+AU  - Manumachu, Ravi Reddy
+AU  - Aseeri, Samar
+AU  - Verma, Mahendra K.
+AU  - Lastovetsky, Alexey L.
+T2  - Journal of Parallel and Distributed Computing
+PY  - 2024
+VL  - 183
+SP  - 104767
+DO  - 10.1016/j.jpdc.2023.104767
+UR  - https://doi.org/10.1016/j.jpdc.2023.104767
+SN  - 0743-7315
+PB  - Elsevier BV
+AB  - Parallel and distributed deep learning (PDNN) has become an effective strategy to reduce the long training times of large-scale deep neural networks. Mainstream PDNN software packages based on the message-passing interface (MPI) and employing synchronous stochastic gradient descent rely crucially on the performance of MPI allreduce collective communication routine. In this work, we propose a novel scalable universal allreduce meta-algorithm called SUARA. In general, SUARA consists of L serial steps, where L≥2, executed by all MPI processes involved in the allreduce operation. At each step, SUARA partitions this set of processes into subsets, which execute optimally selected library allreduce algorithms to solve sub-allreduce problems on these subsets in parallel, to accomplish the whole allreduce operation after completing all the L steps. We then design, theoretically study and implement a two-step SUARA (L=2) called SUARA2 on top of the Open MPI library. We prove that the theoretical asymptotic speedup of SUARA2 executed by P processes over the base Open MPI routine is O(P). Our experiments on Shaheen-II supercomputer employing 1024 nodes demonstrate over 2x speedup of SUARA2 over native Open MPI allreduce routine, which translates into the performance improvement of training of ResNet-50 DNN on ImageNet by 9%.
+KW  - C2 Comunicación punto a punto y colectiva
+ER  - 
+
+TY  - JOUR
+TI  - Optimizing MPI collective operations for intra-node shared memory exploitation and oversubscription
+AU  - Utrera, Gladys
+AU  - Bull, J. Mark
+T2  - Parallel Computing
+PY  - 2026
+VL  - 129
+SP  - 103207
+DO  - 10.1016/j.parco.2026.103207
+UR  - https://doi.org/10.1016/j.parco.2026.103207
+SN  - 0167-8191
+PB  - Elsevier BV
+AB  - Node sizes in multicore clusters are becoming larger, so applications should exploit the shared memory inside a node, to potentially reduce communication latencies compared to network communications. The Message Passing Interface library (MPI) serves as the de facto standard for parallel applications on distributed memory environments. The appearance of the MPI-3 shared memory extension has made the idea of optimizing the MPI collective operations at the intra-node level both attractive and portable. Taking advantage of this facility, we present a hierarchical design of the algorithms for MPI_Allreduce and MPI_Bcast collective operations, which we name Fullpar. The proposal is based on partitioning the messages and exploiting concurrency between network communication and shared-memory operations at intra-node level in the message dissemination process. Previously proposed hierarchical collective algorithms do not exploit all the available parallelism and/or the direct implementation of shared-memory at intra-node level. Furthermore, we explore the application of oversubscription, to enhance resource utilization. Oversubscribing CPUs offers opportunities to optimize resource allocation, as well as making CPUs available to other applications. We implement our proposal on top of the Intel MPI and OpenMPI libraries using the MPI profiling (PMPI) mechanism, and carry out evaluations on platforms with different architectures characteristics such as the node size and interconnection network. Experimental results show that the proposed approach often achieves lower execution times than the evaluated alternatives for medium and large message sizes. Furthermore, the introduction of oversubscription is shown to have almost no overhead, especially for the broadcast of large messages.
+KW  - C2 Comunicación punto a punto y colectiva
+ER  - 
+
+TY  - JOUR
+TI  - Analyzing the impact of the MPI allreduce in distributed training of convolutional neural networks
+AU  - Castelló, Adrián
+AU  - Catalán, Mar
+AU  - Dolz, Manuel F.
+AU  - Quintana-Ortí, Enrique S.
+AU  - Duato, José
+T2  - Computing
+PY  - 2023
+VL  - 105
+IS  - 5
+SP  - 1101-1119
+DO  - 10.1007/s00607-021-01029-2
+UR  - https://doi.org/10.1007/s00607-021-01029-2
+SN  - 0010-485X
+PB  - Springer Science and Business Media LLC
+AB  - For many distributed applications, data communication poses an important bottleneck from the points of view of performance and energy consumption. As more cores are integrated per node, in general the global performance of the system increases yet eventually becomes limited by the interconnection network. This is the case for distributed data-parallel training of convolutional neural networks (CNNs), which usually proceeds on a cluster with a small to moderate number of nodes. In this paper, we analyze the performance of the Allreduce collective communication primitive, a key to the efficient data-parallel distributed training of CNNs. Our study targets the distinct realizations of this primitive in three high performance instances of Message Passing Interface (MPI), namely MPICH, OpenMPI, and IntelMPI, and employs a cluster equipped with state-of-the-art processor and network technologies. In addition, we apply the insights gained from the experimental analysis to the optimization of the TensorFlow framework when running on top of Horovod. Our study reveals that a careful selection of the most convenient MPI library and Allreduce (ARD) realization accelerates the training throughput by a factor of 1.2× compared with the default algorithm in the same MPI library, and up to 2.8× when comparing distinct MPI libraries in a number of relevant combinations of CNN model+dataset.
+KW  - C2 Comunicación punto a punto y colectiva
+ER  - 
+
+TY  - JOUR
+TI  - Towards Efficient HPC: Exploring Overlap Strategies Using MPI Non-Blocking Communication
+AU  - Zheng, Yuntian
+AU  - Wu, Jianping
+T2  - Mathematics
+PY  - 2025
+VL  - 13
+IS  - 11
+SP  - 1848
+DO  - 10.3390/math13111848
+UR  - https://doi.org/10.3390/math13111848
+SN  - 2227-7390
+PB  - MDPI AG
+AB  - As high-performance computing (HPC) platforms continue to scale up, communication costs have become a critical bottleneck affecting overall application performance. An effective strategy to overcome this limitation is to overlap communication with computation. The Message Passing Interface (MPI), as the de facto standard for communication in HPC, provides non-blocking communication primitives that make such overlapping feasible. By enabling asynchronous communication, non-blocking operations reduce idle time of cores caused by data transfer delays, thereby improving resource utilization. Overlapping communication with computation is particularly important for enhancing the performance of large-scale scientific applications, such as numerical simulations, climate modeling, and other data-intensive tasks. However, achieving efficient overlapping is non-trivial and depends not only on advances in hardware technologies such as Remote Direct Memory Access (RDMA), but also on well-designed and optimized MPI implementations. This paper presents a comprehensive survey on the principles of MPI non-blocking communication, the core techniques for achieving computation–communication overlap, and some representative applications in scientific computing. Alongside the survey, we include a preliminary experimental study evaluating the effectiveness of asynchronous progress mechanism on modern HPC platforms to support the development of parallel programs for HPC researchers and practitioners.
+KW  - C2 Comunicación punto a punto y colectiva
+ER  - 
+
+TY  - JOUR
+TI  - Detailed Modeling of Heterogeneous and Contention-Constrained Point-to-Point MPI Communication
+AU  - Thune, Andreas
+AU  - Reinemo, Sven-Arne
+AU  - Skeie, Tor
+AU  - Cai, Xing
+T2  - IEEE Transactions on Parallel and Distributed Systems
+PY  - 2023
+VL  - 34
+IS  - 5
+SP  - 1580-1593
+DO  - 10.1109/tpds.2023.3253881
+UR  - https://doi.org/10.1109/tpds.2023.3253881
+SN  - 1045-9219
+PB  - Institute of Electrical and Electronics Engineers (IEEE)
+AB  - The network topology of modern parallel computing systems is inherently heterogeneous, with a variety of latency and bandwidth values. Moreover, contention for the bandwidth can exist on different levels when many processes communicate with each other. Many-pair, point-to-point MPI communication is thus characterized by heterogeneity and contention, even on a cluster of homogeneous multicore CPU nodes. To get a detailed understanding of the individual communication cost per MPI process, we propose a new modeling methodology that incorporates both heterogeneity and contention. First, we improve the standard max-rate model to better quantify the actually achievable bandwidth depending on the number of MPI processes in competition. Then, we make a further extension that more detailedly models the bandwidth contention when the competing MPI processes have different numbers of neighbors, with also non-uniform message sizes. Thereafter, we include more flexibility by considering interactions between intra-socket and inter-socket messaging. Through a series of experiments done on different processor architectures, we show that the new heterogeneous and contention-constrained performance models can adequately explain the individual communication cost associated with each MPI process. The largest test of realistic point-to-point MPI communication involves 8,192 processes and in total 2,744,632 simultaneous messages over 64 dual-socket AMD Epyc Rome compute nodes connected by InfiniBand, for which the overall prediction accuracy achieved is 84%.
+KW  - C2 Comunicación punto a punto y colectiva
+ER  - 
+
+TY  - JOUR
+TI  - Study of Data and Model parallelism in Distributed Deep learning for Diabetic retinopathy classification
+AU  - Patil, Mahesh S
+AU  - Chickerur, Satyadhyan
+T2  - Procedia Computer Science
+PY  - 2023
+VL  - 218
+SP  - 2253-2263
+DO  - 10.1016/j.procs.2023.01.201
+UR  - https://doi.org/10.1016/j.procs.2023.01.201
+SN  - 1877-0509
+PB  - Elsevier BV
+AB  - Distributed deep learning(DDL) is an area of research in Artificial intelligence (AI), where the training time of deep learning(DL) models can be drastically reduced by using multiple accelerators. Most of the previous research works use the data parallelism strategy of DDL and report its performance. But, other parallelism strategies in DDL need to be explored and report its performance modeling for particular applications and software-hardware stacks. Such works can help other researchers make better decisions in designing an efficient DDL algorithm. This work presents a comparative study of data parallelism(DP) and model parallelism(MP) for DDL. The diabetic retinopathy(DR) image classification is used as a case study, and DDL algorithms are implemented using Mesh-Tensor Flow on NVidia's DGX-1. As indicated by the results, the MP strategy provides faster convergence and higher validation accuracy of 62.13% compared to DP strategies validation accuracy of 55.72%. Also, the MP strategy surpasses the DP's highest accuracy in lesser epochs with a speed-up of 1.38X in terms of time duration. Overall, this unique study provides a performance comparison between DP and MP strategies of DDL algorithms being applied for a particular application, dataset, and software-hardware stack.
+KW  - C3 Entrenamiento distribuido de redes neuronales profundas
+ER  - 
+
+TY  - JOUR
+TI  - Optimizing DNN training with pipeline model parallelism for enhanced performance in embedded systems
+AU  - Maruf, Md Al
+AU  - Azim, Akramul
+AU  - Auluck, Nitin
+AU  - Sahi, Mansi
+T2  - Journal of Parallel and Distributed Computing
+PY  - 2024
+VL  - 190
+SP  - 104890
+DO  - 10.1016/j.jpdc.2024.104890
+UR  - https://doi.org/10.1016/j.jpdc.2024.104890
+SN  - 0743-7315
+PB  - Elsevier BV
+AB  - Deep Neural Networks (DNNs) have gained widespread popularity in different domain applications due to their dominant performance. Despite the prevalence of massively parallel multi-core processor architectures, adopting large DNN models in embedded systems remains challenging, as most embedded applications are designed with single-core processors in mind. This limits DNN adoption in embedded systems due to inefficient leveraging of model parallelization and workload partitioning. Prior solutions attempt to address these challenges using data and model parallelism. However, they lack in finding optimal DNN model partitions and distributing them efficiently to achieve improved performance. This paper proposes a DNN model parallelism framework to accelerate model training by finding the optimal number of model partitions and resource provisions. The proposed framework combines data and model parallelism techniques to optimize the parallel processing of DNNs for embedded applications. In addition, it implements the pipeline execution of the partitioned models and integrates a task controller to manage the computing resources. The experimental results for image object detection demonstrate the applicability of our proposed framework in estimating the latest execution time and reducing overall model training time by almost 44.87% compared to the baseline AlexNet convolutional neural network (CNN) model.
+KW  - C3 Entrenamiento distribuido de redes neuronales profundas
+ER  - 
+
+TY  - JOUR
+TI  - A Survey on Auto-Parallelism of Large-Scale Deep Learning Training
+AU  - Liang, Peng
+AU  - Tang, Yu
+AU  - Zhang, Xiaoda
+AU  - Bai, Youhui
+AU  - Su, Teng
+AU  - Lai, Zhiquan
+AU  - Qiao, Linbo
+AU  - Li, Dongsheng
+T2  - IEEE Transactions on Parallel and Distributed Systems
+PY  - 2023
+VL  - 34
+IS  - 8
+SP  - 2377-2390
+DO  - 10.1109/tpds.2023.3281931
+UR  - https://doi.org/10.1109/tpds.2023.3281931
+SN  - 1045-9219
+PB  - Institute of Electrical and Electronics Engineers (IEEE)
+AB  - Deep learning (DL) has gained great success in recent years, leading to state-of-the-art performance in research community and industrial fields like computer vision and natural language processing. One of the reasons for this success is the huge amount parameters adopted in DL models. However, it is impractical to train a moderately large model with a large number of parameters on a typical single device. Thus, It is necessary to train DL models in clusters with distributed training algorithms. However, traditional distributed training algorithms are usually sub-optimal and highly customized, which owns the drawbacks to train large-scale DL models in varying computing clusters. To handle the above problem, researchers propose auto-parallelism, which is promising to train large-scale DL models efficiently and practically in various computing clusters. In this survey, we perform a broad and thorough investigation on challenges, basis, and strategy searching methods of auto-parallelism in DL training. First, we abstract basic parallelism schemes with their communication cost and memory consumption in DL training. Further, we analyze and compare a series of current auto-parallelism works and investigate strategies and searching methods which are commonly used in practice. At last, we discuss several trends in auto-parallelism which are promising in further research.
+KW  - C3 Entrenamiento distribuido de redes neuronales profundas
+ER  - 
+
+TY  - JOUR
+TI  - A snapshot of parallelism in distributed deep learning training
+AU  - Romero-Sandí, Hairol
+AU  - Núñez, Gabriel
+AU  - Rojas, Elvis
+T2  - Revista Colombiana de Computación
+PY  - 2024
+VL  - 25
+IS  - 1
+SP  - 60-73
+DO  - 10.29375/25392115.5054
+UR  - https://doi.org/10.29375/25392115.5054
+SN  - 2539-2115
+PB  - Universidad Autonoma de Bucaramanga
+AB  - The accelerated development of applications related to artificial intelligence has generated the creation of increasingly complex neural network models with enormous amounts of parameters, currently reaching up to trillions of parameters. Therefore, it makes your training almost impossible without the parallelization of training. Parallelism applied with different approaches is the mechanism that has been used to solve the problem of training on a large scale. This paper presents a glimpse of the state of the art related to parallelism in deep learning training from multiple points of view. The topics of pipeline parallelism, hybrid parallelism, mixture-of-experts and auto-parallelism are addressed in this study, which currently play a leading role in scientific research related to this area. Finally, we develop a series of experiments with data parallelism and model parallelism. The objective is that the reader can observe the performance of two types of parallelism and understand more clearly the approach of each one.
+KW  - C3 Entrenamiento distribuido de redes neuronales profundas
+ER  - 
+
+TY  - JOUR
+TI  - Scalable communication for high-order stencil computations using CUDA-aware MPI
+AU  - Pekkilä, Johannes
+AU  - Väisälä, Miikka S.
+AU  - Käpylä, Maarit J.
+AU  - Rheinhardt, Matthias
+AU  - Lappi, Oskar
+T2  - Parallel Computing
+PY  - 2022
+VL  - 111
+SP  - 102904
+DO  - 10.1016/j.parco.2022.102904
+UR  - https://doi.org/10.1016/j.parco.2022.102904
+SN  - 0167-8191
+PB  - Elsevier BV
+AB  - Modern compute nodes in high-performance computing provide a tremendous level of parallelism and processing power. However, as arithmetic performance has been observed to increase at a faster rate relative to memory and network bandwidths, optimizing data movement has become critical for achieving strong scaling in many communication-heavy applications. This performance gap has been further accentuated with the introduction of graphics processing units, which can provide by multiple factors higher throughput in data-parallel tasks than central processing units. In this work, we explore the computational aspects of iterative stencil loops and implement a generic communication scheme using CUDA-aware MPI, which we use to accelerate magnetohydrodynamics simulations based on high-order finite differences and third-order Runge-Kutta integration. We put particular focus on improving intra-node locality of workloads. Our GPU implementation scales strongly from one to 64 devices at 50%--87% of the expected efficiency based on a theoretical performance model. Compared with a multi-core CPU solver, our implementation exhibits 20--60\times speedup and 9--12\times improved energy efficiency in compute-bound benchmarks on 16 nodes.
+KW  - C4 Aceleración con GPU y programación híbrida (MPI + OpenMP/CUDA)
+ER  - 
+
+TY  - JOUR
+TI  - A hybrid CUDA, OpenMP, and MPI parallel TCA-based domain adaptation for classification of very high-resolution remote sensing images
+AU  - Garea, Alberto S.
+AU  - Heras, Dora B.
+AU  - Argüello, Francisco
+AU  - Demir, Begüm
+T2  - The Journal of Supercomputing
+PY  - 2023
+VL  - 79
+IS  - 7
+SP  - 7513-7532
+DO  - 10.1007/s11227-022-04961-y
+UR  - https://doi.org/10.1007/s11227-022-04961-y
+SN  - 0920-8542
+PB  - Springer Science and Business Media LLC
+AB  - Domain Adaptation (DA) is a technique that aims at extracting information from a labeled remote sensing image to allow classifying a different image obtained by the same sensor but at a different geographical location. This is a very complex problem from the computational point of view, specially due to the very high-resolution of multispectral images. TCANet is a deep learning neural network for DA classification problems that has been proven as very accurate for solving them. TCANet consists of several stages based on the application of convolutional filters obtained through Transfer Component Analysis (TCA) computed over the input images. It does not require backpropagation training, in contrast to the usual CNN-based networks, as the convolutional filters are directly computed based on the TCA transform applied over the training samples. In this paper, a hybrid parallel TCA-based domain adaptation technique for solving the classification of very high-resolution multispectral images is presented. It is designed for efficient execution on a multi-node computer by using Message Passing Interface (MPI), exploiting the available Graphical Processing Units (GPUs), and making efficient use of each multicore node by using Open Multi-Processing (OpenMP). As a result, an accurate DA technique from the point of view of classification and with high speedup values over the sequential version is obtained, increasing the applicability of the technique to real problems.
+KW  - C4 Aceleración con GPU y programación híbrida (MPI + OpenMP/CUDA)
+ER  - 
+
+TY  - JOUR
+TI  - A parallel numerical algorithm by combining MPI and OpenMP programming models with applications in gravity field recovery
+AU  - Lu, Biao
+AU  - Luo, Zhicai
+AU  - Zhong, Bo
+AU  - Zhou, Hao
+T2  - Frontiers in Earth Science
+PY  - 2023
+VL  - 11
+SP  - 1080879
+DO  - 10.3389/feart.2023.1080879
+UR  - https://doi.org/10.3389/feart.2023.1080879
+SN  - 2296-6463
+PB  - Frontiers Media SA
+AB  - Satellite gravimetry missions have enabled the calculation of high-accuracy and high-resolution Earth gravity field models from satellite-to-satellite tracking data and gravitational gradients. However, calculating high maximum degree/order (e.g., 240 or even higher) gravity field models using the least squares method is time-consuming due to the vast amount of gravimetry observations. To improve calculation efficiency, a parallel algorithm has been developed by combining Message Passing Interface (MPI) and Open Multi-Processing (OpenMP) programming models to calculate and invert normal equations for the Earth gravity field recovery. The symmetrical feature of normal equations has been implemented to speed up the calculation progress and reduce computation time. For example, the computation time to generate the normal equation of an IGGT_R1 test version of degree/order 240 was reduced from 88 h to 27 h by considering the symmetrical feature. Here, the calculation was based on the high-performance computing cluster with 108 cores in the School of Geodesy and Geomatics, at Wuhan University. Additionally, the MPI parallel Gaussian-Jordan elimination method was modified to invert normal equation matrices and scaled up to 100 processor cores in this study while the traditional method was limited in a certain number of processors. Furthermore, the Cholesky decomposition from the ScaLAPACK library was used to compare with the parallel Gauss-Jordan elimination method. The numerical algorithm has effectively reduced the amount of calculation and sped up the calculation progress, and has been successfully implemented in applications such as building the gravity field models IGGT_R1 and IGGT_R1C.
+KW  - C4 Aceleración con GPU y programación híbrida (MPI + OpenMP/CUDA)
+ER  - 
+
+TY  - JOUR
+TI  - Numba-MPI v1.0: Enabling MPI communication within Numba/LLVM JIT-compiled Python code
+AU  - Derlatka, Kacper
+AU  - Manna, Maciej
+AU  - Bulenok, Oleksii
+AU  - Zwicker, David
+AU  - Arabas, Sylwester
+T2  - SoftwareX
+PY  - 2024
+VL  - 28
+SP  - 101897
+DO  - 10.1016/j.softx.2024.101897
+UR  - https://doi.org/10.1016/j.softx.2024.101897
+SN  - 2352-7110
+PB  - Elsevier BV
+AB  - The numba-mpi package offers access to the Message Passing Interface (MPI) routines from Python code that uses the Numba just-in-time (JIT) compiler. As a result, high-performance and multi-threaded Python code may utilize MPI communication facilities without leaving the JIT-compiled code blocks, which is not possible with the mpi4py package, a higher-level Python interface to MPI. For debugging purposes, numba-mpi retains full functionality of the code even if the JIT compilation is disabled. The numba-mpi API constitutes a thin wrapper around the C API of MPI and is built around Numpy arrays including handling of non-contiguous views over array slices. Project development is hosted at GitHub leveraging the mpi4py/setup-mpi workflow enabling continuous integration tests on Linux (MPICH, OpenMPI&Intel MPI), macOS (MPICH&OpenMPI) and Windows (MS MPI). The paper covers an overview of the package features, architecture and performance. As of v1.0, the following MPI routines are exposed and covered by unit tests: size/rank, [i]send/[i]recv, wait[all|any], test[all|any], allreduce, bcast, barrier, scatter/[all]gather&wtime. The package is implemented in pure Python and depends on numpy, numba and mpi4py (the latter used at initialization and as a source of utility routines only). The performance advantage of using numba-mpi compared to mpi4py is depicted with a simple example, with entirety of the code included in listings discussed in the text. Application of numba-mpi for handling domain decomposition in numerical solvers for partial differential equations is presented using two external packages that depend on numba-mpi: py-pde and PyMPDATA-MPI.
+KW  - C5 Infraestructura de clúster y red LAN para MPI
+ER  - 
+
+TY  - JOUR
+TI  - Hands-on parallel & distributed computing with Raspberry Pi devices and clusters
+AU  - Shoop, Elizabeth
+AU  - Matthews, Suzanne J.
+AU  - Brown, Richard
+AU  - Adams, Joel C.
+T2  - Journal of Parallel and Distributed Computing
+PY  - 2025
+VL  - 196
+SP  - 104996
+DO  - 10.1016/j.jpdc.2024.104996
+UR  - https://doi.org/10.1016/j.jpdc.2024.104996
+SN  - 0743-7315
+PB  - Elsevier BV
+AB  - Parallel and distributed computing (PDC) concepts are now required topics for accredited undergraduate computer science programs. However, introducing PDC into the CS curriculum is challenging for several reasons, including an instructor's lack of PDC knowledge and difficulties in accessing PDC hardware. This paper addresses both of these challenges by presenting free, interactive, web-based PDC teaching modules using inexpensive Raspberry Pi single board computers (SBCs). Our materials include a free disk image that makes it possible for instructors to build Raspberry Pi clusters in minutes and use our software in a variety of curricular contexts. Our multi-year assessment of these materials on students and faculty members indicates that: (i) our materials increased students' confidence regarding important PDC concepts and motivated them to study PDC further; and (ii) our materials increased faculty members' confidence and preparedness in teaching key PDC concepts at their own institutions. • Free online interactive modules for learning PDC with Raspberry Pis and Pi clusters. • Self-organizing cluster: connects disparate Pis into a working cluster in minutes. • Free disk image pre-loaded with all activities for painless classroom adoption. • Our materials increase student confidence about PDC and motivation to learn more PDC. • Our materials increase faculty confidence and preparedness to teach PDC.
+KW  - C5 Infraestructura de clúster y red LAN para MPI
+ER  - 
+
+TY  - JOUR
+TI  - TopADDPi: An Affordable and Sustainable Raspberry Pi Cluster for Parallel-Computing Topology Optimization
+AU  - Zhang, Zhi-Dong
+AU  - Yu, Dao-Yuan
+AU  - Ibhadode, Osezua
+AU  - Meng, Liang
+AU  - Gao, Tong
+AU  - Zhu, Ji-Hong
+AU  - Zhang, Wei-Hong
+T2  - Processes
+PY  - 2025
+VL  - 13
+IS  - 3
+SP  - 633
+DO  - 10.3390/pr13030633
+UR  - https://doi.org/10.3390/pr13030633
+SN  - 2227-9717
+PB  - MDPI AG
+AB  - Parallel-Computing Topology Optimization (PCTO) has gained importance, especially with the advancement of additive manufacturing (AM), due to its ability to tackle high-dimensional, high-resolution challenges. PCTO is highly relevant to sustainable manufacturing processes and technologies, enabling resource-efficient designs, reduced emissions, and advancements in Industry 4.0 integration. However, PCTO poses difficulties for newcomers or researchers, mainly because of its reliance on non-traditional computing environments and the limited availability of high-performance computing (HPC) resources. Addressing this, the study introduces TopADDPi, a Raspberry Pi-based cluster system, which has been purpose-built to facilitate learning and research in PCTO. It provides detailed instructions for assembling and configuring a Raspberry Pi cluster, with a focus on cost-effectiveness and ease of use. The study thoroughly investigates how different hardware and software configurations affect computing efficiency. In addition, through extensive numerical testing, the performance, energy consumption, and environmental impact of the Raspberry Pi cluster are benchmarked against conventional computing systems. The findings demonstrate the cluster’s advantages in handling parallel computing, its indispensable role in debugging, its remarkable energy efficiency, and its significantly reduced carbon footprint compared to conventional systems. These attributes establish the Raspberry Pi cluster as an invaluable tool for both educational and research applications in structural engineering, offering an affordable, sustainable, and indispensable solution for PCTO.
+KW  - C5 Infraestructura de clúster y red LAN para MPI
+ER  - 
+
+TY  - JOUR
+TI  - Transfer Learning for Multi-Crop Leaf Disease Image Classification using Convolutional Neural Network VGG
+AU  - Paymode, Ananda S.
+AU  - Malode, Vandana B.
+T2  - Artificial Intelligence in Agriculture
+PY  - 2022
+VL  - 6
+SP  - 23-33
+DO  - 10.1016/j.aiia.2021.12.002
+UR  - https://doi.org/10.1016/j.aiia.2021.12.002
+SN  - 2589-7217
+PB  - Elsevier BV
+AB  - In recent times, the use of artificial intelligence (AI) in agriculture has become the most important. The technology adoption in agriculture if creatively approached. Controlling on the diseased leaves during the growing stages of crops is a crucial step. The disease detection, classification, and analysis of diseased leaves at an early stage, as well as possible solutions, are always helpful in agricultural progress. The disease detection and classification of different crops, especially tomatoes and grapes, is a major emphasis of our proposed research. The important objective is to forecast the sort of illness that would affect grapes and tomato leaves at an early stage. The Convolutional Neural Network (CNN) methods are used for detecting Multi-Crops Leaf Disease (MCLD). The features extraction of images using a deep learning-based model classified the sick and healthy leaves. The CNN based Visual Geometry Group (VGG) model is used for improved performance measures. The crops leaves images dataset is considered for training and testing the model. The performance measure parameters, i.e., accuracy, sensitivity, specificity precision, recall and F1-score were calculated and monitored. The main objective of research with the proposed model is to make on-going improvements in the performance. The designed model classifies disease-affected leaves with greater accuracy. In the experiment proposed research has achieved an accuracy of 98.40% of grapes and 95.71% of tomatoes. The proposed research directly supports increasing food production in agriculture.
+KW  - C6 Visión por computador con CNN para enfermedades y plagas de cultivos
+ER  - 
+
+TY  - JOUR
+TI  - CoLeaf-DB: Peruvian coffee leaf images dataset for coffee leaf nutritional deficiencies detection and classification
+AU  - Tuesta-Monteza, Victor A.
+AU  - Mejia-Cabrera, Heber I.
+AU  - Arcila-Diaz, Juan
+T2  - Data in Brief
+PY  - 2023
+VL  - 48
+SP  - 109226
+DO  - 10.1016/j.dib.2023.109226
+UR  - https://doi.org/10.1016/j.dib.2023.109226
+SN  - 2352-3409
+PB  - Elsevier BV
+AB  - This article introduces Peruvian coffee leaf datasets known as CATIMOR, CATURRA and BORBON of coffee plantations located at San Miguel de las Naranjas and La Palma Central, Jaén province, Cajamarca, Perú. The leaves with nutritional deficiencies were identified by agronomists, using a physical structure the controlled environment was designed and the images were captured with a digital camera. The dataset contains 1006 leaf images grouped according to their nutritional deficiencies (Boron, Iron, Potasium, Calcium, Magnesium, Manganese, Nitrogen and others). CoLeaf dataset contain images that facilitate training and validation during the utilization of deep learning algorithms for coffee plant leaf nutritional deficiencies recognition and classification. The dataset is publicly and freely available at http://dx.doi.org/10.17632/brfgw46wzb.1.
+KW  - C6 Visión por computador con CNN para enfermedades y plagas de cultivos
+ER  - 
+
+TY  - JOUR
+TI  - Coffee Leaf Rust Disease Detection and Implementation of an Edge Device for Pruning Infected Leaves via Deep Learning Algorithms
+AU  - Araaf, Raka Thoriq
+AU  - Minn, Arkar
+AU  - Ahamed, Tofael
+T2  - Sensors
+PY  - 2024
+VL  - 24
+IS  - 24
+SP  - 8018
+DO  - 10.3390/s24248018
+UR  - https://doi.org/10.3390/s24248018
+SN  - 1424-8220
+PB  - MDPI AG
+AB  - Global warming and extreme climate conditions caused by unsuitable temperature and humidity lead to coffee leaf rust (Hemileia vastatrix) diseases in coffee plantations. Coffee leaf rust is a severe problem that reduces productivity. Currently, pesticide spraying is considered the most effective solution for mitigating coffee leaf rust. However, the application of pesticide spray is still not efficient for most farmers worldwide. In these cases, pruning the most infected leaves with leaf rust at coffee plantations is important to help pesticide spraying to be more efficient by creating a more targeted, accessible treatment. Therefore, detecting coffee leaf rust is important to support the decision on pruning infected leaves. The dataset was acquired from a coffee farm in Majalengka Regency, Indonesia. Only images with clearly visible spots of coffee leaf rust were selected. Data collection was performed via two devices, a digital mirrorless camera and a phone camera, to diversify the dataset and test it with different datasets. The dataset, comprising a total of 2024 images, was divided into three sets with a ratio of 70% for training (1417 images), 20% for validation (405 images), and 10% for testing (202 images). Images with leaves infected by coffee leaf rust were labeled via LabelImg® with the label “CLR”. All labeled images were used to train the YOLOv5 and YOLOv8 algorithms through the convolutional neural network (CNN). The trained model was tested with a test dataset, a digital mirrorless camera image dataset (100 images), a phone camera dataset (100 images), and real-time detection with a coffee leaf rust image dataset. After the model was trained, coffee leaf rust was detected in each frame. The mean average precision (mAP) and recall for the trained YOLOv5 model were 69% and 63.4%, respectively. For YOLOv8, the mAP and recall were approximately 70.2% and 65.9%, respectively. To evaluate the performance of the two trained models in detecting coffee leaf rust on trees, 202 original images were used for testing with the best-trained weight from each model. Compared to YOLOv5, YOLOv8 demonstrated superior accuracy in detecting coffee leaf rust. With a mAP of 73.2%, YOLOv8 outperformed YOLOv5, which achieved a mAP of 70.5%. An edge device was utilized to deploy real-time detection of CLR with the best-trained model. The detection was successfully executed with high confidence in detecting CLR. The system was further integrated into pruning solutions for Arabica coffee farms. A pruning device was designed using Autodesk Fusion 360® and fabricated for testing on a coffee plantation in Indonesia.
+KW  - C6 Visión por computador con CNN para enfermedades y plagas de cultivos
+ER  - 
+
+TY  - JOUR
+TI  - Early Detection of Coffee Leaf Rust Caused by Hemileia vastatrix Using Multispectral Images
+AU  - Soares, Analis da Silva
+AU  - Vieira, Bruno Sérgio
+AU  - Bezerra, Thalita Almeida
+AU  - Martins, George Deroco
+AU  - Siquieroli, Ana Carolina Silva
+T2  - Agronomy
+PY  - 2022
+VL  - 12
+IS  - 12
+SP  - 2911
+DO  - 10.3390/agronomy12122911
+UR  - https://doi.org/10.3390/agronomy12122911
+SN  - 2073-4395
+PB  - MDPI AG
+AB  - Conventional methodology in the field for the sampling of coffee leaf rust, caused by Hemileia vastatrix, has proven to be impractical. This paper proposes a method for the early detection of this disease, which is the most significant pathogen of coffee plants worldwide, using multispectral images acquired using a Mapir Survey3W camera and an unmanned aerial vehicle (UAV). For this purpose, 160 coffee seedlings of the coffee cultivar ‘Mundo Novo’ were inoculated with urediniospores of H. vastatrix and compared with 160 control (non-inoculated) seedlings to determine the most favorable interval for distinguishing healthy and infected plants. The 320 seedlings were placed on a dark surface to perform the imaging flights. In vitro analyses of the physiological parameters of 20 specimens were then performed for each condition (inoculated/non-inoculated) to obtain the hyperspectral curves, and this process was repeated three times at 15, 30, and 45 days after inoculation (DAI). Based on the simulated hyperspectral curves, a discrepancy between the red and near-infrared (NIR) bands was identified at 15 DAI, with the inoculated plants showing greater absorption in the red band and a greater spectral response in the NIR band. Thus, multispectral images were able to distinguish H. vastatrix infection in coffee seedlings at an asymptomatic stage (15 DAI) using a support vector machines (SVM) algorithm. Detection accuracy was 80% and the Kappa index of agreement was moderate (0.6). The early detection of this pathogen in the field using low-cost technology can be an important tool for the monitoring of coffee leaf rust and, consequently, a more sustainable management of the pathogen, causing farmers to make applications of chemical fungicides only when necessary.
+KW  - C6 Visión por computador con CNN para enfermedades y plagas de cultivos
+ER  - 
+
+TY  - JOUR
+TI  - Influence of Hyperparameters in Deep Learning Models for Coffee Rust Detection
+AU  - Chavarro, Adrian F.
+AU  - Renza, Diego
+AU  - Ballesteros, Dora M.
+T2  - Applied Sciences
+PY  - 2023
+VL  - 13
+IS  - 7
+SP  - 4565
+DO  - 10.3390/app13074565
+UR  - https://doi.org/10.3390/app13074565
+SN  - 2076-3417
+PB  - MDPI AG
+AB  - Most of the world’s crops can be attacked by various diseases or pests, affecting their quality and productivity. In recent years, transfer learning with deep learning (DL) models has been used to detect diseases in maize, tomato, rice, and other crops. In the specific case of coffee, some recent works have used fixed hyperparameters to fine-tune the pre-trained models with the new dataset and/or applied data augmentation, such as image patching, to improve classifier performance. However, a detailed evaluation of the impact of architecture (e.g., backbone) and training (e.g., optimizer and learning rate) hyperparameters on the performance of coffee rust classification models has not been performed. Therefore, this paper presents a comprehensive study of the impact of five types of hyperparameters on the performance of coffee rust classification models. Specifically, eight pre-trained models are compared, each with four different amounts of transferred layers and three different numbers of neurons in the fully-connected (FC) layer, and the models are fine-tuned with three types of optimizers, each with three learning rate values. Comparing more than 800 models in terms of F1-score and accuracy, it is identified that the type of backbone is the hyperparameter with the greatest impact (with differences between models of up to 70%), followed by the optimizer (with differences of up to 20%). At the end of the study, specific recommendations are made on the values of the most suitable hyperparameters for the identification of this type of disease in coffee crops.
+KW  - C6 Visión por computador con CNN para enfermedades y plagas de cultivos
+ER  - 
+
+TY  - JOUR
+TI  - RTR_Lite_MobileNetV2: A lightweight and efficient model for plant disease detection and classification
+AU  - Duhan, Sangeeta
+AU  - Gulia, Preeti
+AU  - Gill, Nasib Singh
+AU  - Narwal, Ekta
+T2  - Current Plant Biology
+PY  - 2025
+VL  - 42
+SP  - 100459
+DO  - 10.1016/j.cpb.2025.100459
+UR  - https://doi.org/10.1016/j.cpb.2025.100459
+SN  - 2214-6628
+PB  - Elsevier BV
+AB  - Early identification and management of plant diseases are paramount for sustaining crop health, ensuring optimal yields, and safeguarding food security in agricultural systems. Left untreated, diseases caused by fungi, bacteria, viruses, and pests can significantly diminish agricultural output, posing a threat to global food production. While recent research has explored machine learning-based techniques for early disease detection, many proposed models are resource-intensive, characterized by large model sizes and millions of trainable parameters. Recognizing resource-constrained devices' needs, recent studies have developed lightweight models, but their shallow structure may hinder accurate disease identification. This study proposes the RTR_Lite_MobileNet model, an enhanced version of the original MobileNetV2 model designed for efficient deployment on resource-constrained devices. Different attention techniques, such as Squeeze-and-Excitation Networks (SENet), Efficient Channel Attention (ECA), and Triplet Attention, are added to reduce the model's computational footprint while boosting its ability to capture complicated disease patterns. Extensive experimentation validates the efficacy of RTR_Lite_MobileNet, consistently outperforming MobileNetV2 with top accuracies across multiple datasets: 99.92% on Plant Disease, 82.00% on PlantDoc, 97.11% on PaddyDoctor, 90.84% on Coffee, 100% on Wheat, 96.78% on Soybean, and 96.67% on Sugarcane. Deployment on edge devices such as Raspberry Pi 4 and 5 demonstrates its computational efficiency, as evidenced by lower latency and memory consumption. Research results indicate that RTR_Lite_MobileNet is a practical and effective option for real-time plant disease diagnosis, paving the way for additional uses in agricultural monitoring and IoT systems. • Efficient, lightweight disease detection model for resource-constrained devices. • Utilization of advanced attention mechanisms for improved plant disease detection. • Hybrid attention modules embed lightweight deep learning models for disease identification. • Optimized for low-power devices without compromising disease identification accuracy.
+KW  - C7 Inferencia eficiente en el borde (dispositivos móviles)
+ER  - 
+
+TY  - JOUR
+TI  - Leveraging Deep Learning for Real-Time Coffee Leaf Disease Identification
+AU  - Adelaja, Opeyemi
+AU  - Pranggono, Bernardi
+T2  - AgriEngineering
+PY  - 2025
+VL  - 7
+IS  - 1
+SP  - 13
+DO  - 10.3390/agriengineering7010013
+UR  - https://doi.org/10.3390/agriengineering7010013
+SN  - 2624-7402
+PB  - MDPI AG
+AB  - Agriculture is vital for providing food and economic benefits, but crop diseases pose significant challenges, including coffee cultivation. Traditional methods for disease identification are labor-intensive and lack real-time capabilities. This study aims to address existing methods’ limitations and provide a more efficient, reliable, and cost-effective solution for coffee leaf disease identification. It presents a novel approach to the real-time identification of coffee leaf diseases using deep learning. We implemented several transfer learning (TL) models, including ResNet101, Xception, CoffNet, and VGG16, to evaluate the feasibility and reliability of our solution. The experiment results show that the proposed models achieved high accuracy rates of 97.30%, 97.60%, 97.88%, and 99.89%, respectively. CoffNet, our proposed model, showed a notable processing speed of 125.93 frames per second (fps), making it suitable for real-time applications. Using a diverse dataset of mixed images from multiple devices, our approach reduces the workload of farmers and simplifies the disease detection process. The findings lay the groundwork for the development of practical and efficient systems that can assist coffee growers in disease management, promoting sustainable farming practices, and food security.
+KW  - C7 Inferencia eficiente en el borde (dispositivos móviles)
+ER  - 
+
+TY  - JOUR
+TI  - Grow-light smart monitoring system leveraging lightweight deep learning for plant disease classification
+AU  - Macdonald, William
+AU  - Sari, Yuksel Asli
+AU  - Pahlevani, Majid
+T2  - Artificial Intelligence in Agriculture
+PY  - 2024
+VL  - 12
+SP  - 44-56
+DO  - 10.1016/j.aiia.2024.03.003
+UR  - https://doi.org/10.1016/j.aiia.2024.03.003
+SN  - 2589-7217
+PB  - Elsevier BV
+AB  - This work focuses on a novel lightweight machine learning approach to the task of plant disease classification, posing as a core component of a larger grow-light smart monitoring system. To the extent of our knowledge, this work is the first to implement lightweight convolutional neural network architectures leveraging down-scaled versions of inception blocks, residual connections, and dense residual connections applied without pre-training to the PlantVillage dataset. The novel contributions of this work include the proposal of a smart monitoring framework outline; responsible for detection and classification of ailments via the devised lightweight networks as well as interfacing with LED grow-light fixtures to optimize environmental parameters and lighting control for the growth of plants in a greenhouse system. Lightweight adaptation of dense residual connections achieved the best balance of minimizing model parameters and maximizing performance metrics with accuracy, precision, recall, and F1-scores of 96.75%, 97.62%, 97.59%, and 97.58% respectively, while consisting of only 228,479 model parameters. These results are further compared against various full-scale state-of-the-art model architectures trained on the PlantVillage dataset, of which the proposed down-scaled lightweight models were capable of performing equally to, if not better than many large-scale counterparts, with drastically less computational requirements.
+KW  - C7 Inferencia eficiente en el borde (dispositivos móviles)
+ER  - 
+
+TY  - JOUR
+TI  - AGRIFOLD: AGRIculture Federated learning for Optimized Leaf disease Detection
+AU  - Piccialli, Francesco
+AU  - Della Bruna, Ciro
+AU  - Chiaro, Diletta
+AU  - Qi, Pian
+AU  - Savoia, Martina
+T2  - Expert Systems with Applications
+PY  - 2025
+VL  - 289
+SP  - 128371
+DO  - 10.1016/j.eswa.2025.128371
+UR  - https://doi.org/10.1016/j.eswa.2025.128371
+SN  - 0957-4174
+PB  - Elsevier BV
+AB  - Efficient and accurate detection of plant leaf diseases is essential for protecting crop health and promoting sustainable and precision agriculture practices. However, the decentralized nature of agricultural data, combined with the inherent limitations of centralized Machine Learning (ML), presents significant challenges for developing scalable, privacy-preserving solutions. In this paper, we introduce AGRIFOLD, a Federated Learning (FL) framework designed to enable collaborative training of a lightweight Convolutional Neural Network (CNN) across diverse and distributed datasets while maintaining data privacy. By integrating an Efficient Channel Attention (ECA) mechanism into the VGG16 architecture, AGRIFOLD significantly improves classification accuracy and enhances interpretability through heatmaps that highlight regions affected by diseases. We evaluate the FL model using various aggregation methods, including FedAvg, FedProx, SCAFFOLD, FedBN, and FedDF, obtaining good accuracy levels for all tested aggregation strategies, with SCAFFOLD achieving the best overall performance. The model’s lightweight design, optimized through ablation and pruning techniques, facilitates deployment on resource-constrained edge devices. Additionally, to further support farmers’ decision-making, the framework incorporates a natural language processing-based recommender system that provides tailored treatment suggestions. Comprehensive experiments conducted on 12 heterogeneous datasets demonstrate high classification accuracy across 9 distinct leaf disease classes and healthy leaves, underscoring the practical potential of FL-based solutions for sustainable, real-world agricultural applications. The AGRIFOLD source code is available at https://github.com/MODAL-UNINA/AGRIFOLD .
+KW  - C8 Aprendizaje federado y sistemas distribuidos en agricultura
+ER  - 
+
+TY  - JOUR
+TI  - Computer vision in smart agriculture and precision farming: Techniques and applications
+AU  - Ghazal, Sumaira
+AU  - Munir, Arslan
+AU  - Qureshi, Waqar S.
+T2  - Artificial Intelligence in Agriculture
+PY  - 2024
+VL  - 13
+SP  - 64-83
+DO  - 10.1016/j.aiia.2024.06.004
+UR  - https://doi.org/10.1016/j.aiia.2024.06.004
+SN  - 2589-7217
+PB  - Elsevier BV
+AB  - The transformation of age-old farming practices through the integration of digitization and automation has sparked a revolution in agriculture that is driven by cutting-edge computer vision and artificial intelligence (AI) technologies. This transformation not only promises increased productivity and economic growth, but also has the potential to address important global issues such as food security and sustainability. This survey paper aims to provide a holistic understanding of the integration of vision-based intelligent systems in various aspects of precision agriculture. By providing a detailed discussion on key areas of digital life cycle of crops, this survey contributes to a deeper understanding of the complexities associated with the implementation of vision-guided intelligent systems in challenging agricultural environments. The focus of this survey is to explore widely used imaging and image analysis techniques being utilized for precision farming tasks. This paper first discusses various salient crop metrics used in digital agriculture. Then this paper illustrates the usage of imaging and computer vision techniques in various phases of digital life cycle of crops in precision agriculture, such as image acquisition, image stitching and photogrammetry, image analysis, decision making, treatment, and planning. After establishing a thorough understanding of related terms and techniques involved in the implementation of vision-based intelligent systems for precision agriculture, the survey concludes by outlining the challenges associated with implementing generalized computer vision models for real-time deployment of fully autonomous farms.
+KW  - C8 Aprendizaje federado y sistemas distribuidos en agricultura
+ER  - 

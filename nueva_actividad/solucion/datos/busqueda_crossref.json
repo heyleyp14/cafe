@@ -1,0 +1,2438 @@
+{
+ "fecha": "2026-10-27",
+ "base": "Crossref REST API (api.crossref.org)",
+ "busquedas": [
+  {
+   "constructo": "C1",
+   "consulta": "MPI message passing interface performance",
+   "filtro": "ScienceDirect (10.1016)",
+   "resultados_totales": 192572,
+   "candidatos": [
+    {
+     "doi": "10.1007/s40571-022-00480-y",
+     "titulo": "A particle-based parallel scheme for material point method (MPM) using message passing interface (MPI)",
+     "anio": 2023,
+     "revista": "Computational Particle Mechanics",
+     "citas": 2
+    },
+    {
+     "doi": "10.1016/j.chemphys.2024.112591",
+     "titulo": "Performance analysis of activation functions in molecular property prediction using Message Passing Graph Neural Networks",
+     "anio": 2025,
+     "revista": "Chemical Physics",
+     "citas": 9
+    },
+    {
+     "doi": "10.1016/j.apacoust.2022.108869",
+     "titulo": "Joint message-passing-based accurate bidirectional channel estimation and generalized-approximation-message-passing-based low-complexity perfect equalization with underwater moving transceivers",
+     "anio": 2022,
+     "revista": "Applied Acoustics",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.knosys.2022.109919",
+     "titulo": "Irregular message passing networks",
+     "anio": 2022,
+     "revista": "Knowledge-Based Systems",
+     "citas": 3
+    },
+    {
+     "doi": "10.1016/j.softx.2023.101438",
+     "titulo": "MSGLib: A Modelica library for message passing communication",
+     "anio": 2023,
+     "revista": "SoftwareX",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.respol.2026.105507",
+     "titulo": "Arbitrary message passing across blockchains and implications for financial markets",
+     "anio": 2026,
+     "revista": "Research Policy",
+     "citas": 1
+    },
+    {
+     "doi": "10.1016/j.neunet.2025.107224",
+     "titulo": "Generative and contrastive graph representation learning with message passing",
+     "anio": 2025,
+     "revista": "Neural Networks",
+     "citas": 7
+    },
+    {
+     "doi": "10.1016/j.pedhc.2021.12.001",
+     "titulo": "President’s Message Passing the Climate Health Baton",
+     "anio": 2022,
+     "revista": "Journal of Pediatric Health Care",
+     "citas": 0
+    }
+   ]
+  },
+  {
+   "constructo": "C1",
+   "consulta": "MPI message passing interface performance",
+   "filtro": "todas las editoriales",
+   "resultados_totales": 760023,
+   "candidatos": [
+    {
+     "doi": "10.69923/ijas.2024.010101",
+     "titulo": "NEW APPROACH TO PREDICTION OF MEMORY LEAK IN HPC HIGH-PERFORMANCE COMPUTING BY USING MPI (MESSAGE PASSING INTERFACE)",
+     "anio": 2024,
+     "revista": "Iraqi Journal for Applied Sciences",
+     "citas": 0
+    },
+    {
+     "doi": "10.26623/transformatika.v20i2.5630",
+     "titulo": "Distributed MD5 Brute Force Using Message Passing Interface (MPI) on ARM Architecture",
+     "anio": 2023,
+     "revista": "Jurnal Transformatika",
+     "citas": 0
+    },
+    {
+     "doi": "10.3390/e24040566",
+     "titulo": "Parallel and Practical Approach of Efficient Image Chaotic Encryption Based on Message Passing Interface (MPI)",
+     "anio": 2022,
+     "revista": "Entropy",
+     "citas": 8
+    },
+    {
+     "doi": "10.30865/json.v7i2.9307",
+     "titulo": "Performance Analysis of Parallel Merge Sort Using MPI (Message Passing Interface) on Big Data Dataset",
+     "anio": 2025,
+     "revista": "Jurnal Sistem Komputer dan Informatika (JSON)",
+     "citas": 0
+    },
+    {
+     "doi": "10.56670/jsrd.v5i2.271",
+     "titulo": "STITCHING IMAGE DENGAN SCALE INVARIANT FEATURE TRANSFORM MENGGUNAKAN PARALEL PROGRAMMING MPI (MESSAGE PASSING INTERFACE)",
+     "anio": 2024,
+     "revista": "Journal of Scientech Research and Development",
+     "citas": 0
+    },
+    {
+     "doi": "10.1007/s40571-022-00480-y",
+     "titulo": "A particle-based parallel scheme for material point method (MPM) using message passing interface (MPI)",
+     "anio": 2023,
+     "revista": "Computational Particle Mechanics",
+     "citas": 2
+    },
+    {
+     "doi": "10.1109/access.2025.3525578",
+     "titulo": "Temporal-Logic-Based Testing Tool for Programs Using the Message Passing Interface (MPI) and Open Multi-Processing (OpenMP) Programming Models",
+     "anio": 2025,
+     "revista": "IEEE Access",
+     "citas": 1
+    },
+    {
+     "doi": "10.2118/209621-pa",
+     "titulo": "Message Passing Interface (MPI) Parallelization of Iteratively Coupled Fluid Flow and Geomechanics Codes for the Simulation of System Behavior in Hydrate-Bearing Geologic Media. Part 2: Parallel Performance and Application",
+     "anio": 2022,
+     "revista": "SPE Reservoir Evaluation &amp; Engineering",
+     "citas": 9
+    }
+   ]
+  },
+  {
+   "constructo": "C1",
+   "consulta": "MPI parallel programming HPC applications",
+   "filtro": "ScienceDirect (10.1016)",
+   "resultados_totales": 120696,
+   "candidatos": [
+    {
+     "doi": "10.1016/j.jpdc.2026.105361",
+     "titulo": "Parallel spawning strategies for dynamic-aware MPI applications",
+     "anio": 2027,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.jpdc.2022.04.002",
+     "titulo": "Simulation-based optimization and sensibility analysis of MPI applications: Variability matters",
+     "anio": 2022,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 6
+    },
+    {
+     "doi": "10.1016/j.jpdc.2024.104863",
+     "titulo": "Revisiting I/O bandwidth-sharing strategies for HPC applications",
+     "anio": 2024,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 4
+    },
+    {
+     "doi": "10.1016/j.jpdc.2025.105156",
+     "titulo": "To repair or not to repair: Assessing fault resilience in MPI stencil applications",
+     "anio": 2025,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 1
+    },
+    {
+     "doi": "10.1016/j.parco.2021.102871",
+     "titulo": "Using long vector extensions for MPI reductions",
+     "anio": 2022,
+     "revista": "Parallel Computing",
+     "citas": 9
+    },
+    {
+     "doi": "10.1016/j.jpdc.2023.104746",
+     "titulo": "Mixed precision support in HPC applications: What about reliability?",
+     "anio": 2023,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 9
+    },
+    {
+     "doi": "10.1016/j.jpdc.2024.104955",
+     "titulo": "Accelerating memory and I/O intensive HPC applications using hardware compression",
+     "anio": 2024,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 3
+    },
+    {
+     "doi": "10.1016/j.parco.2026.103205",
+     "titulo": "Tuned your MPI library? Now check the performance guidelines",
+     "anio": 2026,
+     "revista": "Parallel Computing",
+     "citas": 1
+    }
+   ]
+  },
+  {
+   "constructo": "C1",
+   "consulta": "MPI parallel programming HPC applications",
+   "filtro": "todas las editoriales",
+   "resultados_totales": 467492,
+   "candidatos": [
+    {
+     "doi": "10.1007/s10766-022-00749-y",
+     "titulo": "A Fault-Model-Relevant Classification of Consensus Mechanisms for MPI and HPC",
+     "anio": 2022,
+     "revista": "International Journal of Parallel Programming",
+     "citas": 1
+    },
+    {
+     "doi": "10.3389/feart.2023.1080879",
+     "titulo": "A parallel numerical algorithm by combining MPI and OpenMP programming models with applications in gravity field recovery",
+     "anio": 2023,
+     "revista": "Frontiers in Earth Science",
+     "citas": 3
+    },
+    {
+     "doi": "10.1007/s10766-022-00744-3",
+     "titulo": "Generic Exact Combinatorial Search at HPC Scale",
+     "anio": 2022,
+     "revista": "International Journal of Parallel Programming",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.jpdc.2026.105361",
+     "titulo": "Parallel spawning strategies for dynamic-aware MPI applications",
+     "anio": 2027,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 0
+    },
+    {
+     "doi": "10.1109/tpds.2025.3608434",
+     "titulo": "MIST: Towards MPI Instant Startup and Termination on Tianhe HPC Systems",
+     "anio": 2025,
+     "revista": "IEEE Transactions on Parallel and Distributed Systems",
+     "citas": 0
+    },
+    {
+     "doi": "10.1109/access.2026.3722454",
+     "titulo": "Benchmarking Parallel Programming Models for High-Throughput Security Telemetry Analytics: OpenMP, MPI, and CUDA",
+     "anio": 2026,
+     "revista": "IEEE Access",
+     "citas": 0
+    },
+    {
+     "doi": "10.1007/s42514-023-00174-8",
+     "titulo": "Extending OP2 framework to support portable parallel programming of complex applications",
+     "anio": 2023,
+     "revista": "CCF Transactions on High Performance Computing",
+     "citas": 1
+    },
+    {
+     "doi": "10.52058/2786-6025-2026-2(56)-1706-1719",
+     "titulo": "АНАЛІЗ ЕФЕКТИВНОСТІ МОДЕЛЕЙ ПАРАЛЕЛЬНОГО  ПРОГРАМУВАННЯ MPI ТА OPENMP НА ГІБРИДНИХ  ПРОЦЕСОРНИХ АРХІТЕКТУРАХ",
+     "anio": 2026,
+     "revista": "Наука і техніка сьогодні",
+     "citas": 0
+    }
+   ]
+  },
+  {
+   "constructo": "C2",
+   "consulta": "MPI collective communication allreduce optimization",
+   "filtro": "ScienceDirect (10.1016)",
+   "resultados_totales": 87184,
+   "candidatos": [
+    {
+     "doi": "10.1016/j.future.2026.108498",
+     "titulo": "Maximizing the computation-communication overlap for distributed deep learning with approximate AllReduce",
+     "anio": 2026,
+     "revista": "Future Generation Computer Systems",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.softx.2024.101897",
+     "titulo": "Numba-MPI v1.0: Enabling MPI communication within Numba/LLVM JIT-compiled Python code",
+     "anio": 2024,
+     "revista": "SoftwareX",
+     "citas": 3
+    },
+    {
+     "doi": "10.1016/j.parco.2026.103207",
+     "titulo": "Optimizing MPI collective operations for intra-node shared memory exploitation and oversubscription",
+     "anio": 2026,
+     "revista": "Parallel Computing",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.parco.2021.102860",
+     "titulo": "Towards leveraging collective performance with the support of MPI 4.0 features in MPC",
+     "anio": 2022,
+     "revista": "Parallel Computing",
+     "citas": 4
+    },
+    {
+     "doi": "10.1016/j.renene.2023.119479",
+     "titulo": "Collective large-scale wind farm multivariate power output control based on hierarchical communication multi-agent proximal policy optimization",
+     "anio": 2023,
+     "revista": "Renewable Energy",
+     "citas": 19
+    },
+    {
+     "doi": "10.1016/j.jpdc.2023.104767",
+     "titulo": "SUARA: A scalable universal allreduce communication algorithm for acceleration of parallel deep learning applications",
+     "anio": 2024,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 5
+    },
+    {
+     "doi": "10.1016/j.parco.2022.102925",
+     "titulo": "C-Lop: Accurate contention-based modeling of MPI concurrent communication",
+     "anio": 2022,
+     "revista": "Parallel Computing",
+     "citas": 3
+    },
+    {
+     "doi": "10.1016/j.parco.2022.102904",
+     "titulo": "Scalable communication for high-order stencil computations using CUDA-aware MPI",
+     "anio": 2022,
+     "revista": "Parallel Computing",
+     "citas": 17
+    }
+   ]
+  },
+  {
+   "constructo": "C2",
+   "consulta": "MPI collective communication allreduce optimization",
+   "filtro": "todas las editoriales",
+   "resultados_totales": 534339,
+   "candidatos": [
+    {
+     "doi": "10.4204/eptcs.432.10",
+     "titulo": "VSS Challenge Problem: Verifying the Correctness of AllReduce Algorithms in the MPICH Implementation of MPI",
+     "anio": 2025,
+     "revista": "Electronic Proceedings in Theoretical Computer Science",
+     "citas": 0
+    },
+    {
+     "doi": "10.1007/s00607-021-01029-2",
+     "titulo": "Analyzing the impact of the MPI allreduce in distributed training of convolutional neural networks",
+     "anio": 2022,
+     "revista": "Computing",
+     "citas": 5
+    },
+    {
+     "doi": "10.1007/s11227-023-05340-x",
+     "titulo": "Exploiting copy engines for intra-node MPI collective communication",
+     "anio": 2023,
+     "revista": "The Journal of Supercomputing",
+     "citas": 6
+    },
+    {
+     "doi": "10.1016/j.future.2026.108498",
+     "titulo": "Maximizing the computation-communication overlap for distributed deep learning with approximate AllReduce",
+     "anio": 2026,
+     "revista": "Future Generation Computer Systems",
+     "citas": 0
+    },
+    {
+     "doi": "10.1007/s10586-024-04330-9",
+     "titulo": "Network states-aware collective communication optimization",
+     "anio": 2024,
+     "revista": "Cluster Computing",
+     "citas": 3
+    },
+    {
+     "doi": "10.1016/j.softx.2024.101897",
+     "titulo": "Numba-MPI v1.0: Enabling MPI communication within Numba/LLVM JIT-compiled Python code",
+     "anio": 2024,
+     "revista": "SoftwareX",
+     "citas": 3
+    },
+    {
+     "doi": "10.1016/j.parco.2026.103207",
+     "titulo": "Optimizing MPI collective operations for intra-node shared memory exploitation and oversubscription",
+     "anio": 2026,
+     "revista": "Parallel Computing",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.parco.2021.102860",
+     "titulo": "Towards leveraging collective performance with the support of MPI 4.0 features in MPC",
+     "anio": 2022,
+     "revista": "Parallel Computing",
+     "citas": 4
+    }
+   ]
+  },
+  {
+   "constructo": "C2",
+   "consulta": "point-to-point communication MPI overlap",
+   "filtro": "ScienceDirect (10.1016)",
+   "resultados_totales": 31127,
+   "candidatos": [
+    {
+     "doi": "10.1016/j.jvcir.2025.104400",
+     "titulo": "GMNet: Low overlap point cloud registration based on graph matching",
+     "anio": 2025,
+     "revista": "Journal of Visual Communication and Image Representation",
+     "citas": 2
+    },
+    {
+     "doi": "10.1016/j.patcog.2023.109876",
+     "titulo": "Patch-guided point matching for point cloud registration with low overlap",
+     "anio": 2023,
+     "revista": "Pattern Recognition",
+     "citas": 15
+    },
+    {
+     "doi": "10.1016/j.imavis.2026.106187",
+     "titulo": "Semantic-consistent internal body point cloud representation for low-overlap human point cloud registration",
+     "anio": 2026,
+     "revista": "Image and Vision Computing",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.neucom.2024.127949",
+     "titulo": "Learning compact and overlap-biased interactions for point cloud registration",
+     "anio": 2024,
+     "revista": "Neurocomputing",
+     "citas": 9
+    },
+    {
+     "doi": "10.1016/j.image.2025.117453",
+     "titulo": "GT-MilliNoise: Graph transformer for point-wise denoising of indoor millimetre-wave point clouds",
+     "anio": 2026,
+     "revista": "Signal Processing: Image Communication",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.jvcir.2026.104749",
+     "titulo": "LPT-Former: Local-Point Transformer for 3D point cloud completion",
+     "anio": 2026,
+     "revista": "Journal of Visual Communication and Image Representation",
+     "citas": 0
+    },
+    {
+     "doi": "10.1007/s40571-022-00480-y",
+     "titulo": "A particle-based parallel scheme for material point method (MPM) using message passing interface (MPI)",
+     "anio": 2023,
+     "revista": "Computational Particle Mechanics",
+     "citas": 2
+    },
+    {
+     "doi": "10.1016/j.displa.2023.102615",
+     "titulo": "Semantic enhancement based adaptive geometric encoding network for low overlap point cloud registration",
+     "anio": 2024,
+     "revista": "Displays",
+     "citas": 3
+    }
+   ]
+  },
+  {
+   "constructo": "C2",
+   "consulta": "point-to-point communication MPI overlap",
+   "filtro": "todas las editoriales",
+   "resultados_totales": 307523,
+   "candidatos": [
+    {
+     "doi": "10.1109/tpds.2023.3253881",
+     "titulo": "Detailed Modeling of Heterogeneous and Contention-Constrained Point-to-Point MPI Communication",
+     "anio": 2023,
+     "revista": "IEEE Transactions on Parallel and Distributed Systems",
+     "citas": 10
+    },
+    {
+     "doi": "10.3390/math13111848",
+     "titulo": "Towards Efficient HPC: Exploring Overlap Strategies Using MPI Non-Blocking Communication",
+     "anio": 2025,
+     "revista": "Mathematics",
+     "citas": 3
+    },
+    {
+     "doi": "10.1016/j.jvcir.2025.104400",
+     "titulo": "GMNet: Low overlap point cloud registration based on graph matching",
+     "anio": 2025,
+     "revista": "Journal of Visual Communication and Image Representation",
+     "citas": 2
+    },
+    {
+     "doi": "10.3390/s23042049",
+     "titulo": "A Structure-Based Iterative Closest Point Using Anderson Acceleration for Point Clouds with Low Overlap",
+     "anio": 2023,
+     "revista": "Sensors",
+     "citas": 4
+    },
+    {
+     "doi": "10.1016/j.patcog.2023.109876",
+     "titulo": "Patch-guided point matching for point cloud registration with low overlap",
+     "anio": 2023,
+     "revista": "Pattern Recognition",
+     "citas": 15
+    },
+    {
+     "doi": "10.1007/s00530-025-02146-0",
+     "titulo": "TrCPDs: Trimmed coherent point drift methods for robust fine registration of low-overlap point cloud",
+     "anio": 2026,
+     "revista": "Multimedia Systems",
+     "citas": 2
+    },
+    {
+     "doi": "10.1016/j.imavis.2026.106187",
+     "titulo": "Semantic-consistent internal body point cloud representation for low-overlap human point cloud registration",
+     "anio": 2026,
+     "revista": "Image and Vision Computing",
+     "citas": 0
+    },
+    {
+     "doi": "10.18486/ijcsnt/13.2.178",
+     "titulo": "Slotted Microsrip Patch Antenna at 60GHz for Point- to- Point Communication",
+     "anio": 2024,
+     "revista": "International Journal of Communication Systems and Network Technologies",
+     "citas": 0
+    }
+   ]
+  },
+  {
+   "constructo": "C3",
+   "consulta": "distributed deep learning training data parallelism",
+   "filtro": "ScienceDirect (10.1016)",
+   "resultados_totales": 261701,
+   "candidatos": [
+    {
+     "doi": "10.1016/j.procs.2023.01.201",
+     "titulo": "Study of Data and Model parallelism in Distributed Deep learning for Diabetic retinopathy classification",
+     "anio": 2023,
+     "revista": "Procedia Computer Science",
+     "citas": 5
+    },
+    {
+     "doi": "10.1016/j.peva.2025.102530",
+     "titulo": "swPredictor: A data-driven performance model for distributed data parallelism training on large-scale HPC clusters",
+     "anio": 2025,
+     "revista": "Performance Evaluation",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.procs.2022.12.041",
+     "titulo": "Pipeline Parallelism in Distributed Deep Learning for Diabetic Retinopathy Classification",
+     "anio": 2022,
+     "revista": "Procedia Computer Science",
+     "citas": 4
+    },
+    {
+     "doi": "10.1016/j.jpdc.2026.105304",
+     "titulo": "Jaca: Model-training and cluster feature based job scheduling for distributed deep learning cluster",
+     "anio": 2026,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.jpdc.2024.104890",
+     "titulo": "Optimizing DNN training with pipeline model parallelism for enhanced performance in embedded systems",
+     "anio": 2024,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 12
+    },
+    {
+     "doi": "10.1016/j.jpdc.2024.104947",
+     "titulo": "PiPar: Pipeline parallelism for collaborative machine learning",
+     "anio": 2024,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 8
+    },
+    {
+     "doi": "10.1016/j.jpdc.2024.104879",
+     "titulo": "A characterization of soft-error sensitivity in data-parallel and model-parallel distributed deep learning",
+     "anio": 2024,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 6
+    },
+    {
+     "doi": "10.1016/j.scico.2024.103260",
+     "titulo": "Automated code transformation for distributed training of TensorFlow deep learning models",
+     "anio": 2025,
+     "revista": "Science of Computer Programming",
+     "citas": 3
+    }
+   ]
+  },
+  {
+   "constructo": "C3",
+   "consulta": "distributed deep learning training data parallelism",
+   "filtro": "todas las editoriales",
+   "resultados_totales": 1675859,
+   "candidatos": [
+    {
+     "doi": "10.29375/25392115.5054",
+     "titulo": "A snapshot of parallelism in distributed deep learning training",
+     "anio": 2024,
+     "revista": "Revista Colombiana de Computación",
+     "citas": 0
+    },
+    {
+     "doi": "10.70267/aitia.2026421426",
+     "titulo": "A Survey: Lossless Model Accuracy Data Partitioning and Training Parallelism Strategies for Distributed Machine Learning",
+     "anio": 2026,
+     "revista": "Exploring Science Academic Conference Series",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.procs.2023.01.201",
+     "titulo": "Study of Data and Model parallelism in Distributed Deep learning for Diabetic retinopathy classification",
+     "anio": 2023,
+     "revista": "Procedia Computer Science",
+     "citas": 5
+    },
+    {
+     "doi": "10.14201/adcaij.32609",
+     "titulo": "Neural Network Training Acceleration Based on Hybrid Data and Model Parallelism",
+     "anio": 2026,
+     "revista": "ADCAIJ: Advances in Distributed Computing and Artificial Intelligence Journal",
+     "citas": 0
+    },
+    {
+     "doi": "10.52783/cana.v31.1463",
+     "titulo": "Turbocharged AI: Harnessing Federated Learning and Model Parallelism for Efficient Deep Learning on Distributed System",
+     "anio": 2024,
+     "revista": "Communications on Applied Nonlinear Analysis",
+     "citas": 1
+    },
+    {
+     "doi": "10.1016/j.peva.2025.102530",
+     "titulo": "swPredictor: A data-driven performance model for distributed data parallelism training on large-scale HPC clusters",
+     "anio": 2025,
+     "revista": "Performance Evaluation",
+     "citas": 0
+    },
+    {
+     "doi": "10.1371/journal.pone.0293338",
+     "titulo": "Towards accelerating model parallelism in distributed deep learning systems",
+     "anio": 2023,
+     "revista": "PLOS ONE",
+     "citas": 8
+    },
+    {
+     "doi": "10.1109/tpds.2023.3281931",
+     "titulo": "A Survey on Auto-Parallelism of Large-Scale Deep Learning Training",
+     "anio": 2023,
+     "revista": "IEEE Transactions on Parallel and Distributed Systems",
+     "citas": 33
+    }
+   ]
+  },
+  {
+   "constructo": "C3",
+   "consulta": "Horovod MPI distributed training GPU",
+   "filtro": "ScienceDirect (10.1016)",
+   "resultados_totales": 26941,
+   "candidatos": [
+    {
+     "doi": "10.1016/j.jpdc.2026.105334",
+     "titulo": "Cornucopia: Elastic GPU cluster management for mixed batch-interactive distributed training",
+     "anio": 2026,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.jpdc.2025.105053",
+     "titulo": "GPU memory usage optimization for backward propagation in deep network training",
+     "anio": 2025,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 4
+    },
+    {
+     "doi": "10.1016/j.cie.2025.111306",
+     "titulo": "An efficient method for solving large-scale open shop scheduling problem based on Horovod-GPU and improved graph attention network",
+     "anio": 2025,
+     "revista": "Computers &amp; Industrial Engineering",
+     "citas": 1
+    },
+    {
+     "doi": "10.1016/j.envsoft.2026.106957",
+     "titulo": "Portable multi-GPU urban flood modelling via MPI-OpenACC: evaluating acceleration, scaling, and workload-per-GPU",
+     "anio": 2026,
+     "revista": "Environmental Modelling &amp; Software",
+     "citas": 1
+    },
+    {
+     "doi": "10.1016/j.future.2026.108413",
+     "titulo": "Prediction-based GPU sharing for distributed training",
+     "anio": 2026,
+     "revista": "Future Generation Computer Systems",
+     "citas": 3
+    },
+    {
+     "doi": "10.1016/j.future.2026.108659",
+     "titulo": "REX: Adaptive distributed training with statistically validated batch scaling and spline-guided Bayesian optimization on heterogeneous GPU clusters",
+     "anio": 2026,
+     "revista": "Future Generation Computer Systems",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.cageo.2026.106161",
+     "titulo": "Efficient multi-GPU distributed training strategies for neural operator networks: Application to magnetotelluric forward modeling",
+     "anio": 2026,
+     "revista": "Computers &amp; Geosciences",
+     "citas": 2
+    },
+    {
+     "doi": "10.1016/j.jpdc.2024.105012",
+     "titulo": "GPU tabu search: A study on using GPU to solve massive instances of the maximum diversity problem",
+     "anio": 2025,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 2
+    }
+   ]
+  },
+  {
+   "constructo": "C3",
+   "consulta": "Horovod MPI distributed training GPU",
+   "filtro": "todas las editoriales",
+   "resultados_totales": 235832,
+   "candidatos": [
+    {
+     "doi": "10.1134/s1995080223080218",
+     "titulo": "Early Performance Evaluation of Distributed Learning via GPU-Aware MPI over the Angara Interconnect",
+     "anio": 2023,
+     "revista": "Lobachevskii Journal of Mathematics",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.jpdc.2026.105334",
+     "titulo": "Cornucopia: Elastic GPU cluster management for mixed batch-interactive distributed training",
+     "anio": 2026,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 0
+    },
+    {
+     "doi": "10.54254/2755-2721/2026.33679",
+     "titulo": "Comparative Analysis of SGD Optimization under Single-GPU and Distributed Training Across Learning Rate Configurations",
+     "anio": 2026,
+     "revista": "Applied and Computational Engineering",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.cie.2025.111306",
+     "titulo": "An efficient method for solving large-scale open shop scheduling problem based on Horovod-GPU and improved graph attention network",
+     "anio": 2025,
+     "revista": "Computers &amp; Industrial Engineering",
+     "citas": 1
+    },
+    {
+     "doi": "10.1016/j.jpdc.2025.105053",
+     "titulo": "GPU memory usage optimization for backward propagation in deep network training",
+     "anio": 2025,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 4
+    },
+    {
+     "doi": "10.1016/j.envsoft.2026.106957",
+     "titulo": "Portable multi-GPU urban flood modelling via MPI-OpenACC: evaluating acceleration, scaling, and workload-per-GPU",
+     "anio": 2026,
+     "revista": "Environmental Modelling &amp; Software",
+     "citas": 1
+    },
+    {
+     "doi": "10.1007/s00607-021-01029-2",
+     "titulo": "Analyzing the impact of the MPI allreduce in distributed training of convolutional neural networks",
+     "anio": 2022,
+     "revista": "Computing",
+     "citas": 5
+    },
+    {
+     "doi": "10.1145/3759244",
+     "titulo": "TorchBraid: High-Performance Layer-Parallel Training of Deep Neural Networks with MPI and GPU Acceleration",
+     "anio": 2025,
+     "revista": "ACM Transactions on Mathematical Software",
+     "citas": 1
+    }
+   ]
+  },
+  {
+   "constructo": "C4",
+   "consulta": "hybrid MPI OpenMP CUDA GPU acceleration",
+   "filtro": "ScienceDirect (10.1016)",
+   "resultados_totales": 57779,
+   "candidatos": [
+    {
+     "doi": "10.1016/j.envsoft.2022.105613",
+     "titulo": "High-performance watershed delineation algorithm for GPU using CUDA and OpenMP",
+     "anio": 2023,
+     "revista": "Environmental Modelling &amp; Software",
+     "citas": 12
+    },
+    {
+     "doi": "10.1016/j.future.2022.09.005",
+     "titulo": "Hybrid MPI and CUDA paralleled finite volume unstructured CFD simulations on a multi-GPU system",
+     "anio": 2023,
+     "revista": "Future Generation Computer Systems",
+     "citas": 23
+    },
+    {
+     "doi": "10.1016/j.cpc.2023.108941",
+     "titulo": "GPU-acceleration of tensor renormalization with PyTorch using CUDA",
+     "anio": 2024,
+     "revista": "Computer Physics Communications",
+     "citas": 16
+    },
+    {
+     "doi": "10.1016/j.cageo.2024.105616",
+     "titulo": "Simulation and reconstruction for 3D elastic wave using multi-GPU and CUDA-aware MPI",
+     "anio": 2024,
+     "revista": "Computers &amp; Geosciences",
+     "citas": 4
+    },
+    {
+     "doi": "10.1016/j.ultras.2023.107049",
+     "titulo": "A multi-GPU and CUDA-aware MPI-based spectral element formulation for ultrasonic wave propagation in solid media",
+     "anio": 2023,
+     "revista": "Ultrasonics",
+     "citas": 6
+    },
+    {
+     "doi": "10.1016/j.compgeo.2024.106408",
+     "titulo": "Parallel implementation of LS-DEM with hybrid MPI+OpenMP",
+     "anio": 2024,
+     "revista": "Computers and Geotechnics",
+     "citas": 7
+    },
+    {
+     "doi": "10.1016/j.compfluid.2022.105455",
+     "titulo": "An implementation of MPI and hybrid OpenMP/MPI parallelization strategies for an implicit 3D DDG solver",
+     "anio": 2022,
+     "revista": "Computers &amp; Fluids",
+     "citas": 13
+    },
+    {
+     "doi": "10.1016/j.cageo.2024.105710",
+     "titulo": "Massively parallel modeling of electromagnetic field in conductive media: An MPI-CUDA implementation on Multi-GPU computers",
+     "anio": 2024,
+     "revista": "Computers &amp; Geosciences",
+     "citas": 4
+    }
+   ]
+  },
+  {
+   "constructo": "C4",
+   "consulta": "hybrid MPI OpenMP CUDA GPU acceleration",
+   "filtro": "todas las editoriales",
+   "resultados_totales": 231271,
+   "candidatos": [
+    {
+     "doi": "10.1299/jsmecmd.2025.38.os17-12",
+     "titulo": "Performance Comparison of CUDA-GPU, GLSL-GPU, and OpenMP-CPU Implementations of Ray Tracing",
+     "anio": 2025,
+     "revista": "The Proceedings of The Computational Mechanics Conference",
+     "citas": 0
+    },
+    {
+     "doi": "10.2139/ssrn.4260513",
+     "titulo": "High-Performance Watershed Delineation Algorithm for Gpu Using Cuda and Openmp",
+     "anio": 2022,
+     "revista": "SSRN Electronic Journal",
+     "citas": 1
+    },
+    {
+     "doi": "10.2139/ssrn.4260514",
+     "titulo": "High-Performance Watershed Delineation Algorithm for Gpu Using Cuda and Openmp",
+     "anio": 2022,
+     "revista": "SSRN Electronic Journal",
+     "citas": 0
+    },
+    {
+     "doi": "10.51889/2959-5894.2023.81.1.006",
+     "titulo": "РЕШЕНИЕ ЗАДАЧИ ВЫТЕСНЕНИЯ НЕФТИ С ПОМОЩЬЮ ГИБРИДНОГО ПАРАЛЛЕЛЬНОГО АЛГОРИТМА MPI+OPENMP",
+     "anio": 2023,
+     "revista": "BULLETIN Series Physical and Mathematical Sciences",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.envsoft.2022.105613",
+     "titulo": "High-performance watershed delineation algorithm for GPU using CUDA and OpenMP",
+     "anio": 2023,
+     "revista": "Environmental Modelling &amp; Software",
+     "citas": 12
+    },
+    {
+     "doi": "10.1038/s41524-026-02042-9",
+     "titulo": "Electron-phonon physics at the exascale: a hybrid MPI-GPU-OpenMP framework for scalable Wannier interpolation",
+     "anio": 2026,
+     "revista": "npj Computational Materials",
+     "citas": 0
+    },
+    {
+     "doi": "10.1109/access.2026.3722454",
+     "titulo": "Benchmarking Parallel Programming Models for High-Throughput Security Telemetry Analytics: OpenMP, MPI, and CUDA",
+     "anio": 2026,
+     "revista": "IEEE Access",
+     "citas": 0
+    },
+    {
+     "doi": "10.1007/s11227-022-04961-y",
+     "titulo": "A hybrid CUDA, OpenMP, and MPI parallel TCA-based domain adaptation for classification of very high-resolution remote sensing images",
+     "anio": 2022,
+     "revista": "The Journal of Supercomputing",
+     "citas": 3
+    }
+   ]
+  },
+  {
+   "constructo": "C4",
+   "consulta": "GPU parallel computing deep learning image processing",
+   "filtro": "ScienceDirect (10.1016)",
+   "resultados_totales": 247304,
+   "candidatos": [
+    {
+     "doi": "10.1016/j.jpdc.2022.12.004",
+     "titulo": "Deep learning based data prefetching in CPU-GPU unified virtual memory",
+     "anio": 2023,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 27
+    },
+    {
+     "doi": "10.1016/j.jpdc.2025.105140",
+     "titulo": "Parallel watershed partitioning: GPU-based hierarchical image segmentation",
+     "anio": 2025,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 3
+    },
+    {
+     "doi": "10.1016/j.jpdc.2026.105322",
+     "titulo": "PriorityDRL: Dual-agent deadline-aware GPU scheduling for deep learning jobs",
+     "anio": 2026,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.jpdc.2025.105138",
+     "titulo": "Topology-aware GPU job scheduling with deep reinforcement learning and heuristics",
+     "anio": 2025,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 8
+    },
+    {
+     "doi": "10.1016/j.parco.2026.103196",
+     "titulo": "A survey of parallel computing frameworks and optimizations for AI and deep learning",
+     "anio": 2026,
+     "revista": "Parallel Computing",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.jpdc.2023.104832",
+     "titulo": "Starlight: A kernel optimizer for GPU processing",
+     "anio": 2024,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 3
+    },
+    {
+     "doi": "10.1016/j.acags.2025.100286",
+     "titulo": "Automating fault detection in seismic data: integrating image processing with deep learning",
+     "anio": 2025,
+     "revista": "Applied Computing and Geosciences",
+     "citas": 4
+    },
+    {
+     "doi": "10.1016/j.parco.2023.103019",
+     "titulo": "GPU acceleration of Levenshtein distance computation between long strings",
+     "anio": 2023,
+     "revista": "Parallel Computing",
+     "citas": 17
+    }
+   ]
+  },
+  {
+   "constructo": "C4",
+   "consulta": "GPU parallel computing deep learning image processing",
+   "filtro": "todas las editoriales",
+   "resultados_totales": 1441774,
+   "candidatos": [
+    {
+     "doi": "10.1016/j.jpdc.2022.12.004",
+     "titulo": "Deep learning based data prefetching in CPU-GPU unified virtual memory",
+     "anio": 2023,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 27
+    },
+    {
+     "doi": "10.1016/j.jpdc.2025.105140",
+     "titulo": "Parallel watershed partitioning: GPU-based hierarchical image segmentation",
+     "anio": 2025,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 3
+    },
+    {
+     "doi": "10.1016/j.jpdc.2026.105322",
+     "titulo": "PriorityDRL: Dual-agent deadline-aware GPU scheduling for deep learning jobs",
+     "anio": 2026,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 0
+    },
+    {
+     "doi": "10.1145/3589188",
+     "titulo": "A Distributed-GPU Deep Reinforcement Learning System for Solving Large Graph Optimization Problems",
+     "anio": 2023,
+     "revista": "ACM Transactions on Parallel Computing",
+     "citas": 2
+    },
+    {
+     "doi": "10.2139/ssrn.4046435",
+     "titulo": "A New Gpu Parallel Method for Image Classification Based on Deep Learning",
+     "anio": 2022,
+     "revista": "SSRN Electronic Journal",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.jpdc.2025.105138",
+     "titulo": "Topology-aware GPU job scheduling with deep reinforcement learning and heuristics",
+     "anio": 2025,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 8
+    },
+    {
+     "doi": "10.1016/j.parco.2026.103196",
+     "titulo": "A survey of parallel computing frameworks and optimizations for AI and deep learning",
+     "anio": 2026,
+     "revista": "Parallel Computing",
+     "citas": 0
+    },
+    {
+     "doi": "10.58346/jowua.2022.i4.010",
+     "titulo": "Hierarchical Parallel Processing for Data Clustering in GPU Using Deep Nearest Neighbor Searching",
+     "anio": 2022,
+     "revista": "Journal of Wireless Mobile Networks, Ubiquitous Computing, and Dependable Applications",
+     "citas": 2
+    }
+   ]
+  },
+  {
+   "constructo": "C5",
+   "consulta": "cluster computing MPI containers deployment",
+   "filtro": "ScienceDirect (10.1016)",
+   "resultados_totales": 26789,
+   "candidatos": [
+    {
+     "doi": "10.1016/j.ascom.2022.100655",
+     "titulo": "Deployment of a programming framework based on microservices and containers with application to the astrophysical domain",
+     "anio": 2022,
+     "revista": "Astronomy and Computing",
+     "citas": 2
+    },
+    {
+     "doi": "10.1016/j.future.2026.108513",
+     "titulo": "Oak Ridge Computing Academy: An HPC cluster deployment and management pilot",
+     "anio": 2026,
+     "revista": "Future Generation Computer Systems",
+     "citas": 1
+    },
+    {
+     "doi": "10.1016/j.parco.2021.102871",
+     "titulo": "Using long vector extensions for MPI reductions",
+     "anio": 2022,
+     "revista": "Parallel Computing",
+     "citas": 9
+    },
+    {
+     "doi": "10.1016/j.parco.2026.103205",
+     "titulo": "Tuned your MPI library? Now check the performance guidelines",
+     "anio": 2026,
+     "revista": "Parallel Computing",
+     "citas": 1
+    },
+    {
+     "doi": "10.1016/j.parco.2026.103207",
+     "titulo": "Optimizing MPI collective operations for intra-node shared memory exploitation and oversubscription",
+     "anio": 2026,
+     "revista": "Parallel Computing",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.jiixd.2024.02.002",
+     "titulo": "Cluster-based RSU deployment strategy for vehicular ad hoc networks with integration of communication, sensing and computing",
+     "anio": 2024,
+     "revista": "Journal of Information and Intelligence",
+     "citas": 6
+    },
+    {
+     "doi": "10.1016/j.parco.2023.103061",
+     "titulo": "Program partitioning and deadlock analysis for MPI based on logical clocks",
+     "anio": 2024,
+     "revista": "Parallel Computing",
+     "citas": 3
+    },
+    {
+     "doi": "10.1016/j.parco.2021.102860",
+     "titulo": "Towards leveraging collective performance with the support of MPI 4.0 features in MPC",
+     "anio": 2022,
+     "revista": "Parallel Computing",
+     "citas": 4
+    }
+   ]
+  },
+  {
+   "constructo": "C5",
+   "consulta": "cluster computing MPI containers deployment",
+   "filtro": "todas las editoriales",
+   "resultados_totales": 199259,
+   "candidatos": [
+    {
+     "doi": "10.1007/s10586-024-04873-x",
+     "titulo": "A cost-aware IoT application deployment approach in fog computing",
+     "anio": 2025,
+     "revista": "Cluster Computing",
+     "citas": 19
+    },
+    {
+     "doi": "10.1007/s10586-021-03452-8",
+     "titulo": "IMB-ASYNC: a revised method and benchmark to estimate MPI-3 asynchronous progress efficiency",
+     "anio": 2022,
+     "revista": "Cluster Computing",
+     "citas": 2
+    },
+    {
+     "doi": "10.1007/s10586-026-06263-x",
+     "titulo": "QoS-aware deployment of emotion recognition system through Fog computing infrastructure",
+     "anio": 2026,
+     "revista": "Cluster Computing",
+     "citas": 0
+    },
+    {
+     "doi": "10.1007/s10586-023-04049-z",
+     "titulo": "CUDA-aware MPI implementation of Gibbs sampling for an IRT model",
+     "anio": 2023,
+     "revista": "Cluster Computing",
+     "citas": 1
+    },
+    {
+     "doi": "10.1007/s10586-021-03517-8",
+     "titulo": "Performance and isolation analysis of RunC, gVisor and Kata Containers runtimes",
+     "anio": 2022,
+     "revista": "Cluster Computing",
+     "citas": 29
+    },
+    {
+     "doi": "10.1007/s10586-025-05487-7",
+     "titulo": "Cost-effective edge container deployment strategy",
+     "anio": 2025,
+     "revista": "Cluster Computing",
+     "citas": 1
+    },
+    {
+     "doi": "10.1007/s10586-025-05150-1",
+     "titulo": "An improved heuristic service deployment algorithm based on multi-parameter priority in edge computing",
+     "anio": 2025,
+     "revista": "Cluster Computing",
+     "citas": 4
+    },
+    {
+     "doi": "10.1007/s10586-023-03985-0",
+     "titulo": "Imperialist competitive based approach for efficient deployment of IoT services in fog computing",
+     "anio": 2023,
+     "revista": "Cluster Computing",
+     "citas": 10
+    }
+   ]
+  },
+  {
+   "constructo": "C5",
+   "consulta": "low-cost cluster parallel computing education",
+   "filtro": "ScienceDirect (10.1016)",
+   "resultados_totales": 159472,
+   "candidatos": [
+    {
+     "doi": "10.1016/j.jpdc.2022.04.009",
+     "titulo": "Data stream clustering for low-cost machines",
+     "anio": 2022,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 5
+    },
+    {
+     "doi": "10.1016/j.jpdc.2023.03.002",
+     "titulo": "TurBO: A cost-efficient configuration-based auto-tuning approach for cluster-based big data frameworks",
+     "anio": 2023,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 12
+    },
+    {
+     "doi": "10.1016/j.parco.2022.102948",
+     "titulo": "Parallel multi-view HEVC for heterogeneously embedded cluster system",
+     "anio": 2022,
+     "revista": "Parallel Computing",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.jpdc.2026.105254",
+     "titulo": "Optimal landmark placement in cluster-based networks",
+     "anio": 2026,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 2
+    },
+    {
+     "doi": "10.1016/j.jpdc.2026.105304",
+     "titulo": "Jaca: Model-training and cluster feature based job scheduling for distributed deep learning cluster",
+     "anio": 2026,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.parco.2023.103052",
+     "titulo": "Low consumption automatic discovery protocol for DDS-based large-scale distributed parallel computing",
+     "anio": 2023,
+     "revista": "Parallel Computing",
+     "citas": 3
+    },
+    {
+     "doi": "10.1016/j.jpdc.2023.02.001",
+     "titulo": "PARMA-CC: A family of parallel multiphase approximate cluster combining algorithms",
+     "anio": 2023,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 4
+    },
+    {
+     "doi": "10.1016/j.parco.2024.103084",
+     "titulo": "An approach for low-power heterogeneous parallel implementation of ALC-PSO algorithm using OmpSs and CUDA",
+     "anio": 2024,
+     "revista": "Parallel Computing",
+     "citas": 1
+    }
+   ]
+  },
+  {
+   "constructo": "C5",
+   "consulta": "low-cost cluster parallel computing education",
+   "filtro": "todas las editoriales",
+   "resultados_totales": 1537483,
+   "candidatos": [
+    {
+     "doi": "10.1016/j.jpdc.2022.04.009",
+     "titulo": "Data stream clustering for low-cost machines",
+     "anio": 2022,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 5
+    },
+    {
+     "doi": "10.1039/d3cp06086a",
+     "titulo": "Combining low-cost electronic structure theory and low-cost parallel computing architecture",
+     "anio": 2024,
+     "revista": "Physical Chemistry Chemical Physics",
+     "citas": 7
+    },
+    {
+     "doi": "10.1016/j.jpdc.2023.03.002",
+     "titulo": "TurBO: A cost-efficient configuration-based auto-tuning approach for cluster-based big data frameworks",
+     "anio": 2023,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 12
+    },
+    {
+     "doi": "10.1007/s10586-023-04093-9",
+     "titulo": "A low-cost, high-throughput neuromorphic computer for online SNN learning",
+     "anio": 2023,
+     "revista": "Cluster Computing",
+     "citas": 4
+    },
+    {
+     "doi": "10.1016/j.parco.2022.102948",
+     "titulo": "Parallel multi-view HEVC for heterogeneously embedded cluster system",
+     "anio": 2022,
+     "revista": "Parallel Computing",
+     "citas": 0
+    },
+    {
+     "doi": "10.1007/s10586-021-03511-0",
+     "titulo": "Parallel analysis of Ethereum blockchain transaction data using cluster computing",
+     "anio": 2022,
+     "revista": "Cluster Computing",
+     "citas": 13
+    },
+    {
+     "doi": "10.1007/s10586-024-04781-0",
+     "titulo": "Lcsa-fed: a low cost semi-asynchronous federated learning based on lag tolerance for services QoS prediction",
+     "anio": 2024,
+     "revista": "Cluster Computing",
+     "citas": 1
+    },
+    {
+     "doi": "10.1007/s10586-024-04722-x",
+     "titulo": "Modified parallel PSO algorithm in cloud computing for performance improvement",
+     "anio": 2024,
+     "revista": "Cluster Computing",
+     "citas": 10
+    }
+   ]
+  },
+  {
+   "constructo": "C5",
+   "consulta": "Raspberry Pi cluster MPI parallel computing",
+   "filtro": "ScienceDirect (10.1016)",
+   "resultados_totales": 33434,
+   "candidatos": [
+    {
+     "doi": "10.1016/j.jpdc.2024.104996",
+     "titulo": "Hands-on parallel &amp; distributed computing with Raspberry Pi devices and clusters",
+     "anio": 2025,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 13
+    },
+    {
+     "doi": "10.1016/j.parco.2021.102871",
+     "titulo": "Using long vector extensions for MPI reductions",
+     "anio": 2022,
+     "revista": "Parallel Computing",
+     "citas": 9
+    },
+    {
+     "doi": "10.1016/j.parco.2026.103205",
+     "titulo": "Tuned your MPI library? Now check the performance guidelines",
+     "anio": 2026,
+     "revista": "Parallel Computing",
+     "citas": 1
+    },
+    {
+     "doi": "10.1016/j.parco.2026.103207",
+     "titulo": "Optimizing MPI collective operations for intra-node shared memory exploitation and oversubscription",
+     "anio": 2026,
+     "revista": "Parallel Computing",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.parco.2021.102860",
+     "titulo": "Towards leveraging collective performance with the support of MPI 4.0 features in MPC",
+     "anio": 2022,
+     "revista": "Parallel Computing",
+     "citas": 4
+    },
+    {
+     "doi": "10.1016/j.parco.2023.103061",
+     "titulo": "Program partitioning and deadlock analysis for MPI based on logical clocks",
+     "anio": 2024,
+     "revista": "Parallel Computing",
+     "citas": 3
+    },
+    {
+     "doi": "10.1016/j.jpdc.2026.105361",
+     "titulo": "Parallel spawning strategies for dynamic-aware MPI applications",
+     "anio": 2027,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.parco.2026.103184",
+     "titulo": "Exploring metrics for analyzing dynamic behavior in MPI programs via a coupled-oscillator model",
+     "anio": 2026,
+     "revista": "Parallel Computing",
+     "citas": 0
+    }
+   ]
+  },
+  {
+   "constructo": "C5",
+   "consulta": "Raspberry Pi cluster MPI parallel computing",
+   "filtro": "todas las editoriales",
+   "resultados_totales": 232108,
+   "candidatos": [
+    {
+     "doi": "10.5120/ijca2025925585",
+     "titulo": "Parallel k-Means Benchmarking on a CPU-Bound Beowulf Cluster of Raspberry Pi Nodes: An MPI-Based Scaling Analysis with CPU-Centric Performance Evaluation",
+     "anio": 2025,
+     "revista": "International Journal of Computer Applications",
+     "citas": 0
+    },
+    {
+     "doi": "10.23939/istcmtm2025.02.092",
+     "titulo": "IMPLEMENTATION OF AN APACHE SPARK COMPUTING CLUSTER BASED ON RASPBERRY PI MICROCOMPUTERS",
+     "anio": 2025,
+     "revista": "Measuring Equipment and Metrology",
+     "citas": 1
+    },
+    {
+     "doi": "10.1016/j.jpdc.2024.104996",
+     "titulo": "Hands-on parallel &amp; distributed computing with Raspberry Pi devices and clusters",
+     "anio": 2025,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 13
+    },
+    {
+     "doi": "10.3390/pr13030633",
+     "titulo": "TopADDPi: An Affordable and Sustainable Raspberry Pi Cluster for Parallel-Computing Topology Optimization",
+     "anio": 2025,
+     "revista": "Processes",
+     "citas": 8
+    },
+    {
+     "doi": "10.25126/jtiik.1229452",
+     "titulo": "Implementasi Load Balancing pada Cluster Server Berbasis Raspberry Pi Memanfaatkan Algoritma Least Connection",
+     "anio": 2025,
+     "revista": "Jurnal Teknologi Informasi dan Ilmu Komputer",
+     "citas": 0
+    },
+    {
+     "doi": "10.25126/jtiik.2025129452",
+     "titulo": "Implementasi Load Balancing pada Cluster Server Berbasis Raspberry Pi Memanfaatkan Algoritma Least Connection",
+     "anio": 2025,
+     "revista": "Jurnal Teknologi Informasi dan Ilmu Komputer",
+     "citas": 0
+    },
+    {
+     "doi": "10.1007/s10586-022-03591-6",
+     "titulo": "PI-sqrt: novel parallel implementations of in-place sequence rotation on multicore systems",
+     "anio": 2022,
+     "revista": "Cluster Computing",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.parco.2021.102871",
+     "titulo": "Using long vector extensions for MPI reductions",
+     "anio": 2022,
+     "revista": "Parallel Computing",
+     "citas": 9
+    }
+   ]
+  },
+  {
+   "constructo": "C5",
+   "consulta": "teaching parallel programming MPI cluster students",
+   "filtro": "ScienceDirect (10.1016)",
+   "resultados_totales": 40350,
+   "candidatos": [
+    {
+     "doi": "10.1016/j.parco.2021.102871",
+     "titulo": "Using long vector extensions for MPI reductions",
+     "anio": 2022,
+     "revista": "Parallel Computing",
+     "citas": 9
+    },
+    {
+     "doi": "10.1016/j.parco.2026.103205",
+     "titulo": "Tuned your MPI library? Now check the performance guidelines",
+     "anio": 2026,
+     "revista": "Parallel Computing",
+     "citas": 1
+    },
+    {
+     "doi": "10.1016/j.parco.2026.103207",
+     "titulo": "Optimizing MPI collective operations for intra-node shared memory exploitation and oversubscription",
+     "anio": 2026,
+     "revista": "Parallel Computing",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.teln.2026.09.017",
+     "titulo": "Enhancing competence in dementia care among nursing students: A cluster-randomized trial",
+     "anio": 2026,
+     "revista": "Teaching and Learning in Nursing",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.jpdc.2026.105361",
+     "titulo": "Parallel spawning strategies for dynamic-aware MPI applications",
+     "anio": 2027,
+     "revista": "Journal of Parallel and Distributed Computing",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.parco.2021.102860",
+     "titulo": "Towards leveraging collective performance with the support of MPI 4.0 features in MPC",
+     "anio": 2022,
+     "revista": "Parallel Computing",
+     "citas": 4
+    },
+    {
+     "doi": "10.1016/j.heliyon.2021.e08662",
+     "titulo": "Has the time come to teach parallel programming to secondary school students?",
+     "anio": 2022,
+     "revista": "Heliyon",
+     "citas": 5
+    },
+    {
+     "doi": "10.1016/j.parco.2023.103061",
+     "titulo": "Program partitioning and deadlock analysis for MPI based on logical clocks",
+     "anio": 2024,
+     "revista": "Parallel Computing",
+     "citas": 3
+    }
+   ]
+  },
+  {
+   "constructo": "C5",
+   "consulta": "teaching parallel programming MPI cluster students",
+   "filtro": "todas las editoriales",
+   "resultados_totales": 704730,
+   "candidatos": [
+    {
+     "doi": "10.1007/s10766-022-00749-y",
+     "titulo": "A Fault-Model-Relevant Classification of Consensus Mechanisms for MPI and HPC",
+     "anio": 2022,
+     "revista": "International Journal of Parallel Programming",
+     "citas": 1
+    },
+    {
+     "doi": "10.1109/access.2026.3722454",
+     "titulo": "Benchmarking Parallel Programming Models for High-Throughput Security Telemetry Analytics: OpenMP, MPI, and CUDA",
+     "anio": 2026,
+     "revista": "IEEE Access",
+     "citas": 0
+    },
+    {
+     "doi": "10.52058/2786-6025-2026-2(56)-1706-1719",
+     "titulo": "АНАЛІЗ ЕФЕКТИВНОСТІ МОДЕЛЕЙ ПАРАЛЕЛЬНОГО  ПРОГРАМУВАННЯ MPI ТА OPENMP НА ГІБРИДНИХ  ПРОЦЕСОРНИХ АРХІТЕКТУРАХ",
+     "anio": 2026,
+     "revista": "Наука і техніка сьогодні",
+     "citas": 0
+    },
+    {
+     "doi": "10.1155/scpr/9876257",
+     "titulo": "RETRACTION: Construction of Mental Health Education Model for College Students Based on Fine‐Grained Parallel Computing Programming",
+     "anio": 2026,
+     "revista": "Scientific Programming",
+     "citas": 1
+    },
+    {
+     "doi": "10.1007/s10586-024-04622-0",
+     "titulo": "Extending parallel programming patterns with adaptability features",
+     "anio": 2024,
+     "revista": "Cluster Computing",
+     "citas": 2
+    },
+    {
+     "doi": "10.37547/ijp/volume05issue01-30",
+     "titulo": "Methodology for teaching javascript programming language to students",
+     "anio": 2025,
+     "revista": "International Journal of Pedagogics",
+     "citas": 0
+    },
+    {
+     "doi": "10.3389/feart.2023.1080879",
+     "titulo": "A parallel numerical algorithm by combining MPI and OpenMP programming models with applications in gravity field recovery",
+     "anio": 2023,
+     "revista": "Frontiers in Earth Science",
+     "citas": 3
+    },
+    {
+     "doi": "10.1155/2022/1695044",
+     "titulo": "Construction of Mental Health Education Model for College Students Based on Fine-Grained Parallel Computing Programming",
+     "anio": 2022,
+     "revista": "Scientific Programming",
+     "citas": 1
+    }
+   ]
+  },
+  {
+   "constructo": "C6",
+   "consulta": "coffee leaf disease detection deep learning",
+   "filtro": "ScienceDirect (10.1016)",
+   "resultados_totales": 360262,
+   "candidatos": [
+    {
+     "doi": "10.1016/j.ecoinf.2024.102925",
+     "titulo": "Ensemble transfer learning meets explainable AI: A deep learning approach for leaf disease detection",
+     "anio": 2024,
+     "revista": "Ecological Informatics",
+     "citas": 32
+    },
+    {
+     "doi": "10.1016/j.jbiotec.2023.07.011",
+     "titulo": "Tomato plant leaf disease segmentation and multiclass disease detection using hybrid optimization enabled deep learning",
+     "anio": 2023,
+     "revista": "Journal of Biotechnology",
+     "citas": 53
+    },
+    {
+     "doi": "10.1016/j.asoc.2023.110534",
+     "titulo": "Leaf disease detection using machine learning and deep learning: Review and challenges",
+     "anio": 2023,
+     "revista": "Applied Soft Computing",
+     "citas": 250
+    },
+    {
+     "doi": "10.1016/j.displa.2026.103451",
+     "titulo": "Lightweight deep learning framework and real-world dataset for durian leaf disease detection in smart agriculture",
+     "anio": 2026,
+     "revista": "Displays",
+     "citas": 1
+    },
+    {
+     "doi": "10.1016/j.atech.2024.100526",
+     "titulo": "Semantic segmentation for plant leaf disease classification and damage detection: A deep learning approach",
+     "anio": 2024,
+     "revista": "Smart Agricultural Technology",
+     "citas": 78
+    },
+    {
+     "doi": "10.1016/j.cropro.2024.107002",
+     "titulo": "MobileH-Transformer: Enabling real-time leaf disease detection using hybrid deep learning approach for smart agriculture",
+     "anio": 2025,
+     "revista": "Crop Protection",
+     "citas": 38
+    },
+    {
+     "doi": "10.1016/j.dsp.2026.106179",
+     "titulo": "An improved lightweight grape leaf disease detection algorithm based on deep learning",
+     "anio": 2026,
+     "revista": "Digital Signal Processing",
+     "citas": 1
+    },
+    {
+     "doi": "10.1016/j.asej.2025.103716",
+     "titulo": "Hybrid augmentation for multi-channel deep learning in guava leaf disease detection",
+     "anio": 2025,
+     "revista": "Ain Shams Engineering Journal",
+     "citas": 16
+    }
+   ]
+  },
+  {
+   "constructo": "C6",
+   "consulta": "coffee leaf disease detection deep learning",
+   "filtro": "todas las editoriales",
+   "resultados_totales": 1955184,
+   "candidatos": [
+    {
+     "doi": "10.26634/jaim.3.1.21457",
+     "titulo": "Coffee leaf disease detection using deep learning",
+     "anio": 2025,
+     "revista": "i-manager's Journal on Artificial Intelligence &amp; Machine Learning",
+     "citas": 0
+    },
+    {
+     "doi": "10.7717/peerj-cs.3172",
+     "titulo": "Detection of coffee leaf disease and identification using deep learning",
+     "anio": 2025,
+     "revista": "PeerJ Computer Science",
+     "citas": 3
+    },
+    {
+     "doi": "10.7717/peerj-cs.2406",
+     "titulo": "DeepEMPR: coffee leaf disease detection with deep learning and enhanced multivariance product representation",
+     "anio": 2024,
+     "revista": "PeerJ Computer Science",
+     "citas": 9
+    },
+    {
+     "doi": "10.55248/gengpi.6.0825.3172",
+     "titulo": "Plant Leaf Disease Detection Using Deep Learning",
+     "anio": 2025,
+     "revista": "International Journal of Research Publication and Reviews",
+     "citas": 0
+    },
+    {
+     "doi": "10.3390/agriculture16151664",
+     "titulo": "Deep Learning for Coffee Leaf Disease Detection: Opportunities and Challenges for Quality Traceability in Agricultural E-Commerce",
+     "anio": 2026,
+     "revista": "Agriculture",
+     "citas": 0
+    },
+    {
+     "doi": "10.33395/sinkron.v10i3.16200",
+     "titulo": "Hybrid Deep Learning Model for Coffee Leaf Disease Detection Using CNN DeiT",
+     "anio": 2026,
+     "revista": "sinkron",
+     "citas": 0
+    },
+    {
+     "doi": "10.3390/agriengineering7010013",
+     "titulo": "Leveraging Deep Learning for Real-Time Coffee Leaf Disease Identification",
+     "anio": 2025,
+     "revista": "AgriEngineering",
+     "citas": 15
+    },
+    {
+     "doi": "10.3390/s24248018",
+     "titulo": "Coffee Leaf Rust Disease Detection and Implementation of an Edge Device for Pruning Infected Leaves via Deep Learning Algorithms",
+     "anio": 2024,
+     "revista": "Sensors",
+     "citas": 17
+    }
+   ]
+  },
+  {
+   "constructo": "C6",
+   "consulta": "plant disease classification convolutional neural network transfer learning",
+   "filtro": "ScienceDirect (10.1016)",
+   "resultados_totales": 433943,
+   "candidatos": [
+    {
+     "doi": "10.1016/j.aiia.2021.12.002",
+     "titulo": "Transfer Learning for Multi-Crop Leaf Disease Image Classification using Convolutional Neural Network VGG",
+     "anio": 2022,
+     "revista": "Artificial Intelligence in Agriculture",
+     "citas": 307
+    },
+    {
+     "doi": "10.1016/j.ecoinf.2023.102245",
+     "titulo": "Vision transformer meets convolutional neural network for plant disease classification",
+     "anio": 2023,
+     "revista": "Ecological Informatics",
+     "citas": 192
+    },
+    {
+     "doi": "10.1016/j.sciaf.2024.e02066",
+     "titulo": "Transfer learning-based approach using new convolutional neural network classifier for steel surface defects classification",
+     "anio": 2024,
+     "revista": "Scientific African",
+     "citas": 29
+    },
+    {
+     "doi": "10.1016/j.asoc.2024.112270",
+     "titulo": "Optimized twin spatio-temporal convolutional neural network with squeezenet transfer learning model for cancer miRNA biomarker classification",
+     "anio": 2024,
+     "revista": "Applied Soft Computing",
+     "citas": 2
+    },
+    {
+     "doi": "10.1016/j.solener.2024.112703",
+     "titulo": "Fault classification of photovoltaic module infrared images based on transfer learning and interpretable convolutional neural network",
+     "anio": 2024,
+     "revista": "Solar Energy",
+     "citas": 31
+    },
+    {
+     "doi": "10.1016/j.heliyon.2024.e39569",
+     "titulo": "Maize disease classification using transfer learning and convolutional neural network with weighted loss",
+     "anio": 2024,
+     "revista": "Heliyon",
+     "citas": 16
+    },
+    {
+     "doi": "10.1016/j.sciaf.2024.e02512",
+     "titulo": "Pest classification: Explainable few-shot learning vs. convolutional neural networks vs. transfer learning",
+     "anio": 2025,
+     "revista": "Scientific African",
+     "citas": 5
+    },
+    {
+     "doi": "10.1016/j.cageo.2022.105284",
+     "titulo": "Impact of dataset size and convolutional neural network architecture on transfer learning for carbonate rock classification",
+     "anio": 2023,
+     "revista": "Computers &amp; Geosciences",
+     "citas": 146
+    }
+   ]
+  },
+  {
+   "constructo": "C6",
+   "consulta": "plant disease classification convolutional neural network transfer learning",
+   "filtro": "todas las editoriales",
+   "resultados_totales": 2335381,
+   "candidatos": [
+    {
+     "doi": "10.36341/rabit.v11i1.6622",
+     "titulo": "ANALISIS ARSITEKTUR CONVOLUTIONAL NEURAL NETWORK DAN TRANSFER LEARNING DALAM KLASIFIKASI KUALITAS BUAH",
+     "anio": 2026,
+     "revista": "Rabit : Jurnal Teknologi dan Sistem Informasi Univrab",
+     "citas": 0
+    },
+    {
+     "doi": "10.53106/160792642023122407009",
+     "titulo": "Small Convolutional Neural Network Trainer Designed through Transfer Learning in Dessert Classification",
+     "anio": 2023,
+     "revista": "網際網路技術學刊",
+     "citas": 2
+    },
+    {
+     "doi": "10.59720/23-204",
+     "titulo": "Transfer Learning with Convolutional Neural Network-Based Models for Skin Cancer Classification",
+     "anio": 2024,
+     "revista": "Journal of Emerging Investigators",
+     "citas": 1
+    },
+    {
+     "doi": "10.21275/sr23908191606",
+     "titulo": "Avocado Leaf Disease Classification Using Convolutional Neural Network",
+     "anio": 2023,
+     "revista": "International Journal of Science and Research (IJSR)",
+     "citas": 4
+    },
+    {
+     "doi": "10.21275/sr26504141606",
+     "titulo": "Plant Leaf Disease Classification Using Convolutional Neural Networks (CNN)",
+     "anio": 2026,
+     "revista": "International Journal of Science and Research (IJSR)",
+     "citas": 0
+    },
+    {
+     "doi": "10.14569/ijacsa.2026.0170354",
+     "titulo": "Convolutional Neural Network for Chili Plant Disease Classification: A Deep Learning Approach",
+     "anio": 2026,
+     "revista": "International Journal of Advanced Computer Science and Applications",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.aiia.2021.12.002",
+     "titulo": "Transfer Learning for Multi-Crop Leaf Disease Image Classification using Convolutional Neural Network VGG",
+     "anio": 2022,
+     "revista": "Artificial Intelligence in Agriculture",
+     "citas": 307
+    },
+    {
+     "doi": "10.21275/sr22731164616",
+     "titulo": "Deep Learning Model for Image Classification Using Convolutional Neural Network",
+     "anio": 2022,
+     "revista": "International Journal of Science and Research (IJSR)",
+     "citas": 0
+    }
+   ]
+  },
+  {
+   "constructo": "C6",
+   "consulta": "coffee leaf rust detection deep learning images",
+   "filtro": "ScienceDirect (10.1016)",
+   "resultados_totales": 256299,
+   "candidatos": [
+    {
+     "doi": "10.1016/j.dib.2023.109226",
+     "titulo": "CoLeaf-DB: Peruvian coffee leaf images dataset for coffee leaf nutritional deficiencies detection and classification",
+     "anio": 2023,
+     "revista": "Data in Brief",
+     "citas": 17
+    },
+    {
+     "doi": "10.1016/j.jafr.2026.103206",
+     "titulo": "A comprehensive review on current strategies for managing coffee leaf rust, coffee berry borer and coffee leaf miner with reduced pesticide use",
+     "anio": 2026,
+     "revista": "Journal of Agriculture and Food Research",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.heliyon.2022.e11892",
+     "titulo": "Contrasting coffee leaf rust epidemics between forest coffee and semi-forest coffee agroforestry systems in SW-Ethiopia",
+     "anio": 2022,
+     "revista": "Heliyon",
+     "citas": 9
+    },
+    {
+     "doi": "10.1016/j.agsy.2026.104900",
+     "titulo": "Economic impacts and farming system responses to the first detection of coffee leaf rust in Hawaii",
+     "anio": 2026,
+     "revista": "Agricultural Systems",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.worlddev.2022.105918",
+     "titulo": "The impact of coffee leaf rust on migration by smallholder coffee farmers in Guatemala",
+     "anio": 2022,
+     "revista": "World Development",
+     "citas": 38
+    },
+    {
+     "doi": "10.1016/j.cropro.2026.107732",
+     "titulo": "Post-invasion fungicide performance: Immediate interventions against coffee leaf rust (Hemileia vastatrix) in Hawaiʻian coffee production systems",
+     "anio": 2026,
+     "revista": "Crop Protection",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.cropro.2025.107269",
+     "titulo": "Fungicide efficacy and duration of protection against coffee leaf rust (Hemileia vastatrix) on commercial coffee farms in Hawaii",
+     "anio": 2025,
+     "revista": "Crop Protection",
+     "citas": 5
+    },
+    {
+     "doi": "10.1016/j.compag.2021.106658",
+     "titulo": "Assessment of state-of-the-art deep learning based citrus disease detection techniques using annotated optical leaf images",
+     "anio": 2022,
+     "revista": "Computers and Electronics in Agriculture",
+     "citas": 127
+    }
+   ]
+  },
+  {
+   "constructo": "C6",
+   "consulta": "coffee leaf rust detection deep learning images",
+   "filtro": "todas las editoriales",
+   "resultados_totales": 1462209,
+   "candidatos": [
+    {
+     "doi": "10.3390/s24248018",
+     "titulo": "Coffee Leaf Rust Disease Detection and Implementation of an Edge Device for Pruning Infected Leaves via Deep Learning Algorithms",
+     "anio": 2024,
+     "revista": "Sensors",
+     "citas": 17
+    },
+    {
+     "doi": "10.9734/jeai/2024/v46i22313",
+     "titulo": "Advancing Coffee Leaf Rust Disease Management: A Deep Learning Approach for Accurate Detection and Classification Using Convolutional Neural Networks",
+     "anio": 2024,
+     "revista": "Journal of Experimental Agriculture International",
+     "citas": 6
+    },
+    {
+     "doi": "10.21275/sr24812105523",
+     "titulo": "AI-Driven Plant Disease Detection: Leveraging Deep Learning for Accurate Plant Disease Detection from Leaf Images",
+     "anio": 2024,
+     "revista": "International Journal of Science and Research (IJSR)",
+     "citas": 4
+    },
+    {
+     "doi": "10.26634/jaim.3.1.21457",
+     "titulo": "Coffee leaf disease detection using deep learning",
+     "anio": 2025,
+     "revista": "i-manager's Journal on Artificial Intelligence &amp; Machine Learning",
+     "citas": 0
+    },
+    {
+     "doi": "10.7717/peerj-cs.3172",
+     "titulo": "Detection of coffee leaf disease and identification using deep learning",
+     "anio": 2025,
+     "revista": "PeerJ Computer Science",
+     "citas": 3
+    },
+    {
+     "doi": "10.3390/app13074565",
+     "titulo": "Influence of Hyperparameters in Deep Learning Models for Coffee Rust Detection",
+     "anio": 2023,
+     "revista": "Applied Sciences",
+     "citas": 21
+    },
+    {
+     "doi": "10.3390/agronomy12122911",
+     "titulo": "Early Detection of Coffee Leaf Rust Caused by Hemileia vastatrix Using Multispectral Images",
+     "anio": 2022,
+     "revista": "Agronomy",
+     "citas": 28
+    },
+    {
+     "doi": "10.51519/journalisi.v7i3.1191",
+     "titulo": "Enhancing Coffee Leaf Rust Detection with DenseNet201Plus and Transfer Learning",
+     "anio": 2025,
+     "revista": "Journal of Information Systems and Informatics",
+     "citas": 0
+    }
+   ]
+  },
+  {
+   "constructo": "C7",
+   "consulta": "edge computing deep learning inference mobile agriculture",
+   "filtro": "ScienceDirect (10.1016)",
+   "resultados_totales": 206694,
+   "candidatos": [
+    {
+     "doi": "10.1016/j.asoc.2024.112164",
+     "titulo": "Deep reinforcement learning-based low-latency task offloading for mobile-edge computing networks",
+     "anio": 2024,
+     "revista": "Applied Soft Computing",
+     "citas": 29
+    },
+    {
+     "doi": "10.1016/j.comnet.2024.110564",
+     "titulo": "Deep Reinforcement Learning-based computation offloading and distributed edge service caching for Mobile Edge Computing",
+     "anio": 2024,
+     "revista": "Computer Networks",
+     "citas": 36
+    },
+    {
+     "doi": "10.1016/j.pmcj.2022.101594",
+     "titulo": "Memory-aware and context-aware multi-DNN inference on the edge",
+     "anio": 2022,
+     "revista": "Pervasive and Mobile Computing",
+     "citas": 12
+    },
+    {
+     "doi": "10.1016/j.icte.2024.09.011",
+     "titulo": "Enhancing network function parallelism in mobile edge computing using Deep Reinforcement Learning",
+     "anio": 2025,
+     "revista": "ICT Express",
+     "citas": 9
+    },
+    {
+     "doi": "10.1016/j.ins.2023.119849",
+     "titulo": "Deep reinforcement learning-based online task offloading in mobile edge computing networks",
+     "anio": 2024,
+     "revista": "Information Sciences",
+     "citas": 57
+    },
+    {
+     "doi": "10.1016/j.phycom.2023.102173",
+     "titulo": "Deep reinforcement learning enabled UAV-IRS-assisted secure mobile edge computing network",
+     "anio": 2023,
+     "revista": "Physical Communication",
+     "citas": 9
+    },
+    {
+     "doi": "10.1016/j.comcom.2025.108337",
+     "titulo": "Dynamic distance-based load balancing in mobile edge computing with deep reinforcement learning",
+     "anio": 2025,
+     "revista": "Computer Communications",
+     "citas": 3
+    },
+    {
+     "doi": "10.1016/j.comnet.2024.110960",
+     "titulo": "STAR-RIS-aided NOMA communication for mobile edge computing using hybrid deep reinforcement learning",
+     "anio": 2025,
+     "revista": "Computer Networks",
+     "citas": 2
+    }
+   ]
+  },
+  {
+   "constructo": "C7",
+   "consulta": "edge computing deep learning inference mobile agriculture",
+   "filtro": "todas las editoriales",
+   "resultados_totales": 1372146,
+   "candidatos": [
+    {
+     "doi": "10.1109/tmc.2026.3736717",
+     "titulo": "Joint Optimization of Training and Inference in Federated Edge Learning via Constrained Multi-Objective Deep Reinforcement Learning",
+     "anio": 2026,
+     "revista": "IEEE Transactions on Mobile Computing",
+     "citas": 0
+    },
+    {
+     "doi": "10.1109/tcc.2020.2978846",
+     "titulo": "Distributed and Collaborative High-Speed Inference Deep Learning for Mobile Edge with Topological Dependencies",
+     "anio": 2022,
+     "revista": "IEEE Transactions on Cloud Computing",
+     "citas": 15
+    },
+    {
+     "doi": "10.21275/sr23603125305",
+     "titulo": "Distributed Deep Learning Based Framework to Optimize Real-Time Offloading in Mobile Edge Computing Networks",
+     "anio": 2023,
+     "revista": "International Journal of Science and Research (IJSR)",
+     "citas": 2
+    },
+    {
+     "doi": "10.1109/tmc.2023.3312304",
+     "titulo": "Roulette: A Semantic Privacy-Preserving Device-Edge Collaborative Inference Framework for Deep Learning Classification Tasks",
+     "anio": 2024,
+     "revista": "IEEE Transactions on Mobile Computing",
+     "citas": 20
+    },
+    {
+     "doi": "10.1109/tmc.2026.3672623",
+     "titulo": "Task-Oriented Computation Offloading for Edge Inference: An Integrated Bayesian Optimization and Deep Reinforcement Learning Framework",
+     "anio": 2026,
+     "revista": "IEEE Transactions on Mobile Computing",
+     "citas": 4
+    },
+    {
+     "doi": "10.1155/2022/7212984",
+     "titulo": "Collaborative Caching in Edge Computing via Federated Learning and Deep Reinforcement Learning",
+     "anio": 2022,
+     "revista": "Wireless Communications and Mobile Computing",
+     "citas": 3
+    },
+    {
+     "doi": "10.1155/2023/4665067",
+     "titulo": "Dependent Task-Offloading Strategy Based on Deep Reinforcement Learning in Mobile Edge Computing",
+     "anio": 2023,
+     "revista": "Wireless Communications and Mobile Computing",
+     "citas": 19
+    },
+    {
+     "doi": "10.1109/tmc.2024.3429571",
+     "titulo": "Reinforcement Learning Based Online Request Scheduling Framework for Workload-Adaptive Edge Deep Learning Inference",
+     "anio": 2024,
+     "revista": "IEEE Transactions on Mobile Computing",
+     "citas": 7
+    }
+   ]
+  },
+  {
+   "constructo": "C7",
+   "consulta": "lightweight CNN mobile plant disease detection",
+   "filtro": "ScienceDirect (10.1016)",
+   "resultados_totales": 260431,
+   "candidatos": [
+    {
+     "doi": "10.1016/j.pmcj.2025.102059",
+     "titulo": "EdgePlantNet: Lightweight edge-aware cyber–physical system for plant disease detection using enhanced attention CNNs",
+     "anio": 2025,
+     "revista": "Pervasive and Mobile Computing",
+     "citas": 11
+    },
+    {
+     "doi": "10.1016/j.asoc.2026.115515",
+     "titulo": "A lightweight CNN supported by partially skip-connected CAE for plant disease identification across multiple agricultural environments",
+     "anio": 2026,
+     "revista": "Applied Soft Computing",
+     "citas": 1
+    },
+    {
+     "doi": "10.1016/j.cpb.2025.100459",
+     "titulo": "RTR_Lite_MobileNetV2: A lightweight and efficient model for plant disease detection and classification",
+     "anio": 2025,
+     "revista": "Current Plant Biology",
+     "citas": 69
+    },
+    {
+     "doi": "10.1016/j.displa.2022.102355",
+     "titulo": "OMCBIR: Offline mobile content-based image retrieval with lightweight CNN optimization",
+     "anio": 2023,
+     "revista": "Displays",
+     "citas": 38
+    },
+    {
+     "doi": "10.1016/j.atech.2023.100362",
+     "titulo": "Ensemble of CNN models for classification of groundnut plant leaf disease detection",
+     "anio": 2023,
+     "revista": "Smart Agricultural Technology",
+     "citas": 48
+    },
+    {
+     "doi": "10.34133/plantphenomics.0174",
+     "titulo": "Toward Real Scenery: A Lightweight Tomato Growth Inspection Algorithm for Leaf Disease Detection and Fruit Counting",
+     "anio": 2024,
+     "revista": "Plant Phenomics",
+     "citas": 45
+    },
+    {
+     "doi": "10.1016/j.ecoinf.2023.102025",
+     "titulo": "DLMC-Net: Deeper lightweight multi-class classification model for plant leaf disease detection",
+     "anio": 2023,
+     "revista": "Ecological Informatics",
+     "citas": 147
+    },
+    {
+     "doi": "10.1016/j.procs.2026.06.138",
+     "titulo": "Hybrid CNN+SNN and ResNet Pipeline for Real-World Plant Disease Detection and Classification",
+     "anio": 2026,
+     "revista": "Procedia Computer Science",
+     "citas": 0
+    }
+   ]
+  },
+  {
+   "constructo": "C7",
+   "consulta": "lightweight CNN mobile plant disease detection",
+   "filtro": "todas las editoriales",
+   "resultados_totales": 1329842,
+   "candidatos": [
+    {
+     "doi": "10.56975/ijedr.v13i3.301798",
+     "titulo": "Lightweight CNN Transformer Hybrid for Real Time Leaf Disease Detection on Mobile Devices: A Review",
+     "anio": 2025,
+     "revista": "INTERNATIONAL JOURNAL OF ENGINEERING DEVELOPMENT AND RESEARCH",
+     "citas": 0
+    },
+    {
+     "doi": "10.1186/s13007-025-01386-5",
+     "titulo": "Mobile based deep CNN model for maize leaf disease detection and classification",
+     "anio": 2025,
+     "revista": "Plant Methods",
+     "citas": 28
+    },
+    {
+     "doi": "10.55248/gengpi.07.0526.c1325",
+     "titulo": "Plant Disease Detection System Using CNN",
+     "anio": 2026,
+     "revista": "International Journal of Research Publication and Reviews",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.pmcj.2025.102059",
+     "titulo": "EdgePlantNet: Lightweight edge-aware cyber–physical system for plant disease detection using enhanced attention CNNs",
+     "anio": 2025,
+     "revista": "Pervasive and Mobile Computing",
+     "citas": 11
+    },
+    {
+     "doi": "10.69513/jncs.v3.i1.a4",
+     "titulo": "A Lightweight Parallel CNN Framework for Real-Time Plant Disease Detection in Corn, Tomato, and Apple",
+     "anio": 2026,
+     "revista": "Al-Noor Journal for Information Technology and Cybersecurity",
+     "citas": 0
+    },
+    {
+     "doi": "10.62718/vmca.tech-gjtdsi.7.1.sc-1025-011",
+     "titulo": "Lightweight CNN for Mobile-Based Detection of Fungal Disease in Onion Leaves",
+     "anio": 2026,
+     "revista": "Technologique: A Global Journal on Technological Developments and Scientific Innovations",
+     "citas": 0
+    },
+    {
+     "doi": "10.3390/app13095801",
+     "titulo": "Lightweight Multiscale CNN Model for Wheat Disease Detection",
+     "anio": 2023,
+     "revista": "Applied Sciences",
+     "citas": 51
+    },
+    {
+     "doi": "10.3844/jcssp.2026.2736.2754",
+     "titulo": "An Edge Efficient and Lightweight Hybrid CNN Vision Transformer Network With CBAM for IoT Based Plant Disease Detection",
+     "anio": 2026,
+     "revista": "Journal of Computer Science",
+     "citas": 0
+    }
+   ]
+  },
+  {
+   "constructo": "C8",
+   "consulta": "federated learning agriculture plant disease",
+   "filtro": "ScienceDirect (10.1016)",
+   "resultados_totales": 299293,
+   "candidatos": [
+    {
+     "doi": "10.1016/j.compag.2024.109720",
+     "titulo": "Adaptive knowledge transfer using federated deep learning for plant disease detection",
+     "anio": 2025,
+     "revista": "Computers and Electronics in Agriculture",
+     "citas": 46
+    },
+    {
+     "doi": "10.1016/j.compag.2024.109001",
+     "titulo": "Resource-efficient federated learning over IoAT for rice leaf disease classification",
+     "anio": 2024,
+     "revista": "Computers and Electronics in Agriculture",
+     "citas": 59
+    },
+    {
+     "doi": "10.1016/j.compag.2026.112249",
+     "titulo": "LCSNet–FedPerGC: An efficient federated learning framework for rice leaf disease classification in the Mekong Delta",
+     "anio": 2026,
+     "revista": "Computers and Electronics in Agriculture",
+     "citas": 1
+    },
+    {
+     "doi": "10.1016/j.eswa.2025.128371",
+     "titulo": "AGRIFOLD: AGRIculture Federated learning for Optimized Leaf disease Detection",
+     "anio": 2025,
+     "revista": "Expert Systems with Applications",
+     "citas": 21
+    },
+    {
+     "doi": "10.1016/j.compag.2026.112206",
+     "titulo": "FedAD: Federated learning with generative data augmentation and adaptive parameter decomposition for rice pest and disease identification",
+     "anio": 2026,
+     "revista": "Computers and Electronics in Agriculture",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.compag.2022.107371",
+     "titulo": "P2OP—Plant Pathology on Palms: A deep learning-based mobile solution for in-field plant disease detection",
+     "anio": 2022,
+     "revista": "Computers and Electronics in Agriculture",
+     "citas": 34
+    },
+    {
+     "doi": "10.1016/j.aiia.2024.03.003",
+     "titulo": "Grow-light smart monitoring system leveraging lightweight deep learning for plant disease classification",
+     "anio": 2024,
+     "revista": "Artificial Intelligence in Agriculture",
+     "citas": 16
+    },
+    {
+     "doi": "10.1016/j.inpa.2026.05.006",
+     "titulo": "Exploring attention mechanisms in deep learning for plant health: A scoping review on disease and pest detection",
+     "anio": 2026,
+     "revista": "Information Processing in Agriculture",
+     "citas": 1
+    }
+   ]
+  },
+  {
+   "constructo": "C8",
+   "consulta": "federated learning agriculture plant disease",
+   "filtro": "todas las editoriales",
+   "resultados_totales": 1824792,
+   "candidatos": [
+    {
+     "doi": "10.1016/j.compag.2024.109720",
+     "titulo": "Adaptive knowledge transfer using federated deep learning for plant disease detection",
+     "anio": 2025,
+     "revista": "Computers and Electronics in Agriculture",
+     "citas": 46
+    },
+    {
+     "doi": "10.3390/agriculture16090918",
+     "titulo": "Real-Field-Ready and Digitally Sustainable Plant Disease Recognition via Federated Multimodal Edge Learning and Few-Shot Domain Adaptation",
+     "anio": 2026,
+     "revista": "Agriculture",
+     "citas": 5
+    },
+    {
+     "doi": "10.3724/2096-7004.di.2025.0097",
+     "titulo": "A Novel Maize Plant Disease Classification using Federated Machine Learning in Smart Agriculture",
+     "anio": 2026,
+     "revista": "Data Intelligence",
+     "citas": 0
+    },
+    {
+     "doi": "10.21275/sr25924111202",
+     "titulo": "Smart Agriculture: Role of Machine Learning in Image-Based Plant Disease Recognition",
+     "anio": 2025,
+     "revista": "International Journal of Science and Research (IJSR)",
+     "citas": 1
+    },
+    {
+     "doi": "10.3390/agriculture15141523",
+     "titulo": "AgriFusionNet: A Lightweight Deep Learning Model for Multisource Plant Disease Diagnosis",
+     "anio": 2025,
+     "revista": "Agriculture",
+     "citas": 52
+    },
+    {
+     "doi": "10.21276/ambi.2022.09.3.ta02",
+     "titulo": "Plant Disease Detection using Transfer Learning in Precision Agriculture",
+     "anio": 2022,
+     "revista": "AMBIENT SCIENCE",
+     "citas": 3
+    },
+    {
+     "doi": "10.70389/pjpb.100025",
+     "titulo": "A Secure Federated Transfer Learning Approach for Cotton Leaf Disease Classification Using Deep Learning Neural Networks",
+     "anio": 2026,
+     "revista": "Premier Journal of Plant Biology",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.compag.2024.109001",
+     "titulo": "Resource-efficient federated learning over IoAT for rice leaf disease classification",
+     "anio": 2024,
+     "revista": "Computers and Electronics in Agriculture",
+     "citas": 59
+    }
+   ]
+  },
+  {
+   "constructo": "C8",
+   "consulta": "distributed artificial intelligence smart farming",
+   "filtro": "ScienceDirect (10.1016)",
+   "resultados_totales": 77677,
+   "candidatos": [
+    {
+     "doi": "10.1016/j.engappai.2023.105899",
+     "titulo": "Smart farming using artificial intelligence: A review",
+     "anio": 2023,
+     "revista": "Engineering Applications of Artificial Intelligence",
+     "citas": 388
+    },
+    {
+     "doi": "10.1016/j.atech.2026.102129",
+     "titulo": "Towards Smart Mushroom Farming: A comprehensive review of data, sensors, robotics and artificial intelligence",
+     "anio": 2026,
+     "revista": "Smart Agricultural Technology",
+     "citas": 4
+    },
+    {
+     "doi": "10.1016/j.aiia.2023.11.002",
+     "titulo": "Vision Intelligence for Smart Sheep Farming: Applying Ensemble Learning to Detect Sheep Breeds",
+     "anio": 2024,
+     "revista": "Artificial Intelligence in Agriculture",
+     "citas": 15
+    },
+    {
+     "doi": "10.1016/j.aiia.2024.06.004",
+     "titulo": "Computer vision in smart agriculture and precision farming: Techniques and applications",
+     "anio": 2024,
+     "revista": "Artificial Intelligence in Agriculture",
+     "citas": 146
+    },
+    {
+     "doi": "10.1016/j.aiia.2026.07.001",
+     "titulo": "Contrastive learning with sparsely annotated dataset for apple detection in smart orchard farming",
+     "anio": 2026,
+     "revista": "Artificial Intelligence in Agriculture",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.atech.2025.100889",
+     "titulo": "Artificial intelligence applied to precision livestock farming: A tertiary study",
+     "anio": 2025,
+     "revista": "Smart Agricultural Technology",
+     "citas": 26
+    },
+    {
+     "doi": "10.1016/j.atech.2022.100132",
+     "titulo": "Smart farming and artificial intelligence in East Africa: Addressing indigeneity, plants, and gender",
+     "anio": 2023,
+     "revista": "Smart Agricultural Technology",
+     "citas": 53
+    },
+    {
+     "doi": "10.1016/j.engappai.2024.107881",
+     "titulo": "A comprehensive review of synthetic data generation in smart farming by using variational autoencoder and generative adversarial network",
+     "anio": 2024,
+     "revista": "Engineering Applications of Artificial Intelligence",
+     "citas": 276
+    }
+   ]
+  },
+  {
+   "constructo": "C8",
+   "consulta": "distributed artificial intelligence smart farming",
+   "filtro": "todas las editoriales",
+   "resultados_totales": 562367,
+   "candidatos": [
+    {
+     "doi": "10.31031/cojra.2025.04.000599",
+     "titulo": "Artificial Intelligence in Agriculture: Enabling Smart and Sustainable Farming",
+     "anio": 2025,
+     "revista": "COJ Robotics &amp; Artificial Intelligence",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.engappai.2023.105899",
+     "titulo": "Smart farming using artificial intelligence: A review",
+     "anio": 2023,
+     "revista": "Engineering Applications of Artificial Intelligence",
+     "citas": 388
+    },
+    {
+     "doi": "10.65024/atr.v3i1.06",
+     "titulo": "Artificial Intelligence in Agriculture: Transforming Traditional Farming into Smart Farming:",
+     "anio": 2026,
+     "revista": "Adamas Technical Review",
+     "citas": 0
+    },
+    {
+     "doi": "10.29333/agrenvedu/18108",
+     "titulo": "Education about smart dairy farming using artificial intelligence",
+     "anio": 2026,
+     "revista": "Agricultural and Environmental Education",
+     "citas": 0
+    },
+    {
+     "doi": "10.1016/j.atech.2026.102129",
+     "titulo": "Towards Smart Mushroom Farming: A comprehensive review of data, sensors, robotics and artificial intelligence",
+     "anio": 2026,
+     "revista": "Smart Agricultural Technology",
+     "citas": 4
+    },
+    {
+     "doi": "10.1016/j.aiia.2023.11.002",
+     "titulo": "Vision Intelligence for Smart Sheep Farming: Applying Ensemble Learning to Detect Sheep Breeds",
+     "anio": 2024,
+     "revista": "Artificial Intelligence in Agriculture",
+     "citas": 15
+    },
+    {
+     "doi": "10.1016/j.aiia.2024.06.004",
+     "titulo": "Computer vision in smart agriculture and precision farming: Techniques and applications",
+     "anio": 2024,
+     "revista": "Artificial Intelligence in Agriculture",
+     "citas": 146
+    },
+    {
+     "doi": "10.64026/jssf/2025005",
+     "titulo": "Exploring Artificial Intelligence Applications in the Agricultural Sector",
+     "anio": 2025,
+     "revista": "Journal of Smart and Sustainable Farming",
+     "citas": 0
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1074 @@
+[
+ {
+  "constructo": "C1",
+  "doi": "10.1007/s10766-022-00749-y",
+  "url": "https://doi.org/10.1007/s10766-022-00749-y",
+  "titulo": "A Fault-Model-Relevant Classification of Consensus Mechanisms for MPI and HPC",
+  "autores": [
+   {
+    "given": "Grace",
+    "family": "Nansamba"
+   },
+   {
+    "given": "Amani",
+    "family": "Altarawneh"
+   },
+   {
+    "given": "Anthony",
+    "family": "Skjellum"
+   }
+  ],
+  "revista": "International Journal of Parallel Programming",
+  "editorial": "Springer Science and Business Media LLC",
+  "anio": 2023,
+  "mes": 6,
+  "volumen": "51",
+  "numero": "2-3",
+  "paginas": "128-149",
+  "articulo": "",
+  "issn": "0885-7458",
+  "resumen": "",
+  "fuente_resumen": "",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C1",
+  "doi": "10.3389/feart.2023.1080879",
+  "url": "https://doi.org/10.3389/feart.2023.1080879",
+  "titulo": "A parallel numerical algorithm by combining MPI and OpenMP programming models with applications in gravity field recovery",
+  "autores": [
+   {
+    "given": "Biao",
+    "family": "Lu"
+   },
+   {
+    "given": "Zhicai",
+    "family": "Luo"
+   },
+   {
+    "given": "Bo",
+    "family": "Zhong"
+   },
+   {
+    "given": "Hao",
+    "family": "Zhou"
+   }
+  ],
+  "revista": "Frontiers in Earth Science",
+  "editorial": "Frontiers Media SA",
+  "anio": 2023,
+  "mes": 3,
+  "volumen": "11",
+  "numero": "",
+  "paginas": "",
+  "articulo": "1080879",
+  "issn": "2296-6463",
+  "resumen": "Satellite gravimetry missions have enabled the calculation of high-accuracy and high-resolution Earth gravity field models from satellite-to-satellite tracking data and gravitational gradients. However, calculating high maximum degree/order (e.g., 240 or even higher) gravity field models using the least squares method is time-consuming due to the vast amount of gravimetry observations. To improve calculation efficiency, a parallel algorithm has been developed by combining Message Passing Interface (MPI) and Open Multi-Processing (OpenMP) programming models to calculate and invert normal equations for the Earth gravity field recovery. The symmetrical feature of normal equations has been implemented to speed up the calculation progress and reduce computation time. For example, the computation time to generate the normal equation of an IGGT_R1 test version of degree/order 240 was reduced from 88 h to 27 h by considering the symmetrical feature. Here, the calculation was based on the high-performance computing cluster with 108 cores in the School of Geodesy and Geomatics, at Wuhan University. Additionally, the MPI parallel Gaussian-Jordan elimination method was modified to invert normal equation matrices and scaled up to 100 processor cores in this study while the traditional method was limited in a certain number of processors. Furthermore, the Cholesky decomposition from the ScaLAPACK library was used to compare with the parallel Gauss-Jordan elimination method. The numerical algorithm has effectively reduced the amount of calculation and sped up the calculation progress, and has been successfully implemented in applications such as building the gravity field models IGGT_R1 and IGGT_R1C.",
+  "fuente_resumen": "Crossref",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C1",
+  "doi": "10.1016/j.parco.2021.102871",
+  "url": "https://doi.org/10.1016/j.parco.2021.102871",
+  "titulo": "Using long vector extensions for MPI reductions",
+  "autores": [
+   {
+    "given": "Dong",
+    "family": "Zhong"
+   },
+   {
+    "given": "Qinglei",
+    "family": "Cao"
+   },
+   {
+    "given": "George",
+    "family": "Bosilca"
+   },
+   {
+    "given": "Jack",
+    "family": "Dongarra"
+   }
+  ],
+  "revista": "Parallel Computing",
+  "editorial": "Elsevier BV",
+  "anio": 2022,
+  "mes": 3,
+  "volumen": "109",
+  "numero": "",
+  "paginas": "102871",
+  "articulo": "102871",
+  "issn": "0167-8191",
+  "resumen": "The modern CPU’s design, including the deep memory hierarchies and SIMD/vectorization capability have a more significant impact on algorithms’ efficiency than the modest frequency increase observed recently. The current introduction of wide vector instruction set extensions (AVX and SVE) motivated vectorization to become a critical software component to increase efficiency and close the gap to peak performance. In this paper, we investigate the impact of the vectorization of MPI reduction operations. We propose an implementation of predefined MPI reduction operations using vector intrinsics (AVX and SVE) to improve the time-to-solution of the predefined MPI reduction operations. The evaluation of the resulting software stack under different scenarios demonstrates that the approach is not only efficient but also generalizable to many vector architectures. Experiments conducted on varied architectures (Intel Xeon Gold, AMD Zen 2, and Arm A64FX), show that the proposed vector extension optimized reduction operations significantly reduce completion time for collective communication reductions. With these optimizations, we achieve higher memory bandwidth and an increased efficiency for local computations, which directly benefit the overall cost of collective reductions and applications based on them.",
+  "fuente_resumen": "Semantic Scholar",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C1",
+  "doi": "10.1109/tpds.2023.3253881",
+  "url": "https://doi.org/10.1109/tpds.2023.3253881",
+  "titulo": "Detailed Modeling of Heterogeneous and Contention-Constrained Point-to-Point MPI Communication",
+  "autores": [
+   {
+    "given": "Andreas",
+    "family": "Thune"
+   },
+   {
+    "given": "Sven-Arne",
+    "family": "Reinemo"
+   },
+   {
+    "given": "Tor",
+    "family": "Skeie"
+   },
+   {
+    "given": "Xing",
+    "family": "Cai"
+   }
+  ],
+  "revista": "IEEE Transactions on Parallel and Distributed Systems",
+  "editorial": "Institute of Electrical and Electronics Engineers (IEEE)",
+  "anio": 2023,
+  "mes": 5,
+  "volumen": "34",
+  "numero": "5",
+  "paginas": "1580-1593",
+  "articulo": "",
+  "issn": "1045-9219",
+  "resumen": "The network topology of modern parallel computing systems is inherently heterogeneous, with a variety of latency and bandwidth values. Moreover, contention for the bandwidth can exist on different levels when many processes communicate with each other. Many-pair, point-to-point MPI communication is thus characterized by heterogeneity and contention, even on a cluster of homogeneous multicore CPU nodes. To get a detailed understanding of the individual communication cost per MPI process, we propose a new modeling methodology that incorporates both heterogeneity and contention. First, we improve the standard max-rate model to better quantify the actually achievable bandwidth depending on the number of MPI processes in competition. Then, we make a further extension that more detailedly models the bandwidth contention when the competing MPI processes have different numbers of neighbors, with also non-uniform message sizes. Thereafter, we include more flexibility by considering interactions between intra-socket and inter-socket messaging. Through a series of experiments done on different processor architectures, we show that the new heterogeneous and contention-constrained performance models can adequately explain the individual communication cost associated with each MPI process. The largest test of realistic point-to-point MPI communication involves 8,192 processes and in total 2,744,632 simultaneous messages over 64 dual-socket AMD Epyc Rome compute nodes connected by InfiniBand, for which the overall prediction accuracy achieved is 84%.",
+  "fuente_resumen": "Semantic Scholar",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C3",
+  "doi": "10.1016/j.jpdc.2024.104879",
+  "url": "https://doi.org/10.1016/j.jpdc.2024.104879",
+  "titulo": "A characterization of soft-error sensitivity in data-parallel and model-parallel distributed deep learning",
+  "autores": [
+   {
+    "given": "Elvis",
+    "family": "Rojas"
+   },
+   {
+    "given": "Diego",
+    "family": "Pérez"
+   },
+   {
+    "given": "Esteban",
+    "family": "Meneses"
+   }
+  ],
+  "revista": "Journal of Parallel and Distributed Computing",
+  "editorial": "Elsevier BV",
+  "anio": 2024,
+  "mes": 8,
+  "volumen": "190",
+  "numero": "",
+  "paginas": "104879",
+  "articulo": "104879",
+  "issn": "0743-7315",
+  "resumen": "",
+  "fuente_resumen": "",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C3",
+  "doi": "10.1016/j.jpdc.2024.104890",
+  "url": "https://doi.org/10.1016/j.jpdc.2024.104890",
+  "titulo": "Optimizing DNN training with pipeline model parallelism for enhanced performance in embedded systems",
+  "autores": [
+   {
+    "given": "Md Al",
+    "family": "Maruf"
+   },
+   {
+    "given": "Akramul",
+    "family": "Azim"
+   },
+   {
+    "given": "Nitin",
+    "family": "Auluck"
+   },
+   {
+    "given": "Mansi",
+    "family": "Sahi"
+   }
+  ],
+  "revista": "Journal of Parallel and Distributed Computing",
+  "editorial": "Elsevier BV",
+  "anio": 2024,
+  "mes": 8,
+  "volumen": "190",
+  "numero": "",
+  "paginas": "104890",
+  "articulo": "104890",
+  "issn": "0743-7315",
+  "resumen": "Deep Neural Networks (DNNs) have gained widespread popularity in different domain applications due to their dominant performance. Despite the prevalence of massively parallel multi-core processor architectures, adopting large DNN models in embedded systems remains challenging, as most embedded applications are designed with single-core processors in mind. This limits DNN adoption in embedded systems due to inefficient leveraging of model parallelization and workload partitioning. Prior solutions attempt to address these challenges using data and model parallelism. However, they lack in finding optimal DNN model partitions and distributing them efficiently to achieve improved performance. This paper proposes a DNN model parallelism framework to accelerate model training by finding the optimal number of model partitions and resource provisions. The proposed framework combines data and model parallelism techniques to optimize the parallel processing of DNNs for embedded applications. In addition, it implements the pipeline execution of the partitioned models and integrates a task controller to manage the computing resources. The experimental results for image object detection demonstrate the applicability of our proposed framework in estimating the latest execution time and reducing overall model training time by almost 44.87% compared to the baseline AlexNet convolutional neural network (CNN) model.",
+  "fuente_resumen": "OpenAlex",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C3",
+  "doi": "10.1016/j.procs.2022.12.041",
+  "url": "https://doi.org/10.1016/j.procs.2022.12.041",
+  "titulo": "Pipeline Parallelism in Distributed Deep Learning for Diabetic Retinopathy Classification",
+  "autores": [
+   {
+    "given": "Shashank Anand",
+    "family": "Patil"
+   },
+   {
+    "given": "Mahesh S",
+    "family": "Patil"
+   },
+   {
+    "given": "Shantala",
+    "family": "Giraddi"
+   },
+   {
+    "given": "Satyadhyan",
+    "family": "Chickerur"
+   },
+   {
+    "given": "Vinayak M",
+    "family": "Boormane"
+   },
+   {
+    "given": "Ganesh",
+    "family": "Gamanagatti"
+   }
+  ],
+  "revista": "Procedia Computer Science",
+  "editorial": "Elsevier BV",
+  "anio": 2022,
+  "mes": null,
+  "volumen": "215",
+  "numero": "",
+  "paginas": "393-402",
+  "articulo": "",
+  "issn": "1877-0509",
+  "resumen": "Deep learning (DL) has been used widely and successfully in a variety of industries. It is challenging for researchers to carry out their experiments to find the optimal learning model because training the deep learning model is a time-consuming operation. Distributed deep learning offers a technique for rapid training of DL models (DDL). It is difficult to create and implement DDL, nevertheless, so it is important to report on the performance analysis of different DDL algorithms for the benefit of the research community. The authors of this proposed study use two GPUs to design, construct, and analyse a pipeline parallelism in DDL and then present an analysis of its performance. As a case study for DDL implementation, the authors employ diabetic retinopathy classification. 0.834 is obtained as the validation F1 score. The performance of DDL is reported and examined by the authors, and it is demonstrated to improve training effectiveness in terms of both time and speed.",
+  "fuente_resumen": "OpenAlex",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C3",
+  "doi": "10.1109/tpds.2023.3281931",
+  "url": "https://doi.org/10.1109/tpds.2023.3281931",
+  "titulo": "A Survey on Auto-Parallelism of Large-Scale Deep Learning Training",
+  "autores": [
+   {
+    "given": "Peng",
+    "family": "Liang"
+   },
+   {
+    "given": "Yu",
+    "family": "Tang"
+   },
+   {
+    "given": "Xiaoda",
+    "family": "Zhang"
+   },
+   {
+    "given": "Youhui",
+    "family": "Bai"
+   },
+   {
+    "given": "Teng",
+    "family": "Su"
+   },
+   {
+    "given": "Zhiquan",
+    "family": "Lai"
+   },
+   {
+    "given": "Linbo",
+    "family": "Qiao"
+   },
+   {
+    "given": "Dongsheng",
+    "family": "Li"
+   }
+  ],
+  "revista": "IEEE Transactions on Parallel and Distributed Systems",
+  "editorial": "Institute of Electrical and Electronics Engineers (IEEE)",
+  "anio": 2023,
+  "mes": 8,
+  "volumen": "34",
+  "numero": "8",
+  "paginas": "2377-2390",
+  "articulo": "",
+  "issn": "1045-9219",
+  "resumen": "Deep learning (DL) has gained great success in recent years, leading to state-of-the-art performance in research community and industrial fields like computer vision and natural language processing. One of the reasons for this success is the huge amount parameters adopted in DL models. However, it is impractical to train a moderately large model with a large number of parameters on a typical single device. Thus, It is necessary to train DL models in clusters with distributed training algorithms. However, traditional distributed training algorithms are usually sub-optimal and highly customized, which owns the drawbacks to train large-scale DL models in varying computing clusters. To handle the above problem, researchers propose auto-parallelism, which is promising to train large-scale DL models efficiently and practically in various computing clusters. In this survey, we perform a broad and thorough investigation on challenges, basis, and strategy searching methods of auto-parallelism in DL training. First, we abstract basic parallelism schemes with their communication cost and memory consumption in DL training. Further, we analyze and compare a series of current auto-parallelism works and investigate strategies and searching methods which are commonly used in practice. At last, we discuss several trends in auto-parallelism which are promising in further research.",
+  "fuente_resumen": "Semantic Scholar",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C3",
+  "doi": "10.1371/journal.pone.0293338",
+  "url": "https://doi.org/10.1371/journal.pone.0293338",
+  "titulo": "Towards accelerating model parallelism in distributed deep learning systems",
+  "autores": [
+   {
+    "given": "Hyeonseong",
+    "family": "Choi"
+   },
+   {
+    "given": "Byung Hyun",
+    "family": "Lee"
+   },
+   {
+    "given": "Se Young",
+    "family": "Chun"
+   },
+   {
+    "given": "Jaehwan",
+    "family": "Lee"
+   }
+  ],
+  "revista": "PLOS ONE",
+  "editorial": "Public Library of Science (PLoS)",
+  "anio": 2023,
+  "mes": 11,
+  "volumen": "18",
+  "numero": "11",
+  "paginas": "e0293338",
+  "articulo": "",
+  "issn": "1932-6203",
+  "resumen": "Modern deep neural networks cannot be often trained on a single GPU due to large model size and large data size. Model parallelism splits a model for multiple GPUs, but making it scalable and seamless is challenging due to different information sharing among GPUs with communication overhead. Specifically, we identify two key issues to make the parallelism being inefficient and inaccurate; an efficient pipelining technique is crucial to maximize GPU utilization and normalizations in deep neural networks may affect the performance due to different statistics sharing of mini-batch. In this work, we address these issues by investigating efficient pipelining for model parallelism and effective normalizations in model / data parallelisms when training a model with large mini-batch in multiple GPUs so that the model performance in accuracy can not be compromised. Firstly, we propose a novel method to search for an optimal micro-batch size considering the number of GPUs and memory size for model parallelism. For efficient pipelining, mini-batch is usually divided into smaller batches (called micro-batch). To maximize the utilization of GPU computing resources, training should be performed with the optimal micro-batch size. Our proposed micro-batch size search algorithm achieved increased image throughput by up to 12% and improved trainable mini-batch size by 25% as compared to the conventional model parallelism method. Secondly, we investigate normalizations in distributed deep learning training for different parallelisms. Our experiments using different normalization methods suggested that the performance with batch normalization can be improved by sharing the batch information among GPUs when performing data parallelism. It was also confirmed that group normalization helped minimizing accuracy degradation when performing model parallelism with pipelining and yielded consistent accuracies for diverse mini-batch sizes.",
+  "fuente_resumen": "Crossref",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C3",
+  "doi": "10.29375/25392115.5054",
+  "url": "https://doi.org/10.29375/25392115.5054",
+  "titulo": "A snapshot of parallelism in distributed deep learning training",
+  "autores": [
+   {
+    "given": "Hairol",
+    "family": "Romero-Sandí"
+   },
+   {
+    "given": "Gabriel",
+    "family": "Núñez"
+   },
+   {
+    "given": "Elvis",
+    "family": "Rojas"
+   }
+  ],
+  "revista": "Revista Colombiana de Computación",
+  "editorial": "Universidad Autonoma de Bucaramanga",
+  "anio": 2024,
+  "mes": 6,
+  "volumen": "25",
+  "numero": "1",
+  "paginas": "60-73",
+  "articulo": "",
+  "issn": "2539-2115",
+  "resumen": "The accelerated development of applications related to artificial intelligence has generated the creation of increasingly complex neural network models with enormous amounts of parameters, currently reaching up to trillions of parameters. Therefore, it makes your training almost impossible without the parallelization of training. Parallelism applied with different approaches is the mechanism that has been used to solve the problem of training on a large scale. This paper presents a glimpse of the state of the art related to parallelism in deep learning training from multiple points of view. The topics of pipeline parallelism, hybrid parallelism, mixture-of-experts and auto-parallelism are addressed in this study, which currently play a leading role in scientific research related to this area. Finally, we develop a series of experiments with data parallelism and model parallelism. The objective is that the reader can observe the performance of two types of parallelism and understand more clearly the approach of each one.",
+  "fuente_resumen": "Crossref",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C3",
+  "doi": "10.1134/s1995080223080218",
+  "url": "https://doi.org/10.1134/s1995080223080218",
+  "titulo": "Early Performance Evaluation of Distributed Learning via GPU-Aware MPI over the Angara Interconnect",
+  "autores": [
+   {
+    "given": "T. F.",
+    "family": "Ismagilov"
+   },
+   {
+    "given": "A. V.",
+    "family": "Piruygin"
+   },
+   {
+    "given": "A. S.",
+    "family": "Semenov"
+   }
+  ],
+  "revista": "Lobachevskii Journal of Mathematics",
+  "editorial": "Pleiades Publishing Ltd",
+  "anio": 2023,
+  "mes": 8,
+  "volumen": "44",
+  "numero": "8",
+  "paginas": "3091-3099",
+  "articulo": "",
+  "issn": "1995-0802",
+  "resumen": "Distributed neural network computation heavily relies on GPUs and high-speed interconnects. We use Nvidia Tesla GPUs with Angara interconnect for distributed deep learning. We present early performance evaluation results of the Angara interconnect software stack with Nvidia GPU support. We compare the training performance of ResNet50, ResNet152, and DenseNet201 neural networks from the TensorFlow framework when using Nvidia V100 GPUs with Angara, Nvidia Infiniband EDR 56 Gbit/s, and 1 Gbit/s Ethernet interconnects.",
+  "fuente_resumen": "OpenAlex",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C4",
+  "doi": "10.1016/j.compfluid.2022.105455",
+  "url": "https://doi.org/10.1016/j.compfluid.2022.105455",
+  "titulo": "An implementation of MPI and hybrid OpenMP/MPI parallelization strategies for an implicit 3D DDG solver",
+  "autores": [
+   {
+    "given": "Xiaofeng",
+    "family": "He"
+   },
+   {
+    "given": "Kun",
+    "family": "Wang"
+   },
+   {
+    "given": "Yiwei",
+    "family": "Feng"
+   },
+   {
+    "given": "Lili",
+    "family": "Lv"
+   },
+   {
+    "given": "Tiegang",
+    "family": "Liu"
+   }
+  ],
+  "revista": "Computers & Fluids",
+  "editorial": "Elsevier BV",
+  "anio": 2022,
+  "mes": 6,
+  "volumen": "241",
+  "numero": "",
+  "paginas": "105455",
+  "articulo": "105455",
+  "issn": "0045-7930",
+  "resumen": "",
+  "fuente_resumen": "",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C4",
+  "doi": "10.1016/j.compgeo.2024.106408",
+  "url": "https://doi.org/10.1016/j.compgeo.2024.106408",
+  "titulo": "Parallel implementation of LS-DEM with hybrid MPI+OpenMP",
+  "autores": [
+   {
+    "given": "Peng",
+    "family": "Tan"
+   },
+   {
+    "given": "Nicholas",
+    "family": "Sitar"
+   }
+  ],
+  "revista": "Computers and Geotechnics",
+  "editorial": "Elsevier BV",
+  "anio": 2024,
+  "mes": 8,
+  "volumen": "172",
+  "numero": "",
+  "paginas": "106408",
+  "articulo": "106408",
+  "issn": "0266-352X",
+  "resumen": "",
+  "fuente_resumen": "",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C4",
+  "doi": "10.1007/s11227-022-04961-y",
+  "url": "https://doi.org/10.1007/s11227-022-04961-y",
+  "titulo": "A hybrid CUDA, OpenMP, and MPI parallel TCA-based domain adaptation for classification of very high-resolution remote sensing images",
+  "autores": [
+   {
+    "given": "Alberto S.",
+    "family": "Garea"
+   },
+   {
+    "given": "Dora B.",
+    "family": "Heras"
+   },
+   {
+    "given": "Francisco",
+    "family": "Argüello"
+   },
+   {
+    "given": "Begüm",
+    "family": "Demir"
+   }
+  ],
+  "revista": "The Journal of Supercomputing",
+  "editorial": "Springer Science and Business Media LLC",
+  "anio": 2023,
+  "mes": 5,
+  "volumen": "79",
+  "numero": "7",
+  "paginas": "7513-7532",
+  "articulo": "",
+  "issn": "0920-8542",
+  "resumen": "Domain Adaptation (DA) is a technique that aims at extracting information from a labeled remote sensing image to allow classifying a different image obtained by the same sensor but at a different geographical location. This is a very complex problem from the computational point of view, specially due to the very high-resolution of multispectral images. TCANet is a deep learning neural network for DA classification problems that has been proven as very accurate for solving them. TCANet consists of several stages based on the application of convolutional filters obtained through Transfer Component Analysis (TCA) computed over the input images. It does not require backpropagation training, in contrast to the usual CNN-based networks, as the convolutional filters are directly computed based on the TCA transform applied over the training samples. In this paper, a hybrid parallel TCA-based domain adaptation technique for solving the classification of very high-resolution multispectral images is presented. It is designed for efficient execution on a multi-node computer by using Message Passing Interface (MPI), exploiting the available Graphical Processing Units (GPUs), and making efficient use of each multicore node by using Open Multi-Processing (OpenMP). As a result, an accurate DA technique from the point of view of classification and with high speedup values over the sequential version is obtained, increasing the applicability of the technique to real problems.",
+  "fuente_resumen": "Crossref",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C4",
+  "doi": "10.1016/j.cageo.2024.105616",
+  "url": "https://doi.org/10.1016/j.cageo.2024.105616",
+  "titulo": "Simulation and reconstruction for 3D elastic wave using multi-GPU and CUDA-aware MPI",
+  "autores": [
+   {
+    "given": "Wei",
+    "family": "Cai"
+   },
+   {
+    "given": "Peimin",
+    "family": "Zhu"
+   },
+   {
+    "given": "Ziang",
+    "family": "Li"
+   }
+  ],
+  "revista": "Computers & Geosciences",
+  "editorial": "Elsevier BV",
+  "anio": 2024,
+  "mes": 8,
+  "volumen": "190",
+  "numero": "",
+  "paginas": "105616",
+  "articulo": "105616",
+  "issn": "0098-3004",
+  "resumen": "",
+  "fuente_resumen": "",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C5",
+  "doi": "10.1007/s10586-021-03452-8",
+  "url": "https://doi.org/10.1007/s10586-021-03452-8",
+  "titulo": "IMB-ASYNC: a revised method and benchmark to estimate MPI-3 asynchronous progress efficiency",
+  "autores": [
+   {
+    "given": "Alexey V.",
+    "family": "Medvedev"
+   }
+  ],
+  "revista": "Cluster Computing",
+  "editorial": "Springer Science and Business Media LLC",
+  "anio": 2022,
+  "mes": 8,
+  "volumen": "25",
+  "numero": "4",
+  "paginas": "2683-2697",
+  "articulo": "",
+  "issn": "1386-7857",
+  "resumen": "",
+  "fuente_resumen": "",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C5",
+  "doi": "10.1016/j.ascom.2022.100655",
+  "url": "https://doi.org/10.1016/j.ascom.2022.100655",
+  "titulo": "Deployment of a programming framework based on microservices and containers with application to the astrophysical domain",
+  "autores": [
+   {
+    "given": "O.",
+    "family": "Bentaleb"
+   },
+   {
+    "given": "A.",
+    "family": "Sebaa"
+   },
+   {
+    "given": "S.",
+    "family": "Kalli"
+   },
+   {
+    "given": "A.S.Z.",
+    "family": "Belloum"
+   }
+  ],
+  "revista": "Astronomy and Computing",
+  "editorial": "Elsevier BV",
+  "anio": 2022,
+  "mes": 10,
+  "volumen": "41",
+  "numero": "",
+  "paginas": "100655",
+  "articulo": "100655",
+  "issn": "2213-1337",
+  "resumen": "",
+  "fuente_resumen": "",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C5",
+  "doi": "10.1007/s10586-021-03517-8",
+  "url": "https://doi.org/10.1007/s10586-021-03517-8",
+  "titulo": "Performance and isolation analysis of RunC, gVisor and Kata Containers runtimes",
+  "autores": [
+   {
+    "given": "Xingyu",
+    "family": "Wang"
+   },
+   {
+    "given": "Junzhao",
+    "family": "Du"
+   },
+   {
+    "given": "Hui",
+    "family": "Liu"
+   }
+  ],
+  "revista": "Cluster Computing",
+  "editorial": "Springer Science and Business Media LLC",
+  "anio": 2022,
+  "mes": 4,
+  "volumen": "25",
+  "numero": "2",
+  "paginas": "1497-1513",
+  "articulo": "",
+  "issn": "1386-7857",
+  "resumen": "",
+  "fuente_resumen": "",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C6",
+  "doi": "10.1016/j.ecoinf.2023.102245",
+  "url": "https://doi.org/10.1016/j.ecoinf.2023.102245",
+  "titulo": "Vision transformer meets convolutional neural network for plant disease classification",
+  "autores": [
+   {
+    "given": "Poornima Singh",
+    "family": "Thakur"
+   },
+   {
+    "given": "Shubhangi",
+    "family": "Chaturvedi"
+   },
+   {
+    "given": "Pritee",
+    "family": "Khanna"
+   },
+   {
+    "given": "Tanuja",
+    "family": "Sheorey"
+   },
+   {
+    "given": "Aparajita",
+    "family": "Ojha"
+   }
+  ],
+  "revista": "Ecological Informatics",
+  "editorial": "Elsevier BV",
+  "anio": 2023,
+  "mes": 11,
+  "volumen": "77",
+  "numero": "",
+  "paginas": "102245",
+  "articulo": "102245",
+  "issn": "1574-9541",
+  "resumen": "",
+  "fuente_resumen": "",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C6",
+  "doi": "10.1016/j.ecoinf.2024.102925",
+  "url": "https://doi.org/10.1016/j.ecoinf.2024.102925",
+  "titulo": "Ensemble transfer learning meets explainable AI: A deep learning approach for leaf disease detection",
+  "autores": [
+   {
+    "given": "Hetarth",
+    "family": "Raval"
+   },
+   {
+    "given": "Jyotismita",
+    "family": "Chaki"
+   }
+  ],
+  "revista": "Ecological Informatics",
+  "editorial": "Elsevier BV",
+  "anio": 2024,
+  "mes": 12,
+  "volumen": "84",
+  "numero": "",
+  "paginas": "102925",
+  "articulo": "102925",
+  "issn": "1574-9541",
+  "resumen": "Global food security is threatened by plant diseases and manual detection methods are often labor-intensive and time-consuming. Deep learning offers a promising solution by enabling early and accurate detection of leaf diseases. This study presents a novel deep-learning model designed to address the challenges of real-world leaf disease identification. To enhance the model's robustness, we incorporated six datasets (LD, LD1, LD2, LD3, LD4, LD5) which include image augmentation techniques, like flipped versions (LD1) and controlled noise (LD2, LD3). Additionally, we introduced new datasets with additional noise types (LD4) and real-world scenarios (LD5). To further improve accuracy, we employed an ensemble approach, combining MobileNetV3_Small and EfficientNetV2B3 with weighted voting. Our model achieved exceptional performance, surpassing 94 % accuracy on imbalanced data (LD) and exceeding 99 % on balanced, high-quality data (LD1). Even in noisy environments (LD2, LD3, LD4, LD5), our model consistently outperformed other approaches, maintaining an accuracy rate above 90 %. To ensure transparency and interpretability, we utilized Explainable AI (LIME) to visualize the model's decision-making process. These results demonstrate the potential of our model as a reliable and accurate tool for leaf disease detection in practical agricultural settings. • Ensemble Learning: Combining multiple pre-trained models (MobileNetV3_Small, EfficientNetV2B3) significantly improved accuracy and robustness. • Data Augmentation: Flipping and noise addition improved model generalization and performance. • Model Interpretability: LIME (Explainable AI technique) enhanced model understanding and trust. • Robustness to Noise: Model performed well in noisy environments (varied brightness, contrast, blur, clutter, noise). • Real-world Applicability: Model's accuracy on LD5 dataset shows its potential for practical agriculture.",
+  "fuente_resumen": "OpenAlex",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C6",
+  "doi": "10.1016/j.atech.2024.100526",
+  "url": "https://doi.org/10.1016/j.atech.2024.100526",
+  "titulo": "Semantic segmentation for plant leaf disease classification and damage detection: A deep learning approach",
+  "autores": [
+   {
+    "given": "Roshni",
+    "family": "Polly"
+   },
+   {
+    "given": "E. Anna",
+    "family": "Devi"
+   }
+  ],
+  "revista": "Smart Agricultural Technology",
+  "editorial": "Elsevier BV",
+  "anio": 2024,
+  "mes": 12,
+  "volumen": "9",
+  "numero": "",
+  "paginas": "100526",
+  "articulo": "100526",
+  "issn": "2772-3755",
+  "resumen": "Agriculture sustains the livelihoods of a significant portion of India's rural population, yet challenges persist in manual practices and disease management. To address these issues, this paper presents an automated plant leaf damage detection and disease identification system leveraging advanced deep learning techniques. The proposed method consists of six stages: first, utilizing YOLOv8 for region of interest identification from drone images; second, employing DeepLabV3+ for background removal and facilitating disease classification; third, implementing a CNN model for accurate disease classification achieving high training and validation accuracies (96.97 % and 92.89 %, respectively); fourth, utilizing UNet semantic segmentation for precise damage detection at a pixel level with an evaluation accuracy of 99 %; fifth, evaluating disease severity; and sixth, suggesting tailored remedies based on disease type and damage state. Experimental analysis using the Plant Village dataset demonstrates the effectiveness of the proposed method in detecting various defects in plants such as apple, tomato, and corn. This automated approach holds promise for enhancing agricultural productivity and disease management in India and beyond.",
+  "fuente_resumen": "OpenAlex",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C6",
+  "doi": "10.3390/app13074565",
+  "url": "https://doi.org/10.3390/app13074565",
+  "titulo": "Influence of Hyperparameters in Deep Learning Models for Coffee Rust Detection",
+  "autores": [
+   {
+    "given": "Adrian F.",
+    "family": "Chavarro"
+   },
+   {
+    "given": "Diego",
+    "family": "Renza"
+   },
+   {
+    "given": "Dora M.",
+    "family": "Ballesteros"
+   }
+  ],
+  "revista": "Applied Sciences",
+  "editorial": "MDPI AG",
+  "anio": 2023,
+  "mes": 4,
+  "volumen": "13",
+  "numero": "7",
+  "paginas": "4565",
+  "articulo": "",
+  "issn": "2076-3417",
+  "resumen": "Most of the world’s crops can be attacked by various diseases or pests, affecting their quality and productivity. In recent years, transfer learning with deep learning (DL) models has been used to detect diseases in maize, tomato, rice, and other crops. In the specific case of coffee, some recent works have used fixed hyperparameters to fine-tune the pre-trained models with the new dataset and/or applied data augmentation, such as image patching, to improve classifier performance. However, a detailed evaluation of the impact of architecture (e.g., backbone) and training (e.g., optimizer and learning rate) hyperparameters on the performance of coffee rust classification models has not been performed. Therefore, this paper presents a comprehensive study of the impact of five types of hyperparameters on the performance of coffee rust classification models. Specifically, eight pre-trained models are compared, each with four different amounts of transferred layers and three different numbers of neurons in the fully-connected (FC) layer, and the models are fine-tuned with three types of optimizers, each with three learning rate values. Comparing more than 800 models in terms of F1-score and accuracy, it is identified that the type of backbone is the hyperparameter with the greatest impact (with differences between models of up to 70%), followed by the optimizer (with differences of up to 20%). At the end of the study, specific recommendations are made on the values of the most suitable hyperparameters for the identification of this type of disease in coffee crops.",
+  "fuente_resumen": "Crossref",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C6",
+  "doi": "10.7717/peerj-cs.2406",
+  "url": "https://doi.org/10.7717/peerj-cs.2406",
+  "titulo": "DeepEMPR: coffee leaf disease detection with deep learning and enhanced multivariance product representation",
+  "autores": [
+   {
+    "given": "Ahmet",
+    "family": "Topal"
+   },
+   {
+    "given": "Burcu",
+    "family": "Tunga"
+   },
+   {
+    "given": "Erfan Babaee",
+    "family": "Tirkolaee"
+   }
+  ],
+  "revista": "PeerJ Computer Science",
+  "editorial": "PeerJ",
+  "anio": 2024,
+  "mes": 11,
+  "volumen": "10",
+  "numero": "",
+  "paginas": "e2406",
+  "articulo": "e2406",
+  "issn": "2376-5992",
+  "resumen": "Plant diseases threaten agricultural sustainability by reducing crop yields. Rapid and accurate disease identification is crucial for effective management. Recent advancements in artificial intelligence (AI) have facilitated the development of automated systems for disease detection. This study focuses on enhancing the classification of diseases and estimating their severity in coffee leaf images. To do so, we propose a novel approach as the preprocessing step for the classification in which enhanced multivariance product representation (EMPR) is used to decompose the considered image into components, a new image is constructed using some of those components, and the contrast of the new image is enhanced by applying high-dimensional model representation (HDMR) to highlight the diseased parts of the leaves. Popular convolutional neural network (CNN) architectures, including AlexNet, VGG16, and ResNet50, are evaluated. Results show that VGG16 achieves the highest classification accuracy of approximately 96%, while all models perform well in predicting disease severity levels, with accuracies exceeding 85%. Notably, the ResNet50 model achieves accuracy levels surpassing 90%. This research contributes to the advancement of automated crop health management systems.",
+  "fuente_resumen": "Crossref",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C7",
+  "doi": "10.1016/j.compag.2022.107371",
+  "url": "https://doi.org/10.1016/j.compag.2022.107371",
+  "titulo": "P2OP—Plant Pathology on Palms: A deep learning-based mobile solution for in-field plant disease detection",
+  "autores": [
+   {
+    "given": "Sivasubramaniam",
+    "family": "Janarthan"
+   },
+   {
+    "given": "Selvarajah",
+    "family": "Thuseethan"
+   },
+   {
+    "given": "Sutharshan",
+    "family": "Rajasegarar"
+   },
+   {
+    "given": "John",
+    "family": "Yearwood"
+   }
+  ],
+  "revista": "Computers and Electronics in Agriculture",
+  "editorial": "Elsevier BV",
+  "anio": 2022,
+  "mes": 11,
+  "volumen": "202",
+  "numero": "",
+  "paginas": "107371",
+  "articulo": "107371",
+  "issn": "0168-1699",
+  "resumen": "",
+  "fuente_resumen": "",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C7",
+  "doi": "10.1016/j.aiia.2024.03.003",
+  "url": "https://doi.org/10.1016/j.aiia.2024.03.003",
+  "titulo": "Grow-light smart monitoring system leveraging lightweight deep learning for plant disease classification",
+  "autores": [
+   {
+    "given": "William",
+    "family": "Macdonald"
+   },
+   {
+    "given": "Yuksel Asli",
+    "family": "Sari"
+   },
+   {
+    "given": "Majid",
+    "family": "Pahlevani"
+   }
+  ],
+  "revista": "Artificial Intelligence in Agriculture",
+  "editorial": "Elsevier BV",
+  "anio": 2024,
+  "mes": 6,
+  "volumen": "12",
+  "numero": "",
+  "paginas": "44-56",
+  "articulo": "",
+  "issn": "2589-7217",
+  "resumen": "This work focuses on a novel lightweight machine learning approach to the task of plant disease classification, posing as a core component of a larger grow-light smart monitoring system. To the extent of our knowledge, this work is the first to implement lightweight convolutional neural network architectures leveraging down-scaled versions of inception blocks, residual connections, and dense residual connections applied without pre-training to the PlantVillage dataset. The novel contributions of this work include the proposal of a smart monitoring framework outline; responsible for detection and classification of ailments via the devised lightweight networks as well as interfacing with LED grow-light fixtures to optimize environmental parameters and lighting control for the growth of plants in a greenhouse system. Lightweight adaptation of dense residual connections achieved the best balance of minimizing model parameters and maximizing performance metrics with accuracy, precision, recall, and F1-scores of 96.75%, 97.62%, 97.59%, and 97.58% respectively, while consisting of only 228,479 model parameters. These results are further compared against various full-scale state-of-the-art model architectures trained on the PlantVillage dataset, of which the proposed down-scaled lightweight models were capable of performing equally to, if not better than many large-scale counterparts, with drastically less computational requirements.",
+  "fuente_resumen": "OpenAlex",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C7",
+  "doi": "10.1186/s13007-025-01386-5",
+  "url": "https://doi.org/10.1186/s13007-025-01386-5",
+  "titulo": "Mobile based deep CNN model for maize leaf disease detection and classification",
+  "autores": [
+   {
+    "given": "Getnet Tigabie",
+    "family": "Askale"
+   },
+   {
+    "given": "Achenef Behulu",
+    "family": "Yibel"
+   },
+   {
+    "given": "Belayneh Matebie",
+    "family": "Taye"
+   },
+   {
+    "given": "Gashaw Desalegn",
+    "family": "Wubneh"
+   }
+  ],
+  "revista": "Plant Methods",
+  "editorial": "Springer Science and Business Media LLC",
+  "anio": 2025,
+  "mes": 5,
+  "volumen": "21",
+  "numero": "1",
+  "paginas": "",
+  "articulo": "72",
+  "issn": "1746-4811",
+  "resumen": "Maize is the most produced crop in the world, exceeding wheat and rice production. However, its yield is often affected by various leaf diseases. Early identification of maize leaf disease through easily accessible tool is required to increase the yield of maize. Recently, researchers have attempted to detect and classify maize leaf diseases using Deep Learning algorithms. However, to the best of the researcher’s knowledge, nearly all the studies are concentrated on developing an offline model that can detect maize diseases. But, those models are not easily accessible to individuals and don’t provide immediate feedback and monitoring. Thus, in this study, we developed a novel real-time, user-friendly maize leaf disease detection and classification mobile application. The VGG16, AlexNet, and ResNet50 models were implemented and compared their performance on maize disease detection and classification. A total of 4188 images of blight, common_rust, grey_leaf_spot, and healthy were used to train each model. Data augmentation techniques were applied to the dataset to increase the size of the dataset, which can also reduce model overfitting. Weighted cross-entropy loss was also employed to mitigate class-imbalance problems. After training, VGG16 achieved 95% of testing accuracy, AlexNet achieved 91%, and ResNet50 achieved 72% of testing accuracy. The VGG16 model outperformed the other models in terms of accuracy. Consequently, we deployed the VGG16 model into a mobile application to provide real-time disease detection and classification tool for farmers, extension officers, agribusiness managers, and policy-makers. The developed application will enhance early disease detection, decision making, and contribute to better crop management and food security.",
+  "fuente_resumen": "Semantic Scholar",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C7",
+  "doi": "10.1016/j.ecoinf.2023.102025",
+  "url": "https://doi.org/10.1016/j.ecoinf.2023.102025",
+  "titulo": "DLMC-Net: Deeper lightweight multi-class classification model for plant leaf disease detection",
+  "autores": [
+   {
+    "given": "Vivek",
+    "family": "Sharma"
+   },
+   {
+    "given": "Ashish Kumar",
+    "family": "Tripathi"
+   },
+   {
+    "given": "Himanshu",
+    "family": "Mittal"
+   }
+  ],
+  "revista": "Ecological Informatics",
+  "editorial": "Elsevier BV",
+  "anio": 2023,
+  "mes": 7,
+  "volumen": "75",
+  "numero": "",
+  "paginas": "102025",
+  "articulo": "102025",
+  "issn": "1574-9541",
+  "resumen": "",
+  "fuente_resumen": "",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C8",
+  "doi": "10.1016/j.compag.2024.109001",
+  "url": "https://doi.org/10.1016/j.compag.2024.109001",
+  "titulo": "Resource-efficient federated learning over IoAT for rice leaf disease classification",
+  "autores": [
+   {
+    "given": "Meenakshi",
+    "family": "Aggarwal"
+   },
+   {
+    "given": "Vikas",
+    "family": "Khullar"
+   },
+   {
+    "given": "Nitin",
+    "family": "Goyal"
+   },
+   {
+    "given": "Thomas André",
+    "family": "Prola"
+   }
+  ],
+  "revista": "Computers and Electronics in Agriculture",
+  "editorial": "Elsevier BV",
+  "anio": 2024,
+  "mes": 6,
+  "volumen": "221",
+  "numero": "",
+  "paginas": "109001",
+  "articulo": "109001",
+  "issn": "0168-1699",
+  "resumen": "",
+  "fuente_resumen": "",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C8",
+  "doi": "10.1016/j.eswa.2025.128371",
+  "url": "https://doi.org/10.1016/j.eswa.2025.128371",
+  "titulo": "AGRIFOLD: AGRIculture Federated learning for Optimized Leaf disease Detection",
+  "autores": [
+   {
+    "given": "Francesco",
+    "family": "Piccialli"
+   },
+   {
+    "given": "Ciro",
+    "family": "Della Bruna"
+   },
+   {
+    "given": "Diletta",
+    "family": "Chiaro"
+   },
+   {
+    "given": "Pian",
+    "family": "Qi"
+   },
+   {
+    "given": "Martina",
+    "family": "Savoia"
+   }
+  ],
+  "revista": "Expert Systems with Applications",
+  "editorial": "Elsevier BV",
+  "anio": 2025,
+  "mes": 9,
+  "volumen": "289",
+  "numero": "",
+  "paginas": "128371",
+  "articulo": "128371",
+  "issn": "0957-4174",
+  "resumen": "Efficient and accurate detection of plant leaf diseases is essential for protecting crop health and promoting sustainable and precision agriculture practices. However, the decentralized nature of agricultural data, combined with the inherent limitations of centralized Machine Learning (ML), presents significant challenges for developing scalable, privacy-preserving solutions. In this paper, we introduce AGRIFOLD, a Federated Learning (FL) framework designed to enable collaborative training of a lightweight Convolutional Neural Network (CNN) across diverse and distributed datasets while maintaining data privacy. By integrating an Efficient Channel Attention (ECA) mechanism into the VGG16 architecture, AGRIFOLD significantly improves classification accuracy and enhances interpretability through heatmaps that highlight regions affected by diseases. We evaluate the FL model using various aggregation methods, including FedAvg, FedProx, SCAFFOLD, FedBN, and FedDF, obtaining good accuracy levels for all tested aggregation strategies, with SCAFFOLD achieving the best overall performance. The model’s lightweight design, optimized through ablation and pruning techniques, facilitates deployment on resource-constrained edge devices. Additionally, to further support farmers’ decision-making, the framework incorporates a natural language processing-based recommender system that provides tailored treatment suggestions. Comprehensive experiments conducted on 12 heterogeneous datasets demonstrate high classification accuracy across 9 distinct leaf disease classes and healthy leaves, underscoring the practical potential of FL-based solutions for sustainable, real-world agricultural applications. The AGRIFOLD source code is available at https://github.com/MODAL-UNINA/AGRIFOLD .",
+  "fuente_resumen": "OpenAlex",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C8",
+  "doi": "10.1016/j.aiia.2024.06.004",
+  "url": "https://doi.org/10.1016/j.aiia.2024.06.004",
+  "titulo": "Computer vision in smart agriculture and precision farming: Techniques and applications",
+  "autores": [
+   {
+    "given": "Sumaira",
+    "family": "Ghazal"
+   },
+   {
+    "given": "Arslan",
+    "family": "Munir"
+   },
+   {
+    "given": "Waqar S.",
+    "family": "Qureshi"
+   }
+  ],
+  "revista": "Artificial Intelligence in Agriculture",
+  "editorial": "Elsevier BV",
+  "anio": 2024,
+  "mes": 9,
+  "volumen": "13",
+  "numero": "",
+  "paginas": "64-83",
+  "articulo": "",
+  "issn": "2589-7217",
+  "resumen": "The transformation of age-old farming practices through the integration of digitization and automation has sparked a revolution in agriculture that is driven by cutting-edge computer vision and arti ﬁ cial intelligence (AI) technologies. This transformation not only promises increased productivity and economic growth, but also has the potential to address important global issues such as food security and sustainability. This survey paper aims to provide a holistic understanding of the integration of vision-based intelligent systems in various aspects of precision agriculture. By providing a detailed discussion on key areas of digital life cycle of crops, this survey contributes to a deeper understanding of the complexities associated with the implementation of vision-guided intelligent systems in challenging agricultural environments. The focus of this survey is to explore widelyusedimagingandimageanalysistechniquesbeingutilizedforprecisionfarmingtasks.Thispaper ﬁ rstdis-cussesvarioussalientcropmetricsusedindigitalagriculture.Thenthispaperillustratestheusageofimagingand computer vision techniques in various phases of digital life cycle of crops in precision agriculture, such as image acquisition, image stitching and photogrammetry, image analysis, decision making, treatment, and planning. After establishing a thorough understanding of related terms and techniques involved in the implementation of vision-based intelligent systems for precision agriculture, the survey concludes by outlining the challenges associated with implementing generalized computer vision models for real-time deployment of fully autonomous farms.",
+  "fuente_resumen": "Semantic Scholar",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C8",
+  "doi": "10.3390/agriculture16090918",
+  "url": "https://doi.org/10.3390/agriculture16090918",
+  "titulo": "Real-Field-Ready and Digitally Sustainable Plant Disease Recognition via Federated Multimodal Edge Learning and Few-Shot Domain Adaptation",
+  "autores": [
+   {
+    "given": "Muhammad Irfan",
+    "family": "Sharif"
+   },
+   {
+    "given": "Yong",
+    "family": "Zhong"
+   },
+   {
+    "given": "Muhammad Zaheer",
+    "family": "Sajid"
+   },
+   {
+    "given": "Francesco",
+    "family": "Marinello"
+   }
+  ],
+  "revista": "Agriculture",
+  "editorial": "MDPI AG",
+  "anio": 2026,
+  "mes": 4,
+  "volumen": "16",
+  "numero": "9",
+  "paginas": "918",
+  "articulo": "",
+  "issn": "2077-0472",
+  "resumen": "Plant disease diagnosis in real-world agricultural environments is challenged by data scarcity, domain shift, privacy constraints, and limited edge-device resources. This paper proposes FMEL-FSDA, a Federated Multimodal Edge Learning framework with Few-Shot Domain Adaptation for robust field-based plant disease recognition. The framework integrates attention-based RGB–text feature fusion, privacy-preserving federated learning, rapid few-shot personalization, and uncertainty-aware inference within an edge-efficient architecture. Federated training enables collaborative learning across distributed farms without sharing raw data, while few-shot adaptation allows fast deployment to new regions using only 1–10 labeled samples per class. Experiments on the PlantWild in-the-wild dataset show that FMEL-FSDA outperforms centralized, federated, and few-shot baselines, achieving 93.78% accuracy, 93.33% F1-score, and 0.97 AUC. The model maintains strong performance under privacy mechanisms such as gradient perturbation and secure aggregation, reduces communication overhead by up to 4×, and supports low-latency edge inference. Uncertainty estimation and Grad-CAM-based explainability further enhance reliability by identifying low-confidence cases and highlighting disease-relevant regions. Overall, FMEL-FSDA offers a scalable, privacy-aware, and field-ready solution for intelligent plant disease diagnosis in precision agriculture.",
+  "fuente_resumen": "Crossref",
+  "tipo": "journal-article"
+ }
+]
