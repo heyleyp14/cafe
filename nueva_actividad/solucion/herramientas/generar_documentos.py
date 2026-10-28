@@ -207,7 +207,10 @@ def build_article(out, fig_path):
     doc = Document(); s0 = doc.sections[0]; page_setup(s0)
     st = doc.styles["Normal"]; st.font.name = FONT; st.font.size = Pt(10)
     para(doc, C.TITULO, 22, WD_ALIGN_PARAGRAPH.CENTER, after=10)
-    para(doc, "  ·  ".join(C.AUTORES), 11, WD_ALIGN_PARAGRAPH.CENTER, after=2)
+    for name in C.AUTORES:
+        p = para(doc, align=WD_ALIGN_PARAGRAPH.CENTER, after=0); set_font(p.add_run(name), 11)
+        set_font(p.add_run(f"  ·  Identificación {C.IDENTIFICACION[name]}"), 9)
+    para(doc, "", after=2)
     for line in C.AFILIACION: para(doc, line, 10, WD_ALIGN_PARAGRAPH.CENTER, italic=True)
     para(doc, "", after=6)
     body = doc.add_section(WD_SECTION.CONTINUOUS); page_setup(body); set_columns(body, 2)
@@ -274,7 +277,9 @@ def build_traceability(out, flow):
     para(doc, "Documento de trazabilidad de la revisión sistemática", 18, WD_ALIGN_PARAGRAPH.CENTER, before=60, after=8, bold=True)
     para(doc, C.TITULO, 13, WD_ALIGN_PARAGRAPH.CENTER, after=16, italic=True)
     para(doc, "Proyecto: Sistema de detección temprana de plagas y enfermedades en cultivos de café (prototipo BioCafe)", 11, WD_ALIGN_PARAGRAPH.CENTER, after=4)
-    para(doc, "Autoras: " + " y ".join(C.AUTORES), 11, WD_ALIGN_PARAGRAPH.CENTER, after=4)
+    para(doc, "Autoras:", 11, WD_ALIGN_PARAGRAPH.CENTER, after=0, bold=True)
+    for line in C.autores_con_id(): para(doc, line, 11, WD_ALIGN_PARAGRAPH.CENTER, after=0)
+    para(doc, "", after=4)
     for line in C.AFILIACION: para(doc, line, 11, WD_ALIGN_PARAGRAPH.CENTER)
     para(doc, "Cursos: Fundamentos de Computación Paralela y Distribuida · Sistemas Inteligentes", 11, WD_ALIGN_PARAGRAPH.CENTER, before=8)
     para(doc, f"Fecha de la búsqueda: {BUSQ['fecha']}", 11, WD_ALIGN_PARAGRAPH.CENTER, before=4)
@@ -287,7 +292,7 @@ def build_traceability(out, flow):
     heading(doc, "1. Datos de la revisión")
     table(doc, ["Campo", "Valor"], [
         ("Título", C.TITULO), ("Title", C.TITLE_EN), ("Tipo", "Revisión sistemática descriptiva (artículo corto, máximo 10 páginas, formato IEEE)"),
-        ("Autoras", ", ".join(C.AUTORES)), ("Afiliación", " ".join(C.AFILIACION)),
+        ("Autoras", "; ".join(C.autores_con_id())), ("Afiliación", " ".join(C.AFILIACION)),
         ("Base consultada", BUSQ["base"]), ("Periodo", "Artículos de revista publicados desde el 1 de enero de 2022"),
         ("Búsquedas", f"{len(BUSQ['busquedas'])} (8 constructos, cada cadena con y sin el filtro de ScienceDirect)"),
         ("Referencias incluidas", f"{len(REFS)} ({sum(r['doi'].startswith('10.1016/') for r in REFS)} de ScienceDirect), todas con DOI verificado"),
@@ -382,7 +387,8 @@ def build_seed(out):
     doc = Document(); s = doc.sections[0]; page_setup(s, 1, 1, 1)
     st = doc.styles["Normal"]; st.font.name = FONT; st.font.size = Pt(11)
     para(doc, "Semilla de referencias para Zotero", 18, WD_ALIGN_PARAGRAPH.CENTER, after=4, bold=True)
-    para(doc, C.TITULO, 12, WD_ALIGN_PARAGRAPH.CENTER, after=12, italic=True)
+    para(doc, C.TITULO, 12, WD_ALIGN_PARAGRAPH.CENTER, after=4, italic=True)
+    para(doc, "Autoras: " + "; ".join(C.autores_con_id()), 11, WD_ALIGN_PARAGRAPH.CENTER, after=12)
     heading(doc, "Cómo cargar las referencias en cualquier equipo", 2)
     for i, step in enumerate((
         "Instale Zotero (https://www.zotero.org/download/) y ábralo.",

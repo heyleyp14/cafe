@@ -11,6 +11,10 @@ TITULO = ("Computación paralela con MPI y sistemas inteligentes para la detecci
 TITLE_EN = ("Parallel computing with MPI and intelligent systems for the early detection of coffee leaf "
             "diseases: a descriptive systematic review")
 AUTORES = ["Heyley Yurani Parada Parada", "Lisbeth Gissel Cordero Tovar"]
+IDENTIFICACION = {"Heyley Yurani Parada Parada": "1093887319", "Lisbeth Gissel Cordero Tovar": "1093293375"}
+
+def autores_con_id():
+    return [f"{n} (identificación {IDENTIFICACION[n]})" for n in AUTORES]
 AFILIACION = ["Programa de Ingeniería de Sistemas, Facultad de Ingenierías y Arquitectura",
               "Universidad de Pamplona, Villa del Rosario, Norte de Santander, Colombia"]
 

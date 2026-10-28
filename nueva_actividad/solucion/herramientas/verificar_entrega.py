@@ -25,6 +25,9 @@ check(all(f"https://doi.org/{r['doi']}" in art_links for r in refs), "cada refer
 check(all(r["anio"] >= 2022 for r in refs), "todas las referencias son de 2022 o posteriores")
 
 tra, _ = text_and_links(root / "Trazabilidad_Revision_MPI_BioCafe.docx")
+seed_text, _ = text_and_links(root / "Semilla_Zotero_Referencias.docx")
+for doc_text, name in ((art, "artículo"), (tra, "trazabilidad"), (seed_text, "semilla Word")):
+    check("1093887319" in doc_text and "1093293375" in doc_text, f"{name} incluye la identificación de ambas autoras")
 for s in ("2. Resumen y abstract", "3. Constructos", "4. Prompts", "6. Fichas", "7. Relación de los resúmenes", "8. Cuadro comparativo", "9. Evaluación de la revisión: cinco preguntas", "10. Ajustes y correcciones"):
     check(s in tra, f"trazabilidad contiene «{s}»")
 check(len(re.findall(r"^Grupo \d+\.", tra, re.M)) >= 8, "trazabilidad agrupa los resúmenes de 2 o 3")
