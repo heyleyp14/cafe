@@ -30,3 +30,4 @@ Rama: `feat/revision-sistematica-mpi`. Entrega: `single-pr` (solo documentación
 - L4 (2026-10-27) Verificación: 28 DOI resuelven en doi.org; artículo de 5 páginas (render OnlyOffice, no probado en Word); correos de las autoras pendientes.
 - L5 (2026-10-27) Usuario: "Heyley Yurani Parada Parada 1093887319 / Lisbeth Gissel Cordero Tovar 1093293375"; eligió «En los tres documentos (Recomendado)». Se agregó la identificación bajo cada nombre en el artículo, la portada y la tabla de la trazabilidad y la semilla Word.
 - L6 (2026-10-27) Usuario: "heyley.paradapar@unipamplona.edu.co, lisbeth.corderotov@unipamplona.edu.co". Correos agregados en los tres documentos (enlace mailto en el artículo); se cierra el pendiente de correos.
+- L7 (2026-10-27) Usuario: "sison c.c". La identificación se rotula «C.C.» en los tres documentos.

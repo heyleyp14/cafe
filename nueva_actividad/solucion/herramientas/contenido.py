@@ -16,7 +16,7 @@ IDENTIFICACION = {"Heyley Yurani Parada Parada": "1093887319", "Lisbeth Gissel C
 CORREO = {"Heyley Yurani Parada Parada": "heyley.paradapar@unipamplona.edu.co", "Lisbeth Gissel Cordero Tovar": "lisbeth.corderotov@unipamplona.edu.co"}
 
 def autores_con_id():
-    return [f"{n} (identificación {IDENTIFICACION[n]}, {CORREO[n]})" for n in AUTORES]
+    return [f"{n} (C.C. {IDENTIFICACION[n]}, {CORREO[n]})" for n in AUTORES]
 AFILIACION = ["Programa de Ingeniería de Sistemas, Facultad de Ingenierías y Arquitectura",
               "Universidad de Pamplona, Villa del Rosario, Norte de Santander, Colombia"]
 
@@ -399,7 +399,7 @@ AJUSTES = [
      "resúmenes que venían de Semantic Scholar."),
     ("Redacción", "Se separaron los datos del proyecto (exactitud de 0,94 y 0,81 y 48 ms, del repositorio de BioCafe) de "
      "las cifras de la literatura, para no atribuir a otros autores resultados propios."),
-    ("Redacción", "Se agregaron al encabezado de los tres documentos la identificación y el correo institucional de cada "
+    ("Redacción", "Se agregaron al encabezado de los tres documentos la cédula de ciudadanía y el correo institucional de cada "
      "autora, suministrados por ellas."),
     ("Pendiente", "Insertar las citas con el complemento de Zotero en Word si el docente exige citas dinámicas; las del "
      "documento están numeradas en formato IEEE y coinciden con la colección de Zotero."),
