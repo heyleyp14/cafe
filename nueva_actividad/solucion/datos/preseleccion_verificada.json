@@ -1,0 +1,1614 @@
+[
+ {
+  "constructo": "C1",
+  "doi": "10.1016/j.atech.2024.100656",
+  "url": "https://doi.org/10.1016/j.atech.2024.100656",
+  "titulo": "Coffee leaf rust and berry borer management in agroforestry systems: A systematic literature review",
+  "autores": [
+   {
+    "given": "Yakdiel",
+    "family": "Rodriguez-Gallo"
+   },
+   {
+    "given": "Hector",
+    "family": "Cañas"
+   },
+   {
+    "given": "Jordi",
+    "family": "Cruz"
+   },
+   {
+    "given": "Manuel",
+    "family": "Cardona"
+   },
+   {
+    "given": "Guillermo",
+    "family": "Medina-González"
+   }
+  ],
+  "revista": "Smart Agricultural Technology",
+  "editorial": "Elsevier BV",
+  "anio": 2024,
+  "mes": 12,
+  "volumen": "9",
+  "numero": "",
+  "paginas": "100656",
+  "articulo": "100656",
+  "issn": "2772-3755",
+  "resumen": "This study presents a Systematic Literature Review (SLR) on the management of Coffee Berry Borer (CBB) and Coffee Leaf Rust (CLR) in Coffee Agroforestry Systems (CAFS). Despite extensive research on pest and disease management in CAFS, there is a notable absence of literature reviews or bibliometric analyses regarding the study of the CBB and CLR. The novelty of this work lies in offering a comprehensive synthesis of recent research and identifying the technologies employed in these studies, providing valuable insights for future developments in the field. Using the PRISMA protocol and Bibliometrix tool, the research analyzed 51 relevant studies from Web of Science and Scopus databases, covering the period from 2002 to August 2024. The analysis revealed an increasing trend in publications on CBB and CLR in CAFS in recent years. Traditional techniques, such as visual plant observation, pheromone traps, and spore sedimentation traps, remain prevalent. However, the use of advanced technologies in CAFS is still limited. Findings highlight the significant impact of shade on pest dynamics, the importance of biodiversity in pest control, and the need for integrated pest management strategies. The study concludes that while traditional techniques play a crucial role in pest and disease monitoring in CAFS, there is significant untapped potential in integrating advanced technologies such as sensors, UAVs, IoT, robotics, and AI. The limited use of these technologies in CAFS underscores the need for future research to drive their adoption and optimization, aiming to improve sustainable pest and disease management in these complex systems.",
+  "fuente_resumen": "OpenAlex",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C1",
+  "doi": "10.1016/j.worlddev.2022.105918",
+  "url": "https://doi.org/10.1016/j.worlddev.2022.105918",
+  "titulo": "The impact of coffee leaf rust on migration by smallholder coffee farmers in Guatemala",
+  "autores": [
+   {
+    "given": "Samuel I.",
+    "family": "Dupre"
+   },
+   {
+    "given": "Celia A.",
+    "family": "Harvey"
+   },
+   {
+    "given": "Margaret B.",
+    "family": "Holland"
+   }
+  ],
+  "revista": "World Development",
+  "editorial": "Elsevier BV",
+  "anio": 2022,
+  "mes": 8,
+  "volumen": "156",
+  "numero": "",
+  "paginas": "105918",
+  "articulo": "105918",
+  "issn": "0305-750X",
+  "resumen": "",
+  "fuente_resumen": "",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C1",
+  "doi": "10.1016/j.cropro.2025.107269",
+  "url": "https://doi.org/10.1016/j.cropro.2025.107269",
+  "titulo": "Fungicide efficacy and duration of protection against coffee leaf rust (Hemileia vastatrix) on commercial coffee farms in Hawaii",
+  "autores": [
+   {
+    "given": "Luis F.",
+    "family": "Aristizábal"
+   },
+   {
+    "given": "Colby T.",
+    "family": "Maeda"
+   },
+   {
+    "given": "Tracie",
+    "family": "Matsumoto"
+   },
+   {
+    "given": "Melissa A.",
+    "family": "Johnson"
+   }
+  ],
+  "revista": "Crop Protection",
+  "editorial": "Elsevier BV",
+  "anio": 2025,
+  "mes": 10,
+  "volumen": "196",
+  "numero": "",
+  "paginas": "107269",
+  "articulo": "107269",
+  "issn": "0261-2194",
+  "resumen": "Coffee leaf rust (CLR, Hemileia vastatrix ) is a recent arrival to Hawaii and has quickly become the most significant challenge to the State's small but economically important coffee industry. Frequent sprays of fungicides and the improvement of agronomic practices have been the primary management strategies for controlling this devastating disease. However, the high cost of products and labor coupled with the harmful effects of chemical inputs have made frequent applications of fungicides economically and environmentally unfeasible. The aim of this study was to determine fungicide efficacy against CLR, duration of protection, and cost of applications in field trials conducted on commercial coffee farms on Hawaii Island in 2022 and 2023. The translaminar fungicide was the most effective product tested, keeping CLR below 2 % over a 12-week period. Copper-based fungicides were also effective at keeping CLR below the 5 % action threshold, although the duration of protection was shorter (6–8 weeks). Copper fungicides were the most cost-effective of all products examined ($126/acre), followed by the translaminar ($140/acre). In contrast, the Bacillu s-based fungicides and the botanical fungicide did not reduce CLR incidence and were more expensive to apply ($138-$198/acre). The findings presented here can be used by coffee growers to decide which fungicides to spray based on disease levels, time of year, management style, and budget. Future research is needed to determine optimal fungicide rotation strategies given the farm type and starting CLR incidence. This rotation will need to consider application timing, duration of product efficacy, as well as product compatibility.",
+  "fuente_resumen": "OpenAlex",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C1",
+  "doi": "10.1016/j.heliyon.2022.e11892",
+  "url": "https://doi.org/10.1016/j.heliyon.2022.e11892",
+  "titulo": "Contrasting coffee leaf rust epidemics between forest coffee and semi-forest coffee agroforestry systems in SW-Ethiopia",
+  "autores": [
+   {
+    "given": "Gerba",
+    "family": "Daba"
+   },
+   {
+    "given": "Gezahegn",
+    "family": "Berecha"
+   },
+   {
+    "given": "Bart",
+    "family": "Lievens"
+   },
+   {
+    "given": "Kitessa",
+    "family": "Hundera"
+   },
+   {
+    "given": "Kenny",
+    "family": "Helsen"
+   },
+   {
+    "given": "Olivier",
+    "family": "Honnay"
+   }
+  ],
+  "revista": "Heliyon",
+  "editorial": "Elsevier BV",
+  "anio": 2022,
+  "mes": 12,
+  "volumen": "8",
+  "numero": "12",
+  "paginas": "e11892",
+  "articulo": "e11892",
+  "issn": "2405-8440",
+  "resumen": "Ethiopian Arabica coffee is produced in different agroforestry systems which differ in forest management intensity. In forest coffee systems (FC), coffee shrubs grow naturally in the understory of Afromontane forests with little human intervention, whereas in semi-forest coffee systems (SFC) thinning of the canopy and removal of the understory is applied. Coffee leaf rust (CLR) disease is a growing concern for coffee agroforestry, but to what extent infection pressure is affected by management intensity is poorly known. Here we assessed CLR infection through time across FC and SFC systems in SW-Ethiopia. CLR infection was significantly higher for SFC, with a gradual reduction of this difference during the beginning of dry season (November) through main rainy season of (July). Our findings also demonstrated that CLR infections were significantly lower in the FC system as compared to SFC system in both years 2015/16 and 2020/21. The higher CLR infection was partly explained by lower crown cover and higher human impact. We expect that reduced wind speed and droplet penetration under closed canopies and reduced human-facilitated spore dispersal are the dominating mechanisms behind lower CLR infection in FC systems, yet lower coffee density in FC may also play a role. Overall, our results indicate that although higher management intensity still generally results in higher total yields per hectare, proportionally larger losses due to CLR infection can be expected. Therefore, introducing more coffee genetic diversity, screening resistant coffee varieties and increasing canopy cover in the SFC will mitigate the CLR disease pressure and guarantee the sustainability of higher yields of the system in the future. Also, lower yields in the FC will be rewarded through providing price premiums so that farmers instantly get a higher price for their lower yield, guaranteeing livelihoods.",
+  "fuente_resumen": "Semantic Scholar",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C1",
+  "doi": "10.3390/agronomy12051134",
+  "url": "https://doi.org/10.3390/agronomy12051134",
+  "titulo": "Monitoring Coffee Leaf Rust (Hemileia vastatrix) on Commercial Coffee Farms in Hawaii: Early Insights from the First Year of Disease Incursion",
+  "autores": [
+   {
+    "given": "Luis F.",
+    "family": "Aristizábal"
+   },
+   {
+    "given": "Melissa A.",
+    "family": "Johnson"
+   }
+  ],
+  "revista": "Agronomy",
+  "editorial": "MDPI AG",
+  "anio": 2022,
+  "mes": 5,
+  "volumen": "12",
+  "numero": "5",
+  "paginas": "1134",
+  "articulo": "",
+  "issn": "2073-4395",
+  "resumen": "Coffee leaf rust (CLR, Hemileia vastatrix) is considered the most damaging coffee disease worldwide, causing reduced yields and even plant death. CLR was detected in Hawaii for the first time in 2020, and quickly spread across the state. We initiated a CLR monitoring program in Kona, West Hawaii Island, to track the spread of this new invasive disease across a broad elevational gradient. The goals of the program were to assist growers in the early detection of CLR, to characterize patterns of disease incidence across the region, and to collect information on farm agronomics, management practices, and costs to apply fungicides, all of which can be used to develop Integrated Pest Management (IPM) strategies for this pathogen. We monitored 30 coffee lots in Kona, located between 204 and 875 m elevation. Average CLR incidence remained below 4% early in the season and increased to 36% during harvest. We observed no significant difference in CLR incidence between low-, mid- and high-elevation farms. A significant reduction in the number of leaves per branch was observed at the end of the harvest season, and a significant negative correlation was found between the number of leaves per branch and maximum CLR severity. Mean disease incidence and mean severity were observed to have a significant positive correlation. Incidence increased above threshold levels (5%), despite most growers applying preventative fungicides 3–10 times throughout the season, suggesting that improved coverage and timing of applications is needed along with the addition of systemic fungicides. Our study provides the first insights into CLR disease patterns under the unique and variable conditions under which Hawaiian coffee is grown, and will aid in the development of IPM programs that can be used to sustain Hawaii’s coffee industry under this new threat.",
+  "fuente_resumen": "Crossref",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C1",
+  "doi": "10.1080/03235408.2023.2168173",
+  "url": "https://doi.org/10.1080/03235408.2023.2168173",
+  "titulo": "Status of coffee leaf rust ( Hemileia vastatrix ) and its management in Ethiopia: a review",
+  "autores": [
+   {
+    "given": "Goytom",
+    "family": "Berihun"
+   },
+   {
+    "given": "Kumlachew",
+    "family": "Alemu"
+   }
+  ],
+  "revista": "Archives of Phytopathology and Plant Protection",
+  "editorial": "Informa UK Limited",
+  "anio": 2022,
+  "mes": 12,
+  "volumen": "55",
+  "numero": "20",
+  "paginas": "2283-2300",
+  "articulo": "",
+  "issn": "0323-5408",
+  "resumen": "Ethiopia is believed to be the center of origin of Arabica coffee which accounts for nearly two-thirds of the world coffee market. The country ranks fifth in the world coffee production and nearly 15 million people support their livelihood in the coffee sector. However, coffee is prone to several diseases that attack its different parts and reduce its yield. Coffee leaf rust (CLR) disease which was considered a negligible disease is now becoming a major threat to coffee production in Ethiopia. A recent study indicates an upsurge in disease with an average incidence of CLR is 35.3%. Moreover, the disease spread to mid and highland coffee-growing areas, which were previously limited to lowland areas. Several disease management strategies have been implemented to manage the disease including cultural control, the use of biocontrol agents and host resistance. Moreover, the availability of wide germplasm for the selection of CLR disease resistance was reported in Ethiopia. However, only a few varieties were released for lowland coffee production system 30 years ago. This review discusses the status of CLR disease in Ethiopia. It also focuses on the impact of climate change on CLR epidemics and suggests possible schemes and strategies for managing the disease.",
+  "fuente_resumen": "Semantic Scholar",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C1",
+  "doi": "10.1016/j.baae.2023.11.006",
+  "url": "https://doi.org/10.1016/j.baae.2023.11.006",
+  "titulo": "Non-additive effects of multiple predators alter the biological control of the coffee leaf miner (Leucoptera coffeella)",
+  "autores": [
+   {
+    "given": "Iris Saraeny",
+    "family": "Rivera-Salinas"
+   },
+   {
+    "given": "Amarilys D.",
+    "family": "Irizarry"
+   },
+   {
+    "given": "Koralis",
+    "family": "Reyes-Maldonado"
+   },
+   {
+    "given": "Ivette",
+    "family": "Perfecto"
+   }
+  ],
+  "revista": "Basic and Applied Ecology",
+  "editorial": "Elsevier BV",
+  "anio": 2024,
+  "mes": 2,
+  "volumen": "74",
+  "numero": "",
+  "paginas": "35-39",
+  "articulo": "",
+  "issn": "1439-1791",
+  "resumen": "Although most prey are attacked by multiple predators, much ecological theory on prey suppression focuses on the effects of a single predator. The presence of multiple predators can lead to complex effects such as trait-mediated interactions (TMIIs) and intraguild predation which can influence the suppression of pest populations. Here we explore the effect of two predators, a native anole lizard species Anolis cristatellus (Squamata: Dactyloidae) and a non-native ant species Wasmannia auropunctata (Hymenoptera: Formicidae), on the coffee leaf miner, Leucoptera coffeella (Lepidoptera: Lyonetiidae) (CLM). In a laboratory experiment we examined the effects of these two predators in isolation and when co-occurring. Our results show that when each predator is alone, they are able to consume the CLM in a comparable way. However, when they are together, their effect is not greater than when alone. This indicates that there is a negative effect when both predators co-occur. The results from this experiment have practical implications since both predators are present in coffee agroecosystems in Puerto Rico, where the CLM is considered the main insect pest. Furthermore, these results demonstrate the potential dynamics among several predators in agroecosystems and the potential implications for herbivore regulation.",
+  "fuente_resumen": "OpenAlex",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C1",
+  "doi": "10.1002/ps.6889",
+  "url": "https://doi.org/10.1002/ps.6889",
+  "titulo": "The effects of thiamethoxam on coffee seedling morphophysiology and Neotropical leaf miner ( Leucoptera coffeella ) infestations",
+  "autores": [
+   {
+    "given": "Suzany A",
+    "family": "Leite"
+   },
+   {
+    "given": "Raul Narciso C",
+    "family": "Guedes"
+   },
+   {
+    "given": "Daniela R",
+    "family": "da Costa"
+   },
+   {
+    "given": "Yelitza C",
+    "family": "Colmenarez"
+   },
+   {
+    "given": "Sylvana N",
+    "family": "Matsumoto"
+   },
+   {
+    "given": "Mateus P",
+    "family": "dos Santos"
+   },
+   {
+    "given": "Beatriz S",
+    "family": "Coelho"
+   },
+   {
+    "given": "Aldenise A",
+    "family": "Moreira"
+   },
+   {
+    "given": "Maria A",
+    "family": "Castellani"
+   }
+  ],
+  "revista": "Pest Management Science",
+  "editorial": "Wiley",
+  "anio": 2022,
+  "mes": 6,
+  "volumen": "78",
+  "numero": "6",
+  "paginas": "2581-2587",
+  "articulo": "",
+  "issn": "1526-498X",
+  "resumen": "BACKGROUND Coffee ( Coffea arabica L.) is one of the main commodities produced in Brazil. Insecticides like the (systemic) neonicotinoid thiamethoxam are widely used to suppress pest populations during coffee production, in particular the Neotropical leaf miner ( Leucoptera coffeella Guérin‐Mèneville & Perrottet, 1842) (Lepidoptera: Lyonetiidae). In addition to its efficacy against this pest species, thiamethoxam is also thought to be a bioactivator of plant metabolism, but has not yet been tested for such activity. Thus, the objectives of the present study were (1) to assess the concentration‐response effects of thiamethoxam on the vegetative vigor of coffee seedlings ( C. arabica ‘Catuaí 144’ cultivar) at different concentrations [2, 20, 40, 80 and 200 mg active ingredient (a.i.) kg −1 ] applied via soil drenching and (2) to evaluate if the plant response interferes with the effectiveness of thiamethoxam in controlling leaf miner populations. The morphophysiological traits of the coffee seedlings were evaluated 20, 40, 60 and 80 days after application, and leaf miner infestations were recorded starting 20 days after the insecticide application with the releasing of adults, and every 20 days afterwards. RESULTS The results indicated that thiamethoxam has a deleterious effect on the morphophysiological traits of the plants compromising their development with increase in concentrations. However, leaf area exhibited a different pattern with a peak at 50 mg a.i. kg −1 consistent with thiamethoxam‐induced hormesis (i.e. biphasic response with stimulatory effect at sublethal range of a toxic substance at the higher concentration). Nonetheless, such bioactivator effect did not affect thiamethoxan effectiveness against the leaf miner even at the lowest concentration tested. CONCLUSION Thiamethoxan exhibited bioactivation effect on leaf at low concentration, but without compromising efficacy against leaf miner populations. Therefore, its proposed metabolism‐boosting properties may encourage the unnecessary use of this insecticide, potentially leading to higher selection for insecticide resistance and an eventual decline in its effectiveness against the Neotropical leaf miner. © 2022 Society of Chemical Industry.",
+  "fuente_resumen": "Crossref",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C2",
+  "doi": "10.3390/agronomy12122911",
+  "url": "https://doi.org/10.3390/agronomy12122911",
+  "titulo": "Early Detection of Coffee Leaf Rust Caused by Hemileia vastatrix Using Multispectral Images",
+  "autores": [
+   {
+    "given": "Analis da Silva",
+    "family": "Soares"
+   },
+   {
+    "given": "Bruno Sérgio",
+    "family": "Vieira"
+   },
+   {
+    "given": "Thalita Almeida",
+    "family": "Bezerra"
+   },
+   {
+    "given": "George Deroco",
+    "family": "Martins"
+   },
+   {
+    "given": "Ana Carolina Silva",
+    "family": "Siquieroli"
+   }
+  ],
+  "revista": "Agronomy",
+  "editorial": "MDPI AG",
+  "anio": 2022,
+  "mes": 11,
+  "volumen": "12",
+  "numero": "12",
+  "paginas": "2911",
+  "articulo": "",
+  "issn": "2073-4395",
+  "resumen": "Conventional methodology in the field for the sampling of coffee leaf rust, caused by Hemileia vastatrix, has proven to be impractical. This paper proposes a method for the early detection of this disease, which is the most significant pathogen of coffee plants worldwide, using multispectral images acquired using a Mapir Survey3W camera and an unmanned aerial vehicle (UAV). For this purpose, 160 coffee seedlings of the coffee cultivar ‘Mundo Novo’ were inoculated with urediniospores of H. vastatrix and compared with 160 control (non-inoculated) seedlings to determine the most favorable interval for distinguishing healthy and infected plants. The 320 seedlings were placed on a dark surface to perform the imaging flights. In vitro analyses of the physiological parameters of 20 specimens were then performed for each condition (inoculated/non-inoculated) to obtain the hyperspectral curves, and this process was repeated three times at 15, 30, and 45 days after inoculation (DAI). Based on the simulated hyperspectral curves, a discrepancy between the red and near-infrared (NIR) bands was identified at 15 DAI, with the inoculated plants showing greater absorption in the red band and a greater spectral response in the NIR band. Thus, multispectral images were able to distinguish H. vastatrix infection in coffee seedlings at an asymptomatic stage (15 DAI) using a support vector machines (SVM) algorithm. Detection accuracy was 80% and the Kappa index of agreement was moderate (0.6). The early detection of this pathogen in the field using low-cost technology can be an important tool for the monitoring of coffee leaf rust and, consequently, a more sustainable management of the pathogen, causing farmers to make applications of chemical fungicides only when necessary.",
+  "fuente_resumen": "Crossref",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C2",
+  "doi": "10.1016/j.measen.2022.100441",
+  "url": "https://doi.org/10.1016/j.measen.2022.100441",
+  "titulo": "A comprehensive review on detection of plant disease using machine learning and deep learning approaches",
+  "autores": [
+   {
+    "given": "C",
+    "family": "Jackulin"
+   },
+   {
+    "given": "S.",
+    "family": "Murugavalli"
+   }
+  ],
+  "revista": "Measurement: Sensors",
+  "editorial": "Elsevier BV",
+  "anio": 2022,
+  "mes": 12,
+  "volumen": "24",
+  "numero": "",
+  "paginas": "100441",
+  "articulo": "100441",
+  "issn": "2665-9174",
+  "resumen": "Agriculture plays a significant part in India due to their population growth and increased food demands. Hence, there is a need to enhance the yield of crop. One of these important effects on low crop yields is diseases caused by bacteria, fungi and viruses. This can be prevented and handled by means of applying plant disease detection approaches. Machine learning techniques will be employed in the process of disease identification on plants as it mostly applies information themselves and offers fabulous techniques for detection of plant diseases. Methods based on Machine learning can be employed for the identification of diseases because it mainly applies on data superiority outcomes for specified task. In this approach, a comprehensive review has been made on the various techniques employed in plant disease detection using artificial intelligence (AI) based machine learning and deep learning techniques. Likewise, deep learning has also gained a great deal of significance in offering better performance outcome for detecting plant disease in the computer vision field. The deep learning advancements were employed to a range of domains that leads to great attainment in the machine learning and computer vision areas. The comparative study is made in terms of machine and deep learning techniques and their performance and usage in various research papers is related to show the effectiveness of deep learning model over machine learning model. In order to prevent major crop losses, the deep learning technique can be used to detect the leaf diseases from captured images.",
+  "fuente_resumen": "OpenAlex",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C2",
+  "doi": "10.3390/agriengineering4010021",
+  "url": "https://doi.org/10.3390/agriengineering4010021",
+  "titulo": "Vegetation Indices Applied to Suborbital Multispectral Images of Healthy Coffee and Coffee Infested with Coffee Leaf Miner",
+  "autores": [
+   {
+    "given": "Luana Mendes dos",
+    "family": "Santos"
+   },
+   {
+    "given": "Gabriel Araújo e Silva",
+    "family": "Ferraz"
+   },
+   {
+    "given": "Diego Bedin",
+    "family": "Marin"
+   },
+   {
+    "given": "Milene Alves de Figueiredo",
+    "family": "Carvalho"
+   },
+   {
+    "given": "Jessica Ellen Lima",
+    "family": "Dias"
+   },
+   {
+    "given": "Ademilson de Oliveira",
+    "family": "Alecrim"
+   },
+   {
+    "given": "Mirian de Lourdes Oliveira e",
+    "family": "Silva"
+   }
+  ],
+  "revista": "AgriEngineering",
+  "editorial": "MDPI AG",
+  "anio": 2022,
+  "mes": 3,
+  "volumen": "4",
+  "numero": "1",
+  "paginas": "311-319",
+  "articulo": "",
+  "issn": "2624-7402",
+  "resumen": "The coffee leaf miner (Leucoptera coffeella) is a primary pest for coffee plants. The attack of this pest reduces the photosynthetic area of the leaves due to necrosis, causing premature leaf falling, decreasing the yield and the lifespan of the plant. Therefore, this study aims to analyze vegetation indices (VI) from images of healthy coffee leaves and those infested by coffee leaf miner, obtained using a multispectral camera, mainly to differentiate and detect infested areas. The study was conducted in two distinct locations: At a farm, where the camera was coupled to a remotely piloted aircraft (RPA) flying at a 3 m altitude from the soil surface; and the second location, in a greenhouse, where the images were obtained manually at a 0.5 m altitude from the support of the plant vessels, in which only healthy plants were located. For the image processing, arithmetic operations with the spectral bands were calculated using the “Raster Calculator” obtaining the indices NormNIR, Normalized Difference Vegetation Index (NDVI), Green-Red NDVI (GRNDVI), and Green NDVI (GNDVI), the values of which on average for healthy leaves were: 0.66; 0.64; 0.32, and 0.55 and for infested leaves: 0.53; 0.41; 0.06, and 0.37 respectively. The analysis concluded that healthy leaves presented higher values of VIs when compared to infested leaves. The index GRNDVI was the one that better differentiated infested leaves from the healthy ones.",
+  "fuente_resumen": "Crossref",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C2",
+  "doi": "10.1016/j.snr.2026.100502",
+  "url": "https://doi.org/10.1016/j.snr.2026.100502",
+  "titulo": "Machine learning-integrated plant biosensors for precision agriculture: A systematic review of stress detection, pathogen monitoring and smart crop management",
+  "autores": [
+   {
+    "given": "Anchal",
+    "family": "Sharma"
+   },
+   {
+    "given": "Madan Mohan",
+    "family": "Sharma"
+   },
+   {
+    "given": "Himanshu",
+    "family": "Priyadarshi"
+   }
+  ],
+  "revista": "Sensors and Actuators Reports",
+  "editorial": "Elsevier BV",
+  "anio": 2026,
+  "mes": 12,
+  "volumen": "12",
+  "numero": "",
+  "paginas": "100502",
+  "articulo": "100502",
+  "issn": "2666-0539",
+  "resumen": "Plant biosensors combining biological recognition elements with electrochemical, optical and CRISPR based transduction platforms have emerged as robust field deployable tools for the detection of stress biomarkers, pathogens and phytohormones directly within agricultural settings. Sophisticated computational methods are needed to tackle the potential of these devices which generate complex high dimensional data. By following PRISMA guidelines, this systematic review critically assesses the state of the art in machine learning algorithms like deep learning, random forest and time series models. These are used to convert raw biosensor data into actionable agronomic insights that provide early stress prediction, multi analyte classification and real time crop health assessment. The review provides a thorough survey of biosensing platforms including electrochemical, fluorescent, aptamer based, antibody based and multiplexed architectures as well as evaluates their coupling with Internet of Things (IoT) networks and artificial intelligence-based decision systems to enable precision agriculture. Some of the primary challenges are the lack of labelled field datasets, the complexity of making cross-crop models work for all crops and the lack of consistent machine learning benchmarking pipelines for biosensor data, though strategies such as transfer learning, self-supervised learning and data augmentation offer promising paths forward. The review discusses about future chances to put lightweight machine learning models directly into biosensor platforms for edge computing and wearables. This work is in line with the UN SDGs, especially SDG 2, SDG 12 and SDG 13 by integrating biosensor innovation with data-driven analytics for sustainable, climate-resilient agriculture.",
+  "fuente_resumen": "OpenAlex",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C3",
+  "doi": "10.1016/j.dib.2025.111421",
+  "url": "https://doi.org/10.1016/j.dib.2025.111421",
+  "titulo": "Colombian coffee tree leaves multispectral images dataset",
+  "autores": [
+   {
+    "given": "Jorge Luis",
+    "family": "Aroca-Trujillo"
+   },
+   {
+    "given": "Alexander",
+    "family": "Perez-Ruiz"
+   }
+  ],
+  "revista": "Data in Brief",
+  "editorial": "Elsevier BV",
+  "anio": 2025,
+  "mes": 4,
+  "volumen": "59",
+  "numero": "",
+  "paginas": "111421",
+  "articulo": "111421",
+  "issn": "2352-3409",
+  "resumen": "In this work, a unique database of 6726 multispectral images of coffee leaves is presented. These images were captured in JPG format for the RGB photos and in TIF format for the five multispectral bands: blue, green, red, NIR and red edge, providing a detailed view of different wavelengths of the electromagnetic spectrum. Images in TIF format have a color depth of 16 bits per pixel, ensuring good quality. The blue band (Band 1) captures light in the blue region of the spectrum, approximately 450 to 500 nm. The green band (Band 2) records light in the green region, approximately between 500 and 620 nm. The red band (Band 3) captures light in the red region, between 620 and 750 nm. The red-edge band (Band 4) lies between the red band and the NIR, and is sensitive to the transition between green vegetation and non-vegetation, around 840 nm. Finally, the near infrared band (Band 5) captures light in the near infrared region, between 750 and 900 nm. For ease of identification, images are labeled as follows: if the image name ends in 0, it is an RGB image; if it ends in 1, it corresponds to the blue band; if it ends in 2, to the green band; if it ends in 3, to the red band; if it ends in 4, to the red-edge band; and if it ends in 5, to the near-infrared band. The images show coffee leaves with and without lesions caused by the Hemileia vastatrix fungus, known as coffee rust. These samples were collected from Colombian coffee farms and the images were captured under controlled lighting conditions to ensure quality and consistency. This database is an invaluable resource for precision agriculture research and early detection of crop diseases. With these 6726 images, researchers can use advanced image processing and machine learning techniques to identify differences between healthy leaves and those affected by rust. This can lead to the development of effective predictive models, enabling early detection and more efficient management of diseases in coffee plantations, optimizing production and reducing economic losses for farmers.",
+  "fuente_resumen": "Semantic Scholar",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C3",
+  "doi": "10.1016/j.dib.2023.109226",
+  "url": "https://doi.org/10.1016/j.dib.2023.109226",
+  "titulo": "CoLeaf-DB: Peruvian coffee leaf images dataset for coffee leaf nutritional deficiencies detection and classification",
+  "autores": [
+   {
+    "given": "Victor A.",
+    "family": "Tuesta-Monteza"
+   },
+   {
+    "given": "Heber I.",
+    "family": "Mejia-Cabrera"
+   },
+   {
+    "given": "Juan",
+    "family": "Arcila-Diaz"
+   }
+  ],
+  "revista": "Data in Brief",
+  "editorial": "Elsevier BV",
+  "anio": 2023,
+  "mes": 6,
+  "volumen": "48",
+  "numero": "",
+  "paginas": "109226",
+  "articulo": "109226",
+  "issn": "2352-3409",
+  "resumen": "This article introduces Peruvian coffee leaf datasets known as CATIMOR, CATURRA and BORBON of coffee plantations located at San Miguel de las Naranjas and La Palma Central, Jaén province, Cajamarca, Perú. The leaves with nutritional deficiencies were identified by agronomists, using a physical structure the controlled environment was designed and the images were captured with a digital camera. The dataset contains 1006 leaf images grouped according to their nutritional deficiencies (Boron, Iron, Potasium, Calcium, Magnesium, Manganese, Nitrogen and others). CoLeaf dataset contain images that facilitate training and validation during the utilization of deep learning algorithms for coffee plant leaf nutritional deficiencies recognition and classification. The dataset is publicly and freely available at http://dx.doi.org/10.17632/brfgw46wzb.1.",
+  "fuente_resumen": "Semantic Scholar",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C3",
+  "doi": "10.1007/s00138-022-01277-y",
+  "url": "https://doi.org/10.1007/s00138-022-01277-y",
+  "titulo": "Automated diagnosis of diverse coffee leaf images through a stage-wise aggregated triple deep convolutional neural network",
+  "autores": [
+   {
+    "given": "Francis Jesmar P.",
+    "family": "Montalbo"
+   }
+  ],
+  "revista": "Machine Vision and Applications",
+  "editorial": "Springer Science and Business Media LLC",
+  "anio": 2022,
+  "mes": 1,
+  "volumen": "33",
+  "numero": "1",
+  "paginas": "",
+  "articulo": "19",
+  "issn": "0932-8092",
+  "resumen": "",
+  "fuente_resumen": "",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C4",
+  "doi": "10.1016/j.atech.2023.100183",
+  "url": "https://doi.org/10.1016/j.atech.2023.100183",
+  "titulo": "Coffee disease classification at the edge using deep learning",
+  "autores": [
+   {
+    "given": "João Vitor Yukio",
+    "family": "Bordin Yamashita"
+   },
+   {
+    "given": "João Paulo R.R.",
+    "family": "Leite"
+   }
+  ],
+  "revista": "Smart Agricultural Technology",
+  "editorial": "Elsevier BV",
+  "anio": 2023,
+  "mes": 8,
+  "volumen": "4",
+  "numero": "",
+  "paginas": "100183",
+  "articulo": "100183",
+  "issn": "2772-3755",
+  "resumen": "Brazil is the world’s largest producer and exporter of coffee and the second largest consumer of the beverage. The aim of this study is to embed convolutional networks in a low-cost microcontrolled board to classify coffee leaf diseases in loco, without the need for an internet connection. Early identification of diseases in coffee plantations is crucial for productivity and production quality. Two datasets were used, in addition to images taken with the development board itself, totaling more than 6000 images of six different types of diseases. The proposed architectures (cascade and single-stage), when embedded, presented accuracy values around 98% and 96%, respectively, demonstrating their ability to assist in the diagnosis of diseases in coffee farms, especially those managed by producers with less resources.",
+  "fuente_resumen": "OpenAlex",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C4",
+  "doi": "10.3390/agriengineering7010013",
+  "url": "https://doi.org/10.3390/agriengineering7010013",
+  "titulo": "Leveraging Deep Learning for Real-Time Coffee Leaf Disease Identification",
+  "autores": [
+   {
+    "given": "Opeyemi",
+    "family": "Adelaja"
+   },
+   {
+    "given": "Bernardi",
+    "family": "Pranggono"
+   }
+  ],
+  "revista": "AgriEngineering",
+  "editorial": "MDPI AG",
+  "anio": 2025,
+  "mes": 1,
+  "volumen": "7",
+  "numero": "1",
+  "paginas": "13",
+  "articulo": "",
+  "issn": "2624-7402",
+  "resumen": "Agriculture is vital for providing food and economic benefits, but crop diseases pose significant challenges, including coffee cultivation. Traditional methods for disease identification are labor-intensive and lack real-time capabilities. This study aims to address existing methods’ limitations and provide a more efficient, reliable, and cost-effective solution for coffee leaf disease identification. It presents a novel approach to the real-time identification of coffee leaf diseases using deep learning. We implemented several transfer learning (TL) models, including ResNet101, Xception, CoffNet, and VGG16, to evaluate the feasibility and reliability of our solution. The experiment results show that the proposed models achieved high accuracy rates of 97.30%, 97.60%, 97.88%, and 99.89%, respectively. CoffNet, our proposed model, showed a notable processing speed of 125.93 frames per second (fps), making it suitable for real-time applications. Using a diverse dataset of mixed images from multiple devices, our approach reduces the workload of farmers and simplifies the disease detection process. The findings lay the groundwork for the development of practical and efficient systems that can assist coffee growers in disease management, promoting sustainable farming practices, and food security.",
+  "fuente_resumen": "Crossref",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C4",
+  "doi": "10.3390/app13074565",
+  "url": "https://doi.org/10.3390/app13074565",
+  "titulo": "Influence of Hyperparameters in Deep Learning Models for Coffee Rust Detection",
+  "autores": [
+   {
+    "given": "Adrian F.",
+    "family": "Chavarro"
+   },
+   {
+    "given": "Diego",
+    "family": "Renza"
+   },
+   {
+    "given": "Dora M.",
+    "family": "Ballesteros"
+   }
+  ],
+  "revista": "Applied Sciences",
+  "editorial": "MDPI AG",
+  "anio": 2023,
+  "mes": 4,
+  "volumen": "13",
+  "numero": "7",
+  "paginas": "4565",
+  "articulo": "",
+  "issn": "2076-3417",
+  "resumen": "Most of the world’s crops can be attacked by various diseases or pests, affecting their quality and productivity. In recent years, transfer learning with deep learning (DL) models has been used to detect diseases in maize, tomato, rice, and other crops. In the specific case of coffee, some recent works have used fixed hyperparameters to fine-tune the pre-trained models with the new dataset and/or applied data augmentation, such as image patching, to improve classifier performance. However, a detailed evaluation of the impact of architecture (e.g., backbone) and training (e.g., optimizer and learning rate) hyperparameters on the performance of coffee rust classification models has not been performed. Therefore, this paper presents a comprehensive study of the impact of five types of hyperparameters on the performance of coffee rust classification models. Specifically, eight pre-trained models are compared, each with four different amounts of transferred layers and three different numbers of neurons in the fully-connected (FC) layer, and the models are fine-tuned with three types of optimizers, each with three learning rate values. Comparing more than 800 models in terms of F1-score and accuracy, it is identified that the type of backbone is the hyperparameter with the greatest impact (with differences between models of up to 70%), followed by the optimizer (with differences of up to 20%). At the end of the study, specific recommendations are made on the values of the most suitable hyperparameters for the identification of this type of disease in coffee crops.",
+  "fuente_resumen": "Crossref",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C4",
+  "doi": "10.1109/jsen.2024.3498050",
+  "url": "https://doi.org/10.1109/jsen.2024.3498050",
+  "titulo": "Coffee-Net: Deep Mobile Patch Generation Network for Coffee Leaf Disease Classification",
+  "autores": [
+   {
+    "given": "Praveen M",
+    "family": "Bidarakundi"
+   },
+   {
+    "given": "B.",
+    "family": "Muthu Kumar"
+   }
+  ],
+  "revista": "IEEE Sensors Journal",
+  "editorial": "Institute of Electrical and Electronics Engineers (IEEE)",
+  "anio": 2025,
+  "mes": 2,
+  "volumen": "25",
+  "numero": "4",
+  "paginas": "7355-7362",
+  "articulo": "",
+  "issn": "1530-437X",
+  "resumen": "Coffee is the most regularly consumed beverages around the world, and the quality of coffee beans depends greatly on the health of the coffee plants. To prevent coffee leaf diseases (CLDs) from spreading and ensure a healthy coffee leaf, it is critical to detect them accurately and early. Coffee is a vital commodity for the global economy, and diseases affect its productivity and quality, so an automatic method for detecting coffee leaf disorder is necessary. In this work, a novel Coffee-Net is proposed for precisely classify and identify the diseases in CLDs, namely, Phoma, miner, rust, and Cercospora. Bilateral filter is used to smooth the image and remove additive noise, followed by contrast stretching adaptive histogram equalization (CSAHE) to enhance the quality of the image. Patches generated by region convolutional neural network (RCNN) automatically vary a transform that captures the common pattern for patch generation. The input image is then separated into multiple patches and the patch results are given for classification. The latent representation of coffee leaf can be classified into healthy, Phoma, miner, rust, and Cercospora based on the correct prediction of these images. The proposed Coffee-Net achieves 99.95% of accuracy rate for the CLD detection. The proposed Coffee-Net outperforms artificial neural network (ANN), Mask R-CNN, MobileNetV2, and ResNet50 in terms of overall accuracy by 0.6%, 4.32%, 0.02%, and 1.95, accordingly.",
+  "fuente_resumen": "Semantic Scholar",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C4",
+  "doi": "10.1007/s42979-024-02960-9",
+  "url": "https://doi.org/10.1007/s42979-024-02960-9",
+  "titulo": "Coffee Leaf Disease Classification by Using a Hybrid Deep Convolution Neural Network",
+  "autores": [
+   {
+    "given": "Manish K.",
+    "family": "Singh"
+   },
+   {
+    "given": "Avadhesh",
+    "family": "Kumar"
+   }
+  ],
+  "revista": "SN Computer Science",
+  "editorial": "Springer Science and Business Media LLC",
+  "anio": 2024,
+  "mes": 6,
+  "volumen": "5",
+  "numero": "5",
+  "paginas": "",
+  "articulo": "618",
+  "issn": "2661-8907",
+  "resumen": "",
+  "fuente_resumen": "",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C4",
+  "doi": "10.1016/j.aiia.2021.12.002",
+  "url": "https://doi.org/10.1016/j.aiia.2021.12.002",
+  "titulo": "Transfer Learning for Multi-Crop Leaf Disease Image Classification using Convolutional Neural Network VGG",
+  "autores": [
+   {
+    "given": "Ananda S.",
+    "family": "Paymode"
+   },
+   {
+    "given": "Vandana B.",
+    "family": "Malode"
+   }
+  ],
+  "revista": "Artificial Intelligence in Agriculture",
+  "editorial": "Elsevier BV",
+  "anio": 2022,
+  "mes": null,
+  "volumen": "6",
+  "numero": "",
+  "paginas": "23-33",
+  "articulo": "",
+  "issn": "2589-7217",
+  "resumen": "In recent times, the use of artificial intelligence (AI) in agriculture has become the most important. The technology adoption in agriculture if creatively approached. Controlling on the diseased leaves during the growing stages of crops is a crucial step. The disease detection, classification, and analysis of diseased leaves at an early stage, as well as possible solutions, are always helpful in agricultural progress. The disease detection and classification of different crops, especially tomatoes and grapes, is a major emphasis of our proposed research. The important objective is to forecast the sort of illness that would affect grapes and tomato leaves at an early stage. The Convolutional Neural Network (CNN) methods are used for detecting Multi-Crops Leaf Disease (MCLD). The features extraction of images using a deep learning-based model classified the sick and healthy leaves. The CNN based Visual Geometry Group (VGG) model is used for improved performance measures. The crops leaves images dataset is considered for training and testing the model. The performance measure parameters, i.e., accuracy, sensitivity, specificity precision, recall and F1-score were calculated and monitored. The main objective of research with the proposed model is to make on-going improvements in the performance. The designed model classifies disease-affected leaves with greater accuracy. In the experiment proposed research has achieved an accuracy of 98.40% of grapes and 95.71% of tomatoes. The proposed research directly supports increasing food production in agriculture.",
+  "fuente_resumen": "OpenAlex",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C4",
+  "doi": "10.1016/j.compag.2022.106892",
+  "url": "https://doi.org/10.1016/j.compag.2022.106892",
+  "titulo": "Leaf image based plant disease identification using transfer learning and feature fusion",
+  "autores": [
+   {
+    "given": "Xijian",
+    "family": "Fan"
+   },
+   {
+    "given": "Peng",
+    "family": "Luo"
+   },
+   {
+    "given": "Yuen",
+    "family": "Mu"
+   },
+   {
+    "given": "Rui",
+    "family": "Zhou"
+   },
+   {
+    "given": "Tardi",
+    "family": "Tjahjadi"
+   },
+   {
+    "given": "Yi",
+    "family": "Ren"
+   }
+  ],
+  "revista": "Computers and Electronics in Agriculture",
+  "editorial": "Elsevier BV",
+  "anio": 2022,
+  "mes": 5,
+  "volumen": "196",
+  "numero": "",
+  "paginas": "106892",
+  "articulo": "106892",
+  "issn": "0168-1699",
+  "resumen": "",
+  "fuente_resumen": "",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C4",
+  "doi": "10.3390/s24248018",
+  "url": "https://doi.org/10.3390/s24248018",
+  "titulo": "Coffee Leaf Rust Disease Detection and Implementation of an Edge Device for Pruning Infected Leaves via Deep Learning Algorithms",
+  "autores": [
+   {
+    "given": "Raka Thoriq",
+    "family": "Araaf"
+   },
+   {
+    "given": "Arkar",
+    "family": "Minn"
+   },
+   {
+    "given": "Tofael",
+    "family": "Ahamed"
+   }
+  ],
+  "revista": "Sensors",
+  "editorial": "MDPI AG",
+  "anio": 2024,
+  "mes": 12,
+  "volumen": "24",
+  "numero": "24",
+  "paginas": "8018",
+  "articulo": "",
+  "issn": "1424-8220",
+  "resumen": "Global warming and extreme climate conditions caused by unsuitable temperature and humidity lead to coffee leaf rust (Hemileia vastatrix) diseases in coffee plantations. Coffee leaf rust is a severe problem that reduces productivity. Currently, pesticide spraying is considered the most effective solution for mitigating coffee leaf rust. However, the application of pesticide spray is still not efficient for most farmers worldwide. In these cases, pruning the most infected leaves with leaf rust at coffee plantations is important to help pesticide spraying to be more efficient by creating a more targeted, accessible treatment. Therefore, detecting coffee leaf rust is important to support the decision on pruning infected leaves. The dataset was acquired from a coffee farm in Majalengka Regency, Indonesia. Only images with clearly visible spots of coffee leaf rust were selected. Data collection was performed via two devices, a digital mirrorless camera and a phone camera, to diversify the dataset and test it with different datasets. The dataset, comprising a total of 2024 images, was divided into three sets with a ratio of 70% for training (1417 images), 20% for validation (405 images), and 10% for testing (202 images). Images with leaves infected by coffee leaf rust were labeled via LabelImg® with the label “CLR”. All labeled images were used to train the YOLOv5 and YOLOv8 algorithms through the convolutional neural network (CNN). The trained model was tested with a test dataset, a digital mirrorless camera image dataset (100 images), a phone camera dataset (100 images), and real-time detection with a coffee leaf rust image dataset. After the model was trained, coffee leaf rust was detected in each frame. The mean average precision (mAP) and recall for the trained YOLOv5 model were 69% and 63.4%, respectively. For YOLOv8, the mAP and recall were approximately 70.2% and 65.9%, respectively. To evaluate the performance of the two trained models in detecting coffee leaf rust on trees, 202 original images were used for testing with the best-trained weight from each model. Compared to YOLOv5, YOLOv8 demonstrated superior accuracy in detecting coffee leaf rust. With a mAP of 73.2%, YOLOv8 outperformed YOLOv5, which achieved a mAP of 70.5%. An edge device was utilized to deploy real-time detection of CLR with the best-trained model. The detection was successfully executed with high confidence in detecting CLR. The system was further integrated into pruning solutions for Arabica coffee farms. A pruning device was designed using Autodesk Fusion 360® and fabricated for testing on a coffee plantation in Indonesia.",
+  "fuente_resumen": "Crossref",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C5",
+  "doi": "10.1109/access.2023.3240100",
+  "url": "https://doi.org/10.1109/access.2023.3240100",
+  "titulo": "Toward Generalization of Deep Learning-Based Plant Disease Identification Under Controlled and Field Conditions",
+  "autores": [
+   {
+    "given": "Aanis",
+    "family": "Ahmad"
+   },
+   {
+    "given": "Aly El",
+    "family": "Gamal"
+   },
+   {
+    "given": "Dharmendra",
+    "family": "Saraswat"
+   }
+  ],
+  "revista": "IEEE Access",
+  "editorial": "Institute of Electrical and Electronics Engineers (IEEE)",
+  "anio": 2023,
+  "mes": null,
+  "volumen": "11",
+  "numero": "",
+  "paginas": "9042-9057",
+  "articulo": "",
+  "issn": "2169-3536",
+  "resumen": "Identifying corn diseases under field conditions is crucial for implementing effective disease management systems. Deep learning (DL)-based plant disease identification using deep neural networks (DNN) has been successfully implemented in recent years. Recent work suggests DL models trained on lab-acquired image data do not generalize to similar accuracy levels for identifying diseases in the field. Additionally, most studies have not evaluated the generalizability of DL models for identifying plant diseases from various datasets and diverse imaging conditions. This study evaluates how well DL models generalize across different datasets and environmental conditions for identifying plant diseases using five datasets consisting of foliar disease images in corn: namely PlantVillage, PlantDoc, Digipathos, northern leaf blight (NLB) dataset, and a custom acquired CD&S dataset. Multiple DL-based image classification models were trained and evaluated using different dataset combinations. Transfer learning was utilized using five different pre-trained DNN architectures: InceptionV3, ResNet50, VGG16, DesneNet169, and Xception, for conducting four different experiments. After training the models, images for distinct corn diseases from different datasets were used as testing data for evaluating the generalization ability of each DL model. It was observed that the DenseNet169 model performed the best. The highest generalization accuracy of 81.60% was observed when the DenseNet169 model was trained using red, green, blue, and alpha (RGBA) images from CD&S corn disease dataset with removed backgrounds. In addition, 77.50% to 80.33% accuracy was achieved for the PlantVillage dataset when combined with field-acquired images from either the PlantDoc or the CD&S dataset. The results suggest that background removal using RGBA images from CD&S dataset or augmentation of field and lab data improves the generalization performance of DL models and could be used for developing field-deployable disease management systems.",
+  "fuente_resumen": "Semantic Scholar",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C5",
+  "doi": "10.34133/plantphenomics.0038",
+  "url": "https://doi.org/10.34133/plantphenomics.0038",
+  "titulo": "From Laboratory to Field: Unsupervised Domain Adaptation for Plant Disease Recognition in the Wild",
+  "autores": [
+   {
+    "given": "Xinlu",
+    "family": "Wu"
+   },
+   {
+    "given": "Xijian",
+    "family": "Fan"
+   },
+   {
+    "given": "Peng",
+    "family": "Luo"
+   },
+   {
+    "given": "Sruti Das",
+    "family": "Choudhury"
+   },
+   {
+    "given": "Tardi",
+    "family": "Tjahjadi"
+   },
+   {
+    "given": "Chunhua",
+    "family": "Hu"
+   }
+  ],
+  "revista": "Plant Phenomics",
+  "editorial": "Elsevier BV",
+  "anio": 2023,
+  "mes": null,
+  "volumen": "5",
+  "numero": "",
+  "paginas": "0038",
+  "articulo": "0038",
+  "issn": "2643-6515",
+  "resumen": "Plant disease recognition is of vital importance to monitor plant development and predicting crop production. However, due to data degradation caused by different conditions of image acquisition, e.g., laboratory vs. field environment, machine learning-based recognition models generated within a specific dataset (source domain) tend to lose their validity when generalized to a novel dataset (target domain). To this end, domain adaptation methods can be leveraged for the recognition by learning invariant representations across domains. In this paper, we aim at addressing the issues of domain shift existing in plant disease recognition and propose a novel unsupervised domain adaptation method via uncertainty regularization, namely, Multi-Representation Subdomain Adaptation Network with Uncertainty Regularization for Cross-Species Plant Disease Classification (MSUN). Our simple but effective MSUN makes a breakthrough in plant disease recognition in the wild by using a large amount of unlabeled data and via nonadversarial training. Specifically, MSUN comprises multirepresentation, subdomain adaptation modules and auxiliary uncertainty regularization. The multirepresentation module enables MSUN to learn the overall structure of features and also focus on capturing more details by using the multiple representations of the source domain. This effectively alleviates the problem of large interdomain discrepancy. Subdomain adaptation is used to capture discriminative properties by addressing the issue of higher interclass similarity and lower intraclass variation. Finally, the auxiliary uncertainty regularization effectively suppresses the uncertainty problem due to domain transfer. MSUN was experimentally validated to achieve optimal results on the PlantDoc, Plant-Pathology, Corn-Leaf-Diseases, and Tomato-Leaf-Diseases datasets, with accuracies of 56.06%, 72.31%, 96.78%, and 50.58%, respectively, surpassing other state-of-the-art domain adaptation techniques considerably.",
+  "fuente_resumen": "Semantic Scholar",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C5",
+  "doi": "10.1016/j.engappai.2025.111168",
+  "url": "https://doi.org/10.1016/j.engappai.2025.111168",
+  "titulo": "Domain generalization plant leaf disease recognition: Toward from laboratory to field",
+  "autores": [
+   {
+    "given": "Kun",
+    "family": "Zhan"
+   },
+   {
+    "given": "Yingqiong",
+    "family": "Peng"
+   },
+   {
+    "given": "Muxin",
+    "family": "Liao"
+   },
+   {
+    "given": "Yinglong",
+    "family": "Wang"
+   }
+  ],
+  "revista": "Engineering Applications of Artificial Intelligence",
+  "editorial": "Elsevier BV",
+  "anio": 2025,
+  "mes": 9,
+  "volumen": "156",
+  "numero": "",
+  "paginas": "111168",
+  "articulo": "111168",
+  "issn": "0952-1976",
+  "resumen": "",
+  "fuente_resumen": "",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C5",
+  "doi": "10.1016/j.ecoinf.2025.103579",
+  "url": "https://doi.org/10.1016/j.ecoinf.2025.103579",
+  "titulo": "Bridging the Lab-to-Field gap in plant disease diagnosis through unsupervised domain adaptation enhanced by background recomposition",
+  "autores": [
+   {
+    "given": "Woosang",
+    "family": "Jeon"
+   },
+   {
+    "given": "Taehyeong",
+    "family": "Kim"
+   },
+   {
+    "given": "Sanghyeok",
+    "family": "Choi"
+   },
+   {
+    "given": "Kyuseok",
+    "family": "Yang"
+   },
+   {
+    "given": "Seong-Yeop",
+    "family": "Kim"
+   },
+   {
+    "given": "Mungyeong",
+    "family": "Song"
+   }
+  ],
+  "revista": "Ecological Informatics",
+  "editorial": "Elsevier BV",
+  "anio": 2026,
+  "mes": 2,
+  "volumen": "93",
+  "numero": "",
+  "paginas": "103579",
+  "articulo": "103579",
+  "issn": "1574-9541",
+  "resumen": "Early detection of plant diseases caused by pests, pathogens such as viruses is essential for preventing their spread and minimizing crop damage, particularly in indoor farming and orchards. Machine learning-based computer vision approaches have emerged as promising tools for automated disease diagnosis, but their implementation faces critical challenges due to the scarcity of labeled data from real agricultural environments. Consequently, models are primarily trained using laboratory-collected images with monotonous backgrounds, resulting in significantly reduced performance when deployed in real cultivation environments. To address these challenges, this study presents a two-step adaptation method to bridge the gap between laboratory and real-field environments in plant disease diagnosis. Our approach first applies field-adaptive background recomposition for image augmentation, followed by unsupervised domain adaptation, enabling effective disease diagnosis in real agricultural environments. We quantitatively and qualitatively validated the proposed method on disease identification tasks for tomato, chili pepper, grape, and apple leaves, achieving robust performance in field environments without requiring labeled real-field data.",
+  "fuente_resumen": "OpenAlex",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C5",
+  "doi": "10.1016/j.compag.2022.107371",
+  "url": "https://doi.org/10.1016/j.compag.2022.107371",
+  "titulo": "P2OP—Plant Pathology on Palms: A deep learning-based mobile solution for in-field plant disease detection",
+  "autores": [
+   {
+    "given": "Sivasubramaniam",
+    "family": "Janarthan"
+   },
+   {
+    "given": "Selvarajah",
+    "family": "Thuseethan"
+   },
+   {
+    "given": "Sutharshan",
+    "family": "Rajasegarar"
+   },
+   {
+    "given": "John",
+    "family": "Yearwood"
+   }
+  ],
+  "revista": "Computers and Electronics in Agriculture",
+  "editorial": "Elsevier BV",
+  "anio": 2022,
+  "mes": 11,
+  "volumen": "202",
+  "numero": "",
+  "paginas": "107371",
+  "articulo": "107371",
+  "issn": "0168-1699",
+  "resumen": "",
+  "fuente_resumen": "",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C6",
+  "doi": "10.1016/j.procs.2023.01.201",
+  "url": "https://doi.org/10.1016/j.procs.2023.01.201",
+  "titulo": "Study of Data and Model parallelism in Distributed Deep learning for Diabetic retinopathy classification",
+  "autores": [
+   {
+    "given": "Mahesh S",
+    "family": "Patil"
+   },
+   {
+    "given": "Satyadhyan",
+    "family": "Chickerur"
+   }
+  ],
+  "revista": "Procedia Computer Science",
+  "editorial": "Elsevier BV",
+  "anio": 2023,
+  "mes": null,
+  "volumen": "218",
+  "numero": "",
+  "paginas": "2253-2263",
+  "articulo": "",
+  "issn": "1877-0509",
+  "resumen": "Distributed deep learning(DDL) is an area of research in Artificial intelligence (AI), where the training time of deep learning(DL) models can be drastically reduced by using multiple accelerators. Most of the previous research works use the data parallelism strategy of DDL and report its performance. But, other parallelism strategies in DDL need to be explored and report its performance modeling for particular applications and software-hardware stacks. Such works can help other researchers make better decisions in designing an efficient DDL algorithm. This work presents a comparative study of data parallelism(DP) and model parallelism(MP) for DDL. The diabetic retinopathy(DR) image classification is used as a case study, and DDL algorithms are implemented using Mesh-Tensor Flow on NVidia's DGX-1. As indicated by the results, the MP strategy provides faster convergence and higher validation accuracy of 62.13% compared to DP strategies validation accuracy of 55.72%. Also, the MP strategy surpasses the DP's highest accuracy in lesser epochs with a speed-up of 1.38X in terms of time duration. Overall, this unique study provides a performance comparison between DP and MP strategies of DDL algorithms being applied for a particular application, dataset, and software-hardware stack.",
+  "fuente_resumen": "OpenAlex",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C6",
+  "doi": "10.29375/25392115.5054",
+  "url": "https://doi.org/10.29375/25392115.5054",
+  "titulo": "A snapshot of parallelism in distributed deep learning training",
+  "autores": [
+   {
+    "given": "Hairol",
+    "family": "Romero-Sandí"
+   },
+   {
+    "given": "Gabriel",
+    "family": "Núñez"
+   },
+   {
+    "given": "Elvis",
+    "family": "Rojas"
+   }
+  ],
+  "revista": "Revista Colombiana de Computación",
+  "editorial": "Universidad Autonoma de Bucaramanga",
+  "anio": 2024,
+  "mes": 6,
+  "volumen": "25",
+  "numero": "1",
+  "paginas": "60-73",
+  "articulo": "",
+  "issn": "2539-2115",
+  "resumen": "The accelerated development of applications related to artificial intelligence has generated the creation of increasingly complex neural network models with enormous amounts of parameters, currently reaching up to trillions of parameters. Therefore, it makes your training almost impossible without the parallelization of training. Parallelism applied with different approaches is the mechanism that has been used to solve the problem of training on a large scale. This paper presents a glimpse of the state of the art related to parallelism in deep learning training from multiple points of view. The topics of pipeline parallelism, hybrid parallelism, mixture-of-experts and auto-parallelism are addressed in this study, which currently play a leading role in scientific research related to this area. Finally, we develop a series of experiments with data parallelism and model parallelism. The objective is that the reader can observe the performance of two types of parallelism and understand more clearly the approach of each one.",
+  "fuente_resumen": "Crossref",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C6",
+  "doi": "10.1007/s00607-021-01029-2",
+  "url": "https://doi.org/10.1007/s00607-021-01029-2",
+  "titulo": "Analyzing the impact of the MPI allreduce in distributed training of convolutional neural networks",
+  "autores": [
+   {
+    "given": "Adrián",
+    "family": "Castelló"
+   },
+   {
+    "given": "Mar",
+    "family": "Catalán"
+   },
+   {
+    "given": "Manuel F.",
+    "family": "Dolz"
+   },
+   {
+    "given": "Enrique S.",
+    "family": "Quintana-Ortí"
+   },
+   {
+    "given": "José",
+    "family": "Duato"
+   }
+  ],
+  "revista": "Computing",
+  "editorial": "Springer Science and Business Media LLC",
+  "anio": 2023,
+  "mes": 5,
+  "volumen": "105",
+  "numero": "5",
+  "paginas": "1101-1119",
+  "articulo": "",
+  "issn": "0010-485X",
+  "resumen": "For many distributed applications, data communication poses an important bottleneck from the points of view of performance and energy consumption. As more cores are integrated per node, in general the global performance of the system increases yet eventually becomes limited by the interconnection network. This is the case for distributed data-parallel training of convolutional neural networks (CNNs), which usually proceeds on a cluster with a small to moderate number of nodes. In this paper, we analyze the performance of the Allreduce collective communication primitive, a key to the efficient data-parallel distributed training of CNNs. Our study targets the distinct realizations of this primitive in three high performance instances of Message Passing Interface (MPI), namely MPICH, OpenMPI, and IntelMPI, and employs a cluster equipped with state-of-the-art processor and network technologies. In addition, we apply the insights gained from the experimental analysis to the optimization of the TensorFlow framework when running on top of Horovod. Our study reveals that a careful selection of the most convenient MPI library and Allreduce (ARD) realization accelerates the training throughput by a factor of $$1.2\\times $$ 1.2 × compared with the default algorithm in the same MPI library, and up to $$2.8\\times $$ 2.8 × when comparing distinct MPI libraries in a number of relevant combinations of CNN model+dataset.",
+  "fuente_resumen": "Semantic Scholar",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C6",
+  "doi": "10.1016/j.parco.2022.102945",
+  "url": "https://doi.org/10.1016/j.parco.2022.102945",
+  "titulo": "Optimizing convolutional neural networks on multi-core vector accelerator",
+  "autores": [
+   {
+    "given": "Zhong",
+    "family": "Liu"
+   },
+   {
+    "given": "Xin",
+    "family": "Xiao"
+   },
+   {
+    "given": "Chen",
+    "family": "Li"
+   },
+   {
+    "given": "Sheng",
+    "family": "Ma"
+   },
+   {
+    "given": "Deng",
+    "family": "Rangyu"
+   }
+  ],
+  "revista": "Parallel Computing",
+  "editorial": "Elsevier BV",
+  "anio": 2022,
+  "mes": 9,
+  "volumen": "112",
+  "numero": "",
+  "paginas": "102945",
+  "articulo": "102945",
+  "issn": "0167-8191",
+  "resumen": "",
+  "fuente_resumen": "",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C6",
+  "doi": "10.1109/tpds.2023.3281931",
+  "url": "https://doi.org/10.1109/tpds.2023.3281931",
+  "titulo": "A Survey on Auto-Parallelism of Large-Scale Deep Learning Training",
+  "autores": [
+   {
+    "given": "Peng",
+    "family": "Liang"
+   },
+   {
+    "given": "Yu",
+    "family": "Tang"
+   },
+   {
+    "given": "Xiaoda",
+    "family": "Zhang"
+   },
+   {
+    "given": "Youhui",
+    "family": "Bai"
+   },
+   {
+    "given": "Teng",
+    "family": "Su"
+   },
+   {
+    "given": "Zhiquan",
+    "family": "Lai"
+   },
+   {
+    "given": "Linbo",
+    "family": "Qiao"
+   },
+   {
+    "given": "Dongsheng",
+    "family": "Li"
+   }
+  ],
+  "revista": "IEEE Transactions on Parallel and Distributed Systems",
+  "editorial": "Institute of Electrical and Electronics Engineers (IEEE)",
+  "anio": 2023,
+  "mes": 8,
+  "volumen": "34",
+  "numero": "8",
+  "paginas": "2377-2390",
+  "articulo": "",
+  "issn": "1045-9219",
+  "resumen": "Deep learning (DL) has gained great success in recent years, leading to state-of-the-art performance in research community and industrial fields like computer vision and natural language processing. One of the reasons for this success is the huge amount parameters adopted in DL models. However, it is impractical to train a moderately large model with a large number of parameters on a typical single device. Thus, It is necessary to train DL models in clusters with distributed training algorithms. However, traditional distributed training algorithms are usually sub-optimal and highly customized, which owns the drawbacks to train large-scale DL models in varying computing clusters. To handle the above problem, researchers propose auto-parallelism, which is promising to train large-scale DL models efficiently and practically in various computing clusters. In this survey, we perform a broad and thorough investigation on challenges, basis, and strategy searching methods of auto-parallelism in DL training. First, we abstract basic parallelism schemes with their communication cost and memory consumption in DL training. Further, we analyze and compare a series of current auto-parallelism works and investigate strategies and searching methods which are commonly used in practice. At last, we discuss several trends in auto-parallelism which are promising in further research.",
+  "fuente_resumen": "Semantic Scholar",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C7",
+  "doi": "10.1016/j.cpb.2025.100459",
+  "url": "https://doi.org/10.1016/j.cpb.2025.100459",
+  "titulo": "RTR_Lite_MobileNetV2: A lightweight and efficient model for plant disease detection and classification",
+  "autores": [
+   {
+    "given": "Sangeeta",
+    "family": "Duhan"
+   },
+   {
+    "given": "Preeti",
+    "family": "Gulia"
+   },
+   {
+    "given": "Nasib Singh",
+    "family": "Gill"
+   },
+   {
+    "given": "Ekta",
+    "family": "Narwal"
+   }
+  ],
+  "revista": "Current Plant Biology",
+  "editorial": "Elsevier BV",
+  "anio": 2025,
+  "mes": 6,
+  "volumen": "42",
+  "numero": "",
+  "paginas": "100459",
+  "articulo": "100459",
+  "issn": "2214-6628",
+  "resumen": "Early identification and management of plant diseases are paramount for sustaining crop health, ensuring optimal yields, and safeguarding food security in agricultural systems. Left untreated, diseases caused by fungi, bacteria, viruses, and pests can significantly diminish agricultural output, posing a threat to global food production. While recent research has explored machine learning-based techniques for early disease detection, many proposed models are resource-intensive, characterized by large model sizes and millions of trainable parameters. Recognizing resource-constrained devices' needs, recent studies have developed lightweight models, but their shallow structure may hinder accurate disease identification. This study proposes the RTR_Lite_MobileNet model, an enhanced version of the original MobileNetV2 model designed for efficient deployment on resource-constrained devices. Different attention techniques, such as Squeeze-and-Excitation Networks (SENet), Efficient Channel Attention (ECA), and Triplet Attention, are added to reduce the model's computational footprint while boosting its ability to capture complicated disease patterns. Extensive experimentation validates the efficacy of RTR_Lite_MobileNet, consistently outperforming MobileNetV2 with top accuracies across multiple datasets: 99.92% on Plant Disease, 82.00% on PlantDoc, 97.11% on PaddyDoctor, 90.84% on Coffee, 100% on Wheat, 96.78% on Soybean, and 96.67% on Sugarcane. Deployment on edge devices such as Raspberry Pi 4 and 5 demonstrates its computational efficiency, as evidenced by lower latency and memory consumption. Research results indicate that RTR_Lite_MobileNet is a practical and effective option for real-time plant disease diagnosis, paving the way for additional uses in agricultural monitoring and IoT systems. • Efficient, lightweight disease detection model for resource-constrained devices. • Utilization of advanced attention mechanisms for improved plant disease detection. • Hybrid attention modules embed lightweight deep learning models for disease identification. • Optimized for low-power devices without compromising disease identification accuracy.",
+  "fuente_resumen": "OpenAlex",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C7",
+  "doi": "10.1016/j.atech.2023.100195",
+  "url": "https://doi.org/10.1016/j.atech.2023.100195",
+  "titulo": "Application of smartphone-image processing and transfer learning for rice disease and nutrient deficiency detection",
+  "autores": [
+   {
+    "given": "Anshuman",
+    "family": "Nayak"
+   },
+   {
+    "given": "Somsubhra",
+    "family": "Chakraborty"
+   },
+   {
+    "given": "Dillip Kumar",
+    "family": "Swain"
+   }
+  ],
+  "revista": "Smart Agricultural Technology",
+  "editorial": "Elsevier BV",
+  "anio": 2023,
+  "mes": 8,
+  "volumen": "4",
+  "numero": "",
+  "paginas": "100195",
+  "articulo": "100195",
+  "issn": "2772-3755",
+  "resumen": "The earliest detection of plant disease is the primary concern of the farming community. The availability of advanced digital cameras and smartphones with improved image acquisition modes and deep learning methods like convolutional neural networks (CNN) can detect plant disease with high accuracy. This study used 2259 smartphone images of various rice (Oryza sativa) plant parts under various classes and 250 real-time validation images for classifying 12 rice diseases and nutrient deficiency symptoms. Different image segmentation techniques like foreground extraction were used to segment affected portions. Additionally, optimization of models and procedures to use them in smartphones with offline working capabilities have been described. Furthermore, a dynamic framework has been developed and demonstrated where the server trains on unseen image data to improve the classification performance and updates the model on falling below a certain threshold level. A comparison was made across different models used for image classification with many supporting metrics to select the best model for transfer learning. The top four performing models were DenseNet201, Xception, MobileNetV2, and ResNet50, with validation accuracies of 0.9803, 0.9778, 0.9756, and 0.9718, respectively. The ResNet50 model was found to best among all for cloud architectures, while MobileNetV2 appeared as the best model for the smartphone application. Finally, the android application, “Rice Disease Detector” compiled with the MobileNetV2 model was tested for multiple disease occurrences in a single capture. More research is warranted to test the application for smartphones with variable configurations.",
+  "fuente_resumen": "OpenAlex",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C7",
+  "doi": "10.1016/j.procs.2022.07.013",
+  "url": "https://doi.org/10.1016/j.procs.2022.07.013",
+  "titulo": "Cocoa Companion: Deep Learning-Based Smartphone Application for Cocoa Disease Detection",
+  "autores": [
+   {
+    "given": "Sandra",
+    "family": "Kumi"
+   },
+   {
+    "given": "Dylan",
+    "family": "Kelly"
+   },
+   {
+    "given": "Jonathan",
+    "family": "Woodstuff"
+   },
+   {
+    "given": "Richard K.",
+    "family": "Lomotey"
+   },
+   {
+    "given": "Rita",
+    "family": "Orji"
+   },
+   {
+    "given": "Ralph",
+    "family": "Deters"
+   }
+  ],
+  "revista": "Procedia Computer Science",
+  "editorial": "Elsevier BV",
+  "anio": 2022,
+  "mes": null,
+  "volumen": "203",
+  "numero": "",
+  "paginas": "87-94",
+  "articulo": "",
+  "issn": "1877-0509",
+  "resumen": "The use of machine learning (ML) in crop disease detection has gain significant attention from both academia and industry lately. This paper posits that ML techniques can be employed for early detection and diagnosis of the two (2) major diseases that affect cocoa production namely – Swollen Shoot and Black Pod. In this regard, a mobile application is designed with ML techniques integrated to enable cocoa farmers take a picture of the cocoa pod and upload for the diagnosis, which takes place on a backend cloud service. The automatic detection and diagnosis of diseases is based on the Convolutional Neural Networks (CNN) for image analysis and classification. In the paper, four (4) CNN models are built and trained. The best performing model is SSD MobileNet V2 with over 80% confidence detection score.",
+  "fuente_resumen": "OpenAlex",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C7",
+  "doi": "10.34133/plantphenomics.0201",
+  "url": "https://doi.org/10.34133/plantphenomics.0201",
+  "titulo": "StripeRust-Pocket: A Mobile-Based Deep Learning Application for Efficient Disease Severity Assessment of Wheat Stripe Rust",
+  "autores": [
+   {
+    "given": "Weizhen",
+    "family": "Liu"
+   },
+   {
+    "given": "Yuxi",
+    "family": "Chen"
+   },
+   {
+    "given": "Zhaoxin",
+    "family": "Lu"
+   },
+   {
+    "given": "Xiaoyu",
+    "family": "Lu"
+   },
+   {
+    "given": "Ze",
+    "family": "Wu"
+   },
+   {
+    "given": "Ziyao",
+    "family": "Zheng"
+   },
+   {
+    "given": "Yongqiang",
+    "family": "Suo"
+   },
+   {
+    "given": "Caixia",
+    "family": "Lan"
+   },
+   {
+    "given": "Xiaohui",
+    "family": "Yuan"
+   }
+  ],
+  "revista": "Plant Phenomics",
+  "editorial": "Elsevier BV",
+  "anio": 2024,
+  "mes": null,
+  "volumen": "6",
+  "numero": "",
+  "paginas": "0201",
+  "articulo": "0201",
+  "issn": "2643-6515",
+  "resumen": "Wheat stripe rust poses a marked threat to global wheat production. Accurate and effective disease severity assessments are crucial for disease resistance breeding and timely management of field diseases. In this study, we propose a practical solution using mobile-based deep learning and model-assisted labeling. StripeRust-Pocket, a user-friendly mobile application developed based on deep learning models, accurately quantifies disease severity in wheat stripe rust leaf images, even under complex backgrounds. Additionally, StripeRust-Pocket facilitates image acquisition, result storage, organization, and sharing. The underlying model employed by StripeRust-Pocket, called StripeRustNet, is a balanced lightweight 2-stage model. The first stage utilizes MobileNetV2-DeepLabV3+ for leaf segmentation, followed by ResNet50-DeepLabV3+ in the second stage for lesion segmentation. Disease severity is estimated by calculating the ratio of the lesion pixel area to the leaf pixel area. StripeRustNet achieves 98.65% mean intersection over union (MIoU) for leaf segmentation and 86.08% MIoU for lesion segmentation. Validation using an additional 100 field images demonstrated a mean correlation of over 0.964 with 3 expert visual scores. To address the challenges in manual labeling, we introduce a 2-stage labeling pipeline that combines model-assisted labeling, manual correction, and spatial complementarity. We apply this pipeline to our self-collected dataset, reducing the annotation time from 20 min to 3 min per image. Our method provides an efficient and practical solution for wheat stripe rust severity assessments, empowering wheat breeders and pathologists to implement timely disease management. It also demonstrates how to address the “last mile” challenge of applying computer vision technology to plant phenomics.",
+  "fuente_resumen": "Semantic Scholar",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C7",
+  "doi": "10.3389/fpls.2023.1308528",
+  "url": "https://doi.org/10.3389/fpls.2023.1308528",
+  "titulo": "Plant disease detection model for edge computing devices",
+  "autores": [
+   {
+    "given": "Ameer Tamoor",
+    "family": "Khan"
+   },
+   {
+    "given": "Signe Marie",
+    "family": "Jensen"
+   },
+   {
+    "given": "Abdul Rehman",
+    "family": "Khan"
+   },
+   {
+    "given": "Shuai",
+    "family": "Li"
+   }
+  ],
+  "revista": "Frontiers in Plant Science",
+  "editorial": "Frontiers Media SA",
+  "anio": 2023,
+  "mes": 12,
+  "volumen": "14",
+  "numero": "",
+  "paginas": "",
+  "articulo": "1308528",
+  "issn": "1664-462X",
+  "resumen": "In this paper, we address the question of achieving high accuracy in deep learning models for agricultural applications through edge computing devices while considering the associated resource constraints. Traditional and state-of-the-art models have demonstrated good accuracy, but their practicality as end-user available solutions remains uncertain due to current resource limitations. One agricultural application for deep learning models is the detection and classification of plant diseases through image-based crop monitoring. We used the publicly available PlantVillage dataset containing images of healthy and diseased leaves for 14 crop species and 6 groups of diseases as example data. The MobileNetV3-small model succeeds in classifying the leaves with a test accuracy of around 99.50%. Post-training optimization using quantization reduced the number of model parameters from approximately 1.5 million to 0.93 million while maintaining the accuracy of 99.50%. The final model is in ONNX format, enabling deployment across various platforms, including mobile devices. These findings offer a cost-effective solution for deploying accurate deep-learning models in agricultural applications.",
+  "fuente_resumen": "Crossref",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C7",
+  "doi": "10.1109/access.2025.3581099",
+  "url": "https://doi.org/10.1109/access.2025.3581099",
+  "titulo": "Deep Learning Based Mobile Application for Automated Plant Disease Detection",
+  "autores": [
+   {
+    "given": "B.",
+    "family": "Ramana Reddy"
+   },
+   {
+    "given": "Gauri",
+    "family": "Kalnoor"
+   },
+   {
+    "given": "Mudigonda",
+    "family": "Devashish"
+   },
+   {
+    "given": "Palagiri",
+    "family": "Sai Karthik Reddy"
+   }
+  ],
+  "revista": "IEEE Access",
+  "editorial": "Institute of Electrical and Electronics Engineers (IEEE)",
+  "anio": 2025,
+  "mes": null,
+  "volumen": "13",
+  "numero": "",
+  "paginas": "107917-107925",
+  "articulo": "",
+  "issn": "2169-3536",
+  "resumen": "Plant diseases remain a significant threat to global agriculture, necessitating rapid and accurate detection to minimize crop loss. This paper presents a lightweight, end-to-end system for plant leaf disease detection and severity estimation, optimized for real-time field deployment. We propose a custom Convolutional Neural Network (CNN), built using PyTorch, trained on the PlantVillage dataset to classify leaves as healthy or diseased with a test accuracy of 92.06%. To enhance its practical relevance, we incorporate a classical image processing pipeline using OpenCV and NumPy to estimate the severity of infection by computing the ratio of diseased to total leaf area. These capabilities are integrated into a cross-platform mobile application developed using React Native, with inference served via a Flask-based backend API. The mobile app enables users to capture or upload images and instantly receive diagnostic results, and severity percentages. Our system bridges the gap between deep learning research and real-world agricultural application by combining accurate classification, interpretable severity estimation, and mobile accessibility. This approach offers farmers a powerful, on-device digital assistant to monitor crop health and make informed intervention decisions. Experimental results demonstrate strong generalization performance, visual alignment of model attention with infected regions, and real-time usability in field conditions.",
+  "fuente_resumen": "Semantic Scholar",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C8",
+  "doi": "10.1016/j.eswa.2025.128371",
+  "url": "https://doi.org/10.1016/j.eswa.2025.128371",
+  "titulo": "AGRIFOLD: AGRIculture Federated learning for Optimized Leaf disease Detection",
+  "autores": [
+   {
+    "given": "Francesco",
+    "family": "Piccialli"
+   },
+   {
+    "given": "Ciro",
+    "family": "Della Bruna"
+   },
+   {
+    "given": "Diletta",
+    "family": "Chiaro"
+   },
+   {
+    "given": "Pian",
+    "family": "Qi"
+   },
+   {
+    "given": "Martina",
+    "family": "Savoia"
+   }
+  ],
+  "revista": "Expert Systems with Applications",
+  "editorial": "Elsevier BV",
+  "anio": 2025,
+  "mes": 9,
+  "volumen": "289",
+  "numero": "",
+  "paginas": "128371",
+  "articulo": "128371",
+  "issn": "0957-4174",
+  "resumen": "Efficient and accurate detection of plant leaf diseases is essential for protecting crop health and promoting sustainable and precision agriculture practices. However, the decentralized nature of agricultural data, combined with the inherent limitations of centralized Machine Learning (ML), presents significant challenges for developing scalable, privacy-preserving solutions. In this paper, we introduce AGRIFOLD, a Federated Learning (FL) framework designed to enable collaborative training of a lightweight Convolutional Neural Network (CNN) across diverse and distributed datasets while maintaining data privacy. By integrating an Efficient Channel Attention (ECA) mechanism into the VGG16 architecture, AGRIFOLD significantly improves classification accuracy and enhances interpretability through heatmaps that highlight regions affected by diseases. We evaluate the FL model using various aggregation methods, including FedAvg, FedProx, SCAFFOLD, FedBN, and FedDF, obtaining good accuracy levels for all tested aggregation strategies, with SCAFFOLD achieving the best overall performance. The model’s lightweight design, optimized through ablation and pruning techniques, facilitates deployment on resource-constrained edge devices. Additionally, to further support farmers’ decision-making, the framework incorporates a natural language processing-based recommender system that provides tailored treatment suggestions. Comprehensive experiments conducted on 12 heterogeneous datasets demonstrate high classification accuracy across 9 distinct leaf disease classes and healthy leaves, underscoring the practical potential of FL-based solutions for sustainable, real-world agricultural applications. The AGRIFOLD source code is available at https://github.com/MODAL-UNINA/AGRIFOLD .",
+  "fuente_resumen": "OpenAlex",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C8",
+  "doi": "10.1016/j.compag.2024.109720",
+  "url": "https://doi.org/10.1016/j.compag.2024.109720",
+  "titulo": "Adaptive knowledge transfer using federated deep learning for plant disease detection",
+  "autores": [
+   {
+    "given": "Pragya",
+    "family": "Hari"
+   },
+   {
+    "given": "Maheshwari Prasad",
+    "family": "Singh"
+   }
+  ],
+  "revista": "Computers and Electronics in Agriculture",
+  "editorial": "Elsevier BV",
+  "anio": 2025,
+  "mes": 2,
+  "volumen": "229",
+  "numero": "",
+  "paginas": "109720",
+  "articulo": "109720",
+  "issn": "0168-1699",
+  "resumen": "",
+  "fuente_resumen": "",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C8",
+  "doi": "10.1016/j.compag.2024.109001",
+  "url": "https://doi.org/10.1016/j.compag.2024.109001",
+  "titulo": "Resource-efficient federated learning over IoAT for rice leaf disease classification",
+  "autores": [
+   {
+    "given": "Meenakshi",
+    "family": "Aggarwal"
+   },
+   {
+    "given": "Vikas",
+    "family": "Khullar"
+   },
+   {
+    "given": "Nitin",
+    "family": "Goyal"
+   },
+   {
+    "given": "Thomas André",
+    "family": "Prola"
+   }
+  ],
+  "revista": "Computers and Electronics in Agriculture",
+  "editorial": "Elsevier BV",
+  "anio": 2024,
+  "mes": 6,
+  "volumen": "221",
+  "numero": "",
+  "paginas": "109001",
+  "articulo": "109001",
+  "issn": "0168-1699",
+  "resumen": "",
+  "fuente_resumen": "",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C8",
+  "doi": "10.1007/s11042-024-18867-9",
+  "url": "https://doi.org/10.1007/s11042-024-18867-9",
+  "titulo": "An improved federated deep learning for plant leaf disease detection",
+  "autores": [
+   {
+    "given": "Pragya",
+    "family": "Hari"
+   },
+   {
+    "given": "Maheshwari Prasad",
+    "family": "Singh"
+   },
+   {
+    "given": "Amit Kumar",
+    "family": "Singh"
+   }
+  ],
+  "revista": "Multimedia Tools and Applications",
+  "editorial": "Springer Science and Business Media LLC",
+  "anio": 2024,
+  "mes": 3,
+  "volumen": "83",
+  "numero": "35",
+  "paginas": "83471-83491",
+  "articulo": "",
+  "issn": "1573-7721",
+  "resumen": "",
+  "fuente_resumen": "",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C8",
+  "doi": "10.1016/j.aiia.2024.06.004",
+  "url": "https://doi.org/10.1016/j.aiia.2024.06.004",
+  "titulo": "Computer vision in smart agriculture and precision farming: Techniques and applications",
+  "autores": [
+   {
+    "given": "Sumaira",
+    "family": "Ghazal"
+   },
+   {
+    "given": "Arslan",
+    "family": "Munir"
+   },
+   {
+    "given": "Waqar S.",
+    "family": "Qureshi"
+   }
+  ],
+  "revista": "Artificial Intelligence in Agriculture",
+  "editorial": "Elsevier BV",
+  "anio": 2024,
+  "mes": 9,
+  "volumen": "13",
+  "numero": "",
+  "paginas": "64-83",
+  "articulo": "",
+  "issn": "2589-7217",
+  "resumen": "The transformation of age-old farming practices through the integration of digitization and automation has sparked a revolution in agriculture that is driven by cutting-edge computer vision and arti ﬁ cial intelligence (AI) technologies. This transformation not only promises increased productivity and economic growth, but also has the potential to address important global issues such as food security and sustainability. This survey paper aims to provide a holistic understanding of the integration of vision-based intelligent systems in various aspects of precision agriculture. By providing a detailed discussion on key areas of digital life cycle of crops, this survey contributes to a deeper understanding of the complexities associated with the implementation of vision-guided intelligent systems in challenging agricultural environments. The focus of this survey is to explore widelyusedimagingandimageanalysistechniquesbeingutilizedforprecisionfarmingtasks.Thispaper ﬁ rstdis-cussesvarioussalientcropmetricsusedindigitalagriculture.Thenthispaperillustratestheusageofimagingand computer vision techniques in various phases of digital life cycle of crops in precision agriculture, such as image acquisition, image stitching and photogrammetry, image analysis, decision making, treatment, and planning. After establishing a thorough understanding of related terms and techniques involved in the implementation of vision-based intelligent systems for precision agriculture, the survey concludes by outlining the challenges associated with implementing generalized computer vision models for real-time deployment of fully autonomous farms.",
+  "fuente_resumen": "Semantic Scholar",
+  "tipo": "journal-article"
+ },
+ {
+  "constructo": "C8",
+  "doi": "10.1016/j.inpa.2024.03.002",
+  "url": "https://doi.org/10.1016/j.inpa.2024.03.002",
+  "titulo": "Innovative deep learning approach for cross-crop plant disease detection: A generalized method for identifying unhealthy leaves",
+  "autores": [
+   {
+    "given": "Imane",
+    "family": "Bouacida"
+   },
+   {
+    "given": "Brahim",
+    "family": "Farou"
+   },
+   {
+    "given": "Lynda",
+    "family": "Djakhdjakha"
+   },
+   {
+    "given": "Hamid",
+    "family": "Seridi"
+   },
+   {
+    "given": "Muhammet",
+    "family": "Kurulay"
+   }
+  ],
+  "revista": "Information Processing in Agriculture",
+  "editorial": "Elsevier BV",
+  "anio": 2025,
+  "mes": 3,
+  "volumen": "12",
+  "numero": "1",
+  "paginas": "54-67",
+  "articulo": "",
+  "issn": "2214-3173",
+  "resumen": "One of the most serious threats to global food security is plant diseases compromising agricultural productivity and threatening the livelihoods of millions. These diseases can decimate crops, disrupt food supply chains, and escalate the risk of food shortages, underscoring the urgency of implementing robust strategies to safeguard the world’s food sources. Deep learning methods have revolutionized the field of plant disease detection, offering advanced and accurate solutions for early identification and management. However, a recurring problem in deep learning models is their susceptibility to a lack of robustness and generalization when facing novel crop and disease types that were not included in the training dataset. In this paper, we address this issue by proposing a novel deep learning-based system capable of recognizing diseased and healthy leaves across different crops, even if the system was not trained on them. The key idea is to focus on recognizing the diseased small leaf regions rather than the overall appearance of the diseased leaf, along with determining the disease’s prevalence rate on the entire leaf. For efficient classification and to leverage the excellence of the Inception model in disease recognition, we employ a small Inception model architecture, which is suitable for processing small regions without compromising performance. To confirm the effectiveness of our method, we trained and tested it using the widely acclaimed PlantVillage dataset, recognized as the most utilized dataset for its comprehensive and diverse coverage. Our method achieved an accuracy rate of 94.04%. Furthermore, when tested on new datasets, it achieved an accuracy rate of 97.13%. This innovative approach not only enhances the accuracy of plant disease detection but also addresses the critical challenge of model generalization to diverse crops and diseases. In addition, it outperformed the existing methods in its ability to identify any disease across any crop type, showcasing its potential for broad applicability and contribution to global food security initiatives.",
+  "fuente_resumen": "OpenAlex",
+  "tipo": "journal-article"
+ }
+]

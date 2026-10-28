@@ -2,8 +2,8 @@
 
 Usage: python generar_documentos.py <solucion dir>
 Writes:
-  Articulo_IEEE_Revision_MPI_BioCafe.docx   (IEEE two-column short article)
-  Trazabilidad_Revision_MPI_BioCafe.docx    (constructs, prompts, abstracts, comparative table, evaluation)
+  Articulo_IEEE_Revision_BioCafe.docx   (IEEE two-column short article)
+  Trazabilidad_Revision_BioCafe.docx    (constructs, prompts, abstracts, comparative table, evaluation)
   Semilla_Zotero_Referencias.docx           (Word copy of the Zotero seed)
   figuras/flujo_seleccion.png
 """
@@ -39,19 +39,7 @@ CITE = re.compile(r"\[(@[^\]]+)\]")
 ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"]
 
 # ---------------------------------------------------------------- citation order
-HALLAZGOS = [
-    ("castello2023analyzing", "Elegir biblioteca MPI y algoritmo de Allreduce acelera el entrenamiento de CNN de 1,2 a 2,8 veces"),
-    ("nuriyev2024suara", "SUARA más que duplica la velocidad del Allreduce de Open MPI y mejora 9 % el entrenamiento de ResNet-50"),
-    ("thune2023detailed", "Modelo de comunicación punto a punto con 84 % de precisión para 8192 procesos"),
-    ("patil2023study", "Paralelismo de modelo: aceleración de 1,38 veces y 62,13 % frente a 55,72 % de exactitud"),
-    ("maruf2024optimizing", "Paralelismo en tubería, de datos y de modelo: 44,87 % menos tiempo de entrenamiento"),
-    ("pekkila2022scalable", "MPI compatible con CUDA: 50 % a 87 % de la eficiencia esperada con hasta 64 GPU"),
-    ("chavarro2023influence", "Roya del café: la arquitectura base cambia el resultado hasta en 70 %"),
-    ("araaf2024coffee", "Roya del café con YOLOv8 en un dispositivo de borde: mAP de 73,2 %"),
-    ("soares2022early", "Roya presintomática a los 15 días con imágenes multiespectrales: 80 % de exactitud"),
-    ("duhan2025lite", "Modelo ligero en Raspberry Pi: 90,84 % de exactitud en café"),
-    ("adelaja2025leveraging", "CoffNet: 97,88 % de exactitud a 125,93 imágenes por segundo"),
-]
+HALLAZGOS = C.HALLAZGOS
 
 def citation_order():
     order = []
@@ -174,20 +162,18 @@ def short_name(r):
 
 # ---------------------------------------------------------------- figure
 def flujo_figure(path):
-    uniq = len({x["doi"] for s in BUSQ["busquedas"] for x in s["candidatos"]})
-    listed = sum(len(s["candidatos"]) for s in BUSQ["busquedas"])
-    alt = json.load(open(DATA / "alternativas_verificadas.json", encoding="utf8"))
-    r1 = sum(len(v) for v in json.load(open(DATA / "seleccion_ronda1.json", encoding="utf8")).values())
-    assessed = r1 + len(alt) + len(CRIB["ronda3"]["incluidos"])
-    no_abs = len(CRIB["ronda1"]["excluidos_sin_resumen"]) + sum(1 for r in alt if not r["resumen"])
-    red = len(CRIB["ronda2"]["no_elegidos_con_resumen"])
-    assert assessed - no_abs - red == len(REFS)
     seen = {x["doi"] for s in BUSQ["busquedas"] for x in s["candidatos"]}
-    pre = [d for v in json.load(open(DATA / "seleccion_ronda1.json", encoding="utf8")).values() for d in v] + [r["doi"] for r in alt] + CRIB["ronda3"]["incluidos"]
-    assert len(set(pre)) == assessed and set(pre) <= seen, set(pre) - seen
+    listed = sum(len(s["candidatos"]) for s in BUSQ["busquedas"])
+    pre = [d for v in json.load(open(DATA / "preseleccion.json", encoding="utf8")).values() for d in v]
+    from_v1 = [d for d in pre if d not in seen]
+    uniq = len(seen) + len(from_v1)
+    assessed = len(set(pre))
+    no_abs = len(CRIB["excluidos_sin_resumen"])
+    red = len(CRIB["no_elegidos_con_resumen"])
+    assert assessed - no_abs - red == len(REFS), (assessed, no_abs, red)
     fig, ax = plt.subplots(figsize=(3.6, 3.3), dpi=300); ax.axis("off"); ax.set_xlim(0, 12); ax.set_ylim(0, 10)
     main = [(9.0, f"{len(BUSQ['busquedas'])} búsquedas en Crossref\n{listed} registros revisados"),
-            (6.8, f"{uniq} registros únicos"), (4.6, f"{assessed} preseleccionados\n(DOI verificado)"), (2.0, f"{len(REFS)} artículos incluidos")]
+            (6.8, f"{len(seen)} registros únicos\n+ {len(from_v1)} de la primera búsqueda"), (4.6, f"{assessed} preseleccionados\n(DOI verificado)"), (2.0, f"{len(REFS)} artículos incluidos")]
     for y, txt in main:
         ax.text(3.2, y, txt, ha="center", va="center", fontsize=6.5, family="serif",
                 bbox=dict(boxstyle="round,pad=0.35", fc="#EEF3FA", ec="#1F4E99", lw=0.7))
@@ -200,7 +186,7 @@ def flujo_figure(path):
                 bbox=dict(boxstyle="round,pad=0.3", fc="#FFF4E5", ec="#B26B00", lw=0.6))
         ax.annotate("", xy=(7.2, y), xytext=(3.2, y), arrowprops=dict(arrowstyle="->", lw=0.6))
     fig.savefig(path, bbox_inches="tight"); plt.close(fig)
-    return {"listed": listed, "uniq": uniq, "assessed": assessed, "no_abs": no_abs, "red": red}
+    return {"listed": listed, "uniq": len(seen), "from_v1": len(from_v1), "assessed": assessed, "no_abs": no_abs, "red": red}
 
 # ---------------------------------------------------------------- article
 def build_article(out, fig_path):
@@ -239,10 +225,10 @@ def build_article(out, fig_path):
                     rows = []
                     for c in CONS:
                         nums = sorted(NUM[k] for k, r in BY_KEY.items() if r["constructo"] == c["id"])
-                        area = "PyD" if c["area"].startswith("Computación") and "+" not in c["area"] else ("SI" if c["area"].startswith("Sistemas") and "+" not in c["area"] else "PyD + SI")
+                        area = {"Dominio del proyecto": "Dom.", "Sistemas Inteligentes": "SI", "Computación Paralela y Distribuida": "PyD"}.get(c["area"], "SI + PyD")
                         rows.append((c["id"], c["nombre"], area, ", ".join(f"[{n}]" for n in nums)))
                     t = table(doc, ["ID", "Constructo", "Área", "Referencias"], rows, [0.3, 1.75, 0.5, 0.75], 7)
-                    para(doc, "PyD: Computación Paralela y Distribuida. SI: Sistemas Inteligentes.", 7, WD_ALIGN_PARAGRAPH.LEFT, before=2, after=6)
+                    para(doc, "Dom.: dominio del proyecto. SI: Sistemas Inteligentes. PyD: Computación Paralela y Distribuida.", 7, WD_ALIGN_PARAGRAPH.LEFT, before=2, after=6)
                 else:
                     para(doc, "Hallazgos cuantitativos relevantes para BioCafe", 8, WD_ALIGN_PARAGRAPH.CENTER, after=3, small_caps=True)
                     t = table(doc, ["Ref.", "Hallazgo reportado en el resumen"], [(f"[{NUM[k]}]", txt) for k, txt in HALLAZGOS], [0.4, 2.9], 7)
@@ -296,8 +282,9 @@ def build_traceability(out, flow):
         ("Autoras", "; ".join(C.autores_con_id())), ("Afiliación", " ".join(C.AFILIACION)),
         ("Base consultada", BUSQ["base"]), ("Periodo", "Artículos de revista publicados desde el 1 de enero de 2022"),
         ("Búsquedas", f"{len(BUSQ['busquedas'])} (8 constructos, cada cadena con y sin el filtro de ScienceDirect)"),
+        ("Enfoque", "Revisión del proyecto en su conjunto (problema agrícola, sistema inteligente y computación paralela y distribuida); la primera versión, centrada en MPI, se reorientó"),
         ("Referencias incluidas", f"{len(REFS)} ({sum(r['doi'].startswith('10.1016/') for r in REFS)} de ScienceDirect), todas con DOI verificado"),
-        ("Gestor de referencias", "Zotero, colección «BioCafe - Revisión sistemática MPI», cargada con el MCP de Zotero"),
+        ("Gestor de referencias", "Zotero, colección «BioCafe - Revisión sistemática del proyecto», cargada con el MCP de Zotero"),
     ], [1.6, 4.9], 10)
 
     heading(doc, "2. Resumen y abstract")
@@ -307,8 +294,8 @@ def build_traceability(out, flow):
     p = para(doc, before=4); set_font(p.add_run("Index terms: "), 11, bold=True); set_font(p.add_run(C.INDEX_TERMS), 11)
 
     heading(doc, "3. Constructos")
-    para(doc, "Los constructos cruzan las unidades del curso de MPI (fundamentación, instalación en LAN y en clúster, comunicación punto "
-         "a punto y colectiva) con los componentes inteligentes de BioCafe.", 11, after=6)
+    para(doc, "Los constructos se derivaron del título y de los componentes del proyecto: el problema agrícola, el sistema inteligente y "
+         "la computación paralela y distribuida que lo soporta.", 11, after=6)
     table(doc, ["ID", "Constructo", "Área", "Definición operativa", "Indicadores"],
           [(c["id"], c["nombre"], c["area"], c["definicion"], c["indicadores"]) for c in CONS], [0.4, 1.3, 1.1, 2.2, 1.5], 9)
 
@@ -330,12 +317,12 @@ def build_traceability(out, flow):
                         ("Exclusión: ", "ruido semántico de la búsqueda; fecha fuera del periodo; sin resumen recuperable; redundancia con otro trabajo incluido; fuera del alcance; presencia previa en la biblioteca de Zotero de las autoras.")):
         p = para(doc, after=3); set_font(p.add_run(label), 11, bold=True); set_font(p.add_run(text), 11)
     table(doc, ["Etapa", "Registros"], [
-        ("Búsquedas ejecutadas", len(BUSQ["busquedas"])), ("Registros revisados (8 por búsqueda)", flow["listed"]),
-        ("Registros únicos", flow["uniq"]), ("Preseleccionados con DOI verificado", flow["assessed"]),
+        ("Búsquedas ejecutadas", len(BUSQ["busquedas"])), ("Registros revisados (10 por búsqueda)", flow["listed"]),
+        ("Registros únicos", flow["uniq"]), ("Añadidos de la primera búsqueda (versión MPI)", flow["from_v1"]), ("Preseleccionados con DOI verificado", flow["assessed"]),
         ("Excluidos por no tener resumen recuperable", flow["no_abs"]), ("Excluidos por redundancia o alcance", flow["red"]),
         ("Incluidos", len(REFS))], [4.5, 1.2], 10)
     para(doc, "Excluidos por redundancia o alcance:", 11, before=6, after=3, bold=True)
-    table(doc, ["DOI", "Motivo"], [(("link", "https://doi.org/" + k, k), v) for k, v in CRIB["ronda2"]["no_elegidos_con_resumen"].items()], [2.3, 4.2], 9)
+    table(doc, ["DOI", "Motivo"], [(("link", "https://doi.org/" + k, k), v) for k, v in CRIB["no_elegidos_con_resumen"].items()], [2.3, 4.2], 9)
 
     heading(doc, "6. Fichas de las referencias: resumen y abstract")
     para(doc, "Para cada referencia se presenta la cita IEEE con su enlace DOI, el constructo, un resumen en español elaborado por las "
@@ -375,8 +362,8 @@ def build_traceability(out, flow):
     table(doc, ["#", "Etapa", "Ajuste o corrección"], [(i, e, txt) for i, (e, txt) in enumerate(C.AJUSTES, 1)], [0.3, 1.0, 5.2], 9)
 
     heading(doc, "11. Archivos de la solución")
-    for name, desc in (("Articulo_IEEE_Revision_MPI_BioCafe.docx", "artículo final en formato IEEE"),
-                       ("Trazabilidad_Revision_MPI_BioCafe.docx", "este documento"),
+    for name, desc in (("Articulo_IEEE_Revision_BioCafe.docx", "artículo final en formato IEEE"),
+                       ("Trazabilidad_Revision_BioCafe.docx", "este documento"),
                        ("Semilla_Zotero_Referencias.ris / .bib / .docx", "referencias para importar en Zotero en cualquier equipo, con título, autores, abstract y DOI"),
                        ("01_Constructos_y_prompts.md", "constructos, prompts, cadenas de búsqueda y flujo de selección"),
                        ("datos/ y herramientas/", "evidencia en JSON y scripts que repiten la búsqueda y generan los documentos")):
@@ -398,7 +385,7 @@ def build_seed(out):
         f"{len(REFS)} referencias, cada una con título, autores, revista, año, DOI, resumen (abstract) y una etiqueta con su constructo.",
         "Para citar en Word en formato IEEE, instale el complemento de Zotero para Word y elija el estilo «IEEE»."), 1):
         para(doc, f"{i}. {step}", 11, WD_ALIGN_PARAGRAPH.LEFT, after=2)
-    para(doc, "Las referencias se cargaron además en la colección «BioCafe - Revisión sistemática MPI» de la biblioteca de las autoras mediante el "
+    para(doc, "Las referencias se cargaron además en la colección «BioCafe - Revisión sistemática del proyecto» de la biblioteca de las autoras mediante el "
          "MCP de Zotero. El orden y la numeración [n] coinciden con el artículo IEEE.", 11, before=6, after=8)
     heading(doc, "Referencias", 2)
     for k in ORDERED:
@@ -416,8 +403,8 @@ if __name__ == "__main__":
     (ROOT / "figuras").mkdir(exist_ok=True)
     fig = ROOT / "figuras" / "flujo_seleccion.png"
     flow = flujo_figure(fig)
-    build_article(ROOT / "Articulo_IEEE_Revision_MPI_BioCafe.docx", fig)
-    build_traceability(ROOT / "Trazabilidad_Revision_MPI_BioCafe.docx", flow)
+    build_article(ROOT / "Articulo_IEEE_Revision_BioCafe.docx", fig)
+    build_traceability(ROOT / "Trazabilidad_Revision_BioCafe.docx", flow)
     build_seed(ROOT / "Semilla_Zotero_Referencias.docx")
     json.dump({k: NUM[k] for k in ORDERED}, open(DATA / "numeracion_ieee.json", "w", encoding="utf8"), indent=1)
     print("ok", flow, "citas:", len(NUM))

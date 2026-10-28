@@ -1,0 +1,101 @@
+[
+ {
+  "id": "C1",
+  "nombre": "Paradigma de paso de mensajes (MPI)",
+  "area": "Computación paralela y distribuida",
+  "definicion": "Modelo de programación en memoria distribuida en el que procesos independientes cooperan intercambiando mensajes explícitos mediante el estándar MPI.",
+  "indicadores": "rutinas MPI usadas; número de procesos; latencia y ancho de banda de comunicación",
+  "consultas": [
+   "MPI message passing interface performance",
+   "MPI parallel programming HPC applications"
+  ],
+  "prompt": "Con base en el constructo «Paradigma de paso de mensajes (MPI)» del proyecto BioCafe, busca artículos de revista publicados desde 2022, con DOI y preferiblemente de ScienceDirect, que analicen cómo se configura y optimiza el rendimiento de aplicaciones MPI (número de procesos, algoritmos colectivos, ubicación de procesos)."
+ },
+ {
+  "id": "C2",
+  "nombre": "Comunicación punto a punto y colectiva",
+  "area": "Computación paralela y distribuida",
+  "definicion": "Operaciones de envío/recepción entre pares (Send/Recv) y operaciones que involucran a todos los procesos (Bcast, Reduce, Allreduce, Gather).",
+  "indicadores": "tiempo de Allreduce; solapamiento cómputo-comunicación; algoritmo colectivo",
+  "consultas": [
+   "MPI collective communication allreduce optimization",
+   "point-to-point communication MPI overlap"
+  ],
+  "prompt": "Con base en el constructo «Comunicación punto a punto y colectiva», busca artículos desde 2022, con DOI, que evalúen operaciones MPI Send/Recv no bloqueantes y colectivas (Bcast, Reduce, Allreduce), su modelado y su efecto en el tiempo de entrenamiento de redes neuronales."
+ },
+ {
+  "id": "C3",
+  "nombre": "Entrenamiento distribuido de redes neuronales profundas",
+  "area": "Computación paralela y distribuida + Sistemas inteligentes",
+  "definicion": "Reparto del entrenamiento de un modelo entre varios procesos o GPU (paralelismo de datos o de modelo) con sincronización de gradientes.",
+  "indicadores": "aceleración (speedup); eficiencia de escalado; exactitud final frente al entrenamiento secuencial",
+  "consultas": [
+   "distributed deep learning training data parallelism",
+   "Horovod MPI distributed training GPU"
+  ],
+  "prompt": "Con base en el constructo «Entrenamiento distribuido de redes neuronales profundas», busca artículos desde 2022, con DOI, que comparen paralelismo de datos, de modelo y en tubería (pipeline) para entrenar redes convolucionales de clasificación de imágenes, incluidas herramientas como Horovod sobre MPI."
+ },
+ {
+  "id": "C4",
+  "nombre": "Aceleración con GPU y programación híbrida (MPI + OpenMP/CUDA)",
+  "area": "Computación paralela y distribuida",
+  "definicion": "Combinación de paralelismo entre nodos (MPI), entre hilos (OpenMP) y en el acelerador (CUDA) para aprovechar hardware heterogéneo.",
+  "indicadores": "uso de GPU; tiempo por época; modelo de programación híbrido",
+  "consultas": [
+   "hybrid MPI OpenMP CUDA GPU acceleration",
+   "GPU parallel computing deep learning image processing"
+  ],
+  "prompt": "Con base en el constructo «Aceleración con GPU y programación híbrida (MPI + OpenMP/CUDA)», busca artículos desde 2022, con DOI, que combinen MPI con OpenMP o CUDA para acelerar procesamiento o clasificación de imágenes y reporten aceleración o eficiencia."
+ },
+ {
+  "id": "C5",
+  "nombre": "Infraestructura de clúster y red LAN para MPI",
+  "area": "Computación paralela y distribuida",
+  "definicion": "Instalación y configuración de un entorno MPI sobre nodos conectados en red local o en un clúster/HPC, incluida la planificación de trabajos.",
+  "indicadores": "número de nodos; interconexión; herramientas de despliegue (contenedores, gestor de trabajos)",
+  "consultas": [
+   "cluster computing MPI containers deployment",
+   "low-cost cluster parallel computing education",
+   "Raspberry Pi cluster MPI parallel computing",
+   "teaching parallel programming MPI cluster students"
+  ],
+  "prompt": "Con base en el constructo «Infraestructura de clúster y red LAN para MPI», busca artículos desde 2022, con DOI, sobre la instalación y configuración de entornos MPI en clústeres de bajo costo o en red local (por ejemplo, Raspberry Pi) y sobre herramientas para usar MPI desde Python, con fines de investigación o enseñanza."
+ },
+ {
+  "id": "C6",
+  "nombre": "Visión por computador con CNN para enfermedades y plagas de cultivos",
+  "area": "Sistemas inteligentes",
+  "definicion": "Clasificación o detección de afectaciones en imágenes de hojas mediante redes neuronales convolucionales y aprendizaje por transferencia.",
+  "indicadores": "exactitud; F1; número de clases; dataset usado",
+  "consultas": [
+   "coffee leaf disease detection deep learning",
+   "plant disease classification convolutional neural network transfer learning",
+   "coffee leaf rust detection deep learning images"
+  ],
+  "prompt": "Con base en el constructo «Visión por computador con CNN para enfermedades y plagas de cultivos», busca artículos desde 2022, con DOI, que clasifiquen o detecten enfermedades en hojas (en especial de café y roya) con redes convolucionales y aprendizaje por transferencia, y que reporten exactitud o F1."
+ },
+ {
+  "id": "C7",
+  "nombre": "Inferencia eficiente en el borde (dispositivos móviles)",
+  "area": "Sistemas inteligentes + Computación distribuida",
+  "definicion": "Ejecución local de modelos ligeros en teléfonos o dispositivos IoT, sin depender de conexión, con técnicas de compresión y cuantización.",
+  "indicadores": "latencia por imagen; tamaño del modelo; consumo de recursos",
+  "consultas": [
+   "edge computing deep learning inference mobile agriculture",
+   "lightweight CNN mobile plant disease detection"
+  ],
+  "prompt": "Con base en el constructo «Inferencia eficiente en el borde (dispositivos móviles)», busca artículos desde 2022, con DOI, sobre modelos ligeros de detección de enfermedades de plantas ejecutados en teléfonos o dispositivos de borde, que reporten latencia, tamaño del modelo o consumo de recursos."
+ },
+ {
+  "id": "C8",
+  "nombre": "Aprendizaje federado y sistemas distribuidos en agricultura",
+  "area": "Sistemas inteligentes + Computación distribuida",
+  "definicion": "Entrenamiento colaborativo de modelos entre varios nodos o fincas que comparten parámetros en lugar de datos.",
+  "indicadores": "número de clientes; rondas de comunicación; exactitud global",
+  "consultas": [
+   "federated learning agriculture plant disease",
+   "distributed artificial intelligence smart farming"
+  ],
+  "prompt": "Con base en el constructo «Aprendizaje federado y sistemas distribuidos en agricultura», busca artículos desde 2022, con DOI, sobre entrenamiento colaborativo de modelos entre varias fincas o nodos y sobre sistemas inteligentes de visión en agricultura de precisión."
+ }
+]

@@ -16,7 +16,7 @@ def text_and_links(path):
     text = "\n".join(p.text for p in d.paragraphs) + "\n".join(c.text for t in d.tables for row in t.rows for c in row.cells)
     return text, links
 
-art, art_links = text_and_links(root / "Articulo_IEEE_Revision_MPI_BioCafe.docx")
+art, art_links = text_and_links(root / "Articulo_IEEE_Revision_BioCafe.docx")
 check("mailto:heyley.paradapar@unipamplona.edu.co" in art_links and "mailto:lisbeth.corderotov@unipamplona.edu.co" in art_links, "artículo enlaza el correo de ambas autoras")
 for s in ("Resumen—", "Abstract—", "I. Introducción", "II. Materiales y métodos", "III. Resultados y discusión", "IV. Conclusiones", "Referencias", "Universidad de Pamplona", "Heyley Yurani Parada Parada"):
     check(s in art, f"artículo contiene «{s}»")
@@ -25,20 +25,21 @@ check(cited == set(range(1, len(refs) + 1)), f"artículo cita [1]..[{len(refs)}]
 check(all(f"https://doi.org/{r['doi']}" in art_links for r in refs), "cada referencia del artículo tiene enlace DOI")
 check(all(r["anio"] >= 2022 for r in refs), "todas las referencias son de 2022 o posteriores")
 
-tra, _ = text_and_links(root / "Trazabilidad_Revision_MPI_BioCafe.docx")
+tra, _ = text_and_links(root / "Trazabilidad_Revision_BioCafe.docx")
 seed_text, _ = text_and_links(root / "Semilla_Zotero_Referencias.docx")
 for doc_text, name in ((art, "artículo"), (tra, "trazabilidad"), (seed_text, "semilla Word")):
     check("1093887319" in doc_text and "1093293375" in doc_text, f"{name} incluye la identificación de ambas autoras")
     check(name == "artículo" or ("heyley.paradapar@unipamplona.edu.co" in doc_text and "lisbeth.corderotov@unipamplona.edu.co" in doc_text), f"{name} incluye el correo de ambas autoras")
 for s in ("2. Resumen y abstract", "3. Constructos", "4. Prompts", "6. Fichas", "7. Relación de los resúmenes", "8. Cuadro comparativo", "9. Evaluación de la revisión: cinco preguntas", "10. Ajustes y correcciones"):
     check(s in tra, f"trazabilidad contiene «{s}»")
-check(len(re.findall(r"^Grupo \d+\.", tra, re.M)) >= 8, "trazabilidad agrupa los resúmenes de 2 o 3")
+sys.path.insert(0, str(root / "herramientas")); import contenido as C
+check(all(2 <= len(k) <= 3 for _, k, _ in C.GRUPOS) and len(re.findall(r"^Grupo \d+\.", tra, re.M)) == len(C.GRUPOS), f"trazabilidad agrupa los resúmenes de 2 o 3 ({len(C.GRUPOS)} grupos)")
 
 seed, seed_links = text_and_links(root / "Semilla_Zotero_Referencias.docx")
 check(all(r["titulo"] in seed and r["resumen"][:80] in seed for r in refs), "semilla Word: título y abstract de cada referencia")
 ris = (root / "Semilla_Zotero_Referencias.ris").read_text(encoding="utf8"); bib = (root / "Semilla_Zotero_Referencias.bib").read_text(encoding="utf8")
-check(ris.count("ER  -") == len(refs) and ris.count("AB  -") == len(refs) and ris.count("DO  -") == len(refs), "semilla RIS: 28 registros con abstract y DOI")
-check(bib.count("@article{") == len(refs) and bib.count("abstract = {") == len(refs), "semilla BibTeX: 28 entradas con abstract")
+check(ris.count("ER  -") == len(refs) and ris.count("AB  -") == len(refs) and ris.count("DO  -") == len(refs), f"semilla RIS: {len(refs)} registros con abstract y DOI")
+check(bib.count("@article{") == len(refs) and bib.count("abstract = {") == len(refs), f"semilla BibTeX: {len(refs)} entradas con abstract")
 
 class NoRedirect(urllib.request.HTTPRedirectHandler):
     def redirect_request(self, *a, **k): return None

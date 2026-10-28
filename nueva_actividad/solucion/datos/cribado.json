@@ -1,37 +1,24 @@
 {
- "ronda1": {
-  "descripcion": "Primera selección por título y revista: 25 candidatos, priorizando ScienceDirect.",
-  "excluidos_sin_resumen": [
-   "10.1016/j.jpdc.2025.105156",
-   "10.1016/j.scico.2024.103260",
-   "10.1016/j.future.2026.108498",
-   "10.1016/j.parco.2026.103196",
-   "10.1016/j.future.2022.09.005",
-   "10.1016/j.future.2026.108513",
-   "10.1016/j.asoc.2023.110534",
-   "10.1016/j.pmcj.2025.102059",
-   "10.1016/j.compag.2024.109720",
-   "10.1016/j.engappai.2023.105899"
-  ]
+ "preseleccion": "datos/preseleccion.json (45 candidatos por título, revista y año) verificados en datos/preseleccion_verificada.json",
+ "excluidos_sin_resumen": [
+  "10.1016/j.worlddev.2022.105918",
+  "10.1007/s00138-022-01277-y",
+  "10.1007/s42979-024-02960-9",
+  "10.1016/j.compag.2022.106892",
+  "10.1016/j.engappai.2025.111168",
+  "10.1016/j.compag.2022.107371",
+  "10.1016/j.parco.2022.102945",
+  "10.1016/j.compag.2024.109720",
+  "10.1016/j.compag.2024.109001",
+  "10.1007/s11042-024-18867-9"
+ ],
+ "no_elegidos_con_resumen": {
+  "10.1016/j.heliyon.2022.e11892": "Epidemiología de la roya en sistemas agroforestales de Etiopía; redundante con las otras cuatro referencias del dominio.",
+  "10.1016/j.baae.2023.11.006": "Control biológico del minador en laboratorio; se conservó un trabajo del minador con daño y manejo en cultivo (Leite et al., 2022).",
+  "10.34133/plantphenomics.0201": "Estimación de severidad de roya del trigo por segmentación; redundante con las aplicaciones móviles incluidas y fuera del alcance de clasificación."
  },
- "ronda2": {
-  "descripcion": "Reemplazos del mismo constructo para los excluidos sin resumen (ver alternativas_verificadas.json).",
-  "no_elegidos_con_resumen": {
-   "10.1016/j.procs.2022.12.041": "Mismo grupo y caso de estudio que Patil y Chickerur (2023); se conservó el más reciente.",
-   "10.1371/journal.pone.0293338": "Redundante con la encuesta de autoparalelismo y con Maruf et al. (2024).",
-   "10.1134/s1995080223080218": "Resumen breve y centrado en una red de interconexión específica (Angara).",
-   "10.1016/j.ecoinf.2024.102925": "Redundante con Paymode y Malode (2022) y sin relación con café.",
-   "10.1016/j.atech.2024.100526": "Trata segmentación semántica, fuera del alcance de clasificación de BioCafe.",
-   "10.7717/peerj-cs.2406": "Redundante con los otros cuatro trabajos sobre café ya incluidos.",
-   "10.1186/s13007-025-01386-5": "Redundante con Duhan et al. (2025) en modelos móviles; cultivo distinto (maíz).",
-   "10.3390/agriculture16090918": "Redundante con AGRIFOLD (2025) en aprendizaje federado."
-  }
- },
- "ronda3": {
-  "descripcion": "Búsqueda adicional para C5 (clústeres de bajo costo): se incluyeron los 2 candidatos verificados.",
-  "incluidos": [
-   "10.1016/j.jpdc.2024.104996",
-   "10.3390/pr13030633"
-  ]
+ "reasignados": {
+  "10.1016/j.inpa.2024.03.002": "de C8 a C5: trata generalización entre cultivos",
+  "10.1016/j.procs.2022.07.013": "de C7 a C8: el diagnóstico corre en un servicio en la nube"
  }
 }
