@@ -1,0 +1,1869 @@
+TY  - JOUR
+AU  - Wanyonyi, M.
+AU  - Akelo, J.G.
+AU  - Njenga, V.N.
+AU  - Keraro, F.O.
+AU  - Kioko, T.M.
+TI  - Comparative and complementary use of Bayesian inference and supervised learning for predictive modeling of coffee rust incidence among Kenyan smallholder farmers
+PY  - 2026
+T2  - PLOS Climate
+VL  - 5
+IS  - 4 April
+C7  - e0000754
+DO  - 10.1371/journal.pclm.0000754
+UR  - https://www.scopus.com/pages/publications/105037066729?origin=resultslist
+AB  - Hemileia vastatrix, the causal agent of coffee leaf rust, poses a persistent threat to Arabica coffee production in Kenya, where smallholder farmers face recurrent yield losses and limited access to effective control strategies. Effective disease management requires predictive frameworks capable of quantifying both infection risk and associated uncertainty under real-world farm conditions. This study presents a comparative evaluation of Bayesian hierarchical inference and supervised machine learning approaches for predicting coffee rust incidence, using their complementary strengths to generate probabilistic predictions. The models were developed using longitudinal data from 9,850 plot-level observations across six major coffee-producing counties in Kenya. Microclimatic moisture variables, particularly leaf wetness duration and relative humidity, emerged as the dominant predictors of infection. Partial dependence and SHAP analyses revealed strong nonlinear threshold effects: elevated humidity and prolonged leaf wetness sharply increased infection probability, while proximity to infected farms intensified spatial transmission dynamics. A key finding is that parsimonious, interpretable models performed competitively with complex algorithms. Logistic regression achieved the highest discriminative performance (AUC ROC = 0.867), matching or exceeding more complex ensemble methods while maintaining transparency and computational efficiency. Ensemble models such as random forests achieved slightly higher classification accuracy, highlighting complementary strengths across approaches. The Bayesian hierarchical model contributed additional value by quantifying uncertainty and accounting for unobserved heterogeneity across counties. These findings demonstrate that interpretable models can perform as well as complex machine learning algorithms in this context, an important insight for resource-limited agricultural settings. The proposed framework offers a scalable, transparent decision-support tool for precision disease management and enhances the resilience of smallholder coffee systems in Kenya and similar tropical environments. © 2026 Wanyonyi et al. This is an open access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105037066729
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 1
+ER  -
+
+TY  - JOUR
+AU  - Adelaja, O.
+AU  - Pranggono, B.
+TI  - Leveraging Deep Learning for Real-Time Coffee Leaf Disease Identification
+PY  - 2025
+T2  - AgriEngineering
+VL  - 7
+IS  - 1
+C7  - 13
+DO  - 10.3390/agriengineering7010013
+UR  - https://www.scopus.com/pages/publications/85216003193?origin=resultslist
+AB  - Agriculture is vital for providing food and economic benefits, but crop diseases pose significant challenges, including coffee cultivation. Traditional methods for disease identification are labor-intensive and lack real-time capabilities. This study aims to address existing methods’ limitations and provide a more efficient, reliable, and cost-effective solution for coffee leaf disease identification. It presents a novel approach to the real-time identification of coffee leaf diseases using deep learning. We implemented several transfer learning (TL) models, including ResNet101, Xception, CoffNet, and VGG16, to evaluate the feasibility and reliability of our solution. The experiment results show that the proposed models achieved high accuracy rates of 97.30%, 97.60%, 97.88%, and 99.89%, respectively. CoffNet, our proposed model, showed a notable processing speed of 125.93 frames per second (fps), making it suitable for real-time applications. Using a diverse dataset of mixed images from multiple devices, our approach reduces the workload of farmers and simplifies the disease detection process. The findings lay the groundwork for the development of practical and efficient systems that can assist coffee growers in disease management, promoting sustainable farming practices, and food security. © 2025 by the authors.
+KW  - convolutional neural network
+KW  - deep learning
+KW  - disease identification
+KW  - transfer learning
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-85216003193
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 16
+ER  -
+
+TY  - JOUR
+AU  - Novanti, A.I.
+AU  - Harjoko, A.
+TI  - Modification of C-Grabcut for Segmentation and Classification of Coffee Leaf Diseases in Complex Backgrounds
+PY  - 2025
+T2  - International Journal of Advanced Computer Science and Applications
+VL  - 16
+IS  - 3
+SP  - 283
+EP  - 291
+DO  - 10.14569/IJACSA.2025.0160328
+UR  - https://www.scopus.com/pages/publications/105001591095?origin=resultslist
+AB  - Visual changes, including spots, discoloration, and deformation characterize coffee leaf diseases. In real-world image data, complex backgrounds present challenges for classification using deep learning models. Irrelevant objects, such as soil, other leaves, and miscellaneous items, can hinder the model’s ability to accurately recognize disease patterns. Furthermore, the absence of effective segmentation techniques has resulted in low accuracy in previous studies. This work aims to address these limitations by enhancing the performance of the MobileNet-V2 model for coffee leaf disease classification. We applied a modified C-Grabcut segmentation technique to improve the isolation of diseased areas from complex backgrounds. The results demonstrate a significant performance improvement, achieving an Intersection over Union (IoU) of 0.8369 and an accuracy of 94.83%. These findings suggest that the modified MobileNet-V2 model, combined with the improved C-Grabcut segmentation, offers robust performance for in-field coffee leaf disease classification, striking a better balance between effectiveness and accuracy compared to previous studies. © (2025), (Science and Information Organization). All rights reserved.
+KW  - background complexity
+KW  - coffee leaf diseases
+KW  - Image segmentation
+KW  - in-field image
+KW  - mobilenet-v2
+KW  - Classification (of information)
+KW  - Deep learning
+KW  - Image classification
+KW  - Background complexity
+KW  - Coffee leaf disease
+KW  - Complex background
+KW  - Field images
+KW  - Images segmentations
+KW  - In-field
+KW  - In-field image
+KW  - Leaf disease
+KW  - Mobilenet-v2
+KW  - Segmentation techniques
+KW  - Image segmentation
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105001591095
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 1
+ER  -
+
+TY  - JOUR
+AU  - Venkatraman, S.
+AU  - Mani, M.
+AU  - Balasundaram, A.
+AU  - Shaik, A.
+TI  - Automated coffee leaf disease classification via deep feature extraction with PhytoV2Net and InceptionV3 architectures
+PY  - 2026
+T2  - Frontiers in Agronomy
+VL  - 8
+C7  - 1767554
+DO  - 10.3389/fagro.2026.1767554
+UR  - https://www.scopus.com/pages/publications/105039032773?origin=resultslist
+AB  - Proper categorization of diseases in coffee plants is critical for their early detection and good crop management, which in turn has a direct impact on the quantity, quality, and long-term sustainability of agriculture. Early detection of diseases makes it possible to resort to selective interventions, which not only reduce the chance of total crop loss, but also help in the control of outbreaks. Until now, detection methods have relied on manual inspections that are slow, inconsistent and prone to human errors, making them very much dependent on experts. The present research uses deep learning along with machine feature extraction techniques for coffee disease identification using PhytoV2Net and InceptionV3, respectively. Both networks were trained on the JMuBEN and JMuBEN2 datasets, which consist of a total of 58, 549 leaf images. These networks can differentiate between healthy and diseased leaves by learning to identify visual symptoms such as spots, discolorations, and lesions. The custom PhytoV2Net model produced an accuracy score of 99.87%, while InceptionV3 was based on 99.55% under K-fold cross-validation. PhytoV2Net performance was also above 95% in both precision and recall, indicating the high dependability and constancy of the model in its disease identification. The environmental changes posed difficulties, such as variations in lighting, leaf blocking, and background noise. Preprocessing techniques, particularly data augmentation applied to the JMuBEN dataset from an open-source data repository, helped improve image quality and enhance model robustness. Deploying these models in real time can significantly advance smart farming. When integrated into edge devices, handheld tools, or drone systems, they enable autonomous on-site detection of coffee leaf diseases and turn these platforms into intelligent assistants for plant health monitoring. Copyright © 2026 Venkatraman, Mani, Balasundaram and Shaik.
+KW  - coffee disease classification
+KW  - data augmentation
+KW  - deep learning
+KW  - K-fold cross validation
+KW  - precision agriculture
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105039032773
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 1
+ER  -
+
+TY  - JOUR
+AU  - Apriani, A.
+AU  - Rismayat, R.
+AU  - Zulfiki, M.
+AU  - Anggapranat, I.
+AU  - Wija, M.A.S.
+TI  - From Leaf to Data: A Hybrid CNN-KNN Strategy with Synthetic Augmentation for Early Detection of Robusta-Arabica Coffee Leaf Diseases
+PY  - 2026
+T2  - Ingenierie des Systemes d'Information
+VL  - 31
+IS  - 3
+SP  - 763
+EP  - 771
+DO  - 10.18280/isi.310310
+UR  - https://www.scopus.com/pages/publications/105040401079?origin=resultslist
+AB  - Coffee is one of Indonesia's leading plantation commodities; however, its productivity is threatened by various leaf diseases such as Cercospora, leaf rust, leaf miner, and Phoma, which can reduce yields by up to 50%. Conventional disease inspection methods are still widely used but often suffer from subjectivity and delays in diagnosis. This study aims to develop an early detection model for coffee leaf diseases by integrating Convolutional Neural Networks (CNN) and K-Nearest Neighbors (KNN) with synthetic augmentation using Deep Convolutional Generative Adversarial Network (DCGAN). In this model, the CNN extracts image features and the KNN performs the final classification. Additionally, DCGAN-based augmentation is applied to balance and enrich the dataset with realistic synthetic images. The dataset consists of five classes—Healthy, Cercospora, Leaf Rust, Miner, and Phoma—each containing 9,000 images. The proposed model achieved a classification accuracy of 99.34%, with precision, recall, and F1-score values approaching 1.00. The 5-fold cross-validation confirmed the robustness of the model, resulting in an average accuracy of 97.63%. In conclusion, the hybrid CNN -KNN approach with DCGAN-based augmentation proved to be effective and reliable for the early detection of coffee leaf diseases, offering great potential as an artificial intelligence (AI)-based decision support tool for precision agriculture applications. https://doi.org/10.18280/isi.310310 Copyright: ©2026 The authors. This article is published by IIETA and is licensed under the CC BY 4.0 license (http://creativecommons.org/licenses/by/4.0/).
+KW  - Arabica
+KW  - coffee leaf disease
+KW  - Convolutional Neural Network
+KW  - Generative Adversarial Network
+KW  - K-Nearest Neighbor
+KW  - Robusta
+KW  - synthetic augmentation
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105040401079
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 0
+ER  -
+
+TY  - JOUR
+AU  - de Oliveira Aparecido, L.E.
+AU  - Torsoni, G.B.
+AU  - de Lima, R.F.
+AU  - Lorençone, J.A.
+AU  - Lorençone, P.A.
+AU  - de Oliveira, G.G.
+AU  - Saqui, D.
+AU  - de Souza Rolim, G.
+AU  - Marques, A.V.
+TI  - Predictive modeling of coffee leaf rust severity in Brazil under different yielding conditions
+PY  - 2026
+T2  - Theoretical and Applied Climatology
+VL  - 157
+IS  - 7
+C7  - 456
+DO  - 10.1007/s00704-026-06384-8
+UR  - https://www.scopus.com/pages/publications/105042661857?origin=resultslist
+AB  - Coffee leaf rust (Hemileia vastatrix) is one of the most significant diseases affecting coffee crops, with considerable impacts on yield, particularly during high-production years. This study aimed to forecast coffee leaf rust severity in Brazil using machine learning (ML) models and to analyze the spatial and temporal variability of the disease under different yield conditions. The models evaluated included Extreme Gradient Boosting (XGB), Random Forest (RF), Multi-Layer Perceptron (MLP), Support Vector Machine (SVM), and Multiple Linear Regression (MLR), using open-access meteorological data from the NASA-POWER system as predictive variables. The results indicated that XGB showed strong predictive performance, with R² = 0.5973 in the test dataset for high-yielding conditions and R² = 0.5039 for low-yielding conditions, performing comparably to other models depending on the evaluation metric. The generated maps revealed a seasonal pattern in coffee leaf rust severity, with lower values during the rainy months (January to March) and higher severity between May and August, particularly in regions such as Minas Gerais, São Paulo, and Goiás. Additionally, high-yielding conditions were associated with higher disease severity throughout the year, suggesting increased plant susceptibility. The findings highlight the potential of machine learning approaches combined with open climatic data for large-scale and reproducible disease monitoring. Predictive modeling can support the identification of potential risk patterns and may contribute to decision-support strategies, including climate-based monitoring and more targeted phytosanitary management. The proposed framework provides a promising approach for analyzing coffee leaf rust dynamics and may be useful in other coffee-producing regions, although broader validation is still needed. © The Author(s) 2026.
+KW  - Agrometeorology
+KW  - Hemileia vastatrix
+KW  - Leaf wetness duration
+KW  - Phytosanitary management
+KW  - Predictive analytics
+KW  - Spatial modeling
+KW  - Brazil
+KW  - agrometeorology
+KW  - crop yield
+KW  - disease severity
+KW  - fungal disease
+KW  - modeling
+KW  - prediction
+KW  - sanitation
+KW  - spatial variation
+KW  - temporal variation
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105042661857
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 0
+ER  -
+
+TY  - JOUR
+AU  - Yamakawa, D.I.
+AU  - Patrocinio, A.C.
+AU  - De Sousa, P.M.
+AU  - Damaso De Melo, P.H.A.
+TI  - Automation of Coffee Biotic Stresses Classification Using Convolutional Neural Networks and Image Preprocessing Techniques
+ST  - Automatizac¸ a˜ o da Classificac¸ a˜ o de Estresses Bio´ ticos no Cafe´ Usando Redes Neurais Convolucionais e Te´ cnicas de Pre´ -processamento de Imagens
+PY  - 2026
+T2  - Revista de Informatica Teorica e Aplicada
+VL  - 33
+IS  - 2
+SP  - 89
+EP  - 97
+DO  - 10.22456/2175-2745.150942
+UR  - https://www.scopus.com/pages/publications/105044623641?origin=resultslist
+AB  - Coffee is one of the most consumed beverages worldwide, with Brazil leading exports in 2024. However, production is threatened by biotic stresses such as cercospora, phoma, rust, and leaf miner, which reduce grain quality and cause major losses. Disease identification is usually performed manually by specialists, a process that is slow, limited, and error-prone. This study proposes automating classification through Convolutional Neural Networks (CNNs) combined with various image processing techniques. The JMunBEN and JMunBEN2 datasets were used for this task, together with image preprocessing techniques such as cropping, augmentation, Gaussian, Clahe, Graythresh and Wavelet. Three CNN architectures—ResNet50, MobileNetV2, and AlexNet—were tested for multiclass classification, trained for 100 epochs with Adam optimizer and CrossEntropy loss. The article proposed wavelet filter yielded the best results, with ResNet achieving 99.07% accuracy, confirming CNNs with image pre-processing techniques to be efficient tools for rapid, reliable detection of coffee biotic stresses. © 2025 CC BY-NC-ND 4.0-This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+KW  - artificial intelligence
+KW  - cafe´
+KW  - coffee
+KW  - inteligeˆ ncia artificial
+KW  - neural networks
+KW  - redes neurais
+KW  - wavelet
+KW  - wavelet
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105044623641
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 0
+ER  -
+
+TY  - JOUR
+AU  - Pham, T.-C.
+AU  - Nguyen, T.-N.
+AU  - Nguyen, V.-D.
+TI  - Ambiguity-aware semi-supervised learning for leaf disease classification
+PY  - 2025
+T2  - Scientific Reports
+VL  - 15
+IS  - 1
+C7  - 14070
+DO  - 10.1038/s41598-025-95849-3
+UR  - https://www.scopus.com/pages/publications/105003107632?origin=resultslist
+AB  - In deep learning, Semi-Supervised Learning is a highly effective technique to enhances neural network training by leveraging both labeled and unlabeled data. This process involves using a trained model to generate pseudo labels to the unlabeled samples, which are then incorporated to further train the original model, resulting in a new model. However, if these pseudo labels contain substantial errors, the resulting model’s accuracy may drop, potentially falling below the performance of the initial model. To tackle the problem, we propose an Ambiguity-Aware Semi-Supervised Learning method for Leaf Disease Classification. Specifically, we present a per-disease ambiguity rejection algorithm that eliminates ambiguous results, thereby enhancing the precision of pseudo labels for the subsequent semi-supervised training step and improving the precision of the final classifier. The proposed method is evaluated on two public leaf disease datasets of coffee and banana across various data scenarios, including supervised and semi-supervised settings, with varying proportions of labeled data. The results indicate that our semi-supervised method reduces the reliance for fully labeled datasets while preserving high accuracy by utilizing the ambiguity rejection algorithm. Additionally, the rejection algorithm significantly boosts precision of final classifier on both coffee and banana datasets, achieving rates of 99.46% and 100.0%, respectively, while using only 50% labeled data. The study also presents a thorough set of experiments and analyses to validate the effectiveness of the proposed method, comparing its performance against state-of-the-art supervised approaches. The results demonstrate that our method, despite using only 50% of the labeled data, achieves competitive performance compared to fully supervised models that use 100% of the labeled data. © The Author(s) 2025.
+KW  - Ambiguity rejection
+KW  - Banana leaf disease
+KW  - Coffee leaf disease
+KW  - Deep learning
+KW  - Leaf disease classification
+KW  - Semi-supervised learning
+KW  - Algorithms
+KW  - Deep Learning
+KW  - Musa
+KW  - Neural Networks, Computer
+KW  - Plant Diseases
+KW  - Plant Leaves
+KW  - Supervised Machine Learning
+KW  - algorithm
+KW  - artificial neural network
+KW  - classification
+KW  - deep learning
+KW  - microbiology
+KW  - Musa
+KW  - plant disease
+KW  - plant leaf
+KW  - supervised machine learning
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105003107632
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 13
+ER  -
+
+TY  - JOUR
+AU  - Mansouri, N.
+AU  - Guesmi, H.
+AU  - Alkhalil, A.
+TI  - A deep learning model for detection and classification of coffee-leaf diseases using the transfer-learning technique
+PY  - 2024
+T2  - International Journal of Advances in Intelligent Informatics
+VL  - 10
+IS  - 3
+SP  - 379
+EP  - 396
+DO  - 10.26555/ijain.v10i3.1573
+UR  - https://www.scopus.com/pages/publications/85214845819?origin=resultslist
+AB  - The early treatment and detection of plant diseases are important, as many diseases affecting crops are highly contagious. Recent advancements in deep learning have helped to provide innovative tools that have not only assisted early detection but also significantly improved the performance and accuracy of Coffee Leaf Disease (CLD) classification and treatment. However, training a deep learning model from scratch can be both resource and time-consuming. To overcome this challenge, the transfer learning technique can take full advantage of pre-trained models for more general tasks on extensive datasets to ameliorate the performance of a new, related task using few-shot training. This paper proposes a deep learning model, coupled with transfer learning, for CLD detection that aims to provide high-accuracy forecasting of diseases that could affect coffee leaves. Our method involves 195 different pre-trained deep learning models, including real-time models like MobileNet and dense ones like EfficientNet and ResNet, for detecting four different diseases. The findings suggest that the EfficientNetB0 model, with transfer learning, has the most relevant accuracy (99.99%), thus offering an effective solution for classifying coffee leaf diseases. This result could be used to develop applications that help coffee growers improve their crops' productivity and quality by detecting coffee plant leaf diseases early and accurately. Such an Artificial Intelligence-based application would provide growers with timely control measures, preventing the spread of disease and minimizing crop damage. © 2024, Universitas Ahmad Dahlan. All rights reserved.
+KW  - Coffee
+KW  - Diseases
+KW  - Few-shot
+KW  - Real-time
+KW  - Transfer-learning
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-85214845819
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 8
+ER  -
+
+TY  - JOUR
+AU  - Masgo Ventura, H.K.
+AU  - Vergaray Jauregui, C.M.
+AU  - Maldonado Ramírez, I.
+AU  - Santa Cruz Acosta, R.C.
+AU  - Ruiz Camacho, W.
+AU  - Suarez Rivadeneira, J.E.
+AU  - Pérez Astonitas, R.
+AU  - Velayarce Vallejos, F.
+AU  - Morales-Rojas, E.
+TI  - Image classification-based system for disease diagnosis in coffee crops: A case study in the province of Rodriguez de Mendoza, northern Peru
+PY  - 2026
+T2  - Forest Science and Technology
+VL  - 22
+IS  - 3
+SP  - 485
+EP  - 495
+DO  - 10.1080/21580103.2025.2611524
+UR  - https://www.scopus.com/pages/publications/105027062160?origin=resultslist
+AB  - Coffee is an important product in the world economy and its productivity and quality are affected by diseases such as Rust (Hemileia vastatrix), anthracnose (Colletotrichum kahawae) and rooster’s eye (Mycena citricolor), in this sense, the objective of this research was to determine the level of accuracy of a system based on image recognition for the diagnosis of diseases in coffee crops, which will help in the timely detection of diseases. Convolutional neural networks (CNN) were used, which have demonstrated their efficiency and accuracy in the field of image classification and pattern recognition, based on Artificial Intelligence (AI), which allowed the recognition of diseases in coffee crops through a mobile web application. As a result, high accuracy was obtained to detect anthracnose, rooster’s eye and rust diseases (92%, 94%, 91%) at an overall accuracy of 92%, an F1 score of 0.92%. With this help, coffee growers can identify diseases more quickly, increasing coffee production. In this sense, it is of great importance to implement future projects, incorporating participatory research methods for its massification that will allow the diagnosis of coffee diseases in real time. © 2026 The Author(s). Published by Informa UK Limited, trading as Taylor & Francis Group.
+KW  - Amazon
+KW  - artificial intelligence
+KW  - coffee
+KW  - Coffee disease
+KW  - deep learning
+KW  - training
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105027062160
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 1
+ER  -
+
+TY  - JOUR
+AU  - Thanammal Indu, V.
+AU  - Suja Priyadharsini, S.
+TI  - Deep Residual Squeeze Excited Region Convolutional Network: A Robust Deep Learning Framework for Precision Agriculture and Plant Disease Diagnosis
+PY  - 2026
+T2  - Cybernetics and Systems
+VL  - 57
+IS  - 7
+SP  - 1356
+EP  - 1385
+DO  - 10.1080/01969722.2025.2573328
+UR  - https://www.scopus.com/pages/publications/105020435848?origin=resultslist
+AB  - This paper presents a Deep Residual Squeeze Excited Region Convolutional Network for the precise classification of plant diseases. The proposed model combines deep residual learning, adaptive feature recalibration, and region-focused convolution to improve accuracy and efficiency in disease detection. Leveraging datasets like PlantVillage dataset, Citrus Leaf Disease image dataset, and Coffee Leaf diseases dataset undergo extensive preprocessing, including normalization, data augmentation, resizing, noise cancelation, and contrast enhancement to ensure high-quality inputs. Feature extraction is enhanced by multihead self-attention mechanisms with transformers, generating a detailed, high-dimensional image representations. To manage the complexity of the processed data, statistical techniques such as mean, variance, skewness, kurtosis, and standard deviation are employed, capturing intricate details that aid in classification. The proposed model utilizes squeeze-and-excitation module to emphasize essential features within the images, refining the focus on disease-relevant characteristics. Experimental evaluations use multiple metrics, showcasing the model’s superior accuracy of 98.53%, precision of 97.23%, recall of 96.60%, F1 score of 96.91% and specificity of 96.63%. This rigorous evaluation confirms the model’s practical viability for high-stakes agricultural applications. © 2025 Taylor & Francis Group, LLC.
+KW  - Convolutional neural network
+KW  - multihead self-attention
+KW  - plant disease classification
+KW  - squeeze-and-excitation
+KW  - transformers
+KW  - Classification (of information)
+KW  - Computer aided diagnosis
+KW  - Convolution
+KW  - Convolutional neural networks
+KW  - Deep neural networks
+KW  - Feature extraction
+KW  - Higher order statistics
+KW  - Plant diseases
+KW  - Plants (botany)
+KW  - Precision agriculture
+KW  - Convolutional networks
+KW  - Convolutional neural network
+KW  - Disease classification
+KW  - Leaf disease
+KW  - Multihead
+KW  - Multihead self-attention
+KW  - Plant disease
+KW  - Plant disease classification
+KW  - Squeeze-and-excitation
+KW  - Transformer
+KW  - Image enhancement
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105020435848
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 3
+ER  -
+
+TY  - JOUR
+AU  - Maruthai, S.
+AU  - Selvanarayanan, R.
+AU  - Thanarajan, T.
+AU  - Rajendran, S.
+TI  - Hybrid vision GNNs based early detection and protection against pest diseases in coffee plants
+PY  - 2025
+T2  - Scientific Reports
+VL  - 15
+IS  - 1
+C7  - 11778
+DO  - 10.1038/s41598-025-96523-4
+UR  - https://www.scopus.com/pages/publications/105003192409?origin=resultslist
+AB  - Agriculture is an essential foundation that supports numerous economies, and the longevity of the coffee business is of paramount significance. Controlling and safeguarding coffee farms from harmful pests, including the Coffee Berry Borer, Mealybugs, Scales, and Leaf Miners, which may drastically affect crop productivity and quality. Standard methods for detecting pest diseases sometimes need specialized knowledge or thorough analysis, leading to a substantial commitment of time and effort. To address this challenge, researchers have explored the use of computer vision and deep learning techniques for the automated detection of plant pest diseases. This paper presents a novel strategy for the early detection of coffee crop killers using Hybrid Vision Graph Neural Networks (HV-GNN) in coffee plantations. The model was trained and validated using a curated dataset of 2850 labelled coffee plant images, which included diverse insect infestations. The HV-GNN design allows the model to recognize individual pests within images and capture the complex relationships between them, potentially leading to improved detection accuracy. HV-GNN proficiently detect pests by analyzing their visual characteristics and elucidating the interconnections among pests in images. Experimental findings indicate that HV-GNN attain a detection accuracy of 93.6625%, exceeding that of leading models. The increased accuracy underscores the feasibility of practical implementation, enabling proactive pest control to protect coffee farms and improve agricultural output. © The Author(s) 2025.
+KW  - Coffee plantation
+KW  - Computer vision
+KW  - Deep learning
+KW  - Disease identification
+KW  - Drone image
+KW  - Hybrid vision GNN
+KW  - Pest
+KW  - Agriculture
+KW  - Animals
+KW  - Coffea
+KW  - Coffee
+KW  - Crops, Agricultural
+KW  - Deep Learning
+KW  - Neural Networks, Computer
+KW  - Pest Control
+KW  - Plant Diseases
+KW  - agriculture
+KW  - animal
+KW  - artificial neural network
+KW  - Coffea
+KW  - coffee
+KW  - crop
+KW  - deep learning
+KW  - parasitology
+KW  - pest control
+KW  - plant disease
+KW  - prevention and control
+KW  - procedures
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105003192409
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 68
+ER  -
+
+TY  - JOUR
+AU  - Pham, T.-C.
+AU  - Nguyen, T.-N.
+AU  - Hoang, V.-D.
+AU  - Nguyen, V.-D.
+TI  - Enhancing Coffee Leaf Disease Classification via Active Learning and Diverse Sample Selection
+PY  - 2025
+T2  - IEEE Access
+VL  - 13
+SP  - 161410
+EP  - 161422
+DO  - 10.1109/ACCESS.2025.3609540
+UR  - https://www.scopus.com/pages/publications/105015995712?origin=resultslist
+AB  - Accurate classification of coffee leaf diseases is essential for early intervention and improved crop yield. However, training deep learning models for this task often requires large labeled datasets, which can be expensive and time-consuming to obtain. To address this challenge, we propose an iterative active learning framework with diverse expansion sampling for coffee leaf disease classification, aimed at the need to reduce annotation costs while maintaining high classification accuracy in agricultural disease detection. Our method iteratively selects the most informative and representative samples for labeling, reducing annotation costs while maintaining high classification performance. Diverse expansion sampling leverages a per-class diversity-based selection method inspired by Greedy Furthest-Point Selection, to effectively capture the data distribution. Experimental results demonstrate that our approach significantly improves classification accuracy with fewer labeled samples compared to traditional supervised learning. The proposed method is evaluated on two coffee leaf disease datasets from different countries across various data scenarios. The results indicate that our active learning strategy achieves an improvement of 1.7% and 0.9% in F1 score on VIECOLD and BRACOL, respectively, using the same amount of labeled data as in the supervised approach. The results also show that using only 35% of labeled data for VIECOLD and 50% for BRACOL surpasses the performance achieved with the full dataset when applied to the same baseline model. This emphasizes the advantages of selective data utilization for enhanced generalization and efficiency. This research highlights the potential of active learning in optimizing data annotation for agricultural applications, making deep learning-based plant disease detection more accessible and efficient. © 2013 IEEE.
+KW  - Active learning
+KW  - coffee leaf disease classification
+KW  - deep learning
+KW  - diverse sample selection
+KW  - Active learning
+KW  - Agriculture
+KW  - Coffee
+KW  - Expansion
+KW  - Federated learning
+KW  - Iterative methods
+KW  - Labeled data
+KW  - Large datasets
+KW  - Learning algorithms
+KW  - Learning systems
+KW  - Plant diseases
+KW  - Plants (botany)
+KW  - Supervised learning
+KW  - Active Learning
+KW  - Classification accuracy
+KW  - Coffee leaf disease classification
+KW  - Deep learning
+KW  - Disease classification
+KW  - Disease detection
+KW  - Diverse sample selection
+KW  - Labeled data
+KW  - Leaf disease
+KW  - Samples selection
+KW  - Deep learning
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105015995712
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 4
+ER  -
+
+TY  - JOUR
+AU  - Mehta, B.
+AU  - Bharany, S.
+AU  - Elkamchouchi, D.H.
+AU  - Rehman, A.U.
+AU  - Singh, R.
+AU  - Adem, S.H.
+TI  - EffResViT-SE FusionNet: A Hybrid Deep Learning Framework for Accurate Classification of Coffee Leaf Diseases
+PY  - 2025
+T2  - Food Science and Nutrition
+VL  - 13
+IS  - 12
+C7  - e71311
+DO  - 10.1002/fsn3.71311
+UR  - https://www.scopus.com/pages/publications/105024561260?origin=resultslist
+AB  - Coffee is a vital agricultural commodity that sustains millions of farmers worldwide, yet its cultivation is increasingly threatened by devastating leaf diseases such as Leaf Rust, Phoma, Cercospora, and Leaf Miner. These diseases reduce photosynthetic efficiency, cause defoliation, and ultimately lower crop yield and quality. Traditional diagnostic methods, including visual inspection and laboratory-based tests such as PCR and ELISA, are often time-consuming, costly, and require expert intervention, making them impractical for large-scale use. To address these challenges, we propose EffResViT-SE FusionNet, a novel hybrid deep learning framework that integrates EfficientNetB3 and ResNet50 enhanced with Squeeze-and-Excitation (SE) blocks for adaptive local feature recalibration, along with a Vision Transformer (ViT) for modeling global contextual dependencies. This fusion design effectively combines CNN-based local feature extraction with transformer-based long-range attention in a unified architecture. The model was trained on a large-scale dataset comprising 58,555 coffee leaf images distributed across five classes: Healthy (18,984), Miner (16,983), Leaf Rust (8336), Cercospora (7681), and Phoma (6571). The dataset was split into 70%, 15%, and 15% testing. Key hyperparameters included the Adam optimizer, a learning rate of 0.001, a batch size of 32, and 80 training epochs, ensuring stable convergence. Experimental results demonstrate the superior capability of the proposed model, achieving an overall classification accuracy of 99%, with precision, recall, and F1-scores all ranging between 98% and 99% across all classes. Comparative analysis confirmed notable improvements over baseline models: ResNet50 (94% accuracy), EfficientNetB3 (95% accuracy), and standalone ViT (97% accuracy). Furthermore, ablation studies validated the critical role of SE blocks and feature fusion with the transformer in achieving optimal performance. These outcomes highlight EffResViT-SE FusionNet as a powerful, precise, and scalable solution for early detection and classification of coffee leaf diseases, supporting timely interventions and promoting sustainable agriculture. © 2025 The Author(s). Food Science & Nutrition published by Wiley Periodicals LLC.
+KW  - coffee leaf disease
+KW  - deep learning
+KW  - EfficientNetB3
+KW  - image classification
+KW  - ResNet50
+KW  - squeeze-and-excitation block
+KW  - vision transformer
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105024561260
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 0
+ER  -
+
+TY  - JOUR
+AU  - Raja, K.
+AU  - Shiny Duela, J.
+AU  - Gopichandd, M.
+AU  - Kannan, K.
+AU  - Sathish, M.G.
+TI  - Chilli Leaf Diseases Detection with Different Features of Original Chilli Using Region Based Convolutional Neural Network
+PY  - 2024
+T2  - International Journal of Intelligent Systems and Applications in Engineering
+VL  - 12
+IS  - 3s
+SP  - 298
+EP  - 305
+UR  - https://www.scopus.com/pages/publications/85179330306?origin=resultslist
+AB  - The productivity of the agriculture sector drives the Indian economy. Rural households rely on agriculture to a greater than 70% extent. Almost 60% of the country is employed in agriculture, which generates roughly 17% of the global GDP. Thus, within the domain of agriculture, the detection of crop diseases is crucial. Rice, wheat, groundnuts, and including variety of crops, but not limited to, fruits, vegetables, and other plants. In addition to these crops, Indian farmers also raise potatoes, oilseeds, sugarcanes, and non-food commodities including coffee, cocoa, tea, rubber, and cotton. Most plants primarily grow depending on the energy of their roots and leaves. There are also some more factors that result in various plant-leaf diseases, which ruin harvests and ultimately impact the nation's economy. Chilli production is a skilled labor-intensive operation because plants are constantly under attack from various insects, bacterial diseases, and smaller-scale organisms. Studies of organic products show that leaves and shoots are commonly used to identify attack marks. Currently, chemicals are being applied to plants without paying attention to their needs. This technique will ensure that chemicals such as pesticides are only applied to plants when they are infected with the diseases. Images of the chilli leaf disease were captured using image processing techniques. The leaf image will be used to identify and estimate the state of the plants. There are also several data processing techniques, which are indeed effective as well as efficient for determining plant diseases to support farmers. In this, we have implemented GLCM feature extraction and region-based CNN method. Our Proposed model aims to give an accuracy of above 90%. It will be helpful in various agricultural applications. Firstly, it can be beneficial for assisting non-expert farmers in identifying the right time to apply chemicals to the plant. It also provides the most appropriate time for harvesting crops before they get ruined. Secondly, it can also be used by the researchers of plant research institutes to study crops in detail in different stages of the crop. © 2024, Ismail Saritas. All rights reserved.
+KW  - Anaconda
+KW  - CNN
+KW  - Deep learning
+KW  - GLCM
+KW  - Keras
+KW  - OpenCV-Python
+KW  - Python
+KW  - TensorFlow
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-85179330306
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 4
+ER  -
+
+TY  - JOUR
+AU  - Sultana, N.
+AU  - Sharmin, S.
+AU  - Uddin, M.S.
+TI  - A generalized leaf disease recognition of various crops and vegetables through computer vision and machine learning
+PY  - 2025
+T2  - Neural Computing and Applications
+VL  - 37
+IS  - 25
+SP  - 21069
+EP  - 21089
+DO  - 10.1007/s00521-025-11382-4
+UR  - https://www.scopus.com/pages/publications/105011354440?origin=resultslist
+AB  - Agricultural production is crucial for global economies, yet crop diseases significantly threaten productivity and food security. Traditional manual diagnosis methods are labor-intensive and subjective, leading to inaccurate pesticide applications. Leveraging deep learning, recent advancements have improved disease identification accuracy. However, existing models lack generalization across multiple crops and vegetable diseases. To address this gap, a comprehensive dataset comprising 11 common leaf diseases, such as Anthracnose, Bacterial Blight, Bacterial Spot, Bacterial Wilt, Blast, Downy Mildew, Early Blight, Late Blight, Mosaic, Powdery Mildew, and Rust, affecting 20 widely consumable crops and vegetables, such as rice, wheat, corn, tea, coffee, soybean, potato, tomato, carrot, black gram, pea, cassava, sugarcane, bottle gourd, pepper bell, brinjal, lettuce, cabbage, cauliflower, and cucumber, was curated. Data augmentation techniques expanded the dataset to 16,800 images to enhance the robustness by reducing the overfitting of the deep learning disease recognition model. The dataset is publicly available on GitHub for research purposes. In addition to dataset preparation, this paper introduces a generalized deep learning model for efficient recognition of the leaf diseases of crops and vegetables. Emphasis is placed on optimizing hyperparameters for well-known pre-trained deep learning models, including DenseNet-121, ResNet-50, VGG-16, VGG-19, and Inception-V4. Experimental results using the dataset demonstrate that DenseNet-121 achieved a classification accuracy of 97.58%, surpassing the other models. © The Author(s), under exclusive licence to Springer-Verlag London Ltd., part of Springer Nature 2025.
+KW  - Agri-industry automation
+KW  - Computer vision
+KW  - Convolutional neural network
+KW  - Deep learning
+KW  - Recognition and quality grading
+KW  - Agri-food
+KW  - Crops
+KW  - Deep neural networks
+KW  - Diagnosis
+KW  - Grading
+KW  - Learning systems
+KW  - Plant diseases
+KW  - Plants (botany)
+KW  - Vegetables
+KW  - Agri-industry automation
+KW  - Convolutional neural network
+KW  - Deep learning
+KW  - Industry automation
+KW  - Leaf disease
+KW  - Learning models
+KW  - Machine-learning
+KW  - Quality grading
+KW  - Recognition and quality grading
+KW  - Vision learning
+KW  - Computer vision
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105011354440
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 0
+ER  -
+
+TY  - JOUR
+AU  - Puspita, D.
+AU  - Padya, I.R.
+AU  - Putrawansyah, F.
+TI  - Robusta Coffee Disease Classification Using Optimized MobileNetV3 and DenseNet169
+PY  - 2025
+T2  - Ingenierie des Systemes d'Information
+VL  - 30
+IS  - 11
+SP  - 2917
+EP  - 2928
+DO  - 10.18280/isi.301110
+UR  - https://www.scopus.com/pages/publications/105034963277?origin=resultslist
+AB  - Robusta coffee productivity in Pagar Alam City has declined by nearly 50% compared to the previous year. Typically, a coffee tree produces 1–5 kg of cherries per tree, but in 2024 production dropped to only 100–300 grams. This decline is mainly due to difficulties in accurately identifying leaf diseases, leading to inappropriate pesticide use and reduced yields. Hence, an accurate image-based disease detection system is urgently required to support precision agriculture. This study optimizes the Convolutional Neural Network (CNN) architecture for classifying Robusta coffee leaf diseases using MobileNetV3 and DenseNet169 with transfer learning. The dataset consists of healthy and diseased coffee leaf images (rust, leaf spot, sooty mold). Data preprocessing includes normalization, augmentation, and resizing, with a 70:30 split for training and testing. Performance is evaluated using accuracy, precision, recall, F1-score, and AUC metrics. The optimized model achieved a precision of 0.98, recall of 98%, F1-score of 98%, and AUC of 0.98. It reached the highest accuracy for leaf spot and rust (1.00) and sooty mold (0.93). MobileNetV3 demonstrated superior accuracy and robustness, while DenseNet169 provided faster convergence and efficient feature propagation, yielding a model that balances accuracy and speed. This approach enables farmers to make timely, data-driven decisions in managing coffee plant diseases, supporting sustainable coffee production in Pagar Alam City. Future studies should expand datasets and develop mobile-based real-time detection systems. © 2025 The authors. This article is published by IIETA and is licensed under the CC BY 4.0 license (http://creativecommons.org/licenses/by/4.0/).
+KW  - agricultural AI
+KW  - image classification
+KW  - Pagar Alam city
+KW  - plant disease detection
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105034963277
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 0
+ER  -
+
+TY  - JOUR
+AU  - Gobinath, P.
+TI  - Enhancing Coffee LEAF Disease Detection with RMFA-CNN: A Real-Time Multi-Feature Deep Learning Framework
+PY  - 2026
+T2  - Journal of Theoretical and Applied Information Technology
+VL  - 104
+IS  - 9
+SP  - 377
+EP  - 390
+DO  - 10.5281/zenodo.20253119
+UR  - https://www.scopus.com/pages/publications/105040353501?origin=resultslist
+AB  - Disease prediction in coffee plants has been widely investigated with several approaches utilizing diverse features and measures. However, existing methods often fail to achieve precise classification and are affected by high false prediction rates. The research problem has more impact on the crop of plants and achieving higher yields. The research problem is contributed with a novel approach which incorporates multiple features like intensity and texture of the leaf image towards prediction. Also, the model is designed with three levels of convolution layers to reduce the feature size and supports maximizing classification accuracy. To overcome these limitations, we propose a Real-Time Multi-level Intensity Feature Analysis based Convolutional Neural Network (RMFA-CNN) for efficient disease prediction in coffee plants. The model focussed on handcraft features to be extracted with dedicated schemes of preprocessing, segmentatitaon and feature extraction where the classification is performed with CNN. In the proposed framework, plant images are first pre-processed using a region centric diagonal normalization algorithm which traverses the entire image and enhances visual quality based on intensity features. Subsequently, a gray covariance segmentation algorithm is applied to partition the image into regions according to gray level characteristics. From the segmented regions, colour and texture features are extracted and transformed into a unified one dimensional feature vector for deep CNN training. During testing, the model estimates Intensity Disease Support (IDS) and Texture Disease Support (TDS) which are further combined to compute the Disease Class Support (DCS). Based on the DCS values, the system accurately predicts the disease class. The method is evaluated with two publicly available Arabica coffee leaf datasets, namely JMuBEN and JMuBEN2, which were acquired under real-world conditions at the Mutira coffee plantation in Kirinyaga County, Kenya. Experimental results demonstrate that the proposed RMFA-CNN significantly improves classification accuracy up to 98.6 and reduces false predictions thereby enhancing the reliability of coffee plant disease prediction. © Little Lion Scientific
+KW  - Coffee Plant
+KW  - DCS
+KW  - Disease Prediction
+KW  - Intensity Disease Support (IDS) and Texture Disease Support (TDS)
+KW  - RMFA-CNN
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105040353501
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 0
+ER  -
+
+TY  - JOUR
+AU  - An, W.
+AU  - Yang, J.
+AU  - Ren, Y.
+AU  - Ni, H.
+TI  - High-precision MSFFANet model for soybean leaf disease recognition
+PY  - 2026
+T2  - Discover Computing
+VL  - 29
+IS  - 1
+C7  - 330
+DO  - 10.1007/s10791-026-10227-5
+UR  - https://www.scopus.com/pages/publications/105041072036?origin=resultslist
+AB  - Soybean, as one of the most economically important crops worldwide, plays an irreplaceable role in multiple domains, including food production, animal feed, and industrial raw materials. However, soybean leaf diseases pose a severe threat to both yield and quality, making accurate disease identification critically important for ensuring stable agricultural production. This study systematically analyzes common soybean leaf diseases and constructs a high-quality dataset through manual screening and dataset integration. Building upon this foundation, this paper proposes a high-precision soybean leaf disease recognition model termed Multi-scale Feature Fusion Attention Network (MSFFANet). First, a novel Multi-scale Spatial and Channel Fusion Module (MSCFM) is introduced, which constructs differentiated receptive fields to simultaneously capture local detail and global morphological information from both spatial and channel dimensions. Furthermore, an innovative attention mechanism—Median and Standard Deviation Attention Mechanism (MSAM) is proposed. By refining the pooling strategy, MSAM quantifies feature saliency through the computation of the median and standard deviation of feature maps, which effectively suppresses background interference while directing model attention toward lesion regions, thereby improving recognition accuracy. In addition, a label smoothing technique is incorporated to mitigate overconfident predictions toward any particular category. Experimental results demonstrate that MSFFANet achieves competitive and reliable performance in identifying various soybean leaf diseases, with accuracy, precision, recall, and F1-score reaching 96.47%, 96.85%, 96.86%, and 96.85%, respectively. Moreover, the model exhibits certain generalization ability on leaf disease datasets from other crops, such as apple and coffee. The findings of this study offer supportive technical references for the early diagnosis and precise prevention of soybean leaf diseases. © The Author(s) 2026.
+KW  - Attention mechanism
+KW  - Deep learning
+KW  - Label smoothing
+KW  - Multi-scale feature fusion
+KW  - Soybean leaf disease identification
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105041072036
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 0
+ER  -
+
+TY  - JOUR
+AU  - Baht, N.
+AU  - Domínguez, E.
+TI  - A Hybrid Model of Transfer Learning and Convolutional Neural Networks for Accurate Coffee Leaf Miner (CLM) Classification
+PY  - 2025
+T2  - Computers, Materials and Continua
+VL  - 85
+IS  - 3
+SP  - 4441
+EP  - 4455
+DO  - 10.32604/cmc.2025.069528
+UR  - https://www.scopus.com/pages/publications/105020024899?origin=resultslist
+AB  - Coffee is an important agricultural commodity, and its production is threatened by various diseases. It is also a source of concern for coffee-exporting countries, which is causing them to rethink their strategies for the future. Maintaining crop production requires early diagnosis. Notably, Coffee Leaf Miner (CLM) Machine learning (ML) offers promising tools for automated disease detection. Early detection of CLM is crucial for minimising yield losses. However, this study explores the effectiveness of using Convolutional Neural Networks (CNNs) with transfer learning algorithms ResNet50, DenseNet121, MobileNet, Inception, and hybrid VGG19 for classifying coffee leaf images as healthy or CLM-infected. Leveraging the JMuBEN1 dataset, the proposed hybrid VGG19 model achieved exceptional performance, reaching 97% accuracy on both training and validation data. Additionally, high scores for precision, recall, and F1-score. The confusion matrix shows that all the test samples were correctly classified, which indicates the model’s strong performance on this dataset, demonstrating that the model is effective in distinguishing between healthy and CLM-infected leaves. This suggests strong potential for implementing this approach in real-world coffee plantations for early disease detection and improved disease management, and adapting it for practical deployment in agricultural settings. As well as supporting farmers in detecting diseases using modern, inexpensive methods that do not require specialists, and utilising deep learning technologies. Copyright © 2025 The Authors.
+KW  - Coffee leaf disease
+KW  - disease detection
+KW  - image classification
+KW  - JMuBEN1 dataset
+KW  - transfer learning
+KW  - VGG19 architecture
+KW  - Agricultural machinery
+KW  - Classification (of information)
+KW  - Coffee
+KW  - Computer aided diagnosis
+KW  - Convolution
+KW  - Convolutional neural networks
+KW  - Crops
+KW  - Cultivation
+KW  - Deep learning
+KW  - Diseases
+KW  - Learning algorithms
+KW  - Learning systems
+KW  - Transfer learning
+KW  - Coffee leaf disease
+KW  - Convolutional neural network
+KW  - Disease detection
+KW  - Hybrid model
+KW  - Images classification
+KW  - JMuBEN1 dataset
+KW  - Leaf disease
+KW  - Performance
+KW  - Transfer learning
+KW  - VGG19 architecture
+KW  - Image classification
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105020024899
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 0
+ER  -
+
+TY  - JOUR
+AU  - Çetiner, H.
+AU  - Metlek, S.
+TI  - ABC+CNN-SH: Detection of peruvian coffea leaf diseases with a new hybrid classification algorithm based on ABC optimization and CNN
+PY  - 2025
+T2  - Computers and Electronics in Agriculture
+VL  - 239
+C7  - 111114
+DO  - 10.1016/j.compag.2025.111114
+UR  - https://www.scopus.com/pages/publications/105018672375?origin=resultslist
+AB  - Accurate identification of plant diseases is critical for maximizing agricultural productivity, particularly in high-value crops like Peruvian coffee, where traditional manual diagnostics remain error-prone and inefficient. While numerous studies have explored convolutional neural networks (CNNs) for disease classification, achieving optimal performance hinges on the precise tuning of hyperparameters a process often relegated to suboptimal trial-and-error methods. Using metaheuristic optimization algorithms to detect such hyperparameters would be a correct approach. For this reason, with the artificial bee colony (ABC) optimization method was goal to determine the hyper-parameters of the proposed CNN architecture in the study. In accordance with this goal, both Peruvian Coffea Dataset (CoLeaf-DB), which is an up-to-date dataset, and Arabica Coffee Leaf Dataset (AcLeaf-DB) which is a reliable dataset with which many studies have been conducted on this subject and which can be benchmarked, were used. On CoLeaf-DB, which is a current dataset used in the study, values of 0.94, 0.94, 0.94, 0.95 were obtained in terms of precision, recall, F1 score, accuracy performance metrics, respectively. Same to order, the values of 0.95, 0.95, 0.95, and 0.97 were obtained from the AcLeaf-DB. When the obtained values are compared with state-of-the-art (SOTA) studies, it is revealed that the determination of hyperparameters with the proposed optimization method and the CNN-based architecture developed on this basis have an extremely important effect on disease detection. © 2025 Elsevier B.V.
+KW  - Artificial bee colony
+KW  - CNN
+KW  - Leaf diseases classification
+KW  - Optimization
+KW  - Precision agriculture
+KW  - Classification (of information)
+KW  - Convolutional neural networks
+KW  - Crops
+KW  - Diagnosis
+KW  - Plant diseases
+KW  - Plants (botany)
+KW  - Precision agriculture
+KW  - Artificial bee colony
+KW  - Artificial bee colony optimizations
+KW  - Artificial bees
+KW  - Convolutional neural network
+KW  - Disease classification
+KW  - Hyper-parameter
+KW  - Leaf disease
+KW  - Leaf disease classification
+KW  - Optimisations
+KW  - Precision Agriculture
+KW  - algorithm
+KW  - artificial neural network
+KW  - classification
+KW  - detection method
+KW  - fungal disease
+KW  - hybrid
+KW  - leaf area
+KW  - optimization
+KW  - performance assessment
+KW  - precision agriculture
+KW  - Optimization
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105018672375
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 4
+ER  -
+
+TY  - JOUR
+AU  - Vilela, E.F.
+AU  - Silva, C.A.D.
+AU  - Botti, J.M.C.
+AU  - Martins, E.F.
+AU  - Santana, C.C.
+AU  - Marin, D.B.
+AU  - Freitas, A.R.D.J.
+AU  - Jaramillo-Giraldo, C.
+AU  - Lopes, I.P.D.C.
+AU  - Corrêdo, L.D.P.
+AU  - Queiroz, D.M.D.
+AU  - Rossi, G.
+AU  - Bambi, G.
+AU  - Conti, L.
+AU  - Venzon, M.
+TI  - Detection of Coffee Leaf Miner Using RGB Aerial Imagery and Machine Learning
+PY  - 2024
+T2  - AgriEngineering
+VL  - 6
+IS  - 3
+SP  - 3174
+EP  - 3186
+DO  - 10.3390/agriengineering6030181
+UR  - https://www.scopus.com/pages/publications/85205101557?origin=resultslist
+AB  - The sustainability of coffee production is a concern for producers around the world. To be sustainable, it is necessary to achieve satisfactory levels of coffee productivity and quality. Pests and diseases cause reduced productivity and can affect the quality of coffee beans. To ensure sustainability, producers need to monitor pests that can lead to substantial crop losses, such as the coffee leaf miner, Leucoptera coffeella (Lepidoptera: Lyonetiidae), which belongs to the Lepidoptera order and the Lyonetiidae family. This research aimed to use machine learning techniques and vegetation indices to remotely identify infestations of the coffee leaf miner in coffee-growing regions. Field assessments of coffee leaf miner infestation were conducted in September 2023. Aerial images were taken using remotely piloted aircraft to determine 13 vegetative indices with RGB (red, green, blue) images. The vegetation indices were calculated using ArcGis 10.8 software. A comprehensive database encompassing details of coffee leaf miner infestation, vegetation indices, and crop data. The dataset was divided into training and testing subsets. A set of four machine learning algorithms was utilized: Random Forest (RF), Logistic Regression (LR), Support Vector Machine (SVM), and Stochastic Gradient Descent (SGD). Following hyperparameter tuning, the test subset was employed for model validation. Remarkably, both the SVM and SGD models demonstrated superior performance in estimating coffee leaf miner infestations, with kappa indices of 0.6 and 0.67, respectively. The combined use of vegetation indices and crop data increased the accuracy of coffee leaf miner detection. The RF model performed poorly, while the SVM and SGD models performed better. This situation highlights the challenges of tracking coffee leaf miner infestations in fields with varying ages of coffee plants, different cultivars, and other environmental variables. © 2024 by the authors.
+KW  - artificial intelligence
+KW  - Leucoptera coffeella
+KW  - remote sensing
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-85205101557
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 8
+ER  -
+
+TY  - JOUR
+AU  - AlFrhan, L.A.
+AU  - Almaleh, A.
+TI  - A Hierarchical Deep Learning Framework for Coffee Leaf Disease Detection and Visible Severity Classification Under Saudi Arabian Field Conditions
+PY  - 2026
+T2  - Applied Sciences (Switzerland)
+VL  - 16
+IS  - 12
+C7  - 6109
+DO  - 10.3390/app16126109
+UR  - https://www.scopus.com/pages/publications/105042850327?origin=resultslist
+AB  - Saudi Arabia is expanding its domestic coffee sector under Vision 2030, yet coffee farming remains vulnerable to leaf diseases and pest damage. Image-based artificial intelligence studies conducted under Saudi field conditions remain limited, particularly in relation to assessing image-based visible disease severity. This study designs a hierarchical deep learning framework for screening coffee leaf diseases using field-collected images of Saudi coffee leaves. Three tasks were addressed: binary health status classification, four-class disease or pest damage identification, and binary visible severity classification. A dataset of 550 RGB images was collected from Al-Dayer Governorate, Jazan, under natural field conditions. ResNet50, DenseNet121, and EfficientNet-B0 were evaluated via transfer learning in two phases: a Saudi-only phase and an integrated phase that combined Saudi data with selected JMuBEN and JMuBEN2 samples. In the Saudi-only phase, ResNet50 achieved 96.47% accuracy for binary classification, while DenseNet121 achieved 68.66% and 78.12% for disease and visible severity classification, respectively. In the integrated phase, performance improved to 99.74%, 97.76%, and 97.37%. These integrated-phase results are interpreted as evidence that dataset expansion and increased visual diversity can improve model performance, rather than as definitive estimates of field deployment performance. The results show that binary classification is feasible under limited local data, whereas fine-grained disease classification is more constrained by dataset size and class imbalance. Grad-CAM visualizations were used to support qualitative interpretability and should not be interpreted as biological validation of disease localization. The framework is positioned as a decision-support screening approach that requires further expert-validated, multi-farm, and multi-season evaluation before deployment. © 2026 by the authors.
+KW  - coffee leaf disease detection
+KW  - convolutional neural networks
+KW  - deep learning
+KW  - Grad-CAM
+KW  - hierarchical classification
+KW  - precision agriculture
+KW  - Saudi coffee
+KW  - transfer learning
+KW  - visible severity classification
+KW  - Classification (of information)
+KW  - Coffee
+KW  - Computer aided diagnosis
+KW  - Damage detection
+KW  - Decision support systems
+KW  - Diseases
+KW  - Learning systems
+KW  - Precision agriculture
+KW  - Transfer learning
+KW  - Coffee leaf disease detection
+KW  - Convolutional neural network
+KW  - Deep learning
+KW  - Grad-CAM
+KW  - Hierarchical classification
+KW  - Leaf disease detections
+KW  - Precision Agriculture
+KW  - Saudi coffee
+KW  - Transfer learning
+KW  - Visible severity classification
+KW  - agricultural worker
+KW  - Article
+KW  - artificial intelligence
+KW  - binary classification
+KW  - Coffea
+KW  - controlled study
+KW  - convolutional neural network
+KW  - crop production
+KW  - decision support system
+KW  - deep learning
+KW  - disease classification
+KW  - Hemileia vastatrix
+KW  - hierarchical clustering
+KW  - leaf rust
+KW  - leaf spot
+KW  - nonhuman
+KW  - plant disease
+KW  - plant leaf
+KW  - plant yield
+KW  - Saudi Arabia
+KW  - transfer learning (machine learning)
+KW  - Deep learning
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105042850327
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 1
+ER  -
+
+TY  - JOUR
+AU  - Fragoso, J.
+AU  - Silva, C.
+AU  - Paixão, T.
+AU  - Alvarez, A.B.
+AU  - Júnior, O.C.
+AU  - Florez, R.
+AU  - Palomino-Quispe, F.
+AU  - Savian, L.G.
+AU  - Trazzi, P.A.
+TI  - Coffee-Leaf Diseases and Pests Detection Based on YOLO Models
+PY  - 2025
+T2  - Applied Sciences (Switzerland)
+VL  - 15
+IS  - 9
+C7  - 5040
+DO  - 10.3390/app15095040
+UR  - https://www.scopus.com/pages/publications/105004890711?origin=resultslist
+AB  - Coffee cultivation is vital to the global economy, but faces significant challenges with diseases such as rust, miner, phoma, and cercospora, which impact production and sustainable crop management. In this scenario, deep learning techniques have shown promise for the early identification of these diseases, enabling more efficient monitoring. This paper proposes an approach for detecting diseases and pests on coffee leaves using an efficient single-shot object-detection algorithm. The experiments were conducted using the YOLOv8, YOLOv9, YOLOv10 and YOLOv11 versions, including their variations. The BRACOL dataset, annotated by an expert, was used in the experiments to guarantee the quality of the annotations and the reliability of the trained models. The evaluation of the models included quantitative and qualitative analyses, considering the mAP, F1-Score, and recall metrics. In the analyses, YOLOv8s stands out as the most effective, with a mAP of 54.5%, an inference time of 11.4 ms and the best qualitative predictions, making it ideal for real-time applications. © 2025 by the authors.
+KW  - coffee leaves
+KW  - diseases and pests detection
+KW  - object detection
+KW  - precision agriculture
+KW  - You Only Look Once
+KW  - Cercospora
+KW  - Coffee leaf
+KW  - Crop managements
+KW  - Disease and pest detection
+KW  - Global economies
+KW  - Leaf disease
+KW  - Learning techniques
+KW  - Objects detection
+KW  - Precision Agriculture
+KW  - You only look once
+KW  - Precision agriculture
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105004890711
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 26
+ER  -
+
+TY  - JOUR
+AU  - Abuhayi, B.M.
+AU  - Hajdu, A.
+TI  - A Hybrid Compact Convolutional Transformer with Bilateral Filtering for Coffee Berry Disease Classification
+PY  - 2025
+T2  - Sensors
+VL  - 25
+IS  - 13
+C7  - 3926
+DO  - 10.3390/s25133926
+UR  - https://www.scopus.com/pages/publications/105010310087?origin=resultslist
+AB  - Coffee berry disease (CBD), caused by Colletotrichum kahawae, significantly threatens global Coffee arabica production, leading to major yield losses. Traditional detection methods are often subjective and inefficient, particularly in resource-limited settings. While deep learning has advanced plant disease detection, most existing research targets leaf diseases, with limited focus on berry-specific infections like CBD. This study proposes a lightweight and accurate solution using a Compact Convolutional Transformer (CCT) for classifying healthy and CBD-affected coffee berries. The CCT model combines parallel convolutional branches for hierarchical feature extraction with a transformer encoder to capture long-range dependencies, enabling high performance on limited data. A dataset of 1737 coffee berry images was enhanced using bilateral filtering and color segmentation. The CCT model, integrated with a Multilayer Perceptron (MLP) classifier and optimized through early stopping and regularization, achieved a validation accuracy of 97.70% and a sensitivity of 100% for CBD detection. Additionally, CCT-extracted features performed well with traditional classifiers, including Support Vector Machine (SVM) (82.47% accuracy; AUC 0.91) and Decision Tree (82.76% accuracy; AUC 0.86). Compared to pretrained models, the proposed system delivered superior accuracy (97.5%) with only 0.408 million parameters and faster training (2.3 s/epoch), highlighting its potential for real-time, low-resource deployment in sustainable coffee production systems. © 2025 by the authors.
+KW  - bilateral filtering
+KW  - coffee berry disease
+KW  - compact convolution transformers
+KW  - Algorithms
+KW  - Coffea
+KW  - Coffee
+KW  - Colletotrichum
+KW  - Deep Learning
+KW  - Fruit
+KW  - Image Processing, Computer-Assisted
+KW  - Plant Diseases
+KW  - Support Vector Machine
+KW  - Coffee
+KW  - Convolution
+KW  - Deep learning
+KW  - Extraction
+KW  - Fruits
+KW  - Hierarchical systems
+KW  - Plant diseases
+KW  - Plants (botany)
+KW  - Real time systems
+KW  - Support vector machines
+KW  - Bilateral filtering
+KW  - Coffee arabica
+KW  - Coffee berry disease
+KW  - Compact convolution transformer
+KW  - Detection methods
+KW  - Disease classification
+KW  - Disease detection
+KW  - Plant disease
+KW  - Transformer modeling
+KW  - Yield loss
+KW  - algorithm
+KW  - classification
+KW  - Coffea
+KW  - coffee
+KW  - Colletotrichum
+KW  - deep learning
+KW  - fruit
+KW  - image processing
+KW  - microbiology
+KW  - pathogenicity
+KW  - plant disease
+KW  - support vector machine
+KW  - Classification (of information)
+KW  - Decision trees
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105010310087
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 3
+ER  -
+
+TY  - JOUR
+AU  - Romero-Benavides, M.P.
+AU  - Moura, W.M.
+AU  - Del Ponte, E.M.
+TI  - Foundation Model-Assisted Segmentation Enables Robust Field-Based Severity Estimation: A Case-Study of Coffee Leaf Rust
+PY  - 2026
+T2  - Plant Pathology
+VL  - 75
+IS  - 3
+C7  - e70191
+DO  - 10.1111/ppa.70191
+UR  - https://www.scopus.com/pages/publications/105039681447?origin=resultslist
+AB  - Accurate estimation of coffee leaf rust (Hemileia vastatrix) severity remains challenging due to symptom heterogeneity, illumination variability and observer subjectivity, particularly under field conditions. We developed a segmentation pipeline combining zero-shot foundational models (SAM3) and fine-tuned deep learning (SAM2) for estimation of percentage severity and compared them with three other segmentation approaches: DeepLabV3+ (convolutional neural network model), ImageJ (colour thresholding) and the pliman R package (palette-based). A total of 1285 images were collected across several field plots, and 606 pixel-level rust lesion masks were curated for model fine-tuning and independent evaluation. A two-stage detection–segmentation workflow integrating YOLOv8 and SAM2 enabled robust leaf extraction from complex branch-level images, with detection performance consistently exceeding 0.98 across metrics. For lesion segmentation, at the pixel level, the zero-shot foundation model SAM3 achieved the highest disease segmentation performance (Dice ≈0.91; IoU ≈0.83), with balanced precision (≈0.93) and recall (≈0.94). DeepLabV3+ also performed well (Dice ≈0.86; IoU ≈0.75), whereas classical threshold-based approaches showed high recall but substantially lower precision, indicating frequent false positives and producing a systematic positive bias. SAM2 exhibited more conservative performance, yielding higher precision but reduced recall relative to SAM3. At the leaf level, the highest agreement between predicted and reference severity estimates was found for SAM3, followed by DeepLabV3+ and SAM2, while classical methods overestimated diseased area. Overall, SAM3 led to a reliable, scalable and consistent severity estimation under real-world field conditions. © 2026 The Author(s). Plant Pathology published by John Wiley & Sons Ltd on behalf of British Society for Plant Pathology.
+KW  - Coffea arabica
+KW  - computer vision
+KW  - Hemileia vastatrix
+KW  - phytopathometry
+KW  - coffee
+KW  - computer vision
+KW  - disease severity
+KW  - fungal disease
+KW  - fungus
+KW  - rust disease
+KW  - segmentation
+KW  - symptom
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105039681447
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 2
+ER  -
+
+TY  - JOUR
+AU  - Zuñiga Cajas, J.J.
+AU  - Peña Ramos, O.D.
+AU  - Lasso, E.
+AU  - Avelino, J.
+AU  - Corrales, J.C.
+AU  - Figueroa Martínez, C.N.
+TI  - Estimating the severity of coffee leaf rust using deep learning and image processing
+PY  - 2025
+T2  - Inteligencia Artificial
+VL  - 28
+IS  - 76
+SP  - 200
+EP  - 222
+DO  - 10.4114/intartif.vol28iss76pp200-222
+UR  - https://www.scopus.com/pages/publications/105015583931?origin=resultslist
+AB  - The global coffee industry faces significant challenges from crop diseases, of which coffee leaf rust (CLR) caused by the fungus Hemileia vastatrix, stands out as one of the most damaging. Accurate assessment of disease severity is essential for applying effective control strategies. In response to this need, this study introduces a modern approach using deep learning and image processing techniques to identify and quantify CLR injury automatically. We developed thirteen models using convolutional neural networks, to classify lesions into different degrees of severity. It offers a promising alternative to conventional methods, especially under data-limited conditions, although some limitations remain in robustness across datasets. Manual rust detection requires close visual inspection of leaves, a laborious and error-prone process, especially in large cultivation areas. This challenge makes it harder to apply timely and effective disease management strategies. © IBERAMIA and the authors.
+KW  - Coffee
+KW  - Deep learning and disease detection
+KW  - Rust
+KW  - Convolutional neural networks
+KW  - Deep learning
+KW  - Disease control
+KW  - Control strategies
+KW  - Crop disease
+KW  - Deep learning and disease detection
+KW  - Disease detection
+KW  - Disease severity
+KW  - Hemileia vastatrix
+KW  - Image processing technique
+KW  - Images processing
+KW  - Leaf rust
+KW  - Rust
+KW  - Coffee
+KW  - Image processing
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105015583931
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 1
+ER  -
+
+TY  - JOUR
+AU  - Zhong, R.
+AU  - Wang, Z.
+AU  - Yu, J.
+AU  - Zhang, Y.
+AU  - Lian, J.J.
+AU  - Cai, Z.
+AU  - Pan, Z.
+AU  - Chen, H.
+AU  - Yu, S.
+TI  - Multi-search pattern competitive swarm optimizer: performance investigation and application in coffee leaf disease diagnosis
+PY  - 2026
+T2  - International Journal of Machine Learning and Cybernetics
+VL  - 17
+IS  - 8
+C7  - 372
+DO  - 10.1007/s13042-026-03184-4
+UR  - https://www.scopus.com/pages/publications/105043603649?origin=resultslist
+AB  - This paper presents an efficient and effective variant of the competitive swarm optimizer (CSO) named multi-search pattern CSO (MSPCSO). Two tailored strategies are integrated into MSPCSO to enhance the robustness of CSO: the multi-search pattern mechanism aims to enrich the search diversity and further maintain the population diversity during optimization, and the success history-based parameter tuning strategy allows MSPCSO to adapt complex fitness landscapes in various optimization challenges. We conduct optimization experiments in CEC benchmarks and engineering challenges against nine cutting-edge optimizers to investigate the performance of MSPCSO. Rigorous statistical tests confirm the superiority and competitiveness of MSPCSO, while the sensitivity and ablation experiments are implemented to comprehensively analyze the performance of MSPCSO. Furthermore, we extend MSPCSO to ensemble learning methodology for the coffee leaf disease diagnosis, where several pre-trained deep learning models are trained in the coffee leaf disease dataset. The top three deep learning models are employed for ensemble learning according to the MSPCSO-optimized soft voting scheme. Experiments in public datasets confirm that the proposed MSPCSO-Ensemble achieves significant improvements in the accuracy of 1.021%, precision of 1.0149%, recall of 1.021%, and F1 score of 1.0217% against the second-best model, which demonstrates the competitiveness of MSPCSO-Ensemble in real-world scenarios. © The Author(s), under exclusive licence to Springer-Verlag GmbH Germany, part of Springer Nature 2026.
+KW  - Coffee leaf disease diagnosis
+KW  - Competitive swarm optimizer (CSO)
+KW  - Ensemble learning
+KW  - Multi-search pattern mechanism
+KW  - Success history-based parameter tuning
+KW  - Coffee
+KW  - Deep learning
+KW  - Learning systems
+KW  - Statistical tests
+KW  - Swarm intelligence
+KW  - Tuning
+KW  - Coffee leaf disease diagnose
+KW  - Competitive swarm optimizer
+KW  - Disease diagnosis
+KW  - Ensemble learning
+KW  - Leaf disease
+KW  - Multi-search pattern mechanism
+KW  - Parameters tuning
+KW  - Search patterns
+KW  - Success history-based parameter tuning
+KW  - Swarm optimizer
+KW  - Benchmarking
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105043603649
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 0
+ER  -
+
+TY  - JOUR
+AU  - Puspita, D.
+AU  - Padya, I.R.
+AU  - Putrawansyah, F.
+TI  - Robusta Coffee Disease Classification Using Optimized MobileNetV3 and DenseNet169
+PY  - 2025
+T2  - Ingenierie des Systemes d'Information
+VL  - 30
+IS  - 11
+SP  - 2917
+EP  - 2928
+DO  - 10.18280/isi.301115
+UR  - https://www.scopus.com/pages/publications/105026774207?origin=resultslist
+AB  - Robusta coffee productivity in Pagar Alam City has declined by nearly 50% compared to the previous year. Typically, a coffee tree produces 1-5 kg of cherries per tree, but in 2024 production dropped to only 100-300 grams. This decline is mainly due to difficulties in accurately identifying leaf diseases, leading to inappropriate pesticide use and reduced yields. Hence, an accurate image-based disease detection system is urgently required to support precision agriculture. This study optimizes the Convolutional Neural Network (CNN) architecture for classifying Robusta coffee leaf diseases using MobileNetV3 and DenseNet169 with transfer learning. The dataset consists of healthy and diseased coffee leaf images (rust, leaf spot, sooty mold). Data preprocessing includes normalization, augmentation, and resizing, with a 70:30 split for training and testing. Performance is evaluated using accuracy, precision, recall, F1-score, and AUC metrics. The optimized model achieved a precision of 0.98, recall of 98%, F1-score of 98%, and AUC of 0.98. It reached the highest accuracy for leaf spot and rust (1.00) and sooty mold (0.93). MobileNetV3 demonstrated superior accuracy and robustness, while DenseNet169 provided faster convergence and efficient feature propagation, yielding a model that balances accuracy and speed. This approach enables farmers to make timely, data-driven decisions in managing coffee plant diseases, supporting sustainable coffee production in Pagar Alam City. Future studies should expand datasets and develop mobile-based realtime detection systems. Copyright: ©2025 The authors. This article is published by IIETA and is licensed under the CC BY 4.0 license (http://creativecommons.org/licenses/by/4.0/).
+KW  - agricultural AI
+KW  - image classification
+KW  - Pagar Alam city
+KW  - plant disease detection
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105026774207
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 0
+ER  -
+
+TY  - JOUR
+AU  - Vilela, E.F.
+AU  - Castro, G.D.M.D.
+AU  - Marin, D.B.
+AU  - Santana, C.C.
+AU  - Leite, D.H.
+AU  - Matos, C.D.S.M.
+AU  - Silva, C.A.D.
+AU  - Lopes, I.P.D.C.
+AU  - Queiroz, D.M.D.
+AU  - Silva, R.A.
+AU  - Rossi, G.
+AU  - Bambi, G.
+AU  - Conti, L.
+AU  - Venzon, M.
+TI  - Remote Monitoring of Coffee Leaf Miner Infestation Using Machine Learning
+PY  - 2024
+T2  - AgriEngineering
+VL  - 6
+IS  - 2
+SP  - 1697
+EP  - 1711
+DO  - 10.3390/agriengineering6020098
+UR  - https://www.scopus.com/pages/publications/85197882487?origin=resultslist
+AB  - The coffee leaf miner (Leucoptera coffeella) is a key pest in coffee-producing regions in Brazil. The objective of this work was to evaluate the potential of machine learning algorithms to identify coffee leaf miner infestation by considering the assessment period and Sentinel-2 satellite images generated on the Google Earth Engine platform. Coffee leaf miner infestation in the field was measured monthly from 2019 to 2023. Images were selected from the Sentinel-2 satellite to determine 13 vegetative indices. The selection of images and calculations of the vegetation indices were carried out using the Google Earth Engine platform. A database was generated with information on coffee leaf miner infestation, vegetation indices, and assessment times. The database was separated into training data and testing data. Nine machine learning algorithms were used, including Linear Discriminant Analysis, Random Forest, Support Vector Machine, k-nearest neighbors, and Logistic Regression, and a principal component analysis was conducted for each algorithm. After optimizing the hyperparameters, the testing data were used to validate the model. The best model to estimate miner infestation was RF, which had an accuracy of 0.86, a kappa index of 0.64, and a precision of 0.87. The developed models were capable of monitoring coffee leaf miner infestation. © 2024 by the authors.
+KW  - artificial intelligence
+KW  - Google Earth Engine
+KW  - Leucoptera coffeella
+KW  - multispectral image analysis
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-85197882487
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 7
+ER  -
+
+TY  - JOUR
+AU  - Lim, S.
+AU  - Ahn, E.
+AU  - Zhang, D.
+AU  - Meinhardt, L.W.
+AU  - Park, S.
+TI  - Machine-learning-based analysis of host-depleted k-mer profiles for early detection and abundance estimation of coffee pathogens
+PY  - 2026
+T2  - Bioinformatics Advances
+VL  - 6
+IS  - 1
+C7  - vbag224
+DO  - 10.1093/bioadv/vbag224
+UR  - https://www.scopus.com/pages/publications/105047840499?origin=resultslist
+AB  - Motivation: Early detection of plant pathogens is essential for timely disease management, but diagnosis at low infection levels remains difficult because pathogen-derived sequences are often masked by abundant host DNA. K-mer-based machine learning offers a potentially sensitive, alignment-free feature-based approach for detecting infection and estimating pathogen abundance from sequencing data, but its performance across infection levels, biological backgrounds, and preprocessing strategies remains insufficiently characterized. Results: We evaluated a k-mer-based machine-learning framework using simulated Illumina short-read data from two Coffea arabica cultivars (ET39 and Typica) infected with Hemileia vastatrix or Fusarium xylarioides across a broad range of infection rates. Among ten models tested on raw and host-depleted k-mer profiles, logistic regression (LR) and linear support vector machine (LSVM) were the most sensitive. Host depletion with KrakenUniq substantially improved low-infection-rate detection, lowering the practical detection threshold to 0.05%. Models trained at lower infection rates performed better when tested across different infection rates than models trained at higher rates, although performance declined when the test infection rate fell below 0.05% because infected samples were increasingly misclassified as healthy. External validation showed limited biological transferability: low-infection-rate performance depended strongly on host background, whereas high-infection-rate performance depended more on pathogen identity. To improve weak-signal detection, we developed a two-stage framework combining elastic-net logistic regression for detection with ridge regression for infection rate prediction. This framework maintained near-perfect detection at 0.05% and above, improved detection at 0.01% under mixed-infection-rate training, and showed strong agreement between true and predicted infection rates (Spearman’s ρ = 0.95). Predictive k-mers were extensively shared between LR and LSVM and showed distinct compositional differences between healthy- and infected-associated features. Availability and implementation: Code is available at GitHub (https://github.com/TropicalBreeding/coffee-pathogen-kmer-ml) Published by Oxford University Press 2026. This work is written by (a) US Government employee(s) and is in the public domain in the US.
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105047840499
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 0
+ER  -
+
+TY  - JOUR
+AU  - Araaf, R.T.
+AU  - Minn, A.
+AU  - Ahamed, T.
+TI  - Coffee Leaf Rust Disease Detection and Implementation of an Edge Device for Pruning Infected Leaves via Deep Learning Algorithms
+PY  - 2024
+T2  - Sensors
+VL  - 24
+IS  - 24
+C7  - 8018
+DO  - 10.3390/s24248018
+UR  - https://www.scopus.com/pages/publications/85213236754?origin=resultslist
+AB  - Global warming and extreme climate conditions caused by unsuitable temperature and humidity lead to coffee leaf rust (Hemileia vastatrix) diseases in coffee plantations. Coffee leaf rust is a severe problem that reduces productivity. Currently, pesticide spraying is considered the most effective solution for mitigating coffee leaf rust. However, the application of pesticide spray is still not efficient for most farmers worldwide. In these cases, pruning the most infected leaves with leaf rust at coffee plantations is important to help pesticide spraying to be more efficient by creating a more targeted, accessible treatment. Therefore, detecting coffee leaf rust is important to support the decision on pruning infected leaves. The dataset was acquired from a coffee farm in Majalengka Regency, Indonesia. Only images with clearly visible spots of coffee leaf rust were selected. Data collection was performed via two devices, a digital mirrorless camera and a phone camera, to diversify the dataset and test it with different datasets. The dataset, comprising a total of 2024 images, was divided into three sets with a ratio of 70% for training (1417 images), 20% for validation (405 images), and 10% for testing (202 images). Images with leaves infected by coffee leaf rust were labeled via LabelImg® with the label “CLR”. All labeled images were used to train the YOLOv5 and YOLOv8 algorithms through the convolutional neural network (CNN). The trained model was tested with a test dataset, a digital mirrorless camera image dataset (100 images), a phone camera dataset (100 images), and real-time detection with a coffee leaf rust image dataset. After the model was trained, coffee leaf rust was detected in each frame. The mean average precision (mAP) and recall for the trained YOLOv5 model were 69% and 63.4%, respectively. For YOLOv8, the mAP and recall were approximately 70.2% and 65.9%, respectively. To evaluate the performance of the two trained models in detecting coffee leaf rust on trees, 202 original images were used for testing with the best-trained weight from each model. Compared to YOLOv5, YOLOv8 demonstrated superior accuracy in detecting coffee leaf rust. With a mAP of 73.2%, YOLOv8 outperformed YOLOv5, which achieved a mAP of 70.5%. An edge device was utilized to deploy real-time detection of CLR with the best-trained model. The detection was successfully executed with high confidence in detecting CLR. The system was further integrated into pruning solutions for Arabica coffee farms. A pruning device was designed using Autodesk Fusion 360® and fabricated for testing on a coffee plantation in Indonesia. © 2024 by the authors.
+KW  - coffee
+KW  - deep learning
+KW  - edge device
+KW  - production
+KW  - pruning
+KW  - Algorithms
+KW  - Basidiomycota
+KW  - Coffea
+KW  - Coffee
+KW  - Deep Learning
+KW  - Indonesia
+KW  - Neural Networks, Computer
+KW  - Plant Diseases
+KW  - Plant Leaves
+KW  - Air quality
+KW  - Digital cameras
+KW  - Medical imaging
+KW  - Pesticides
+KW  - Photointerpretation
+KW  - Photomapping
+KW  - Picture archiving and communication systems
+KW  - Pixels
+KW  - Smartphones
+KW  - Coffee plantation
+KW  - Deep learning
+KW  - Edge device
+KW  - Image datasets
+KW  - Indonesia
+KW  - Leaf rust
+KW  - Pesticide spraying
+KW  - Precision and recall
+KW  - Pruning
+KW  - Real-time detection
+KW  - algorithm
+KW  - artificial neural network
+KW  - Basidiomycetes
+KW  - Coffea
+KW  - coffee
+KW  - deep learning
+KW  - Indonesia
+KW  - microbiology
+KW  - pathogenicity
+KW  - physiology
+KW  - plant disease
+KW  - plant leaf
+KW  - Convolutional neural networks
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-85213236754
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 16
+ER  -
+
+TY  - JOUR
+AU  - Zhang, X.
+AU  - Xu, G.
+AU  - Li, Y.
+AU  - Wang, Y.
+AU  - Zuo, D.
+TI  - CDMS-YOLO: An Enhanced YOLOv11 Model with Gated Channel Attention and Dynamic Multiscale Optimization for Coffee Leaf Disease and Pest Detection
+PY  - 2026
+T2  - Applied Sciences (Switzerland)
+VL  - 16
+IS  - 18
+C7  - 9199
+DO  - 10.3390/app16189199
+UR  - https://www.scopus.com/pages/publications/105051657489?origin=resultslist
+AB  - Accurate and efficient detection of coffee leaf diseases and pests is essential for safeguarding coffee yield and quality. To address the challenges posed by small lesions, complex backgrounds, and highly variable symptom morphologies under field conditions, this study proposes CDMS-YOLO, a lightweight detection model based on YOLOv11n. CDMS-YOLO integrates the C3k2-Convolutional Gated Linear Unit (C3k2-CGLU) module, the DySample dynamic upsampling operator, the Mobile Inverted Bottleneck Convolution detection head (Detect_MBConv) detection head, and Scale-based Dynamic Loss (SD Loss) to enhance disease feature extraction, multiscale detail recovery, and bounding-box regression. Experiments on a coffee leaf disease and pest dataset with complex backgrounds show that CDMS-YOLO achieves a precision of 93.0%, a recall of 90.1%, and an mAP50 of 95.1%, representing improvements of 4.8, 2.1, and 3.0 percentage points, respectively, over YOLOv11n. Under a stricter leakage-controlled data split, CDMS-YOLO achieves an mAP50 of 93.6% and an mAP50-95 of 77.3%, outperforming YOLOv11n by 3.1 and 2.6 percentage points, respectively, indicating that the performance advantage is maintained under a more conservative evaluation protocol. The model contains only 2.84 M parameters and requires 7.2 GFLOPs. On the NVIDIA Jetson Orin Nano, CDMS-YOLO achieves an inference speed of 135.41 FPS, compared with 203.75 FPS for YOLOv11n. Thus, its frame rate is approximately 33.5% lower than that of YOLOv11n; nevertheless, it still satisfies real-time detection requirements. Overall, CDMS-YOLO provides an effective balance between detection accuracy, model complexity, and edge-deployment efficiency, offering a practical approach for intelligent detection and precision management of coffee leaf diseases and pests. © 2026 by the authors.
+KW  - attention mechanism
+KW  - coffee leaf diseases and pests
+KW  - deep learning
+KW  - object detection
+KW  - YOLOv11n
+KW  - Coffee
+KW  - Convolution
+KW  - Deep learning
+KW  - Edge detection
+KW  - Feature extraction
+KW  - Object recognition
+KW  - Signal detection
+KW  - Attention mechanisms
+KW  - Coffee leaf disease and pest
+KW  - Complex background
+KW  - Deep learning
+KW  - Gated channels
+KW  - Leaf disease
+KW  - Multi-scale optimization
+KW  - Objects detection
+KW  - Percentage points
+KW  - Yolov11n
+KW  - anthracnose
+KW  - Article
+KW  - brown spot
+KW  - coffee leaf disease
+KW  - convolutional neural network
+KW  - deep learning
+KW  - FLO-1 cell line
+KW  - leaf spot
+KW  - nonhuman
+KW  - plant leaf
+KW  - plant pest
+KW  - Object detection
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105051657489
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 0
+ER  -
+
+TY  - JOUR
+AU  - Santa-María, J.C.
+AU  - Rodríguez, C.
+TI  - Automatic detection of coffee leaf diseases through pattern recognition
+ST  - Detección automática de enfermedades foliares del cafeto mediante reconocimiento de patrones
+PY  - 2026
+T2  - Revista Cientifica de Sistemas e Informatica
+VL  - 6
+IS  - 1
+C7  - e1349
+DO  - 10.51252/rcsi.v6i1.1349
+UR  - https://www.scopus.com/pages/publications/105029874046?origin=resultslist
+AB  - Early detection of coffee leaf diseases is essential to reduce production losses; however, visual field diagnosis presents limitations associated with subjectivity and environmental variability. The objective of this study was to design and evaluate a hybrid pattern-recognition model to classify healthy coffee leaves and those affected by coffee leaf rust and brown eye spot using images captured under real field conditions in Saposoa (San Martín, Peru). A proprietary dataset of 1,500 images validated by a specialist (500 per class) was used and expanded through controlled data augmentation to 6,000 balanced images. ResNet18 was employed as a feature extractor using transfer learning, and three supervised classifiers were compared: SVM, Random Forest, and XGBoost. Model performance was evaluated using 10-fold stratified cross-validation and an independent test set (20%). The ResNet18 + SVM model achieved the best performance, with an accuracy of 0.9742, a macro F1-score of 0.9730, and a macro-AUC of 0.9968, outperforming Random Forest (accuracy = 0.9367) and XGBoost (accuracy = 0.9583). Inferential analysis using ANOVA and Tukey’s HSD test confirmed statistically significant differences among models (p < 0.001). The results demonstrate the robustness and feasibility of the proposed approach to support coffee phytosanitary diagnosis under real-world field conditions. © Los autores.
+KW  - computer vision
+KW  - deep learning
+KW  - pattern recognition
+KW  - phytosanitary diagnosis
+KW  - transfer learning
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105029874046
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 0
+ER  -
+
+TY  - JOUR
+AU  - Awis, G.C.
+TI  - Smart diagnostic tool for coffee pests and disease identification using image processing
+PY  - 2026
+T2  - Plant Science Today
+VL  - 13
+IS  - 2
+DO  - 10.14719/pst.11385
+UR  - https://www.scopus.com/pages/publications/105043295473?origin=resultslist
+AB  - This study presents the development and evaluation of a mobile-based diagnostic tool for identifying coffee pests and diseases through image processing, targeting coffee farmers in Kalinga Province, Philippines. The system integrates traditional visual inspection with advanced image recognition algorithms, including K-means clustering, support vector machine and inceptionV3, to enable early and accurate detection of major pests such as the coffee berry borer (Hypothenemus hampei (Ferrari)) and coffee stem borer (Xylotrechus quadripes Chevrolat), as well as common diseases including coffee leaf rust (Hemileia vastatrix Berk. & Broome) and coffee berry disease (Colletotrichum kahawae J.M. Waller & Bridge). Pilot testing was conducted among farmers, academic researchers and IT experts. System quality was evaluated using the ISO/IEC 25010 software quality model, covering functionality, reliability, usability, efficiency, maintainability and portability. Findings revealed high compliance across all quality characteristics (overall mean = 4.52), indicating strong system performance. Farmers reported improved satisfaction in pest and disease management and improved access to timely treatment recommendations. The study recommends expanding the image dataset to improve detection accuracy and developing an iOS-compatible version to broaden accessibility. This project demonstrates the potential of combining image processing and mobile technology to empower coffee farmers, support sustainable pest and disease management and enhance crop productivity in resource-limited agricultural contexts. Copyright: © The Author(s). This is an open-access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution and reproduction in any medium, provided the original author and source are credited (https://creativecommons.org/ licenses/by/4.0/)
+KW  - convolutional neural network
+KW  - inception v3
+KW  - iso 25010
+KW  - k-means clustering
+KW  - support vector machine
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105043295473
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 0
+ER  -
+
+TY  - JOUR
+AU  - Wang, Z.
+AU  - Luo, Q.
+AU  - Zhang, C.
+AU  - Chen, S.
+AU  - Yu, J.
+AU  - Abdel-Salam, M.
+AU  - Zhong, R.
+AU  - Li, D.
+TI  - Adaptive success history adaptive differential evolution with multi-agent participated competition mechanism
+PY  - 2026
+T2  - Cluster Computing
+VL  - 29
+IS  - 1
+C7  - 66
+DO  - 10.1007/s10586-025-05825-9
+UR  - https://www.scopus.com/pages/publications/105026122962?origin=resultslist
+AB  - This paper proposes an efficient and improved variant of the success history adaptive differential evolution (SHADE), termed Adaptive SHADE with Multi-agent Participated Competition Mechanism (ASHADE-MPC). The proposed ASHADE-MPC incorporates two key components: (1) a Multi-agent Participated Competition (MPC) mechanism and (2) an adaptive mutation probability. The incorporated MPC mechanism enhances search efficiency and stability by integrating two powerful mutation strategies: DE/cur-to-/1 and DE/cur-to-/1. Additionally, ASHADE-MPC dynamically adjusts the implementation of DE/best/1 and the multi-agent competition mechanism through a switching probability P to balance local exploitation and global exploration at different optimization stages effectively. Extensive experiments in CEC2017, CEC2020, CEC2022, and seven engineering problems against eleven state-of-the-art optimizers demonstrate the superiority and domination of ASHADE-MPC in different optimization challenges. Furthermore, we apply ASHADE-MPC to the ensemble learning domain to detect the coffee leaf disease, where three high-accuracy deep learning models are fused using an ASHADE-MPC-optimized soft voting scheme. Experimental results confirm that the proposed ASHADE-MPC-Ensemble approach improves the accuracy of 0.952% in accuracy, 0.938% in precision, 0.952% in recall, and 0.952% in F1-score compared to the second-best model, Swin Transformer, which highlights the effectiveness and applicability of ASHADE-MPC in real-world scenarios. The source code of this research can be found at https://github.com/RuiZhong961230/ASHADE-MPC. © The Author(s), under exclusive licence to Springer Science+Business Media, LLC, part of Springer Nature 2025.
+KW  - Adaptive mutation probability
+KW  - Coffee leaf disease detection
+KW  - Differential Evolution (DE)
+KW  - Ensemble learning
+KW  - Multi-agent Participated Competition (MPC)
+KW  - Success History Adaptive (SHA) Mechanism
+KW  - Deep learning
+KW  - Engineering education
+KW  - Evolutionary algorithms
+KW  - Global optimization
+KW  - Intelligent agents
+KW  - Learning systems
+KW  - Adaptive mechanism
+KW  - Adaptive mutation
+KW  - Adaptive mutation probability
+KW  - Coffee leaf disease detection
+KW  - Differential Evolution
+KW  - Ensemble learning
+KW  - Leaf disease detections
+KW  - Multi agent
+KW  - Multi-agent participated competition
+KW  - Mutation probability
+KW  - Success history adaptive  mechanism
+KW  - Multi agent systems
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105026122962
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 1
+ER  -
+
+TY  - JOUR
+AU  - Alhazmi, M.H.
+TI  - An explainable AI framework (XAI-CoffeeNet) with deep learning and vision transformers for Saudi coffee disease recognition and severity assessment
+PY  - 2026
+T2  - Smart Agricultural Technology
+VL  - 14
+C7  - 102259
+DO  - 10.1016/j.atech.2026.102259
+UR  - https://www.scopus.com/pages/publications/105040695265?origin=resultslist
+AB  - This paper presents XAI-CoffeeNet, an explainable artificial intelligence framework with three core innovations for automated coffee disease management in Saudi Arabia's Jazan high-altitude plantations (1300–1400 m): (i) a hybrid CNN–Vision Transformer architecture with adaptive confidence-based feature fusion that dynamically balances local lesion features and global disease pattern recognition, addressing the limitation of single-architecture approaches that capture only local or global features independently; (ii) a dual LIME–SHAP explainability framework providing complementary local instance-level and global feature-level interpretability, validated against expert-annotated disease regions (localization IoU = 0.912), addressing the gap of single-method XAI systems that provide incomplete model transparency; and (iii) an integrated quantitative severity assessment module producing continuous disease progression scores correlated with trained agronomy annotations (r = 0.924), enabling precision treatment decisions beyond binary disease classification. Coffee farming in the Jazan region faces critical challenges from plant diseases that devastate crop yield in these isolated high-altitude plantations, where the scarcity of trained pathologists and inaccessible mountainous terrain make conventional expert monitoring impractical and economically unsustainable. The framework incorporates dual LIME and SHAP explainability mechanisms and is validated across 18 farms in the Jazan region under varying altitude and environmental conditions. XAI-CoffeeNet achieves 96.7% accuracy, 95.1% F1-score, and 0.989 AUC in multi-class detection of four disease categories (Healthy, Coffee Leaf Rust, Coffee Berry Disease, and Bacterial Blight). The severity assessment module yields a correlation of 0.924 with trained agronomy annotations. The dataset was split at the image level rather than farm level; reported metrics should therefore be interpreted as upper-bound estimates. In observational before–after field trials, system adoption was associated with a 37% reduction in pesticide usage and a 19% improvement in crop yield from 48.3 to 30.4 L/ha/season and 612 to 728 kg/ha respectively, across 18 farms over an 8-month observational period. © 2026 The Author. Published by Elsevier B.V. This is an open access article under the CC BY license. http://creativecommons.org/licenses/by/4.0/
+KW  - Coffee disease detection
+KW  - Explainable artificial intelligence
+KW  - LIME
+KW  - Precision agriculture
+KW  - SHAP
+KW  - Vision transformers
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105040695265
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 0
+ER  -
+
+TY  - JOUR
+AU  - Gupta, C.
+AU  - Gill, N.S.
+AU  - Gulia, P.
+AU  - Duhan, S.
+AU  - Alduaiji, N.
+AU  - Shukla, P.K.
+AU  - Dwivedi, A.
+TI  - Deep vision in agriculture: assessing the function of YOLO in the classification of plant leaf diseases (PLDs)
+PY  - 2025
+T2  - BioData Mining
+VL  - 18
+IS  - 1
+C7  - 91
+DO  - 10.1186/s13040-025-00497-y
+UR  - https://www.scopus.com/pages/publications/105026312857?origin=resultslist
+AB  - Plant leaf diseases (PLDs) can continue to be a significant problem in the agricultural sector, leading to significant losses in production and jeopardizing food security. Early detection is essential, and recent achievements in the domain of deep learning (DL) have made automated high-accuracy solutions possible. The most popular and commonly used of these is the You Only Look Once (YOLO) family of object detection models, which have been proposed to detect plant diseases in real time. This review presents a new and in-depth synthesis of YOLO-based methods, including YOLOv1 to YOLOv10 and the domain-specific variants, including CTB-YOLO (coriander), BED-YOLO (YOLOv10n), and RAG-augmented YOLOv8 (coffee). This work compares to previous surveys in that (i) it presents a structured dataset catalog containing information on size, resolution, disease classes, and limitations (such as imbalance and annotation problems); (ii) it provides comparative benchmarking analysis of performance measures (accuracy, precision, recall, F1-score, mean Average Precision, and frames per second) across versions of YOLO to illustrate trade-offs between speed and accuracy; and (iii) it gives forward-looking discussion on how (ii) open challenges and (iii) future research directions, including lightweight YOLO models to run on mobile. This review presents a summative reference and a new contribution to the progress of the YOLO-based PLD detection approach to sustainable agriculture. © The Author(s) 2025.
+KW  - Artificial intelligence (AI)
+KW  - Deep learning (DL)
+KW  - Object detection
+KW  - PLD classification
+KW  - You-only-look-once (YOLO)
+KW  - agriculture
+KW  - Article
+KW  - artificial intelligence-assisted diagnosis
+KW  - benchmarking
+KW  - classifier
+KW  - comparative study
+KW  - computer model
+KW  - deep learning
+KW  - disease classification
+KW  - feature extraction
+KW  - measurement accuracy
+KW  - nonhuman
+KW  - plant disease
+KW  - plant leaf
+KW  - velocity
+KW  - You Only Look Once model
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105026312857
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 16
+ER  -
+
+TY  - JOUR
+AU  - Arif, A.
+AU  - Putrawansyah, F.
+AU  - Jangcik, I.
+TI  - Detection of Coffee Leaf Diseases Using Lightweight Deep Learning: A Comparative Study of EfficientNet-B0 and Vision Transformer
+PY  - 2025
+T2  - Ingenierie des Systemes d'Information
+VL  - 30
+IS  - 9
+SP  - 2393
+EP  - 2404
+DO  - 10.18280/isi.300915
+UR  - https://www.scopus.com/pages/publications/105023972113?origin=resultslist
+AB  - This study compares lightweight deep learning models for coffee leaf disease detection using field-acquired images. Two architectures were evaluated: EfficientNet-B0, trained from scratch, and Vision Transformer (ViT), fine-tuned from pretrained weights. The dataset consisted of 843 balanced RGB images representing three major coffee leaf diseases: Leaf spot, Rust, and Sooty mold. Images were captured under natural field conditions without synthetic augmentation to ensure realistic evaluation. On the held-out test set, EfficientNet-B0 achieved an accuracy of 88.37%, precision of 87.9%, recall of 88.02%, and F1-score of 87.96%. ViT achieved an accuracy of 85.12%, precision of 84.76%, recall of 84.93%, and F1-score of 84.85%. Error analysis indicated that both models struggled to differentiate rust and sooty mold due to overlapping textural patterns. EfficientNet-B0 showed faster convergence and higher robustness, making it more suitable for mobile and edge deployment. ViT, while slightly less accurate, demonstrated stable learning behavior and potential benefits from larger or more diverse datasets. The results demonstrate feasibility for mobile deployment in real-time field diagnosis, providing a practical benchmark for lightweight AI in precision agriculture. © 2025 The authors.
+KW  - agricultural AI
+KW  - coffee leaf disease
+KW  - EfficientNet-B0
+KW  - field-based diagnosis
+KW  - lightweight deep learning
+KW  - Vision Transformer (ViT)
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105023972113
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 7
+ER  -
+
+TY  - JOUR
+AU  - Singh, M.K.
+AU  - Kumar, A.
+TI  - Coffee Leaf Disease Classification by Using a Hybrid Deep Convolution Neural Network
+PY  - 2024
+T2  - SN Computer Science
+VL  - 5
+IS  - 5
+C7  - 618
+DO  - 10.1007/s42979-024-02960-9
+UR  - https://www.scopus.com/pages/publications/85195400371?origin=resultslist
+AB  - The most common symptoms of coffee leaf disease are coffee leaf rust, black rot diseases, and brown eye spot. Leaf rust is the first symptom of coffee leaves that is visible on the upper surface of the leaves, i.e., small pale-yellow spots. At later stages, these spots gradually expand their diameter and become visible on the undersurface. The underside of the leaves becomes orange–yellow in colour or red–orange powdery, which varies from region to region. Finally, these leaf diseases rapidly spread and result in significant economic losses, so it's essential to identify plant diseases in their initial phases. Detailed features of the leaves have been required for this task to differentiate healthy and unhealthy coffee leaves. The proposed model utilized a mix of two deep learning methods, i.e., InceptionV3 and DenseNet121, and performed better using the concatenation and augmentation approach of convolution neural network (CNN). The proposed work contrasts existing pre-trained CNN models, such as InceptionV3 and DenseNet121, which require more computing power and parameters. According to the proposal, the hybrid deep convolution neural network model demonstrated a remarkable accuracy rate of 99%, which proved better than existing models such as InceptionV3, EfficientNetB0 and DenseNet121, which gained 94%, 98% and 96.36% accuracy, respectively. © The Author(s), under exclusive licence to Springer Nature Singapore Pte Ltd. 2024.
+KW  - Black rot disease
+KW  - Brown eye spot
+KW  - Coffee leaf rust
+KW  - Convolution neural networks (CNNs)
+KW  - Data augmentation
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-85195400371
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 9
+ER  -
+
+TY  - JOUR
+AU  - Bidarakundi, P.M.
+AU  - Muthu Kumar, B.
+TI  - Coffee-Net: Deep Mobile Patch Generation Network for Coffee Leaf Disease Classification
+PY  - 2025
+T2  - IEEE Sensors Journal
+VL  - 25
+IS  - 4
+SP  - 7355
+EP  - 7362
+DO  - 10.1109/JSEN.2024.3498050
+UR  - https://www.scopus.com/pages/publications/85211634372?origin=resultslist
+AB  - Coffee is the most regularly consumed beverages around the world, and the quality of coffee beans depends greatly on the health of the coffee plants. To prevent coffee leaf diseases (CLDs) from spreading and ensure a healthy coffee leaf, it is critical to detect them accurately and early. Coffee is a vital commodity for the global economy, and diseases affect its productivity and quality, so an automatic method for detecting coffee leaf disorder is necessary. In this work, a novel Coffee-Net is proposed for precisely classify and identify the diseases in CLDs, namely, Phoma, miner, rust, and Cercospora. Bilateral filter is used to smooth the image and remove additive noise, followed by contrast stretching adaptive histogram equalization (CSAHE) to enhance the quality of the image. Patches generated by region convolutional neural network (RCNN) automatically vary a transform that captures the common pattern for patch generation. The input image is then separated into multiple patches and the patch results are given for classification. The latent representation of coffee leaf can be classified into healthy, Phoma, miner, rust, and Cercospora based on the correct prediction of these images. The proposed Coffee-Net achieves 99.95% of accuracy rate for the CLD detection. The proposed Coffee-Net outperforms artificial neural network (ANN), Mask R-CNN, MobileNetV2, and ResNet50 in terms of overall accuracy by 0.6%, 4.32%, 0.02%, and 1.95, accordingly.  © 2024 IEEE.
+KW  - Bilateral filter
+KW  - coffee leaf
+KW  - contrast stretching histogram equalization
+KW  - mobile net
+KW  - region-based convolutional neural network (CNN)
+KW  - Equalizers
+KW  - Image segmentation
+KW  - Wiener filtering
+KW  - Bilateral filters
+KW  - Coffee leaf
+KW  - Contrast stretching
+KW  - Contrast stretching histogram equalization
+KW  - Convolutional neural network
+KW  - Histogram equalizations
+KW  - Leaf disease
+KW  - Mobile nets
+KW  - Region based convolutional neural network
+KW  - Region-based
+KW  - Image enhancement
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-85211634372
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 7
+ER  -
+
+TY  - JOUR
+AU  - Hitimana, E.
+AU  - Kuradusenge, M.
+AU  - Sinayobye, O.J.
+AU  - Ufitinema, C.
+AU  - Mukamugema, J.
+AU  - Murangira, T.
+AU  - Masabo, E.
+AU  - Rwibasira, P.
+AU  - Ingabire, D.A.
+AU  - Niyonzima, S.
+AU  - Bajpai, G.
+AU  - Mvuyekure, S.M.
+AU  - Ngabonziza, J.
+TI  - Revolutionizing Coffee Farming: A Mobile App with GPS-Enabled Reporting for Rapid and Accurate On-Site Detection of Coffee Leaf Diseases Using Integrated Deep Learning
+PY  - 2024
+T2  - Software
+VL  - 3
+IS  - 2
+SP  - 146
+EP  - 168
+DO  - 10.3390/software3020007
+UR  - https://www.scopus.com/pages/publications/105048218686?origin=resultslist
+AB  - Coffee leaf diseases are a significant challenge for coffee cultivation. They can reduce yields, impact bean quality, and necessitate costly disease management efforts. Manual monitoring is labor-intensive and time-consuming. This research introduces a pioneering mobile application equipped with global positioning system (GPS)-enabled reporting capabilities for on-site coffee leaf disease detection. The application integrates advanced deep learning (DL) techniques to empower farmers and agronomists with a rapid and accurate tool for identifying and managing coffee plant health. Leveraging the ubiquity of mobile devices, the app enables users to capture high-resolution images of coffee leaves directly in the field. These images are then processed in real-time using a pre-trained DL model optimized for efficient disease classification. Five models, Xception, ResNet50, Inception-v3, VGG16, and DenseNet, were experimented with on the dataset. All models showed promising performance; however, DenseNet proved to have high scores on all four-leaf classes with a training accuracy of 99.57%. The inclusion of GPS functionality allows precise geotagging of each captured image, providing valuable location-specific information. Through extensive experimentation and validation, the app demonstrates impressive accuracy rates in disease classification. The results indicate the potential of this technology to revolutionize coffee farming practices, leading to improved crop yield and overall plant health. © 2024 by the authors.
+KW  - cloud computing
+KW  - coffee leaf diseases
+KW  - deep learning
+KW  - precise agriculture
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105048218686
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 19
+ER  -
+
+TY  - JOUR
+AU  - Muhathir, M.
+AU  - Vajri, I.Y.
+AU  - Salqaura, S.S.
+AU  - Rozi, F.
+AU  - Diyanto, N.R.
+AU  - Lubis, A.H.
+AU  - Rahman, M.A.A.
+AU  - Rahmat, R.F.
+TI  - Attention module distribution in the MobileNetV2 bottleneck blocks for coffee leaf disease classification
+PY  - 2026
+T2  - Smart Agricultural Technology
+VL  - 14
+C7  - 102226
+DO  - 10.1016/j.atech.2026.102226
+UR  - https://www.scopus.com/pages/publications/105040725932?origin=resultslist
+AB  - The use of deep learning models for detecting plant diseases on mobile devices is still limited by the fact that these devices don't have enough computing power. MobileNetV2 has a lightweight architecture, but using attention mechanisms to improve its feature representation can add extra computational load, especially when used evenly across all layers. To mitigate this limitation, this study introduces a parameter efficient strategy by confining attention modules to 50% of the 17 bottleneck blocks and systematically examines the impact of various spatial distributions on model performance. In particular, four attention mechanisms (CBAM, ECA, SimAM, and Coordinate Attention) are tested with different distribution strategies, such as odd, even, early, middle, edge, and late placements. We used eight different distribution setups and five independent trials to test the stability of performance on a dataset of 1,544 Arabica coffee leaf images divided into three groups: Healthy, Phoma, and Cercospora. The results consistently show that selective and structured attention placement works better than full distribution. This suggests a clear performance trend: Middle > Edge > Odd > End > Start > Even > All > Baseline. The Middle distribution with Coordinate Attention had the best accuracy (0.9174 ± 0.0176), and the Edge distribution with ECA had the best balance between accuracy (0.9161 ± 0.0130) and speed (299.54 GMACs; 4.67 ms inference time). These results indicate that the spatial distribution of the attention module is more critical than simultaneous integration, resulting in enhanced performance at a reduced cost. This study highlights the importance of systematic attention module distribution and lays the groundwork for future research on adaptive methodologies, such as attention-guided pruning and dynamic network architecture search in resource-constrained environments. © 2026 The Author(s). Published by Elsevier B.V. This is an open access article under the CC BY license. http://creativecommons.org/licenses/by/4.0/
+KW  - Attention mechanism
+KW  - CBAM
+KW  - Coffee leaf disease
+KW  - Coordinate attention
+KW  - ECA
+KW  - MobileNetV2
+KW  - Model efficiency
+KW  - SimAM
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105040725932
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 0
+ER  -
+
+TY  - JOUR
+AU  - Chavarro, A.
+AU  - Renza, D.
+AU  - Moya-Albor, E.
+TI  - ConvNext as a Basis for Interpretability in Coffee Leaf Rust Classification
+PY  - 2024
+T2  - Mathematics
+VL  - 12
+IS  - 17
+C7  - 2668
+DO  - 10.3390/math12172668
+UR  - https://www.scopus.com/pages/publications/85203655729?origin=resultslist
+AB  - The increasing complexity of deep learning models can make it difficult to interpret and fit models beyond a purely accuracy-focused evaluation. This is where interpretable and eXplainable Artificial Intelligence (XAI) come into play to facilitate an understanding of the inner workings of models. Consequently, alternatives have emerged, such as class activation mapping (CAM) techniques aimed at identifying regions of importance for an image classification model. However, the behavior of such models can be highly dependent on the type of architecture and the different variants of convolutional neural networks. Accordingly, this paper evaluates three Convolutional Neural Network (CNN) architectures (VGG16, ResNet50, ConvNext-T) against seven CAM models (GradCAM, XGradCAM, HiResCAM, LayerCAM, GradCAM++, GradCAMElementWise, and EigenCAM), indicating that the CAM maps obtained with ConvNext models show less variability among them, i.e., they are less dependent on the selected CAM approach. This study was performed on an image dataset for the classification of coffee leaf rust and evaluated using the RemOve And Debias (ROAD) metric. © 2024 by the authors.
+KW  - class activation mapping (CAM)
+KW  - deep learning
+KW  - environment
+KW  - eXplainable Artificial Intelligence (XAI)
+KW  - green
+KW  - model evaluation
+KW  - model interpretation
+KW  - RemOve And Debias (ROAD)
+KW  - rust classification
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-85203655729
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 7
+ER  -
+
+TY  - JOUR
+AU  - Geronimo-Isidro, F.
+AU  - Figueroa-Jimenez, J.J.
+AU  - Gabayno-Laguatan, N.A.
+AU  - Lacuesta-Jalotjot, T.E.J.
+AU  - Cabangbang-Jaranilla, J.T.
+AU  - Macabago, S.A.B.
+AU  - Ocenar-Bautista, C.E.
+AU  - Limbo-Dizon, J.E.
+AU  - Buebos-Esteve, D.E.
+AU  - Dagamac, N.H.A.
+TI  - Spatiotemporal modeling of Hemileia vastatrix using multiple machine learning algorithms: implications for disease surveillance of the coffee leaf rust disease in the Philippines
+PY  - 2025
+T2  - Journal of Plant Pathology
+VL  - 107
+IS  - 4
+SP  - 2011
+EP  - 2026
+DO  - 10.1007/s42161-025-01958-3
+UR  - https://www.scopus.com/pages/publications/105010649899?origin=resultslist
+AB  - Coffee leaf rust (CLR) is a major plant disease found in coffee crops worldwide and is caused by the obligate hemicyclic fungus, Hemileia vastatrix. Despite the detrimental effects it has caused on the Philippine coffee industry over the last decades, the pathogen still remains massively understudied, and records of its occurrences are gravely lacking. Thus, this multipart study was conducted to construct models on the distributions of H. vastatrix nationwide to determine the possible reemergence of the pathogenic disease. Local occurrence records of the pathogen were collated to subject on different machine-learning algorithms (CTA, GAM, GBM, GLM, MaxEnt, MARS, RF, and SRE) under the biomod2 framework. Future distributions were projected using the EC-Earth3-Veg general circulation model (GCM) under two future scenarios (optimistic and pessimistic) to assess their range shift and estimate resurgence possibilities. Risk maps revealed that the highest risk for disease re-emergence looms over the year 2100, viewed optimistically where efforts are exerted to mitigate the effects of climate change, whilst the threat of an epidemic in the near future is as close as the year 2060 should the worst anthropogenic scenario take place. This paper presents the first ensemble species distribution models of coffee leaf rust in the Philippines and comprehensive modeling of host-pathogen spatial distribution under changing climate scenarios. © The Author(s) under exclusive licence to Società Italiana di Patologia Vegetale (S.I.Pa.V.) 2025.
+KW  - Climate change
+KW  - CLR
+KW  - Cultivation
+KW  - Plant pathogens
+KW  - Species distribution models
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105010649899
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 4
+ER  -
+
+TY  - JOUR
+AU  - Baht, N.
+AU  - Dominguez, E.
+AU  - Aljumaili, S.
+TI  - Detection of coffee leaf disease and identification using deep learning
+PY  - 2025
+T2  - PeerJ Computer Science
+VL  - 11
+C7  - e3172
+DO  - 10.7717/peerj-cs.3172
+UR  - https://www.scopus.com/pages/publications/105022167592?origin=resultslist
+AB  - The sustainability of coffee production is a concern for many coffee-producing countries. Indeed, the conservation of the production of coffee needs to detect disease and infection in the early stages, to provide the ability to control and remedy. Coffee is one of the most consumed daily beverages, so it is considered one of the most important plant crops that affect the economy of the country that produces it. Thus, implementing systems for disease detection that do not require expert consultation can streamline production processes. In this paper, we proposed an efficient and rapid system utilizing cost-effective devices for detecting coffee leaf diseases to support farmers without the need for specialized expertise, leveraging deep learning models. Our technique involves several types of artificial intelligence (AI) models used, which include proposed new models using convolutional neural networks (CNN1, CNN2), and prompt transfer learning (VGG16, ResNet50, and EfficientNet), as well as applied machine learning supervised classifier with hybrid approaches (support vector machine (SVM) and Random Forest (RF)). In terms of training, the proposed model was fed with large datasets that contain five classes, with a total number of images exceeding 50, 000 images, while the testing utilized a separate dataset. Finally, the results showed high performance across all evaluation metrics. CNN1 obviously distinguished that it has the superior accuracy compared to the other models, with a 99% value. In conclusion, the proposed framework has the capability to be applied, and it will deliver on-hand support to farmers. © Copyright 2025 Baht et al. Distributed under Creative Commons CC-BY 4.0
+KW  - Algorithms and Analysis of Algorithms
+KW  - Artificial Intelligence
+KW  - CNN
+KW  - Coffee disease
+KW  - Computer Vision
+KW  - Data Mining and Machine Learning
+KW  - Deep learning
+KW  - Neural Networks
+KW  - VGG16
+KW  - Agricultural machinery
+KW  - Coffee
+KW  - Convolutional neural networks
+KW  - Cost effectiveness
+KW  - Crops
+KW  - Data mining
+KW  - Deep neural networks
+KW  - Disease control
+KW  - Diseases
+KW  - Large datasets
+KW  - Learning algorithms
+KW  - Learning systems
+KW  - Plants (botany)
+KW  - Statistical tests
+KW  - Support vector machines
+KW  - Transfer learning
+KW  - Algorithm and analyze of algorithm
+KW  - Analysis of algorithms
+KW  - Coffee disease
+KW  - Data mining and machine learning
+KW  - Deep learning
+KW  - Leaf disease
+KW  - Leaf identification
+KW  - Machine-learning
+KW  - Neural-networks
+KW  - VGG16
+KW  - Computer vision
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105022167592
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 4
+ER  -
+
+TY  - JOUR
+AU  - Ahn, E.
+AU  - Park, S.
+AU  - Bhatt, J.
+AU  - Lim, S.
+AU  - Meinhardt, L.W.
+TI  - Lipid Metabolism and Actin Cytoskeleton Regulation Underlie Yield and Disease Resistance in Two Coffea canephora Breeding Populations
+PY  - 2025
+T2  - Plants
+VL  - 14
+IS  - 23
+C7  - 3675
+DO  - 10.3390/plants14233675
+UR  - https://www.scopus.com/pages/publications/105024596084?origin=resultslist
+AB  - Distinct breeding populations of Coffea canephora often exhibit genetic divergence, yet the biological pathways underlying yield and leaf rust resistance in contrasting populations remain poorly understood. Here, we performed a comparative genomic analysis of two populations (Premature and Intermediate) to dissect the genetic architecture of coffee bean production, green bean yield, and leaf rust incidence. By integrating single-SNP association, machine learning (Bootstrap Forest), and Gene Ontology (GO) pathway analysis, we found that the Premature population’s traits were linked to specialized metabolic pathways, particularly lipid modification and organelle lumen–associated processes. In contrast, the Intermediate population was governed by core cellular machinery, with significant enrichment for actin cytoskeleton regulation and salicylic acid signaling. These findings demonstrate that distinct breeding populations achieve agronomic success through fundamentally different biological strategies and provide a reusable resource of ranked SNP lists for targeted, population-aware breeding. © 2025 by the authors.
+KW  - Bootstrap Forest
+KW  - green bean yield
+KW  - leaf rust resistance
+KW  - SNP analysis
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105024596084
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 0
+ER  -
+
+TY  - JOUR
+AU  - Ardah, H.
+AU  - Alrahhal, M.
+AU  - Abd-Elhafiez, W.M.
+AU  - Trabay, D.
+TI  - Robust coffee plant disease classification using deep learning and advanced feature engineering techniques
+PY  - 2025
+T2  - PeerJ Computer Science
+VL  - 11
+C7  - e3386
+DO  - 10.7717/peerj-cs.3386
+UR  - https://www.scopus.com/pages/publications/105035024110?origin=resultslist
+AB  - Coffee, the world's most traded tropical crop, is vital to the economies of many producing countries. However, coffee leaf diseases pose a serious threat to coffee quality and sustainable production. Deep learning has shown strong performance in plant disease identification through automatic image classification. Nevertheless, reliance on a single convolutional neural networks (CNNs) architecture restricts feature variability and real-world generalization. Moreover, limited work has systematically combined feature selection/reduction with CNNs, which constrains the advancement of hybrid models capable of capturing complementary features while ensuring computational efficiency without accuracy loss. This article presents an enhanced deep learning-based framework for coffee disease classification incorporating a hybrid strategy that integrates CNNs and advanced feature selection algorithms. GoogLeNet and ResNet18 are paired for complementary feature extraction, Principal Component Analysis (PCA) and Singular Value Decomposition (SVD) are employed for dimensionality reduction, and ANOVA and Chi-square are applied to select the most informative features. An Adam optimizer (learning rate = 0.001, batch size = 20, epochs = 50) with early stopping is used for training. Experiments on the BRACOL dataset achieved 99.78% accuracy, with precision, recall, and F1-score all exceeding 99% across classes. To the best of our knowledge, this study systematically integrates GoogLeNet and ResNet18 with PCA/SVD dimensionality reduction and analysis of variance (ANOVA)/Chi-square feature selection, for coffee disease classification, thereby addressing a key gap in prior research. Copyright 2025 Ardah et al. Distributed under Creative Commons CC-BY 4.0. https://creativecommons.org/licenses/by/4.0/.
+KW  - ANOVA
+KW  - Classification
+KW  - CNN
+KW  - Coffee plant disease
+KW  - Deep learning
+KW  - EfficientNet
+KW  - Feature
+KW  - Plant disease
+KW  - Prediction
+KW  - SVD
+KW  - Automatic identification
+KW  - Coffee
+KW  - Computational efficiency
+KW  - Convolutional neural networks
+KW  - Dimensionality reduction
+KW  - Diseases
+KW  - Feature extraction
+KW  - Image processing
+KW  - Knowledge management
+KW  - Learning algorithms
+KW  - Learning systems
+KW  - Plant diseases
+KW  - Plants (botany)
+KW  - Principal component analysis
+KW  - Singular value decomposition
+KW  - Analyse of variances
+KW  - Coffee plant disease
+KW  - Coffee plants
+KW  - Convolutional neural network
+KW  - Deep learning
+KW  - Efficientnet
+KW  - Feature
+KW  - Plant disease
+KW  - Singular values
+KW  - Value decomposition
+KW  - Analysis of variance (ANOVA)
+KW  - Classification (of information)
+KW  - Deep learning
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105035024110
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 2
+ER  -
+
+TY  - JOUR
+AU  - Santhosh, C.S.
+AU  - Umesh, K.K.
+AU  - Hemanth, V.
+AU  - Narendra, K.
+TI  - Forecasting Yield of Coffee Crop Varieties C×R, Sln3 and Sln5B: A Stochastic Machine Learning Model Based on Agro-Ecological Factors using Multivariate Feature Selection Approach
+PY  - 2025
+T2  - Organic Farming
+VL  - 11
+IS  - 3
+SP  - 203
+EP  - 226
+DO  - 10.56578/of110305
+UR  - https://www.scopus.com/pages/publications/105019105816?origin=resultslist
+AB  - Accurate forecasting of coffee crop yield is essential for enhancing agricultural decision-making, ensuring food security, and mitigating environmental risks. India cultivates both Arabica and Robusta across more than one hundred registered varieties. In this study, yield forecasts were developed for three representative varieties—C×R, Sln3, and Sln5B—using agro-ecological data collected from 2015 to 2022 at the Central Coffee Research Institute (CCRI), Coffee Research Station, Balehonnur, Karnataka, India. A stochastic machine learning framework was employed to identify and evaluate the most influential agro-ecological predictors through a multivariate feature selection approach coupled with correlation matrix analysis. Optimal predictors were organized into three distinct parameter groups, which were then used as inputs to four regression models: Extra Trees (ET), Gradient Boosting (GB), Random Forest (RF), and Decision Tree (DT). Independent testing revealed that the ET model consistently provided the highest accuracy. For C×R, yield was most accurately predicted using Group-1 parameters, such as coffee leaf rust (CLR), minimum temperature (Tmin), maximum temperature (Tmax), relative humidity (Rh), rainfall (Rf), organic carbon (OC), phosphorus (P), potassium (K), pH, plant spacing (Sp), and plant age (Ag), achieving a coefficient of determination (R2) of 0.98 with a Root Mean Square Error (RMSE) of 8.61 kg ha-1. For Sln3, Group-3 parameters, such as CLR, Tmin, Tmax, Rh, Rf, OC, P, K, pH, Ag, Sp, minimum sunshine hours (SSmin), maximum sunshine hours (SSmax), vapor (Vp), and dew point (Dp), produced an R2 of 0.98 with an RMSE of 8.27 kg ha-1, while for Sln5B, Group-3 parameters yielded an R2 of 0.97 with an RMSE of 7.79 kg ha-1. These results demonstrate the superiority of the ET algorithm compared with GB, RF, and DT models, which exhibited comparatively lower predictive accuracy. Simulation outcomes further revealed that age, rainfall, and the incidence of CLR were among the most decisive agro-ecological determinants of yield. These findings underscore the potential of stochastic machine learning models, particularly the ET model, for enhancing yield prediction and identifying agro-ecological drivers of coffee productivity. © 2025 by the author(s).
+KW  - Agro-ecological factors
+KW  - Coffee
+KW  - Machine learning
+KW  - Stochastic approach
+KW  - Yield prediction
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105019105816
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 1
+ER  -
+
+TY  - JOUR
+AU  - Ao, C.
+AU  - Kim, G.-J.
+AU  - Kwan, M.-S.
+TI  - A Deep Learning Approach for Coffee Leaf Disease Classification with Centroid-Based Loss Optimization
+PY  - 2025
+T2  - Tehnicki Vjesnik
+VL  - 32
+IS  - 6
+SP  - 2205
+EP  - 2216
+DO  - 10.17559/TV-20241209002180
+UR  - https://www.scopus.com/pages/publications/105021928946?origin=resultslist
+AB  - As global demand for coffee increases, coffee trees, particularly their leaves, suffer more from diseases and pests. Leaf health, being the central organ for photosynthesis, directly impacts the yield and quality of coffee. Therefore, developing a computationally efficient and scalable method for disease and pest management in coffee trees has become imperative. This study introduces a centroid-based loss adjustment method to enhance the focus on distant samples from their class centroid. It involves calculating the centroid for each class and adjusting the loss according to the distance between the sample features and their class centroid. This method is essential concerning the spatial distribution of features, which helps improve classification accuracy and model robustness when dealing with complex data. The experiments use the BRACOL and RoCoLe datasets containing images of multiple coffee leaf diseases. Multiple Deep Learning pre-trained models were tested to validate the proposed method's effectiveness. The experimental results show that this method significantly enhances the accuracy of coffee leaf disease classification and surpasses State-of-The-Art methods. This study presents a method to classify and estimate coffee leaf disease severity, improving model performance without greatly increasing the computational burden. © 2025 Strojarski Facultet. All rights reserved.
+KW  - coffee leaf diseases
+KW  - convolutional neural network
+KW  - deep learning
+KW  - loss adjustment
+KW  - Classification (of information)
+KW  - Coffee
+KW  - Convolutional neural networks
+KW  - Diseases
+KW  - Forestry
+KW  - Scalability
+KW  - Coffee leaf disease
+KW  - Computationally-scalable
+KW  - Convolutional neural network
+KW  - Deep learning
+KW  - Disease classification
+KW  - Global demand
+KW  - Leaf disease
+KW  - Learning approach
+KW  - Loss adjustment
+KW  - Losses optimisation
+KW  - Deep learning
+M3  - Article
+DB  - Scopus
+N1  - EID: 2-s2.0-105021928946
+N1  - Export Date: 31 October 2026
+N1  - Cited By: 0
+ER  -
+
