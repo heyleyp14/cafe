@@ -1,0 +1,11 @@
+{
+  "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU", "compute_capability": "8.9", "sms": 20,
+  "global_mem_mib": 5844, "shared_mem_per_block_kib": 48, "warp_size": 32,
+  "max_threads_per_block": 1024, "cuda_runtime": 13040,
+  "reps": 10, "matmul": [
+    {"n": 512, "cpu_ms": 12.644, "naive_ms": 0.4474, "tiled_ms": 0.4577, "cublas_ms": 0.0668, "h2d_ms": 0.2930, "d2h_ms": 0.1916, "naive_err": 5.91e-04, "tiled_err": 5.91e-04, "cublas_err": 1.53e-03},
+    {"n": 1024, "cpu_ms": 77.768, "naive_ms": 4.2396, "tiled_ms": 3.1308, "cublas_ms": 0.3315, "h2d_ms": 0.9339, "d2h_ms": 0.4728, "naive_err": 1.33e-03, "tiled_err": 1.33e-03, "cublas_err": 3.07e-03},
+    {"n": 2048, "cpu_ms": 1203.473, "naive_ms": 28.3045, "tiled_ms": 20.2457, "cublas_ms": 2.7371, "h2d_ms": 2.8357, "d2h_ms": 1.5623, "naive_err": 3.06e-03, "tiled_err": 3.06e-03, "cublas_err": 3.06e-03}
+  ],
+  "vec_add": {"n": 16777216, "cpu_ms": 8.545, "kernel_ms": 1.4375, "h2d_ms": 10.776, "d2h_ms": 6.132, "correct": true}
+}
